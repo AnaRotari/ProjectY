@@ -8,26 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		8402D1691E61F6C600968EA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8402D1681E61F6C600968EA2 /* main.m */; };
-		8402D16C1E61F6C600968EA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8402D16B1E61F6C600968EA2 /* AppDelegate.m */; };
-		8402D16F1E61F6C600968EA2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8402D16E1E61F6C600968EA2 /* ViewController.m */; };
 		8402D1721E61F6C600968EA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8402D1701E61F6C600968EA2 /* Main.storyboard */; };
-		8402D1751E61F6C600968EA2 /* iMoney.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8402D1731E61F6C600968EA2 /* iMoney.xcdatamodeld */; };
 		8402D1771E61F6C600968EA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8402D1761E61F6C600968EA2 /* Assets.xcassets */; };
 		8402D17A1E61F6C600968EA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8402D1781E61F6C600968EA2 /* LaunchScreen.storyboard */; };
+		84D92FC01E61F88D00F823DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D92FBF1E61F88D00F823DD /* AppDelegate.m */; };
+		84D92FC91E61F9D000F823DD /* CoreDataAccessLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D92FC41E61F9D000F823DD /* CoreDataAccessLayer.m */; };
+		84D92FCA1E61F9D000F823DD /* CoreDataRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D92FC71E61F9D000F823DD /* CoreDataRequestManager.m */; };
+		84D92FCD1E61FB9800F823DD /* iMoney.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84D92FCB1E61FB9800F823DD /* iMoney.xcdatamodeld */; };
+		ABDFF3A35DBEC63E527DB9BB /* libPods-iMoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C586DD88F1E8E3AB5C9D4B /* libPods-iMoney.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11C586DD88F1E8E3AB5C9D4B /* libPods-iMoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iMoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		154A945D88A862DD47CAD59F /* Pods-iMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMoney/Pods-iMoney.debug.xcconfig"; sourceTree = "<group>"; };
 		8402D1641E61F6C600968EA2 /* iMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8402D1681E61F6C600968EA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8402D16A1E61F6C600968EA2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8402D16B1E61F6C600968EA2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8402D16D1E61F6C600968EA2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8402D16E1E61F6C600968EA2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8402D1711E61F6C600968EA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8402D1741E61F6C600968EA2 /* iMoney.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iMoney.xcdatamodel; sourceTree = "<group>"; };
 		8402D1761E61F6C600968EA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8402D1791E61F6C600968EA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8402D17B1E61F6C600968EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D92FBE1E61F88D00F823DD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84D92FBF1E61F88D00F823DD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84D92FC31E61F9D000F823DD /* CoreDataAccessLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataAccessLayer.h; sourceTree = "<group>"; };
+		84D92FC41E61F9D000F823DD /* CoreDataAccessLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataAccessLayer.m; sourceTree = "<group>"; };
+		84D92FC61E61F9D000F823DD /* CoreDataRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataRequestManager.h; sourceTree = "<group>"; };
+		84D92FC71E61F9D000F823DD /* CoreDataRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataRequestManager.m; sourceTree = "<group>"; };
+		84D92FCC1E61FB9800F823DD /* iMoney.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iMoney.xcdatamodel; sourceTree = "<group>"; };
+		84D92FCE1E61FBDF00F823DD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B7AAAB9D4BE802D71A22FB00 /* Pods-iMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMoney/Pods-iMoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABDFF3A35DBEC63E527DB9BB /* libPods-iMoney.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E8A75AEE0F221F971457C3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11C586DD88F1E8E3AB5C9D4B /* libPods-iMoney.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8402D15B1E61F6C600968EA2 = {
 			isa = PBXGroup;
 			children = (
 				8402D1661E61F6C600968EA2 /* iMoney */,
 				8402D1651E61F6C600968EA2 /* Products */,
+				D30209C54F6061ED4D66178B /* Pods */,
+				4E8A75AEE0F221F971457C3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,16 +79,15 @@
 		8402D1661E61F6C600968EA2 /* iMoney */ = {
 			isa = PBXGroup;
 			children = (
-				8402D16A1E61F6C600968EA2 /* AppDelegate.h */,
-				8402D16B1E61F6C600968EA2 /* AppDelegate.m */,
-				8402D16D1E61F6C600968EA2 /* ViewController.h */,
-				8402D16E1E61F6C600968EA2 /* ViewController.m */,
+				8403CB541E61FD00006C326E /* ViewControllers */,
+				84D92FC11E61F9D000F823DD /* Database */,
+				84D92FBD1E61F88D00F823DD /* AppDelegate */,
 				8402D1701E61F6C600968EA2 /* Main.storyboard */,
 				8402D1761E61F6C600968EA2 /* Assets.xcassets */,
 				8402D1781E61F6C600968EA2 /* LaunchScreen.storyboard */,
 				8402D17B1E61F6C600968EA2 /* Info.plist */,
-				8402D1731E61F6C600968EA2 /* iMoney.xcdatamodeld */,
 				8402D1671E61F6C600968EA2 /* Supporting Files */,
+				84D92FCE1E61FBDF00F823DD /* PrefixHeader.pch */,
 			);
 			path = iMoney;
 			sourceTree = "<group>";
@@ -82,6 +100,67 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8403CB541E61FD00006C326E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		84D92FBD1E61F88D00F823DD /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				84D92FBE1E61F88D00F823DD /* AppDelegate.h */,
+				84D92FBF1E61F88D00F823DD /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		84D92FC11E61F9D000F823DD /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				84D92FCB1E61FB9800F823DD /* iMoney.xcdatamodeld */,
+				84D92FC21E61F9D000F823DD /* CoreDataAccessLayer */,
+				84D92FC51E61F9D000F823DD /* DAO */,
+				84D92FC81E61F9D000F823DD /* DatabaseEntities */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		84D92FC21E61F9D000F823DD /* CoreDataAccessLayer */ = {
+			isa = PBXGroup;
+			children = (
+				84D92FC31E61F9D000F823DD /* CoreDataAccessLayer.h */,
+				84D92FC41E61F9D000F823DD /* CoreDataAccessLayer.m */,
+			);
+			path = CoreDataAccessLayer;
+			sourceTree = "<group>";
+		};
+		84D92FC51E61F9D000F823DD /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				84D92FC61E61F9D000F823DD /* CoreDataRequestManager.h */,
+				84D92FC71E61F9D000F823DD /* CoreDataRequestManager.m */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		84D92FC81E61F9D000F823DD /* DatabaseEntities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DatabaseEntities;
+			sourceTree = "<group>";
+		};
+		D30209C54F6061ED4D66178B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				154A945D88A862DD47CAD59F /* Pods-iMoney.debug.xcconfig */,
+				B7AAAB9D4BE802D71A22FB00 /* Pods-iMoney.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8402D17E1E61F6C600968EA2 /* Build configuration list for PBXNativeTarget "iMoney" */;
 			buildPhases = (
+				117B43BE3FB4C9ACF5DACE69 /* [CP] Check Pods Manifest.lock */,
 				8402D1601E61F6C600968EA2 /* Sources */,
 				8402D1611E61F6C600968EA2 /* Frameworks */,
 				8402D1621E61F6C600968EA2 /* Resources */,
+				2C2D1B605B9E101AB6E7BF3F /* [CP] Embed Pods Frameworks */,
+				7AE7005D4213E4C6677A8EDC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,15 +230,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		117B43BE3FB4C9ACF5DACE69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2C2D1B605B9E101AB6E7BF3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iMoney/Pods-iMoney-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AE7005D4213E4C6677A8EDC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iMoney/Pods-iMoney-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8402D1601E61F6C600968EA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8402D1751E61F6C600968EA2 /* iMoney.xcdatamodeld in Sources */,
-				8402D16F1E61F6C600968EA2 /* ViewController.m in Sources */,
-				8402D16C1E61F6C600968EA2 /* AppDelegate.m in Sources */,
+				84D92FCD1E61FB9800F823DD /* iMoney.xcdatamodeld in Sources */,
+				84D92FCA1E61F9D000F823DD /* CoreDataRequestManager.m in Sources */,
 				8402D1691E61F6C600968EA2 /* main.m in Sources */,
+				84D92FC91E61F9D000F823DD /* CoreDataAccessLayer.m in Sources */,
+				84D92FC01E61F88D00F823DD /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +405,11 @@
 		};
 		8402D17F1E61F6C600968EA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 154A945D88A862DD47CAD59F /* Pods-iMoney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = iMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bananaland.iMoney;
@@ -285,8 +419,11 @@
 		};
 		8402D1801E61F6C600968EA2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7AAAB9D4BE802D71A22FB00 /* Pods-iMoney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = iMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bananaland.iMoney;
@@ -313,16 +450,17 @@
 				8402D1801E61F6C600968EA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		8402D1731E61F6C600968EA2 /* iMoney.xcdatamodeld */ = {
+		84D92FCB1E61FB9800F823DD /* iMoney.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				8402D1741E61F6C600968EA2 /* iMoney.xcdatamodel */,
+				84D92FCC1E61FB9800F823DD /* iMoney.xcdatamodel */,
 			);
-			currentVersion = 8402D1741E61F6C600968EA2 /* iMoney.xcdatamodel */;
+			currentVersion = 84D92FCC1E61FB9800F823DD /* iMoney.xcdatamodel */;
 			path = iMoney.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
