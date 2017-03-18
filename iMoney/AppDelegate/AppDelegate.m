@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "iCloudSyncManager.h"
 
 @interface AppDelegate ()
 
@@ -14,18 +15,21 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    NSLog(@"🗂: %@",[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory
+                                                            inDomains:NSUserDomainMask] lastObject]);
+
+    [[iCloudSyncManager sharedInstance] startSyncronize];
+    [self setupAppearance];
+    
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
-
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
@@ -48,5 +52,18 @@
     // Saves changes in the application's managed object context before the application terminates.
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    
+    return UIStatusBarStyleLightContent;
+}
+
+- (void)setupAppearance {
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    [[UINavigationBar appearance] setBackgroundColor:[UIColor clearColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+}
 
 @end

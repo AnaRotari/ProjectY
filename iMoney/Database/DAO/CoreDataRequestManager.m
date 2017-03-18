@@ -11,4 +11,16 @@
 
 @implementation CoreDataRequestManager
 
++ (void)test1 {
+    
+    Test *test = [NSEntityDescription insertNewObjectForEntityForName:@"Test"
+                                                inManagedObjectContext:[[CoreDataAccessLayer sharedInstance] managedObjectContext]];
+    test.testAttribute = [NSString stringWithFormat:@"Lol: %d",arc4random_uniform(1999)];;
+    NSError *error = nil;
+    if(![[[CoreDataAccessLayer sharedInstance] managedObjectContext] save:&error])
+    {
+        NSLog(@"%@",[error localizedDescription]);
+    }
+}
+
 @end

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Test+CoreDataClass.h"
 
 @interface CoreDataAccessLayer : NSObject
 

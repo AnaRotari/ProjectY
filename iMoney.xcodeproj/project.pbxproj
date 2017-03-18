@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8402D1691E61F6C600968EA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8402D1681E61F6C600968EA2 /* main.m */; };
 		8402D1721E61F6C600968EA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8402D1701E61F6C600968EA2 /* Main.storyboard */; };
 		8402D1771E61F6C600968EA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8402D1761E61F6C600968EA2 /* Assets.xcassets */; };
 		8402D17A1E61F6C600968EA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8402D1781E61F6C600968EA2 /* LaunchScreen.storyboard */; };
@@ -16,13 +15,24 @@
 		84D92FCA1E61F9D000F823DD /* CoreDataRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D92FC71E61F9D000F823DD /* CoreDataRequestManager.m */; };
 		84D92FCD1E61FB9800F823DD /* iMoney.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84D92FCB1E61FB9800F823DD /* iMoney.xcdatamodeld */; };
 		ABDFF3A35DBEC63E527DB9BB /* libPods-iMoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C586DD88F1E8E3AB5C9D4B /* libPods-iMoney.a */; };
+		FA0330801E7D75C400BB8DBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03307E1E7D75C400BB8DBA /* main.m */; };
+		FA0330841E7D786800BB8DBA /* ApplicationConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0330831E7D786800BB8DBA /* ApplicationConstants.m */; };
+		FA03308A1E7D794C00BB8DBA /* Test+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0330871E7D794C00BB8DBA /* Test+CoreDataClass.m */; };
+		FA03308B1E7D794C00BB8DBA /* Test+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0330891E7D794C00BB8DBA /* Test+CoreDataProperties.m */; };
+		FA03308F1E7D7B1900BB8DBA /* iCloudSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03308E1E7D7B1900BB8DBA /* iCloudSyncManager.m */; };
+		FA0330931E7D7F8500BB8DBA /* DebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0330921E7D7F8500BB8DBA /* DebugViewController.m */; };
+		FA0330961E7D7F9F00BB8DBA /* iMoneyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0330951E7D7F9F00BB8DBA /* iMoneyUtils.m */; };
+		FAAC9F911E7DE79B0077B160 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC9F8F1E7DE79B0077B160 /* MenuTableViewCell.m */; };
+		FAAC9F921E7DE79B0077B160 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAC9F901E7DE79B0077B160 /* MenuTableViewCell.xib */; };
+		FAE101771E7DC8AF003525DF /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE101761E7DC8AF003525DF /* MenuViewController.m */; };
+		FAE1017E1E7DC9B6003525DF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE1017D1E7DC9B6003525DF /* MainViewController.m */; };
+		FAE101831E7DD182003525DF /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE101821E7DD182003525DF /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11C586DD88F1E8E3AB5C9D4B /* libPods-iMoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iMoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		154A945D88A862DD47CAD59F /* Pods-iMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMoney/Pods-iMoney.debug.xcconfig"; sourceTree = "<group>"; };
 		8402D1641E61F6C600968EA2 /* iMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8402D1681E61F6C600968EA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8402D1711E61F6C600968EA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8402D1761E61F6C600968EA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8402D1791E61F6C600968EA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,8 +44,31 @@
 		84D92FC61E61F9D000F823DD /* CoreDataRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataRequestManager.h; sourceTree = "<group>"; };
 		84D92FC71E61F9D000F823DD /* CoreDataRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataRequestManager.m; sourceTree = "<group>"; };
 		84D92FCC1E61FB9800F823DD /* iMoney.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iMoney.xcdatamodel; sourceTree = "<group>"; };
-		84D92FCE1E61FBDF00F823DD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B7AAAB9D4BE802D71A22FB00 /* Pods-iMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMoney/Pods-iMoney.release.xcconfig"; sourceTree = "<group>"; };
+		FA03307B1E7D73C200BB8DBA /* iMoney.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iMoney.entitlements; sourceTree = "<group>"; };
+		FA03307E1E7D75C400BB8DBA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA0330811E7D75EB00BB8DBA /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FA0330821E7D786800BB8DBA /* ApplicationConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationConstants.h; sourceTree = "<group>"; };
+		FA0330831E7D786800BB8DBA /* ApplicationConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationConstants.m; sourceTree = "<group>"; };
+		FA0330861E7D794C00BB8DBA /* Test+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Test+CoreDataClass.h"; sourceTree = "<group>"; };
+		FA0330871E7D794C00BB8DBA /* Test+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test+CoreDataClass.m"; sourceTree = "<group>"; };
+		FA0330881E7D794C00BB8DBA /* Test+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Test+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FA0330891E7D794C00BB8DBA /* Test+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FA03308D1E7D7B1900BB8DBA /* iCloudSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCloudSyncManager.h; sourceTree = "<group>"; };
+		FA03308E1E7D7B1900BB8DBA /* iCloudSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCloudSyncManager.m; sourceTree = "<group>"; };
+		FA0330911E7D7F8500BB8DBA /* DebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugViewController.h; sourceTree = "<group>"; };
+		FA0330921E7D7F8500BB8DBA /* DebugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugViewController.m; sourceTree = "<group>"; };
+		FA0330941E7D7F9F00BB8DBA /* iMoneyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iMoneyUtils.h; sourceTree = "<group>"; };
+		FA0330951E7D7F9F00BB8DBA /* iMoneyUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iMoneyUtils.m; sourceTree = "<group>"; };
+		FAAC9F8E1E7DE79B0077B160 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
+		FAAC9F8F1E7DE79B0077B160 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
+		FAAC9F901E7DE79B0077B160 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		FAE101751E7DC8AF003525DF /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		FAE101761E7DC8AF003525DF /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		FAE1017C1E7DC9B6003525DF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		FAE1017D1E7DC9B6003525DF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		FAE101811E7DD182003525DF /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		FAE101821E7DD182003525DF /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,32 +112,20 @@
 		8402D1661E61F6C600968EA2 /* iMoney */ = {
 			isa = PBXGroup;
 			children = (
-				8403CB541E61FD00006C326E /* ViewControllers */,
-				84D92FC11E61F9D000F823DD /* Database */,
+				FA03307B1E7D73C200BB8DBA /* iMoney.entitlements */,
 				84D92FBD1E61F88D00F823DD /* AppDelegate */,
+				84D92FC11E61F9D000F823DD /* Database */,
+				FA0330901E7D7F7C00BB8DBA /* ViewControllers */,
+				FA03307C1E7D759500BB8DBA /* Utils */,
+				FA03307D1E7D75C400BB8DBA /* SupportingFiles */,
+				FAE1017F1E7DD182003525DF /* ThirdPartyLibs */,
 				8402D1701E61F6C600968EA2 /* Main.storyboard */,
-				8402D1761E61F6C600968EA2 /* Assets.xcassets */,
 				8402D1781E61F6C600968EA2 /* LaunchScreen.storyboard */,
+				8402D1761E61F6C600968EA2 /* Assets.xcassets */,
+				FA0330811E7D75EB00BB8DBA /* PrefixHeader.pch */,
 				8402D17B1E61F6C600968EA2 /* Info.plist */,
-				8402D1671E61F6C600968EA2 /* Supporting Files */,
-				84D92FCE1E61FBDF00F823DD /* PrefixHeader.pch */,
 			);
 			path = iMoney;
-			sourceTree = "<group>";
-		};
-		8402D1671E61F6C600968EA2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8402D1681E61F6C600968EA2 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8403CB541E61FD00006C326E /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		84D92FBD1E61F88D00F823DD /* AppDelegate */ = {
@@ -120,9 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				84D92FCB1E61FB9800F823DD /* iMoney.xcdatamodeld */,
+				FA03308C1E7D7AFD00BB8DBA /* iCloudSyncManager */,
 				84D92FC21E61F9D000F823DD /* CoreDataAccessLayer */,
 				84D92FC51E61F9D000F823DD /* DAO */,
-				84D92FC81E61F9D000F823DD /* DatabaseEntities */,
+				FA0330851E7D794C00BB8DBA /* DatabaseEntities */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -145,13 +167,6 @@
 			path = DAO;
 			sourceTree = "<group>";
 		};
-		84D92FC81E61F9D000F823DD /* DatabaseEntities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DatabaseEntities;
-			sourceTree = "<group>";
-		};
 		D30209C54F6061ED4D66178B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +174,102 @@
 				B7AAAB9D4BE802D71A22FB00 /* Pods-iMoney.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA03307C1E7D759500BB8DBA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FA0330941E7D7F9F00BB8DBA /* iMoneyUtils.h */,
+				FA0330951E7D7F9F00BB8DBA /* iMoneyUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FA03307D1E7D75C400BB8DBA /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FA0330821E7D786800BB8DBA /* ApplicationConstants.h */,
+				FA0330831E7D786800BB8DBA /* ApplicationConstants.m */,
+				FA03307E1E7D75C400BB8DBA /* main.m */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FA0330851E7D794C00BB8DBA /* DatabaseEntities */ = {
+			isa = PBXGroup;
+			children = (
+				FA0330861E7D794C00BB8DBA /* Test+CoreDataClass.h */,
+				FA0330871E7D794C00BB8DBA /* Test+CoreDataClass.m */,
+				FA0330881E7D794C00BB8DBA /* Test+CoreDataProperties.h */,
+				FA0330891E7D794C00BB8DBA /* Test+CoreDataProperties.m */,
+			);
+			path = DatabaseEntities;
+			sourceTree = "<group>";
+		};
+		FA03308C1E7D7AFD00BB8DBA /* iCloudSyncManager */ = {
+			isa = PBXGroup;
+			children = (
+				FA03308D1E7D7B1900BB8DBA /* iCloudSyncManager.h */,
+				FA03308E1E7D7B1900BB8DBA /* iCloudSyncManager.m */,
+			);
+			path = iCloudSyncManager;
+			sourceTree = "<group>";
+		};
+		FA0330901E7D7F7C00BB8DBA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAE101741E7DC88F003525DF /* MenuViewController */,
+				FAE1017B1E7DC9B6003525DF /* MainViewController */,
+				FA0330911E7D7F8500BB8DBA /* DebugViewController.h */,
+				FA0330921E7D7F8500BB8DBA /* DebugViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FAAC9F8D1E7DE7860077B160 /* MenuTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAAC9F8E1E7DE79B0077B160 /* MenuTableViewCell.h */,
+				FAAC9F8F1E7DE79B0077B160 /* MenuTableViewCell.m */,
+				FAAC9F901E7DE79B0077B160 /* MenuTableViewCell.xib */,
+			);
+			path = MenuTableViewCell;
+			sourceTree = "<group>";
+		};
+		FAE101741E7DC88F003525DF /* MenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FAAC9F8D1E7DE7860077B160 /* MenuTableViewCell */,
+				FAE101751E7DC8AF003525DF /* MenuViewController.h */,
+				FAE101761E7DC8AF003525DF /* MenuViewController.m */,
+			);
+			path = MenuViewController;
+			sourceTree = "<group>";
+		};
+		FAE1017B1E7DC9B6003525DF /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FAE1017C1E7DC9B6003525DF /* MainViewController.h */,
+				FAE1017D1E7DC9B6003525DF /* MainViewController.m */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		FAE1017F1E7DD182003525DF /* ThirdPartyLibs */ = {
+			isa = PBXGroup;
+			children = (
+				FAE101801E7DD182003525DF /* SWRevealViewController */,
+			);
+			path = ThirdPartyLibs;
+			sourceTree = "<group>";
+		};
+		FAE101801E7DD182003525DF /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FAE101811E7DD182003525DF /* SWRevealViewController.h */,
+				FAE101821E7DD182003525DF /* SWRevealViewController.m */,
+			);
+			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +306,13 @@
 				TargetAttributes = {
 					8402D1631E61F6C600968EA2 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 87MSJM99B6;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -224,6 +341,7 @@
 			files = (
 				8402D17A1E61F6C600968EA2 /* LaunchScreen.storyboard in Resources */,
 				8402D1771E61F6C600968EA2 /* Assets.xcassets in Resources */,
+				FAAC9F921E7DE79B0077B160 /* MenuTableViewCell.xib in Resources */,
 				8402D1721E61F6C600968EA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,11 +401,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0330841E7D786800BB8DBA /* ApplicationConstants.m in Sources */,
+				FA0330801E7D75C400BB8DBA /* main.m in Sources */,
 				84D92FCD1E61FB9800F823DD /* iMoney.xcdatamodeld in Sources */,
 				84D92FCA1E61F9D000F823DD /* CoreDataRequestManager.m in Sources */,
-				8402D1691E61F6C600968EA2 /* main.m in Sources */,
+				FAE101771E7DC8AF003525DF /* MenuViewController.m in Sources */,
+				FA0330931E7D7F8500BB8DBA /* DebugViewController.m in Sources */,
 				84D92FC91E61F9D000F823DD /* CoreDataAccessLayer.m in Sources */,
+				FAAC9F911E7DE79B0077B160 /* MenuTableViewCell.m in Sources */,
+				FAE101831E7DD182003525DF /* SWRevealViewController.m in Sources */,
+				FA0330961E7D7F9F00BB8DBA /* iMoneyUtils.m in Sources */,
+				FA03308A1E7D794C00BB8DBA /* Test+CoreDataClass.m in Sources */,
 				84D92FC01E61F88D00F823DD /* AppDelegate.m in Sources */,
+				FA03308B1E7D794C00BB8DBA /* Test+CoreDataProperties.m in Sources */,
+				FAE1017E1E7DC9B6003525DF /* MainViewController.m in Sources */,
+				FA03308F1E7D7B1900BB8DBA /* iCloudSyncManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,12 +536,16 @@
 			baseConfigurationReference = 154A945D88A862DD47CAD59F /* Pods-iMoney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iMoney/iMoney.entitlements;
+				DEVELOPMENT_TEAM = 87MSJM99B6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = iMoney/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bananaland.iMoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -422,12 +554,16 @@
 			baseConfigurationReference = B7AAAB9D4BE802D71A22FB00 /* Pods-iMoney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iMoney/iMoney.entitlements;
+				DEVELOPMENT_TEAM = 87MSJM99B6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = iMoney/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bananaland.iMoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

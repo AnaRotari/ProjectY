@@ -10,4 +10,6 @@
 
 @interface CoreDataRequestManager : NSObject
 
++ (void)test1;
+
 @end
