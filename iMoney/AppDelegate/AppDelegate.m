@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "iCloudSyncManager.h"
+#import "DatabaseSyncManager.h"
 
 @interface AppDelegate ()
 
@@ -19,9 +19,10 @@
     
     NSLog(@"🗂: %@",[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory
                                                             inDomains:NSUserDomainMask] lastObject]);
-
-    [[iCloudSyncManager sharedInstance] startSyncronize];
-    [self setupAppearance];
+#warning FIREBASE
+//    [FIRApp configure];
+    [[DatabaseSyncManager sharedInstance] startSyncronize];
+    [iMoneyUtils setupAppearance];
     
     return YES;
 }
@@ -50,20 +51,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    
-    return UIStatusBarStyleLightContent;
-}
-
-- (void)setupAppearance {
-    
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    [[UINavigationBar appearance] setBackgroundColor:[UIColor clearColor]];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 }
 
 @end

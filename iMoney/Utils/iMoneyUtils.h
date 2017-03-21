@@ -10,4 +10,6 @@
 
 @interface iMoneyUtils : NSObject
 
++ (void)setupAppearance;
+
 @end

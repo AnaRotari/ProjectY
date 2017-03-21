@@ -1,5 +1,5 @@
 //
-//  iCloudSyncManager.h
+//  DatabaseSyncManager.h
 //  iMoney
 //
 //  Created by Alex on 3/18/17.
@@ -8,11 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface iCloudSyncManager : NSObject
+@interface DatabaseSyncManager : NSObject
 
-@property (strong, nonatomic) NSUbiquitousKeyValueStore *iCloudStore;
-
-+ (iCloudSyncManager *)sharedInstance;
++ (DatabaseSyncManager *)sharedInstance;
 - (void)startSyncronize;
 
 @end

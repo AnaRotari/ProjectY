@@ -31,7 +31,7 @@
             </objects>
             <point key="canvasLocation" x="154" y="-454"/>
         </scene>
-        <!--Wallets-->
+        <!--User Pager Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
@@ -45,9 +45,40 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STY-5H-SSw">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JIm-fp-1GD" customClass="HWViewPager">
+                                        <rect key="frame" x="0.0" y="60" width="320" height="232"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tfA-97-NUc">
+                                            <size key="itemSize" width="200" height="200"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FullCollectionCell" id="Yf6-0B-RpZ">
+                                                <rect key="frame" x="20" y="-16" width="200" height="200"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </view>
+                                                <color key="backgroundColor" red="1" green="0.62351359760000002" blue="0.40009779169999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="5Ut-49-cbv"/>
+                                            <outlet property="userPagerDelegate" destination="BYZ-38-t0r" id="LDA-cJ-M70"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.16470588235294117" green="0.011764705882352941" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Kiw-6u-xtT"/>
+                                    <constraint firstAttribute="bottom" secondItem="JIm-fp-1GD" secondAttribute="bottom" constant="8" id="N43-WH-XvV"/>
+                                    <constraint firstItem="JIm-fp-1GD" firstAttribute="top" secondItem="STY-5H-SSw" secondAttribute="top" constant="60" id="TsZ-AL-wUy"/>
+                                    <constraint firstAttribute="trailing" secondItem="JIm-fp-1GD" secondAttribute="trailing" id="pDi-5J-Q0i"/>
+                                    <constraint firstItem="JIm-fp-1GD" firstAttribute="leading" secondItem="STY-5H-SSw" secondAttribute="leading" id="v8W-90-zvu"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MAIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27g-to-JuO">
@@ -74,6 +105,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="revealButtonItem" destination="HuD-mf-jw6" id="XKW-X1-g4s"/>
+                        <outlet property="walletsCollectionView" destination="JIm-fp-1GD" id="t20-Qj-UC1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -96,6 +128,9 @@
                                 <rect key="frame" x="0.0" y="79" width="320" height="489"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="xTg-Aa-ULK" id="Q8s-Dj-GKY"/>

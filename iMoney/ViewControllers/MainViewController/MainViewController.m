@@ -7,10 +7,12 @@
 //
 
 #import "MainViewController.h"
+#import "HWViewPager.h"
 
-@interface MainViewController ()
+@interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, HWViewPagerDelegate>
 
 @property (nonatomic) IBOutlet UIBarButtonItem* revealButtonItem;
+@property (weak, nonatomic) IBOutlet HWViewPager *walletsCollectionView;
 
 @end
 
@@ -20,17 +22,42 @@
     
     [super viewDidLoad];
     [self customSetup];
-    
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
-                                                  forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.shadowImage = [UIImage new];
-    self.navigationController.navigationBar.translucent = YES;
 }
+
+#pragma mark - UICollectionViewDataSource
+
+/*
+ SectionInset = 0,0,0,0
+ minimumLineSpacint = 0
+ For Full Layout Pager
+ */
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FullCollectionCell" forIndexPath:indexPath];
+    return cell;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 10;
+}
+
+
+#pragma mark - UICollectionViewDelegate
+
+
+#pragma mark - HWViewPagerDelegate
+
+- (void)pagerDidSelectedPage:(NSInteger)selectedPage {
+    
+    NSLog(@"FistViewController, SelectedPage : %d",(int)selectedPage);
+}
+
+#pragma mark - Other stuff
 
 - (void)customSetup
 {
     SWRevealViewController *revealViewController = self.revealViewController;
-    if ( revealViewController )
+    if (revealViewController)
     {
         [self.revealButtonItem setTarget: self.revealViewController];
         [self.revealButtonItem setAction: @selector(revealToggle:)];

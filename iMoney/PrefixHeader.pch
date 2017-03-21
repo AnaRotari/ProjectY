@@ -12,5 +12,6 @@
 #import "CoreDataAccessLayer.h"
 #import "CoreDataRequestManager.h"
 #import "SWRevealViewController.h"
+#import "iMoneyUtils.h"
 
 #endif /* PrefixHeader_pch */

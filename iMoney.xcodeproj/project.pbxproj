@@ -14,16 +14,20 @@
 		84D92FC91E61F9D000F823DD /* CoreDataAccessLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D92FC41E61F9D000F823DD /* CoreDataAccessLayer.m */; };
 		84D92FCA1E61F9D000F823DD /* CoreDataRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D92FC71E61F9D000F823DD /* CoreDataRequestManager.m */; };
 		84D92FCD1E61FB9800F823DD /* iMoney.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84D92FCB1E61FB9800F823DD /* iMoney.xcdatamodeld */; };
-		ABDFF3A35DBEC63E527DB9BB /* libPods-iMoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C586DD88F1E8E3AB5C9D4B /* libPods-iMoney.a */; };
+		CC632467DCA99E63795C5D67 /* libPods-iMoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C586DD88F1E8E3AB5C9D4B /* libPods-iMoney.a */; };
 		FA0330801E7D75C400BB8DBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03307E1E7D75C400BB8DBA /* main.m */; };
 		FA0330841E7D786800BB8DBA /* ApplicationConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0330831E7D786800BB8DBA /* ApplicationConstants.m */; };
 		FA03308A1E7D794C00BB8DBA /* Test+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0330871E7D794C00BB8DBA /* Test+CoreDataClass.m */; };
 		FA03308B1E7D794C00BB8DBA /* Test+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0330891E7D794C00BB8DBA /* Test+CoreDataProperties.m */; };
-		FA03308F1E7D7B1900BB8DBA /* iCloudSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03308E1E7D7B1900BB8DBA /* iCloudSyncManager.m */; };
 		FA0330931E7D7F8500BB8DBA /* DebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0330921E7D7F8500BB8DBA /* DebugViewController.m */; };
 		FA0330961E7D7F9F00BB8DBA /* iMoneyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0330951E7D7F9F00BB8DBA /* iMoneyUtils.m */; };
+		FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */; };
 		FAAC9F911E7DE79B0077B160 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC9F8F1E7DE79B0077B160 /* MenuTableViewCell.m */; };
 		FAAC9F921E7DE79B0077B160 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAC9F901E7DE79B0077B160 /* MenuTableViewCell.xib */; };
+		FAC10AE11E81C93600118899 /* MenuContent.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC10AE01E81C93600118899 /* MenuContent.plist */; };
+		FAC10AE41E81D7D900118899 /* MainViewControllerCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC10AE31E81D7D900118899 /* MainViewControllerCollectionView.m */; };
+		FAC10AE71E81D7EC00118899 /* MainViewControllerTablleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC10AE61E81D7EC00118899 /* MainViewControllerTablleView.m */; };
+		FACFC53A1E7E920D000D1B9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FACFC5391E7E920D000D1B9D /* GoogleService-Info.plist */; };
 		FAE101771E7DC8AF003525DF /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE101761E7DC8AF003525DF /* MenuViewController.m */; };
 		FAE1017E1E7DC9B6003525DF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE1017D1E7DC9B6003525DF /* MainViewController.m */; };
 		FAE101831E7DD182003525DF /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE101821E7DD182003525DF /* SWRevealViewController.m */; };
@@ -54,15 +58,21 @@
 		FA0330871E7D794C00BB8DBA /* Test+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test+CoreDataClass.m"; sourceTree = "<group>"; };
 		FA0330881E7D794C00BB8DBA /* Test+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Test+CoreDataProperties.h"; sourceTree = "<group>"; };
 		FA0330891E7D794C00BB8DBA /* Test+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Test+CoreDataProperties.m"; sourceTree = "<group>"; };
-		FA03308D1E7D7B1900BB8DBA /* iCloudSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCloudSyncManager.h; sourceTree = "<group>"; };
-		FA03308E1E7D7B1900BB8DBA /* iCloudSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCloudSyncManager.m; sourceTree = "<group>"; };
 		FA0330911E7D7F8500BB8DBA /* DebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugViewController.h; sourceTree = "<group>"; };
 		FA0330921E7D7F8500BB8DBA /* DebugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugViewController.m; sourceTree = "<group>"; };
 		FA0330941E7D7F9F00BB8DBA /* iMoneyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iMoneyUtils.h; sourceTree = "<group>"; };
 		FA0330951E7D7F9F00BB8DBA /* iMoneyUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iMoneyUtils.m; sourceTree = "<group>"; };
+		FA5540171E7E995900A4C773 /* DatabaseSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseSyncManager.h; sourceTree = "<group>"; };
+		FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseSyncManager.m; sourceTree = "<group>"; };
 		FAAC9F8E1E7DE79B0077B160 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
 		FAAC9F8F1E7DE79B0077B160 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
 		FAAC9F901E7DE79B0077B160 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		FAC10AE01E81C93600118899 /* MenuContent.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MenuContent.plist; sourceTree = "<group>"; };
+		FAC10AE21E81D7D900118899 /* MainViewControllerCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewControllerCollectionView.h; sourceTree = "<group>"; };
+		FAC10AE31E81D7D900118899 /* MainViewControllerCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerCollectionView.m; sourceTree = "<group>"; };
+		FAC10AE51E81D7EC00118899 /* MainViewControllerTablleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewControllerTablleView.h; sourceTree = "<group>"; };
+		FAC10AE61E81D7EC00118899 /* MainViewControllerTablleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerTablleView.m; sourceTree = "<group>"; };
+		FACFC5391E7E920D000D1B9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FAE101751E7DC8AF003525DF /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		FAE101761E7DC8AF003525DF /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		FAE1017C1E7DC9B6003525DF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -76,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABDFF3A35DBEC63E527DB9BB /* libPods-iMoney.a in Frameworks */,
+				CC632467DCA99E63795C5D67 /* libPods-iMoney.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +134,7 @@
 				8402D1761E61F6C600968EA2 /* Assets.xcassets */,
 				FA0330811E7D75EB00BB8DBA /* PrefixHeader.pch */,
 				8402D17B1E61F6C600968EA2 /* Info.plist */,
+				FACFC5391E7E920D000D1B9D /* GoogleService-Info.plist */,
 			);
 			path = iMoney;
 			sourceTree = "<group>";
@@ -141,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				84D92FCB1E61FB9800F823DD /* iMoney.xcdatamodeld */,
-				FA03308C1E7D7AFD00BB8DBA /* iCloudSyncManager */,
+				FA5540161E7E995900A4C773 /* DatabaseSyncManager */,
 				84D92FC21E61F9D000F823DD /* CoreDataAccessLayer */,
 				84D92FC51E61F9D000F823DD /* DAO */,
 				FA0330851E7D794C00BB8DBA /* DatabaseEntities */,
@@ -206,15 +217,6 @@
 			path = DatabaseEntities;
 			sourceTree = "<group>";
 		};
-		FA03308C1E7D7AFD00BB8DBA /* iCloudSyncManager */ = {
-			isa = PBXGroup;
-			children = (
-				FA03308D1E7D7B1900BB8DBA /* iCloudSyncManager.h */,
-				FA03308E1E7D7B1900BB8DBA /* iCloudSyncManager.m */,
-			);
-			path = iCloudSyncManager;
-			sourceTree = "<group>";
-		};
 		FA0330901E7D7F7C00BB8DBA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +226,15 @@
 				FA0330921E7D7F8500BB8DBA /* DebugViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FA5540161E7E995900A4C773 /* DatabaseSyncManager */ = {
+			isa = PBXGroup;
+			children = (
+				FA5540171E7E995900A4C773 /* DatabaseSyncManager.h */,
+				FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */,
+			);
+			path = DatabaseSyncManager;
 			sourceTree = "<group>";
 		};
 		FAAC9F8D1E7DE7860077B160 /* MenuTableViewCell */ = {
@@ -240,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				FAAC9F8D1E7DE7860077B160 /* MenuTableViewCell */,
+				FAC10AE01E81C93600118899 /* MenuContent.plist */,
 				FAE101751E7DC8AF003525DF /* MenuViewController.h */,
 				FAE101761E7DC8AF003525DF /* MenuViewController.m */,
 			);
@@ -251,6 +263,10 @@
 			children = (
 				FAE1017C1E7DC9B6003525DF /* MainViewController.h */,
 				FAE1017D1E7DC9B6003525DF /* MainViewController.m */,
+				FAC10AE21E81D7D900118899 /* MainViewControllerCollectionView.h */,
+				FAC10AE31E81D7D900118899 /* MainViewControllerCollectionView.m */,
+				FAC10AE51E81D7EC00118899 /* MainViewControllerTablleView.h */,
+				FAC10AE61E81D7EC00118899 /* MainViewControllerTablleView.m */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -340,7 +356,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8402D17A1E61F6C600968EA2 /* LaunchScreen.storyboard in Resources */,
+				FAC10AE11E81C93600118899 /* MenuContent.plist in Resources */,
 				8402D1771E61F6C600968EA2 /* Assets.xcassets in Resources */,
+				FACFC53A1E7E920D000D1B9D /* GoogleService-Info.plist in Resources */,
 				FAAC9F921E7DE79B0077B160 /* MenuTableViewCell.xib in Resources */,
 				8402D1721E61F6C600968EA2 /* Main.storyboard in Resources */,
 			);
@@ -403,19 +421,21 @@
 			files = (
 				FA0330841E7D786800BB8DBA /* ApplicationConstants.m in Sources */,
 				FA0330801E7D75C400BB8DBA /* main.m in Sources */,
+				FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */,
 				84D92FCD1E61FB9800F823DD /* iMoney.xcdatamodeld in Sources */,
 				84D92FCA1E61F9D000F823DD /* CoreDataRequestManager.m in Sources */,
 				FAE101771E7DC8AF003525DF /* MenuViewController.m in Sources */,
 				FA0330931E7D7F8500BB8DBA /* DebugViewController.m in Sources */,
 				84D92FC91E61F9D000F823DD /* CoreDataAccessLayer.m in Sources */,
+				FAC10AE41E81D7D900118899 /* MainViewControllerCollectionView.m in Sources */,
 				FAAC9F911E7DE79B0077B160 /* MenuTableViewCell.m in Sources */,
 				FAE101831E7DD182003525DF /* SWRevealViewController.m in Sources */,
+				FAC10AE71E81D7EC00118899 /* MainViewControllerTablleView.m in Sources */,
 				FA0330961E7D7F9F00BB8DBA /* iMoneyUtils.m in Sources */,
 				FA03308A1E7D794C00BB8DBA /* Test+CoreDataClass.m in Sources */,
 				84D92FC01E61F88D00F823DD /* AppDelegate.m in Sources */,
 				FA03308B1E7D794C00BB8DBA /* Test+CoreDataProperties.m in Sources */,
 				FAE1017E1E7DC9B6003525DF /* MainViewController.m in Sources */,
-				FA03308F1E7D7B1900BB8DBA /* iCloudSyncManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

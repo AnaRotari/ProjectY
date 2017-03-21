@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>Dashboard</string>
+		<string>Records</string>
+		<string>Charts</string>
+		<string>Reports</string>
+		<string>Budgets</string>
+		<string>Locations</string>
+	</array>
+	<array>
+		<string>Planned payments</string>
+		<string>Exports</string>
+		<string>Debts</string>
+		<string>Shopping lists</string>
+		<string>Warranties</string>
+	</array>
+	<array>
+		<string>Help</string>
+		<string>Settings</string>
+	</array>
+</array>
+</plist>

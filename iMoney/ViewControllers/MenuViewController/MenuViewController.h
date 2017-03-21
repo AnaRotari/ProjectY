@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MenuTableViewCell.h"
 
-@interface MenuViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+@interface MenuViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *menuTableView;
 

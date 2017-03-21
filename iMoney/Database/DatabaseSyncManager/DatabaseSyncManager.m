@@ -1,25 +1,24 @@
 //
-//  iCloudSyncManager.m
+//  DatabaseSyncManager.m
 //  iMoney
 //
 //  Created by Alex on 3/18/17.
 //  Copyright © 2017 Ana Rotari. All rights reserved.
 //
 
-#import "iCloudSyncManager.h"
+#import "DatabaseSyncManager.h"
 
-@implementation iCloudSyncManager
+@implementation DatabaseSyncManager
 
-+ (iCloudSyncManager *)sharedInstance {
++ (DatabaseSyncManager *)sharedInstance {
     
-    __strong static iCloudSyncManager *sharedInstance = nil;
+    __strong static DatabaseSyncManager *sharedInstance = nil;
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
         
-        sharedInstance = [[iCloudSyncManager alloc] init];
-        sharedInstance.iCloudStore = [NSUbiquitousKeyValueStore defaultStore];
-        NSLog(@"iCloud manager initialized");
+        sharedInstance = [[DatabaseSyncManager alloc] init];
+        NSLog(@"DatabaseSyncManager initialized");
     });
     
     return sharedInstance;
@@ -35,12 +34,8 @@
 
 - (void)coreDataChangeObserver:(NSNotification *)notification {
     
-    if (self.iCloudStore != nil)
-    {
-#warning TODO: Add serialization and upload to iCloud
-        NSLog(@"Add serialization and upload to iCloud");
-//        [self.iCloudStore synchronize];
-    }
+#warning TODO: Upload to databse to Firebase
+    NSLog(@"Upload to databse to Firebase");
 }
 
 - (void)dealloc {
