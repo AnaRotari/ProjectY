@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HWViewPager.h"
 
-@interface MainViewControllerCollectionView : NSObject <UICollectionViewDelegate, UICollectionViewDataSource>
+
+@interface MainViewControllerCollectionView : NSObject <UICollectionViewDataSource, HWViewPagerDelegate>
 
 @end

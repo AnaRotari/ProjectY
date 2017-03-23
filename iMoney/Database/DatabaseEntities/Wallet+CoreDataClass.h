@@ -1,8 +1,8 @@
 //
-//  Test+CoreDataClass.h
+//  Wallet+CoreDataClass.h
 //  
 //
-//  Created by Alex on 3/18/17.
+//  Created by Alex on 3/23/17.
 //
 //
 
@@ -11,10 +11,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Test : NSManagedObject
+@interface Wallet : NSManagedObject
 
 @end
 
 NS_ASSUME_NONNULL_END
 
-#import "Test+CoreDataProperties.h"
+#import "Wallet+CoreDataProperties.h"

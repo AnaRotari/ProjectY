@@ -8,11 +8,13 @@
 
 #import "MainViewController.h"
 #import "HWViewPager.h"
+#import "MainViewControllerCollectionView.h"
 
-@interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, HWViewPagerDelegate>
+@interface MainViewController ()
 
 @property (nonatomic) IBOutlet UIBarButtonItem* revealButtonItem;
 @property (weak, nonatomic) IBOutlet HWViewPager *walletsCollectionView;
+@property (strong, nonatomic) MainViewControllerCollectionView *collectionDelegates;
 
 @end
 
@@ -22,34 +24,24 @@
     
     [super viewDidLoad];
     [self customSetup];
+    [self mainCollectionViewSetup];
+    [self mainTableViewSetup];
 }
 
-#pragma mark - UICollectionViewDataSource
+#pragma mark - Initializations
 
-/*
- SectionInset = 0,0,0,0
- minimumLineSpacint = 0
- For Full Layout Pager
- */
-
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FullCollectionCell" forIndexPath:indexPath];
-    return cell;
-}
-
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 10;
-}
-
-
-#pragma mark - UICollectionViewDelegate
-
-
-#pragma mark - HWViewPagerDelegate
-
-- (void)pagerDidSelectedPage:(NSInteger)selectedPage {
+- (void)mainCollectionViewSetup {
     
-    NSLog(@"FistViewController, SelectedPage : %d",(int)selectedPage);
+    self.collectionDelegates = [[MainViewControllerCollectionView alloc] init];
+    [self.walletsCollectionView registerNib:[UINib nibWithNibName:@"MainWalletCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"MainWalletCollectionViewCell"];
+    //[self.walletsCollectionView setContentInset:UIEdgeInsetsMake(-70, 0, 0, 0)];
+    [self.walletsCollectionView setDataSource: self.collectionDelegates];
+    [self.walletsCollectionView setPagerDelegate:self.collectionDelegates];
+}
+
+- (void)mainTableViewSetup {
+    
+    
 }
 
 #pragma mark - Other stuff

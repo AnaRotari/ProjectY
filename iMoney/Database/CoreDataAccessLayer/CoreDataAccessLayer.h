@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "Test+CoreDataClass.h"
+//Entities
+#import "Wallet+CoreDataClass.h"
 
 @interface CoreDataAccessLayer : NSObject
 

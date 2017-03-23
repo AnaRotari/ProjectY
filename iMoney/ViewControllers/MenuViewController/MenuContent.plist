@@ -3,19 +3,12 @@
 <plist version="1.0">
 <array>
 	<array>
-		<string>Dashboard</string>
-		<string>Records</string>
-		<string>Charts</string>
-		<string>Reports</string>
-		<string>Budgets</string>
-		<string>Locations</string>
-	</array>
-	<array>
 		<string>Planned payments</string>
 		<string>Exports</string>
 		<string>Debts</string>
 		<string>Shopping lists</string>
 		<string>Warranties</string>
+		<string>Locations</string>
 	</array>
 	<array>
 		<string>Help</string>
