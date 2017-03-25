@@ -22,10 +22,15 @@
 		FA3C73371E845B90000E261F /* MainWalletCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3C73351E845B90000E261F /* MainWalletCollectionViewCell.m */; };
 		FA3C73381E845B90000E261F /* MainWalletCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3C73361E845B90000E261F /* MainWalletCollectionViewCell.xib */; };
 		FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */; };
+		FA9693231E872A6A00F86873 /* ColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9693221E872A6A00F86873 /* ColorPickerViewController.m */; };
 		FAA8384E1E868CE3005BFADF /* MenuImages.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAA8384D1E868CE3005BFADF /* MenuImages.plist */; };
 		FAA8385D1E86CA54005BFADF /* TransactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA8385B1E86CA54005BFADF /* TransactionTableViewCell.m */; };
 		FAA8385E1E86CA54005BFADF /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA8385C1E86CA54005BFADF /* TransactionTableViewCell.xib */; };
 		FAA838631E86E1FA005BFADF /* AddEditWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA838621E86E1FA005BFADF /* AddEditWalletViewController.m */; };
+		FAA838721E870BC9005BFADF /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA8386A1E870BC9005BFADF /* TPKeyboardAvoidingCollectionView.m */; };
+		FAA838731E870BC9005BFADF /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA8386D1E870BC9005BFADF /* TPKeyboardAvoidingScrollView.m */; };
+		FAA838741E870BC9005BFADF /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA8386F1E870BC9005BFADF /* TPKeyboardAvoidingTableView.m */; };
+		FAA838751E870BC9005BFADF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA838711E870BC9005BFADF /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		FAAC9F911E7DE79B0077B160 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC9F8F1E7DE79B0077B160 /* MenuTableViewCell.m */; };
 		FAAC9F921E7DE79B0077B160 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAC9F901E7DE79B0077B160 /* MenuTableViewCell.xib */; };
 		FAC10AE11E81C93600118899 /* MenuContent.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC10AE01E81C93600118899 /* MenuContent.plist */; };
@@ -70,6 +75,8 @@
 		FA3C73361E845B90000E261F /* MainWalletCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWalletCollectionViewCell.xib; sourceTree = "<group>"; };
 		FA5540171E7E995900A4C773 /* DatabaseSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseSyncManager.h; sourceTree = "<group>"; };
 		FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseSyncManager.m; sourceTree = "<group>"; };
+		FA9693211E872A6A00F86873 /* ColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerViewController.h; sourceTree = "<group>"; };
+		FA9693221E872A6A00F86873 /* ColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerViewController.m; sourceTree = "<group>"; };
 		FAA8384D1E868CE3005BFADF /* MenuImages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MenuImages.plist; sourceTree = "<group>"; };
 		FAA8385A1E86CA54005BFADF /* TransactionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionTableViewCell.h; sourceTree = "<group>"; };
 		FAA8385B1E86CA54005BFADF /* TransactionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTableViewCell.m; sourceTree = "<group>"; };
@@ -77,6 +84,14 @@
 		FAA838611E86E1FA005BFADF /* AddEditWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEditWalletViewController.h; sourceTree = "<group>"; };
 		FAA838621E86E1FA005BFADF /* AddEditWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEditWalletViewController.m; sourceTree = "<group>"; };
 		FAA838671E86E34A005BFADF /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
+		FAA838691E870BC9005BFADF /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		FAA8386A1E870BC9005BFADF /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		FAA8386C1E870BC9005BFADF /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		FAA8386D1E870BC9005BFADF /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		FAA8386E1E870BC9005BFADF /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		FAA8386F1E870BC9005BFADF /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		FAA838701E870BC9005BFADF /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		FAA838711E870BC9005BFADF /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		FAAC9F8E1E7DE79B0077B160 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
 		FAAC9F8F1E7DE79B0077B160 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
 		FAAC9F901E7DE79B0077B160 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
@@ -269,6 +284,15 @@
 			path = DatabaseSyncManager;
 			sourceTree = "<group>";
 		};
+		FA9693201E872A4D00F86873 /* ColorPickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FA9693211E872A6A00F86873 /* ColorPickerViewController.h */,
+				FA9693221E872A6A00F86873 /* ColorPickerViewController.m */,
+			);
+			path = ColorPickerViewController;
+			sourceTree = "<group>";
+		};
 		FAA838591E86CA41005BFADF /* TransactionTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,8 +308,24 @@
 			children = (
 				FAA838611E86E1FA005BFADF /* AddEditWalletViewController.h */,
 				FAA838621E86E1FA005BFADF /* AddEditWalletViewController.m */,
+				FA9693201E872A4D00F86873 /* ColorPickerViewController */,
 			);
 			path = AddEditWalletViewController;
+			sourceTree = "<group>";
+		};
+		FAA838681E870BC9005BFADF /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				FAA838691E870BC9005BFADF /* TPKeyboardAvoidingCollectionView.h */,
+				FAA8386A1E870BC9005BFADF /* TPKeyboardAvoidingCollectionView.m */,
+				FAA8386C1E870BC9005BFADF /* TPKeyboardAvoidingScrollView.h */,
+				FAA8386D1E870BC9005BFADF /* TPKeyboardAvoidingScrollView.m */,
+				FAA8386E1E870BC9005BFADF /* TPKeyboardAvoidingTableView.h */,
+				FAA8386F1E870BC9005BFADF /* TPKeyboardAvoidingTableView.m */,
+				FAA838701E870BC9005BFADF /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				FAA838711E870BC9005BFADF /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
 		FAAC9F8D1E7DE7860077B160 /* MenuTableViewCell */ = {
@@ -328,6 +368,7 @@
 		FAE1017F1E7DD182003525DF /* ThirdPartyLibs */ = {
 			isa = PBXGroup;
 			children = (
+				FAA838681E870BC9005BFADF /* TPKeyboardAvoiding */,
 				FAE101801E7DD182003525DF /* SWRevealViewController */,
 			);
 			path = ThirdPartyLibs;
@@ -489,10 +530,13 @@
 				FA0330801E7D75C400BB8DBA /* main.m in Sources */,
 				FAE43DC31E8474DB00C90817 /* Wallet+CoreDataProperties.m in Sources */,
 				FAE43DC71E847A7600C90817 /* CustomTabBarController.m in Sources */,
+				FAA838751E870BC9005BFADF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				FAA838721E870BC9005BFADF /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */,
 				84D92FCD1E61FB9800F823DD /* iMoney.xcdatamodeld in Sources */,
 				FA3C73371E845B90000E261F /* MainWalletCollectionViewCell.m in Sources */,
 				84D92FCA1E61F9D000F823DD /* CoreDataRequestManager.m in Sources */,
+				FAA838741E870BC9005BFADF /* TPKeyboardAvoidingTableView.m in Sources */,
 				FAA838631E86E1FA005BFADF /* AddEditWalletViewController.m in Sources */,
 				FAE101771E7DC8AF003525DF /* MenuViewController.m in Sources */,
 				FA0330931E7D7F8500BB8DBA /* DebugViewController.m in Sources */,
@@ -502,9 +546,11 @@
 				FAAC9F911E7DE79B0077B160 /* MenuTableViewCell.m in Sources */,
 				FAE101831E7DD182003525DF /* SWRevealViewController.m in Sources */,
 				FAE43DC21E8474DB00C90817 /* Wallet+CoreDataClass.m in Sources */,
+				FA9693231E872A6A00F86873 /* ColorPickerViewController.m in Sources */,
 				FAC10AE71E81D7EC00118899 /* MainViewControllerTablleView.m in Sources */,
 				FA0330961E7D7F9F00BB8DBA /* iMoneyUtils.m in Sources */,
 				84D92FC01E61F88D00F823DD /* AppDelegate.m in Sources */,
+				FAA838731E870BC9005BFADF /* TPKeyboardAvoidingScrollView.m in Sources */,
 				FAE1017E1E7DC9B6003525DF /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
