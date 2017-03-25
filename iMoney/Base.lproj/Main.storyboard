@@ -43,7 +43,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9bh-us-7kG" customClass="HWViewPager">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6X-60-4MJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" red="0.16470588235294117" green="0.011764705882352941" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9bh-us-7kG" customClass="HWViewPager">
                                 <rect key="frame" x="0.0" y="64" width="375" height="232"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -59,37 +63,97 @@
                                 <cells/>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vcs-iD-1he">
-                                <rect key="frame" x="0.0" y="304" width="375" height="363"/>
+                                <rect key="frame" x="0.0" y="346" width="375" height="272"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7A1-ik-lPc">
+                                <rect key="frame" x="0.0" y="296" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpq-8Z-NwI">
+                                        <rect key="frame" x="342" y="12" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="1z6-OT-4Qr"/>
+                                            <constraint firstAttribute="height" constant="25" id="Eov-Qo-c6p"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="ic_calendar"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today, 25 March" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBn-N5-fk4">
+                                        <rect key="frame" x="8" y="8" width="326" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0Ef-va-uZq"/>
+                                    <constraint firstItem="tpq-8Z-NwI" firstAttribute="centerY" secondItem="7A1-ik-lPc" secondAttribute="centerY" id="NSQ-P8-GVk"/>
+                                    <constraint firstAttribute="trailing" secondItem="tpq-8Z-NwI" secondAttribute="trailing" constant="8" id="iYW-6f-mxR"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.16470588235294117" green="0.011764705882352941" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7A1-ik-lPc" firstAttribute="top" secondItem="9bh-us-7kG" secondAttribute="bottom" id="37C-C8-g6P"/>
+                            <constraint firstItem="t6X-60-4MJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3X0-qh-IxQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vcs-iD-1he" secondAttribute="bottom" id="7YC-Hi-aKI"/>
                             <constraint firstItem="vcs-iD-1he" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8ES-wn-EeB"/>
-                            <constraint firstAttribute="bottom" secondItem="vcs-iD-1he" secondAttribute="bottom" id="HEa-4i-wXv"/>
-                            <constraint firstItem="vcs-iD-1he" firstAttribute="top" secondItem="9bh-us-7kG" secondAttribute="bottom" constant="8" id="NRu-JE-XiY"/>
+                            <constraint firstItem="t6X-60-4MJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="AKI-YY-Ezd"/>
+                            <constraint firstItem="7A1-ik-lPc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PBy-yc-JXs"/>
                             <constraint firstItem="9bh-us-7kG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="R0r-BX-zIg"/>
                             <constraint firstItem="9bh-us-7kG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SJE-uL-fFv"/>
                             <constraint firstAttribute="trailing" secondItem="vcs-iD-1he" secondAttribute="trailing" id="fpx-Fq-ptM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t6X-60-4MJ" secondAttribute="bottom" id="nqx-hk-bMl"/>
+                            <constraint firstItem="vcs-iD-1he" firstAttribute="top" secondItem="7A1-ik-lPc" secondAttribute="bottom" id="pUR-si-wRj"/>
                             <constraint firstAttribute="trailing" secondItem="9bh-us-7kG" secondAttribute="trailing" id="vM6-CP-EmO"/>
+                            <constraint firstAttribute="trailing" secondItem="7A1-ik-lPc" secondAttribute="trailing" id="wa8-P9-v4P"/>
+                            <constraint firstAttribute="trailing" secondItem="t6X-60-4MJ" secondAttribute="trailing" id="zSx-Hg-j0Z"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Wallets" id="dLh-Zf-3qz">
                         <barButtonItem key="leftBarButtonItem" image="beaconMenuV2" id="HuD-mf-jw6">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="X7E-wm-su3">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="addWalletButtonAction:" destination="BYZ-38-t0r" id="uIq-3s-Hiv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="revealButtonItem" destination="HuD-mf-jw6" id="XKW-X1-g4s"/>
+                        <outlet property="transactionsTableView" destination="vcs-iD-1he" id="oeI-7p-Kpg"/>
                         <outlet property="walletsCollectionView" destination="9bh-us-7kG" id="K9T-83-QeW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-322.39999999999998" y="232.53373313343329"/>
+        </scene>
+        <!--Add Edit Wallet View Controller-->
+        <scene sceneID="Gzx-kU-kw3">
+            <objects>
+                <viewController storyboardIdentifier="AddEditWalletViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="61A-0n-5X0" customClass="AddEditWalletViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E0U-rs-VSL"/>
+                        <viewControllerLayoutGuide type="bottom" id="yKS-MG-Hcj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ybF-o0-Z45">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dGe-dw-QSU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="399" y="233"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="WK2-VL-pxA">
@@ -106,6 +170,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dmk-rC-Mzc">
                                 <rect key="frame" x="0.0" y="79" width="375" height="588"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -127,6 +192,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="r28-PC-Kcb" firstAttribute="centerY" secondItem="FPY-a9-kbD" secondAttribute="centerY" id="2d1-0g-hCx"/>
                             <constraint firstAttribute="trailing" secondItem="dmk-rC-Mzc" secondAttribute="trailing" id="GT1-ln-CqR"/>
@@ -151,7 +217,7 @@
         <scene sceneID="S55-xs-aPf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KJt-W0-5aY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="bpi-MI-vgU"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="ic_dashboard" id="bpi-MI-vgU"/>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="C4v-b8-Zab">
@@ -180,7 +246,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Budgets" id="Mwq-Mf-4AR"/>
+                    <tabBarItem key="tabBarItem" title="Budgets" image="ic_budgets" id="Mwq-Mf-4AR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWP-Nc-iSr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,7 +265,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Reports" id="Lp9-iX-RXK"/>
+                    <tabBarItem key="tabBarItem" title="Reports" image="ic_raports" id="Lp9-iX-RXK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u6D-bg-hBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -218,7 +284,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Records" id="n2H-Ex-8Vt"/>
+                    <tabBarItem key="tabBarItem" title="Records" image="ic_records" id="n2H-Ex-8Vt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKl-0i-4fw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -237,16 +303,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Charts" id="dSm-ed-hV2"/>
+                    <tabBarItem key="tabBarItem" title="Charts" image="ic_chart" id="dSm-ed-hV2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i1G-yZ-0vj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1148" y="1719"/>
         </scene>
-        <!--Custom Tab Bar Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="S7f-yn-SmW">
             <objects>
-                <tabBarController id="72T-ks-CFK" customClass="CustomTabBarController" sceneMemberID="viewController">
+                <tabBarController id="72T-ks-CFK" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="eIC-NJ-P4y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -268,5 +334,11 @@
     <resources>
         <image name="beaconMenuV2" width="24" height="24"/>
         <image name="humanIcon" width="33" height="33"/>
+        <image name="ic_budgets" width="32" height="32"/>
+        <image name="ic_calendar" width="32" height="32"/>
+        <image name="ic_chart" width="32" height="32"/>
+        <image name="ic_dashboard" width="32" height="32"/>
+        <image name="ic_raports" width="32" height="32"/>
+        <image name="ic_records" width="32" height="32"/>
     </resources>
 </document>

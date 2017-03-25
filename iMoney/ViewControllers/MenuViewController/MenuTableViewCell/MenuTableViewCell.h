@@ -13,6 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
-- (void)initCellWithValue:(NSString *)name;
+- (void)initCellWithValue:(NSString *)name andImageName:(NSString *)imageName;
 
 @end

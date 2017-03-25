@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MainViewControllerTablleView : NSObject
+@interface MainViewControllerTablleView : NSObject <UITableViewDelegate, UITableViewDataSource>
 
 @end

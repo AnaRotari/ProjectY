@@ -10,7 +10,8 @@
 
 @interface MenuViewController ()
 
-@property (strong, nonatomic) NSArray *menuItemsDictionary;
+@property (strong, nonatomic) NSArray *menuItemsArray;
+@property (strong, nonatomic) NSArray *menuImagesArray;
 
 @end
 
@@ -29,25 +30,29 @@
     self.menuTableView.tableFooterView = [UIView new];
     
     NSArray *contentValues = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MenuContent" ofType:@"plist"]];
-    self.menuItemsDictionary = [[NSArray alloc] initWithArray:contentValues];
+    self.menuItemsArray = [[NSArray alloc] initWithArray:contentValues];
+    
+    NSArray *imagesValues = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MenuImages" ofType:@"plist"]];
+    self.menuImagesArray = [[NSArray alloc] initWithArray:imagesValues];
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return self.menuItemsDictionary.count;
+    return self.menuItemsArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [self.menuItemsDictionary[section] count];
+    return [self.menuItemsArray[section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     MenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuTableViewCell" forIndexPath:indexPath];
-    [cell initCellWithValue:self.menuItemsDictionary[indexPath.section][indexPath.row]];
+    [cell initCellWithValue:self.menuImagesArray[indexPath.section][indexPath.row]
+               andImageName:self.menuItemsArray[indexPath.section][indexPath.row]];
     return cell;
 }
 
@@ -71,7 +76,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"%ld",(long)indexPath.row);
+    NSLog(@"%@",indexPath);
 }
 
 #pragma mark - UITableViewDelegate

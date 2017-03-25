@@ -7,14 +7,8 @@
 //
 
 #import "MainViewController.h"
-#import "HWViewPager.h"
-#import "MainViewControllerCollectionView.h"
 
 @interface MainViewController ()
-
-@property (nonatomic) IBOutlet UIBarButtonItem* revealButtonItem;
-@property (weak, nonatomic) IBOutlet HWViewPager *walletsCollectionView;
-@property (strong, nonatomic) MainViewControllerCollectionView *collectionDelegates;
 
 @end
 
@@ -32,16 +26,27 @@
 
 - (void)mainCollectionViewSetup {
     
-    self.collectionDelegates = [[MainViewControllerCollectionView alloc] init];
     [self.walletsCollectionView registerNib:[UINib nibWithNibName:@"MainWalletCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"MainWalletCollectionViewCell"];
-    //[self.walletsCollectionView setContentInset:UIEdgeInsetsMake(-70, 0, 0, 0)];
+    self.collectionDelegates = [[MainViewControllerCollectionView alloc] init];
     [self.walletsCollectionView setDataSource: self.collectionDelegates];
     [self.walletsCollectionView setPagerDelegate:self.collectionDelegates];
 }
 
 - (void)mainTableViewSetup {
     
+    [self.transactionsTableView registerNib:[UINib nibWithNibName:@"TransactionTableViewCell" bundle:nil] forCellReuseIdentifier:@"TransactionTableViewCell"];
+    self.tableDelegates = [[MainViewControllerTablleView alloc] init];
+    [self.transactionsTableView setDataSource:self.tableDelegates];
+    [self.transactionsTableView setDelegate:self.tableDelegates];
+}
+
+#pragma mark - Button action
+
+- (IBAction)addWalletButtonAction:(id)sender {
     
+    AddEditWalletViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"AddEditWalletViewController"];
+    controller.walletAction = kAddWallet;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - Other stuff

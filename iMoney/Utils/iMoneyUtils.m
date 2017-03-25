@@ -21,6 +21,8 @@
     [[UINavigationBar appearance] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
     [[UINavigationBar appearance] setTranslucent:YES];
+    
+    [[UITabBar appearance] setTintColor:RGBColor(42, 3, 70, 1)];
 }
 
 @end

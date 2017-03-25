@@ -19,26 +19,6 @@ int tabBarHeight = 60;
     
     [super viewDidLoad];
     
-    NSArray *array = @[@{@"title" : @"Exercises", @"image" : @"exercises", @"selectedImage" : @"exercises_"},
-                       @{@"title" : @"Workouts", @"image" : @"training", @"selectedImage" : @"training_"},
-                       @{@"title" : @"Custom", @"image" : @"customized", @"selectedImage" : @"customized_"},
-                       @{@"title" : @"History", @"image" : @"history", @"selectedImage" : @"history_"},
-                       @{@"title" : @"More", @"image" : @"more", @"selectedImage" : @"more_"}];
-    
-    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [[self.tabBar.items objectAtIndex:idx] setTitle:NSLocalizedString(obj[@"title"], nil)];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [[self.tabBar.items objectAtIndex:idx] setImage:[self tabBarImageName:obj[@"image"]]];
-            [[self.tabBar.items objectAtIndex:idx] setSelectedImage:[self tabBarImageName:obj[@"selectedImage"]]];
-        });
-    }];
-    
-    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor darkGrayColor] }
-                                             forState:UIControlStateNormal];
-    
-    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : RGBColor(42, 3, 70, 1) }
-                                             forState:UIControlStateSelected];
-    
     self.tabBar.translucent = YES;
     [self.tabBar setBackgroundImage:[UIImage new]];
     
