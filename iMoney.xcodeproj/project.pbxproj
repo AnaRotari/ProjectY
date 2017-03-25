@@ -23,6 +23,9 @@
 		FA3C73381E845B90000E261F /* MainWalletCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3C73361E845B90000E261F /* MainWalletCollectionViewCell.xib */; };
 		FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */; };
 		FA9693231E872A6A00F86873 /* ColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9693221E872A6A00F86873 /* ColorPickerViewController.m */; };
+		FA9693271E87324100F86873 /* UIColor+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9693261E87324100F86873 /* UIColor+CoreData.m */; };
+		FA96932C1E87346800F86873 /* Wallet+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9693291E87346800F86873 /* Wallet+CoreDataClass.m */; };
+		FA96932D1E87346800F86873 /* Wallet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA96932B1E87346800F86873 /* Wallet+CoreDataProperties.m */; };
 		FAA8384E1E868CE3005BFADF /* MenuImages.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAA8384D1E868CE3005BFADF /* MenuImages.plist */; };
 		FAA8385D1E86CA54005BFADF /* TransactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA8385B1E86CA54005BFADF /* TransactionTableViewCell.m */; };
 		FAA8385E1E86CA54005BFADF /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA8385C1E86CA54005BFADF /* TransactionTableViewCell.xib */; };
@@ -40,8 +43,6 @@
 		FAE101771E7DC8AF003525DF /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE101761E7DC8AF003525DF /* MenuViewController.m */; };
 		FAE1017E1E7DC9B6003525DF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE1017D1E7DC9B6003525DF /* MainViewController.m */; };
 		FAE101831E7DD182003525DF /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE101821E7DD182003525DF /* SWRevealViewController.m */; };
-		FAE43DC21E8474DB00C90817 /* Wallet+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE43DBF1E8474DB00C90817 /* Wallet+CoreDataClass.m */; };
-		FAE43DC31E8474DB00C90817 /* Wallet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE43DC11E8474DB00C90817 /* Wallet+CoreDataProperties.m */; };
 		FAE43DC71E847A7600C90817 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE43DC61E847A7600C90817 /* CustomTabBarController.m */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,12 @@
 		FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseSyncManager.m; sourceTree = "<group>"; };
 		FA9693211E872A6A00F86873 /* ColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerViewController.h; sourceTree = "<group>"; };
 		FA9693221E872A6A00F86873 /* ColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerViewController.m; sourceTree = "<group>"; };
+		FA9693251E87324100F86873 /* UIColor+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CoreData.h"; sourceTree = "<group>"; };
+		FA9693261E87324100F86873 /* UIColor+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CoreData.m"; sourceTree = "<group>"; };
+		FA9693281E87346800F86873 /* Wallet+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataClass.h"; sourceTree = "<group>"; };
+		FA9693291E87346800F86873 /* Wallet+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataClass.m"; sourceTree = "<group>"; };
+		FA96932A1E87346800F86873 /* Wallet+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FA96932B1E87346800F86873 /* Wallet+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataProperties.m"; sourceTree = "<group>"; };
 		FAA8384D1E868CE3005BFADF /* MenuImages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MenuImages.plist; sourceTree = "<group>"; };
 		FAA8385A1E86CA54005BFADF /* TransactionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionTableViewCell.h; sourceTree = "<group>"; };
 		FAA8385B1E86CA54005BFADF /* TransactionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTableViewCell.m; sourceTree = "<group>"; };
@@ -107,10 +114,6 @@
 		FAE1017D1E7DC9B6003525DF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		FAE101811E7DD182003525DF /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		FAE101821E7DD182003525DF /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		FAE43DBE1E8474DB00C90817 /* Wallet+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataClass.h"; sourceTree = "<group>"; };
-		FAE43DBF1E8474DB00C90817 /* Wallet+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataClass.m"; sourceTree = "<group>"; };
-		FAE43DC01E8474DB00C90817 /* Wallet+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataProperties.h"; sourceTree = "<group>"; };
-		FAE43DC11E8474DB00C90817 /* Wallet+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataProperties.m"; sourceTree = "<group>"; };
 		FAE43DC51E847A7600C90817 /* CustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarController.h; sourceTree = "<group>"; };
 		FAE43DC61E847A7600C90817 /* CustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +164,7 @@
 				84D92FC11E61F9D000F823DD /* Database */,
 				FA0330901E7D7F7C00BB8DBA /* ViewControllers */,
 				FA03307C1E7D759500BB8DBA /* Utils */,
+				FA9693241E87320300F86873 /* Categories */,
 				FA03307D1E7D75C400BB8DBA /* SupportingFiles */,
 				FAE1017F1E7DD182003525DF /* ThirdPartyLibs */,
 				8402D1701E61F6C600968EA2 /* Main.storyboard */,
@@ -244,10 +248,10 @@
 		FA0330851E7D794C00BB8DBA /* DatabaseEntities */ = {
 			isa = PBXGroup;
 			children = (
-				FAE43DBE1E8474DB00C90817 /* Wallet+CoreDataClass.h */,
-				FAE43DBF1E8474DB00C90817 /* Wallet+CoreDataClass.m */,
-				FAE43DC01E8474DB00C90817 /* Wallet+CoreDataProperties.h */,
-				FAE43DC11E8474DB00C90817 /* Wallet+CoreDataProperties.m */,
+				FA9693281E87346800F86873 /* Wallet+CoreDataClass.h */,
+				FA9693291E87346800F86873 /* Wallet+CoreDataClass.m */,
+				FA96932A1E87346800F86873 /* Wallet+CoreDataProperties.h */,
+				FA96932B1E87346800F86873 /* Wallet+CoreDataProperties.m */,
 			);
 			path = DatabaseEntities;
 			sourceTree = "<group>";
@@ -291,6 +295,15 @@
 				FA9693221E872A6A00F86873 /* ColorPickerViewController.m */,
 			);
 			path = ColorPickerViewController;
+			sourceTree = "<group>";
+		};
+		FA9693241E87320300F86873 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FA9693251E87324100F86873 /* UIColor+CoreData.h */,
+				FA9693261E87324100F86873 /* UIColor+CoreData.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		FAA838591E86CA41005BFADF /* TransactionTableViewCell */ = {
@@ -528,7 +541,6 @@
 			files = (
 				FA0330841E7D786800BB8DBA /* ApplicationConstants.m in Sources */,
 				FA0330801E7D75C400BB8DBA /* main.m in Sources */,
-				FAE43DC31E8474DB00C90817 /* Wallet+CoreDataProperties.m in Sources */,
 				FAE43DC71E847A7600C90817 /* CustomTabBarController.m in Sources */,
 				FAA838751E870BC9005BFADF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				FAA838721E870BC9005BFADF /* TPKeyboardAvoidingCollectionView.m in Sources */,
@@ -536,6 +548,9 @@
 				84D92FCD1E61FB9800F823DD /* iMoney.xcdatamodeld in Sources */,
 				FA3C73371E845B90000E261F /* MainWalletCollectionViewCell.m in Sources */,
 				84D92FCA1E61F9D000F823DD /* CoreDataRequestManager.m in Sources */,
+				FA9693271E87324100F86873 /* UIColor+CoreData.m in Sources */,
+				FA96932C1E87346800F86873 /* Wallet+CoreDataClass.m in Sources */,
+				FA96932D1E87346800F86873 /* Wallet+CoreDataProperties.m in Sources */,
 				FAA838741E870BC9005BFADF /* TPKeyboardAvoidingTableView.m in Sources */,
 				FAA838631E86E1FA005BFADF /* AddEditWalletViewController.m in Sources */,
 				FAE101771E7DC8AF003525DF /* MenuViewController.m in Sources */,
@@ -545,7 +560,6 @@
 				FAC10AE41E81D7D900118899 /* MainViewControllerCollectionView.m in Sources */,
 				FAAC9F911E7DE79B0077B160 /* MenuTableViewCell.m in Sources */,
 				FAE101831E7DD182003525DF /* SWRevealViewController.m in Sources */,
-				FAE43DC21E8474DB00C90817 /* Wallet+CoreDataClass.m in Sources */,
 				FA9693231E872A6A00F86873 /* ColorPickerViewController.m in Sources */,
 				FAC10AE71E81D7EC00118899 /* MainViewControllerTablleView.m in Sources */,
 				FA0330961E7D7F9F00BB8DBA /* iMoneyUtils.m in Sources */,

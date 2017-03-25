@@ -2,7 +2,7 @@
 //  Wallet+CoreDataProperties.m
 //  
 //
-//  Created by Alex on 3/23/17.
+//  Created by Alex on 3/26/17.
 //
 //
 
@@ -14,10 +14,11 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"Wallet"];
 }
 
+@dynamic walletCurrency;
+@dynamic walletDescription;
 @dynamic walletID;
 @dynamic walletInitialBalance;
-@dynamic walletCurrency;
 @dynamic walletName;
-@dynamic walletDescription;
+@dynamic walletColor;
 
 @end
