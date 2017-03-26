@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CoreDataAccessLayer.h"
 
 @interface CoreDataRequestManager : NSObject
 
-+ (void)test1;
++ (NSArray *)getAllWallets;
 
 @end

@@ -3,8 +3,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'iMoney' do
 
-pod 'HWViewPager'
-pod 'Color-Picker-for-iOS', "~> 2.0"
+pod 'Color-Picker-for-iOS', '~> 2.0'
+pod 'LGPlusButtonsView', '~> 1.1.0'
 
 #urmeaza de lucrat
 pod 'Firebase/Core'

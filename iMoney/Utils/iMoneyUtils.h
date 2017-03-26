@@ -11,5 +11,6 @@
 @interface iMoneyUtils : NSObject
 
 + (void)setupAppearance;
++ (UIBarButtonItem *)getNavigationButton:(NSString *)imageName target:(id)target andSelector:(SEL)action;
 
 @end

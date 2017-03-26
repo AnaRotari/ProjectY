@@ -14,11 +14,12 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"Wallet"];
 }
 
+@dynamic walletColor;
 @dynamic walletCurrency;
 @dynamic walletDescription;
 @dynamic walletID;
-@dynamic walletInitialBalance;
+@dynamic walletBalance;
 @dynamic walletName;
-@dynamic walletColor;
+@dynamic walletSort;
 
 @end

@@ -35,7 +35,7 @@
 - (void)coreDataChangeObserver:(NSNotification *)notification {
     
 #warning TODO: Upload to databse to Firebase
-    NSLog(@"Upload to databse to Firebase");
+    NSLog(@"Need to upload in Firebase");
 }
 
 - (void)dealloc {

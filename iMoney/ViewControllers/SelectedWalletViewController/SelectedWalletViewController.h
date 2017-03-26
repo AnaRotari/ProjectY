@@ -1,0 +1,17 @@
+//
+//  SelectedWalletViewController.h
+//  iMoney
+//
+//  Created by Alex on 3/26/17.
+//  Copyright © 2017 Ana Rotari. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "LGPlusButtonsView.h"
+
+@interface SelectedWalletViewController : UIViewController
+
+@property (strong, nonatomic) LGPlusButtonsView *plusButtonsViewNavBar;
+@property (strong, nonatomic) Wallet *wallet;
+
+@end

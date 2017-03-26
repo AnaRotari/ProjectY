@@ -13,20 +13,32 @@
 
 #pragma mark - UICollectionViewDataSource
 
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     MainWalletCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MainWalletCollectionViewCell" forIndexPath:indexPath];
+    [cell initWalletWithData:self.walletsArray[indexPath.row]];
     return cell;
 }
 
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 3;
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+    return self.walletsArray.count;
 }
 
 #pragma mark - HWViewPagerDelegate
 
 - (void)pagerDidSelectedPage:(NSInteger)selectedPage {
     
-    NSLog(@"FistViewController, SelectedPage : %d",(int)selectedPage);
+    if ([self.delegate respondsToSelector:@selector(userDidScrollToWallet:)]) {
+        [self.delegate userDidScrollToWallet:selectedPage];
+    }
+}
+
+- (void)pagerDidSelectItem:(NSIndexPath *)selectedItemPath {
+    
+    if ([self.delegate respondsToSelector:@selector(userDidSelectWallet:)]) {
+        [self.delegate userDidSelectWallet:selectedItemPath.row];
+    }
 }
 
 @end

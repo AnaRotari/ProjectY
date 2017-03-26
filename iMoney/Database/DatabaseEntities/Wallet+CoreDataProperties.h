@@ -15,12 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<Wallet *> *)fetchRequest;
 
+@property (nullable, nonatomic, retain) NSData *walletColor;
 @property (nullable, nonatomic, copy) NSString *walletCurrency;
 @property (nullable, nonatomic, copy) NSString *walletDescription;
 @property (nullable, nonatomic, copy) NSString *walletID;
-@property (nonatomic) double walletInitialBalance;
+@property (nullable, nonatomic, copy) NSDecimalNumber *walletBalance;
 @property (nullable, nonatomic, copy) NSString *walletName;
-@property (nullable, nonatomic, retain) NSData *walletColor;
+@property (nonatomic) int64_t walletSort;
 
 @end
 

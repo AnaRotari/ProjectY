@@ -10,4 +10,11 @@
 
 @interface MainWalletCollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *walletNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *walletCurrencyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *walletBalanceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *walletDescriptionLabel;
+
+- (void)initWalletWithData:(Wallet *)walletData;
+
 @end

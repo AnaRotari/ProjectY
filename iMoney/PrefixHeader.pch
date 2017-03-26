@@ -11,10 +11,12 @@
 
 #import "CoreDataAccessLayer.h"
 #import "CoreDataRequestManager.h"
+#import "CoreDataInsertManager.h"
 #import "SWRevealViewController.h"
 #import "iMoneyUtils.h"
 #import "Enums.h"
 #import "UIColor+CoreData.h"
+#import "ApplicationConstants.h"
 
 #define RGBColor(r,g,b,a) [UIColor colorWithRed:(r/(float)255) green:(g/(float)255) blue:(b/(float)255) alpha:a]
 

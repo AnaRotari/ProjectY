@@ -11,8 +11,9 @@
 #import "MainViewControllerCollectionView.h"
 #import "MainViewControllerTablleView.h"
 #import "AddEditWalletViewController.h"
+#import "SelectedWalletViewController.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController <MainViewControllerCollectionViewDelegate>
 
 @property (nonatomic) IBOutlet UIBarButtonItem* revealButtonItem;
 @property (weak, nonatomic) IBOutlet HWViewPager *walletsCollectionView;

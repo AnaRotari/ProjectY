@@ -17,4 +17,13 @@
     
 }
 
+- (void)initWalletWithData:(Wallet *)walletData {
+    
+    self.backgroundColor = [[UIColor alloc] colorWithData:walletData.walletColor];
+    self.walletNameLabel.text = walletData.walletName;
+    self.walletCurrencyLabel.text = walletData.walletCurrency;
+    self.walletBalanceLabel.text = [NSString stringWithFormat:@"%.2f",walletData.walletBalance.doubleValue];
+    self.walletDescriptionLabel.text = walletData.walletDescription;
+}
+
 @end

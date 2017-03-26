@@ -10,8 +10,20 @@
 
 @implementation ApplicationConstants
 
-NSString *const kDBiMoneySQLite    = @"kDBiMoneySQLite";
-NSString *const kDBiMoneySQLiteSHM = @"kDBiMoneySQLiteSHM";
-NSString *const kDBiMoneySQLiteWAL = @"kDBiMoneySQLiteWAL";
+NSString *const kDBiMoneySQLite      = @"kDBiMoneySQLite";
+NSString *const kDBiMoneySQLiteSHM   = @"kDBiMoneySQLiteSHM";
+NSString *const kDBiMoneySQLiteWAL   = @"kDBiMoneySQLiteWAL";
+
+NSString *const kCurrencyCountryName = @"kCurrencyCountryName";
+NSString *const kCurrencyCountryCode = @"kCurrencyCountryCode";
+NSString *const kCurrencySymbol      = @"kCurrencySymbol";
+NSString *const kCurrencyCode        = @"kCurrencyCode";
+
+NSString *const kWalletColor         = @"kWalletColor";
+NSString *const kWalletCurrency      = @"kWalletCurrency";
+NSString *const kWalletDescription   = @"kWalletDescription";
+NSString *const kWalletID            = @"kWalletID";
+NSString *const kWalletBalance       = @"kWalletBalance";
+NSString *const kWalletName          = @"kWalletName";
 
 @end

@@ -23,7 +23,6 @@
 //    [FIRApp configure];
     [[DatabaseSyncManager sharedInstance] startSyncronize];
     [iMoneyUtils setupAppearance];
-    
     return YES;
 }
 

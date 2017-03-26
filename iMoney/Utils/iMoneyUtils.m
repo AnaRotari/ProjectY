@@ -25,4 +25,14 @@
     [[UITabBar appearance] setTintColor:RGBColor(42, 3, 70, 1)];
 }
 
++ (UIBarButtonItem *)getNavigationButton:(NSString *)imageName target:(id)target andSelector:(SEL)action {
+    
+    UIImage *image = [UIImage imageNamed:imageName];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.bounds = CGRectMake(0, 0, 25, 25);
+    [button setImage:image forState:UIControlStateNormal];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return [[UIBarButtonItem alloc] initWithCustomView:button];
+}
+
 @end

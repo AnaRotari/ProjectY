@@ -26,7 +26,7 @@
     switch (self.walletAction) {
         case kAddWallet:
             [self setTitle:@"Add new wallet"];
-            [self addNavigationButtons:NO];
+            [self addNavigationButtons:YES];
             break;
         case kEditWallt:
             [self setTitle:@"Edit wallet"];
@@ -39,23 +39,15 @@
 
 - (void)addNavigationButtons:(BOOL)isAddNewWallet {
     
-    UIImage *doneImage = [UIImage imageNamed:@"ic_checkmark"];
-    UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    doneButton.bounds = CGRectMake(0, 0, 25, 25);
-    [doneButton setImage:doneImage forState:UIControlStateNormal];
-    [doneButton addTarget:self action:@selector(doneButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *doneNavButton = [[UIBarButtonItem alloc] initWithCustomView:doneButton];
-    
-    UIImage *trashImage = [UIImage imageNamed:@"ic_trash"];
-    UIButton *trashButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    trashButton.bounds = CGRectMake(0, 0, 25, 25);
-    [trashButton setImage:trashImage forState:UIControlStateNormal];
-    [trashButton addTarget:self action:@selector(deleteButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *trashNavButton = [[UIBarButtonItem alloc] initWithCustomView:trashButton];
-    
+    UIBarButtonItem *doneNavButton = [iMoneyUtils getNavigationButton:@"ic_checkmark"
+                                                               target:self
+                                                          andSelector:@selector(doneButtonAction:)];
     if (isAddNewWallet) {
         self.navigationItem.rightBarButtonItems = @[doneNavButton];
     } else {
+        UIBarButtonItem *trashNavButton = [iMoneyUtils getNavigationButton:@"ic_trash"
+                                                                    target:self
+                                                               andSelector:@selector(deleteButtonAction:)];
         self.navigationItem.rightBarButtonItems = @[doneNavButton,trashNavButton];
     }
 }
@@ -70,11 +62,19 @@
 
 - (void)doneButtonAction:(id)sender {
     
+    NSDictionary *newWallet = @{kWalletColor       : self.walletSelectedColor.backgroundColor,
+                                kWalletCurrency    : self.walletCurrencyLabel.text,
+                                kWalletDescription : self.walletDescriptionTextField.text,
+                                kWalletBalance     : self.walletInitValueTextField.text,
+                                kWalletName        : self.walletNameTextField.text};
+
+    [CoreDataInsertManager createWallet:newWallet];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)deleteButtonAction:(id)sender {
     
+#warning TODO:DELETE WALLET
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -88,16 +88,23 @@
 
 - (IBAction)selectCurrencyButtonAction:(id)sender {
     
-    
+    CurrencyPickerViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"CurrencyPickerViewController"];
+    controller.delegate = self;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - ColorPickerViewControllerDelegate
 
 - (void)setSelectedColor:(UIColor *)color {
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-       self.walletSelectedColor.backgroundColor = color;
-    });
+    self.walletSelectedColor.backgroundColor = color;
+}
+
+#pragma mark - CurrencyPickerViewControllerDelegate
+
+- (void)country:(CurrencyPickerViewController *)country didChangeValue:(id)value {
+    
+    self.walletCurrencyLabel.text = [value valueForKey:@"kCurrencyCode"];
 }
 
 @end

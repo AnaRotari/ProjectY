@@ -22,12 +22,20 @@
     [self mainTableViewSetup];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    self.collectionDelegates.walletsArray = [CoreDataRequestManager getAllWallets];
+    [self.walletsCollectionView reloadData];
+}
+
 #pragma mark - Initializations
 
 - (void)mainCollectionViewSetup {
     
     [self.walletsCollectionView registerNib:[UINib nibWithNibName:@"MainWalletCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"MainWalletCollectionViewCell"];
     self.collectionDelegates = [[MainViewControllerCollectionView alloc] init];
+    self.collectionDelegates.delegate = self;
     [self.walletsCollectionView setDataSource: self.collectionDelegates];
     [self.walletsCollectionView setPagerDelegate:self.collectionDelegates];
 }
@@ -46,6 +54,20 @@
     
     AddEditWalletViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"AddEditWalletViewController"];
     controller.walletAction = kAddWallet;
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+#pragma mark - MainViewControllerCollectionViewDelegate
+
+- (void)userDidScrollToWallet:(NSInteger)walletNumber {
+    
+    //Need to update UI
+}
+
+- (void)userDidSelectWallet:(NSInteger)walletSelected {
+    
+    SelectedWalletViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"SelectedWalletViewController"];
+    controller.wallet = self.collectionDelegates.walletsArray[walletSelected];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

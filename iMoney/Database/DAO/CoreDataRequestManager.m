@@ -7,13 +7,21 @@
 //
 
 #import "CoreDataRequestManager.h"
-#import "CoreDataAccessLayer.h"
 
 @implementation CoreDataRequestManager
 
-+ (void)test1 {
++ (NSArray *)getAllWallets {
     
-
+    NSError *requestError = nil;
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    NSEntityDescription *description = [NSEntityDescription entityForName:@"Wallet"
+                                                   inManagedObjectContext:[[CoreDataAccessLayer sharedInstance] managedObjectContext]];
+    [request setEntity:description];
+    [request setReturnsObjectsAsFaults:NO];
+    
+    NSArray *resultArray = [[[CoreDataAccessLayer sharedInstance] managedObjectContext ] executeFetchRequest:request
+                                                                                                       error:&requestError];
+    return resultArray;
 }
 
 @end

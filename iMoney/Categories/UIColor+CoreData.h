@@ -20,4 +20,7 @@
 
 @interface UIColor (CoreData)
 
+- (NSData *)encode;
+- (UIColor *)colorWithData:(NSData *)data;
+
 @end
