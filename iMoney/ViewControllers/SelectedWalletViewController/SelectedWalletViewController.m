@@ -69,7 +69,7 @@
 
 - (void)editWalletButtonAction:(id)sender {
     
-    
+#warning NEED TO EDIT WALLET
 }
 
 - (void)showHideButtonsAction

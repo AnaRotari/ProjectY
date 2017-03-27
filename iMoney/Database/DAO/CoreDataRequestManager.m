@@ -17,6 +17,11 @@
     NSEntityDescription *description = [NSEntityDescription entityForName:@"Wallet"
                                                    inManagedObjectContext:[[CoreDataAccessLayer sharedInstance] managedObjectContext]];
     [request setEntity:description];
+    
+    NSSortDescriptor *exerciseOrderDescriptor = [[NSSortDescriptor alloc] initWithKey:@"walletSort"
+                                                                            ascending:YES];
+    [request setSortDescriptors:@[exerciseOrderDescriptor]];
+    
     [request setReturnsObjectsAsFaults:NO];
     
     NSArray *resultArray = [[[CoreDataAccessLayer sharedInstance] managedObjectContext ] executeFetchRequest:request
