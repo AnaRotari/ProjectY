@@ -2,7 +2,7 @@
 //  Wallet+CoreDataProperties.m
 //  
 //
-//  Created by Alex on 3/28/17.
+//  Created by Alexandr Pavlov on 3/28/17.
 //
 //
 

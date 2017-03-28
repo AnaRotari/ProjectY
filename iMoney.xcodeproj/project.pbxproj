@@ -14,6 +14,10 @@
 		84D92FC91E61F9D000F823DD /* CoreDataAccessLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D92FC41E61F9D000F823DD /* CoreDataAccessLayer.m */; };
 		84D92FCA1E61F9D000F823DD /* CoreDataRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D92FC71E61F9D000F823DD /* CoreDataRequestManager.m */; };
 		84D92FCD1E61FB9800F823DD /* iMoney.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84D92FCB1E61FB9800F823DD /* iMoney.xcdatamodeld */; };
+		BC8E08301E8A4A6A009E80E3 /* Transaction+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8E08291E8A4A6A009E80E3 /* Transaction+CoreDataClass.m */; };
+		BC8E08311E8A4A6A009E80E3 /* Transaction+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8E082B1E8A4A6A009E80E3 /* Transaction+CoreDataProperties.m */; };
+		BC8E08321E8A4A6A009E80E3 /* Wallet+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8E082D1E8A4A6A009E80E3 /* Wallet+CoreDataClass.m */; };
+		BC8E08331E8A4A6A009E80E3 /* Wallet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8E082F1E8A4A6A009E80E3 /* Wallet+CoreDataProperties.m */; };
 		CC632467DCA99E63795C5D67 /* libPods-iMoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C586DD88F1E8E3AB5C9D4B /* libPods-iMoney.a */; };
 		FA0330801E7D75C400BB8DBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03307E1E7D75C400BB8DBA /* main.m */; };
 		FA0330841E7D786800BB8DBA /* ApplicationConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0330831E7D786800BB8DBA /* ApplicationConstants.m */; };
@@ -47,10 +51,6 @@
 		FAE1017E1E7DC9B6003525DF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE1017D1E7DC9B6003525DF /* MainViewController.m */; };
 		FAE101831E7DD182003525DF /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE101821E7DD182003525DF /* SWRevealViewController.m */; };
 		FAE43DC71E847A7600C90817 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE43DC61E847A7600C90817 /* CustomTabBarController.m */; };
-		FAF08E8F1E89BFCC000638EE /* Transaction+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF08E881E89BFCC000638EE /* Transaction+CoreDataClass.m */; };
-		FAF08E901E89BFCC000638EE /* Transaction+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF08E8A1E89BFCC000638EE /* Transaction+CoreDataProperties.m */; };
-		FAF08E911E89BFCC000638EE /* Wallet+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF08E8C1E89BFCC000638EE /* Wallet+CoreDataClass.m */; };
-		FAF08E921E89BFCC000638EE /* Wallet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF08E8E1E89BFCC000638EE /* Wallet+CoreDataProperties.m */; };
 		FAFF39FA1E88414600524084 /* SelectedWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF39F91E88414600524084 /* SelectedWalletViewController.m */; };
 		FAFF39FD1E88415400524084 /* TransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF39FC1E88415400524084 /* TransactionViewController.m */; };
 		FAFF3A001E8858D500524084 /* SelectedWalletViewController+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF39FF1E8858D500524084 /* SelectedWalletViewController+UI.m */; };
@@ -72,6 +72,14 @@
 		84D92FC71E61F9D000F823DD /* CoreDataRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataRequestManager.m; sourceTree = "<group>"; };
 		84D92FCC1E61FB9800F823DD /* iMoney.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iMoney.xcdatamodel; sourceTree = "<group>"; };
 		B7AAAB9D4BE802D71A22FB00 /* Pods-iMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMoney/Pods-iMoney.release.xcconfig"; sourceTree = "<group>"; };
+		BC8E08281E8A4A6A009E80E3 /* Transaction+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataClass.h"; sourceTree = "<group>"; };
+		BC8E08291E8A4A6A009E80E3 /* Transaction+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataClass.m"; sourceTree = "<group>"; };
+		BC8E082A1E8A4A6A009E80E3 /* Transaction+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BC8E082B1E8A4A6A009E80E3 /* Transaction+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BC8E082C1E8A4A6A009E80E3 /* Wallet+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataClass.h"; sourceTree = "<group>"; };
+		BC8E082D1E8A4A6A009E80E3 /* Wallet+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataClass.m"; sourceTree = "<group>"; };
+		BC8E082E1E8A4A6A009E80E3 /* Wallet+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BC8E082F1E8A4A6A009E80E3 /* Wallet+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataProperties.m"; sourceTree = "<group>"; };
 		FA03307B1E7D73C200BB8DBA /* iMoney.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iMoney.entitlements; sourceTree = "<group>"; };
 		FA03307E1E7D75C400BB8DBA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA0330811E7D75EB00BB8DBA /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -130,14 +138,6 @@
 		FAE101821E7DD182003525DF /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		FAE43DC51E847A7600C90817 /* CustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarController.h; sourceTree = "<group>"; };
 		FAE43DC61E847A7600C90817 /* CustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
-		FAF08E871E89BFCC000638EE /* Transaction+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataClass.h"; sourceTree = "<group>"; };
-		FAF08E881E89BFCC000638EE /* Transaction+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataClass.m"; sourceTree = "<group>"; };
-		FAF08E891E89BFCC000638EE /* Transaction+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataProperties.h"; sourceTree = "<group>"; };
-		FAF08E8A1E89BFCC000638EE /* Transaction+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataProperties.m"; sourceTree = "<group>"; };
-		FAF08E8B1E89BFCC000638EE /* Wallet+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataClass.h"; sourceTree = "<group>"; };
-		FAF08E8C1E89BFCC000638EE /* Wallet+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataClass.m"; sourceTree = "<group>"; };
-		FAF08E8D1E89BFCC000638EE /* Wallet+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataProperties.h"; sourceTree = "<group>"; };
-		FAF08E8E1E89BFCC000638EE /* Wallet+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataProperties.m"; sourceTree = "<group>"; };
 		FAFF39F81E88414600524084 /* SelectedWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedWalletViewController.h; sourceTree = "<group>"; };
 		FAFF39F91E88414600524084 /* SelectedWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedWalletViewController.m; sourceTree = "<group>"; };
 		FAFF39FB1E88415400524084 /* TransactionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionViewController.h; sourceTree = "<group>"; };
@@ -278,14 +278,14 @@
 		FA0330851E7D794C00BB8DBA /* DatabaseEntities */ = {
 			isa = PBXGroup;
 			children = (
-				FAF08E871E89BFCC000638EE /* Transaction+CoreDataClass.h */,
-				FAF08E881E89BFCC000638EE /* Transaction+CoreDataClass.m */,
-				FAF08E891E89BFCC000638EE /* Transaction+CoreDataProperties.h */,
-				FAF08E8A1E89BFCC000638EE /* Transaction+CoreDataProperties.m */,
-				FAF08E8B1E89BFCC000638EE /* Wallet+CoreDataClass.h */,
-				FAF08E8C1E89BFCC000638EE /* Wallet+CoreDataClass.m */,
-				FAF08E8D1E89BFCC000638EE /* Wallet+CoreDataProperties.h */,
-				FAF08E8E1E89BFCC000638EE /* Wallet+CoreDataProperties.m */,
+				BC8E08281E8A4A6A009E80E3 /* Transaction+CoreDataClass.h */,
+				BC8E08291E8A4A6A009E80E3 /* Transaction+CoreDataClass.m */,
+				BC8E082A1E8A4A6A009E80E3 /* Transaction+CoreDataProperties.h */,
+				BC8E082B1E8A4A6A009E80E3 /* Transaction+CoreDataProperties.m */,
+				BC8E082C1E8A4A6A009E80E3 /* Wallet+CoreDataClass.h */,
+				BC8E082D1E8A4A6A009E80E3 /* Wallet+CoreDataClass.m */,
+				BC8E082E1E8A4A6A009E80E3 /* Wallet+CoreDataProperties.h */,
+				BC8E082F1E8A4A6A009E80E3 /* Wallet+CoreDataProperties.m */,
 			);
 			path = DatabaseEntities;
 			sourceTree = "<group>";
@@ -627,7 +627,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAF08E8F1E89BFCC000638EE /* Transaction+CoreDataClass.m in Sources */,
+				BC8E08301E8A4A6A009E80E3 /* Transaction+CoreDataClass.m in Sources */,
 				FADB2E971E88381100319EB6 /* HWViewPager.m in Sources */,
 				FA0330841E7D786800BB8DBA /* ApplicationConstants.m in Sources */,
 				FA0ACEF11E87EAEE000A42EE /* CoreDataInsertManager.m in Sources */,
@@ -639,8 +639,8 @@
 				FAFF39FA1E88414600524084 /* SelectedWalletViewController.m in Sources */,
 				FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */,
 				84D92FCD1E61FB9800F823DD /* iMoney.xcdatamodeld in Sources */,
-				FAF08E921E89BFCC000638EE /* Wallet+CoreDataProperties.m in Sources */,
-				FAF08E911E89BFCC000638EE /* Wallet+CoreDataClass.m in Sources */,
+				BC8E08331E8A4A6A009E80E3 /* Wallet+CoreDataProperties.m in Sources */,
+				BC8E08321E8A4A6A009E80E3 /* Wallet+CoreDataClass.m in Sources */,
 				FA3C73371E845B90000E261F /* MainWalletCollectionViewCell.m in Sources */,
 				84D92FCA1E61F9D000F823DD /* CoreDataRequestManager.m in Sources */,
 				FA9693271E87324100F86873 /* UIColor+CoreData.m in Sources */,
@@ -648,7 +648,7 @@
 				FAA838631E86E1FA005BFADF /* AddEditWalletViewController.m in Sources */,
 				FA0ACEED1E87D55D000A42EE /* CurrencyTableViewCell.m in Sources */,
 				FAFF3A001E8858D500524084 /* SelectedWalletViewController+UI.m in Sources */,
-				FAF08E901E89BFCC000638EE /* Transaction+CoreDataProperties.m in Sources */,
+				BC8E08311E8A4A6A009E80E3 /* Transaction+CoreDataProperties.m in Sources */,
 				FAE101771E7DC8AF003525DF /* MenuViewController.m in Sources */,
 				FAA8385D1E86CA54005BFADF /* TransactionTableViewCell.m in Sources */,
 				84D92FC91E61F9D000F823DD /* CoreDataAccessLayer.m in Sources */,

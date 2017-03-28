@@ -2,12 +2,13 @@
 //  Transaction+CoreDataClass.m
 //  
 //
-//  Created by Alex on 3/28/17.
+//  Created by Alexandr Pavlov on 3/28/17.
 //
 //
 
 #import "Transaction+CoreDataClass.h"
-#import "Wallet.h"
+#import "Wallet+CoreDataClass.h"
+
 @implementation Transaction
 
 @end
