@@ -10,7 +10,7 @@
 
 @interface ApplicationConstants : NSObject
 
-//Core Data constants
+//Export CoreData constants
 FOUNDATION_EXPORT NSString *const kDBiMoneySQLite;
 FOUNDATION_EXPORT NSString *const kDBiMoneySQLiteSHM;
 FOUNDATION_EXPORT NSString *const kDBiMoneySQLiteWAL;
@@ -29,5 +29,15 @@ FOUNDATION_EXPORT NSString *const kWalletID;
 FOUNDATION_EXPORT NSString *const kWalletBalance;
 FOUNDATION_EXPORT NSString *const kWalletName;
 
+//Transaction constants
+FOUNDATION_EXPORT NSString *const kTransactionAmount;
+FOUNDATION_EXPORT NSString *const kTransactionAttachemts;
+FOUNDATION_EXPORT NSString *const kTransactionCategory;
+FOUNDATION_EXPORT NSString *const kTransactionDate;
+FOUNDATION_EXPORT NSString *const kTransactionDescription;
+FOUNDATION_EXPORT NSString *const kTransactionLocation;
+FOUNDATION_EXPORT NSString *const kTransactionPayee;
+FOUNDATION_EXPORT NSString *const kTransactionPaymentType;
+FOUNDATION_EXPORT NSString *const kTransactionType;
 
 @end

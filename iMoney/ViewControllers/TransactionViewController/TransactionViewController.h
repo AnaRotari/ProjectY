@@ -10,4 +10,6 @@
 
 @interface TransactionViewController : UIViewController
 
+@property (strong, nonatomic) Wallet *parentWallet;
+
 @end

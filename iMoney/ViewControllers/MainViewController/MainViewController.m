@@ -67,7 +67,7 @@
 - (void)userDidSelectWallet:(NSInteger)walletSelected {
     
     SelectedWalletViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"SelectedWalletViewController"];
-    controller.wallet = self.collectionDelegates.walletsArray[walletSelected];
+    controller.selectedWallet = self.collectionDelegates.walletsArray[walletSelected];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

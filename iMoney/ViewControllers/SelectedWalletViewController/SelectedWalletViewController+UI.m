@@ -10,26 +10,14 @@
 
 @implementation SelectedWalletViewController (UI)
 
-- (void)setStatusBarBackgroundColor:(UIColor *)color {
-    
-    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
-    [UIView animateWithDuration:0.3
-                     animations:^{
-                         self.navigationController.navigationBar.backgroundColor = color;
-                         if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
-                             statusBar.backgroundColor = color;
-                         }
-                     }];
-}
-
 - (void)setupLGNavButton:(LGPlusButtonsView *)button andButtonBackgroundColor:(UIColor *)color {
     
     button.showHideOnScroll = NO;
     button.appearingAnimationType = LGPlusButtonsAppearingAnimationTypeCrossDissolveAndPop;
     button.position = LGPlusButtonsViewPositionTopRight;
     
-    [button setButtonsTitles:@[@"1", @"2", @"3", @"4"] forState:UIControlStateNormal];
-    [button setDescriptionsTexts:@[@"New record", @"Transfer", @"Choose template", @"Adjust balance"]];
+    [button setButtonsTitles:@[@"0", @"1", @"2", @"3", @"4"] forState:UIControlStateNormal];
+    [button setDescriptionsTexts:@[@"", @"New record", @"Transfer", @"Choose template", @"Adjust balance"]];
     
     [button setButtonsTitleFont:[UIFont boldSystemFontOfSize:32.f] forOrientation:LGPlusButtonsViewOrientationAll];
     [button setButtonsSize:CGSizeMake(52.f, 52.f) forOrientation:LGPlusButtonsViewOrientationAll];

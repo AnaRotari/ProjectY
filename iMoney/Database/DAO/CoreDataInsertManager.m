@@ -34,4 +34,9 @@
     }
 }
 
++ (void)createTransaction:(NSDictionary *)transactionDetails toWallet:(Wallet *)wallet {
+    
+    
+}
+
 @end

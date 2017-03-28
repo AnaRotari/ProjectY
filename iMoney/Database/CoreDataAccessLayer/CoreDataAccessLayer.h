@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 //Entities
 #import "Wallet+CoreDataClass.h"
+#import "Transaction+CoreDataClass.h"
 
 @interface CoreDataAccessLayer : NSObject
 

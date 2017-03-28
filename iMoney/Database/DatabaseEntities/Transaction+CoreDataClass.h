@@ -2,7 +2,7 @@
 //  Transaction+CoreDataClass.h
 //  
 //
-//  Created by Alexandr Pavlov on 3/28/17.
+//  Created by Alex on 3/29/17.
 //
 //
 

@@ -19,7 +19,7 @@
     
     NSLog(@"🗂: %@",[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory
                                                             inDomains:NSUserDomainMask] lastObject]);
-#warning FIREBASE
+#warning TODO: FIREBASE
 //    [FIRApp configure];
     [[DatabaseSyncManager sharedInstance] startSyncronize];
     [iMoneyUtils setupAppearance];

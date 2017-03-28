@@ -10,7 +10,6 @@
 
 @interface SelectedWalletViewController (UI)
 
-- (void)setStatusBarBackgroundColor:(UIColor *)color;
 - (void)setupLGNavButton:(LGPlusButtonsView *)button andButtonBackgroundColor:(UIColor *)color;
 - (void)disableSwipe;
 

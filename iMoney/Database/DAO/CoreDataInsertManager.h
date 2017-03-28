@@ -12,5 +12,6 @@
 @interface CoreDataInsertManager : NSObject
 
 + (void)createWallet:(NSDictionary *)walletValues;
++ (void)createTransaction:(NSDictionary *)transactionDetails toWallet:(Wallet *)wallet;
 
 @end

@@ -12,5 +12,7 @@
 
 + (void)setupAppearance;
 + (UIBarButtonItem *)getNavigationButton:(NSString *)imageName target:(id)target andSelector:(SEL)action;
++ (NSDate *)getTodayFormatedDate;
++ (void)setStatusBarBackgroundColor:(UIColor *)color forNavigationController:(UINavigationController *)controller;
 
 @end

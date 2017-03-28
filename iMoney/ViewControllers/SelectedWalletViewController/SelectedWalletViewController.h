@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "LGPlusButtonsView.h"
+#import "TransactionViewController.h"
 
 @interface SelectedWalletViewController : UIViewController
 
 @property (strong, nonatomic) LGPlusButtonsView *plusButtonsViewNavBar;
-@property (strong, nonatomic) Wallet *wallet;
+@property (strong, nonatomic) Wallet *selectedWallet;
 
 @end

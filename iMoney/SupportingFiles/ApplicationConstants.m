@@ -26,4 +26,14 @@ NSString *const kWalletID            = @"kWalletID";
 NSString *const kWalletBalance       = @"kWalletBalance";
 NSString *const kWalletName          = @"kWalletName";
 
+NSString *const kTransactionAmount      = @"kTransactionAmount";
+NSString *const kTransactionAttachemts  = @"kTransactionAttachemts";
+NSString *const kTransactionCategory    = @"kTransactionCategory";
+NSString *const kTransactionDate        = @"kTransactionDate";
+NSString *const kTransactionDescription = @"kTransactionDescription";
+NSString *const kTransactionLocation    = @"kTransactionLocation";
+NSString *const kTransactionPayee       = @"kTransactionPayee";
+NSString *const kTransactionPaymentType = @"kTransactionPaymentType";
+NSString *const kTransactionType        = @"kTransactionType";
+
 @end

@@ -35,4 +35,26 @@
     return [[UIBarButtonItem alloc] initWithCustomView:button];
 }
 
++ (NSDate *)getTodayFormatedDate {
+
+    NSDate* currentDate = [NSDate date];
+    //Convert date to yy/mm/dd
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [gregorian components:NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay fromDate:currentDate];
+    currentDate = [gregorian dateFromComponents:components];
+    return currentDate;
+}
+
++ (void)setStatusBarBackgroundColor:(UIColor *)color forNavigationController:(UINavigationController *)controller {
+    
+    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         controller.navigationBar.backgroundColor = color;
+                         if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
+                             statusBar.backgroundColor = color;
+                         }
+                     }];
+}
+
 @end
