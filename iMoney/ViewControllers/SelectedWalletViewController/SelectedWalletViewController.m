@@ -57,6 +57,7 @@
                                                                      showAfterInit:NO
                                                                      actionHandler:^(LGPlusButtonsView *plusButtonView, NSString *title, NSString *description, NSUInteger index)
                               {
+                                  [self showHideButtonsAction];
                                   switch (index) {
                                       case 0:
                                           NSLog(@"fucking autolayout");
