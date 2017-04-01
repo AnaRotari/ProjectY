@@ -44,13 +44,14 @@
 		FAC10AE11E81C93600118899 /* MenuContent.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC10AE01E81C93600118899 /* MenuContent.plist */; };
 		FAC10AE41E81D7D900118899 /* MainViewControllerCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC10AE31E81D7D900118899 /* MainViewControllerCollectionView.m */; };
 		FAC10AE71E81D7EC00118899 /* MainViewControllerTablleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC10AE61E81D7EC00118899 /* MainViewControllerTablleView.m */; };
-		FACFC53A1E7E920D000D1B9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FACFC5391E7E920D000D1B9D /* GoogleService-Info.plist */; };
 		FAD2FF571E87CBF5001BB364 /* CurrencyPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD2FF561E87CBF5001BB364 /* CurrencyPickerViewController.m */; };
 		FADB2E971E88381100319EB6 /* HWViewPager.m in Sources */ = {isa = PBXBuildFile; fileRef = FADB2E961E88381100319EB6 /* HWViewPager.m */; };
 		FAE101771E7DC8AF003525DF /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE101761E7DC8AF003525DF /* MenuViewController.m */; };
 		FAE1017E1E7DC9B6003525DF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE1017D1E7DC9B6003525DF /* MainViewController.m */; };
 		FAE101831E7DD182003525DF /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE101821E7DD182003525DF /* SWRevealViewController.m */; };
 		FAE43DC71E847A7600C90817 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE43DC61E847A7600C90817 /* CustomTabBarController.m */; };
+		FAEAC8AF1E8FCF7400E38654 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEAC8AE1E8FCF7400E38654 /* DropboxSDK.framework */; };
+		FAEAC8B41E8FD39B00E38654 /* DropBoxUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEAC8B31E8FD39B00E38654 /* DropBoxUtils.m */; };
 		FAFF39FA1E88414600524084 /* SelectedWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF39F91E88414600524084 /* SelectedWalletViewController.m */; };
 		FAFF39FD1E88415400524084 /* TransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF39FC1E88415400524084 /* TransactionViewController.m */; };
 		FAFF3A001E8858D500524084 /* SelectedWalletViewController+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF39FF1E8858D500524084 /* SelectedWalletViewController+UI.m */; };
@@ -125,7 +126,6 @@
 		FAC10AE31E81D7D900118899 /* MainViewControllerCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerCollectionView.m; sourceTree = "<group>"; };
 		FAC10AE51E81D7EC00118899 /* MainViewControllerTablleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewControllerTablleView.h; sourceTree = "<group>"; };
 		FAC10AE61E81D7EC00118899 /* MainViewControllerTablleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerTablleView.m; sourceTree = "<group>"; };
-		FACFC5391E7E920D000D1B9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FAD2FF551E87CBF5001BB364 /* CurrencyPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyPickerViewController.h; sourceTree = "<group>"; };
 		FAD2FF561E87CBF5001BB364 /* CurrencyPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyPickerViewController.m; sourceTree = "<group>"; };
 		FADB2E951E88381100319EB6 /* HWViewPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWViewPager.h; sourceTree = "<group>"; };
@@ -138,6 +138,9 @@
 		FAE101821E7DD182003525DF /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		FAE43DC51E847A7600C90817 /* CustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarController.h; sourceTree = "<group>"; };
 		FAE43DC61E847A7600C90817 /* CustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
+		FAEAC8AE1E8FCF7400E38654 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
+		FAEAC8B21E8FD39B00E38654 /* DropBoxUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBoxUtils.h; sourceTree = "<group>"; };
+		FAEAC8B31E8FD39B00E38654 /* DropBoxUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBoxUtils.m; sourceTree = "<group>"; };
 		FAFF39F81E88414600524084 /* SelectedWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedWalletViewController.h; sourceTree = "<group>"; };
 		FAFF39F91E88414600524084 /* SelectedWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedWalletViewController.m; sourceTree = "<group>"; };
 		FAFF39FB1E88415400524084 /* TransactionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionViewController.h; sourceTree = "<group>"; };
@@ -151,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAEAC8AF1E8FCF7400E38654 /* DropboxSDK.framework in Frameworks */,
 				CC632467DCA99E63795C5D67 /* libPods-iMoney.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +165,7 @@
 		4E8A75AEE0F221F971457C3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAEAC8AE1E8FCF7400E38654 /* DropboxSDK.framework */,
 				11C586DD88F1E8E3AB5C9D4B /* libPods-iMoney.a */,
 			);
 			name = Frameworks;
@@ -190,6 +195,7 @@
 				FA03307B1E7D73C200BB8DBA /* iMoney.entitlements */,
 				84D92FBD1E61F88D00F823DD /* AppDelegate */,
 				84D92FC11E61F9D000F823DD /* Database */,
+				FAEAC8B01E8FD37600E38654 /* Networking */,
 				FA0330901E7D7F7C00BB8DBA /* ViewControllers */,
 				FA03307C1E7D759500BB8DBA /* Utils */,
 				FA9693241E87320300F86873 /* Categories */,
@@ -200,7 +206,6 @@
 				8402D1761E61F6C600968EA2 /* Assets.xcassets */,
 				FA0330811E7D75EB00BB8DBA /* PrefixHeader.pch */,
 				8402D17B1E61F6C600968EA2 /* Info.plist */,
-				FACFC5391E7E920D000D1B9D /* GoogleService-Info.plist */,
 			);
 			path = iMoney;
 			sourceTree = "<group>";
@@ -471,6 +476,23 @@
 			path = CustomTabBarController;
 			sourceTree = "<group>";
 		};
+		FAEAC8B01E8FD37600E38654 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FAEAC8B11E8FD37600E38654 /* DropBoxManager */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FAEAC8B11E8FD37600E38654 /* DropBoxManager */ = {
+			isa = PBXGroup;
+			children = (
+				FAEAC8B21E8FD39B00E38654 /* DropBoxUtils.h */,
+				FAEAC8B31E8FD39B00E38654 /* DropBoxUtils.m */,
+			);
+			path = DropBoxManager;
+			sourceTree = "<group>";
+		};
 		FAFF39F61E88412F00524084 /* SelectedWalletViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -565,7 +587,6 @@
 				8402D1771E61F6C600968EA2 /* Assets.xcassets in Resources */,
 				FA0ACEEE1E87D55D000A42EE /* CurrencyTableViewCell.xib in Resources */,
 				FAA8385E1E86CA54005BFADF /* TransactionTableViewCell.xib in Resources */,
-				FACFC53A1E7E920D000D1B9D /* GoogleService-Info.plist in Resources */,
 				FAA8384E1E868CE3005BFADF /* MenuImages.plist in Resources */,
 				FAAC9F921E7DE79B0077B160 /* MenuTableViewCell.xib in Resources */,
 				8402D1721E61F6C600968EA2 /* Main.storyboard in Resources */,
@@ -639,6 +660,7 @@
 				FAFF39FA1E88414600524084 /* SelectedWalletViewController.m in Sources */,
 				FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */,
 				84D92FCD1E61FB9800F823DD /* iMoney.xcdatamodeld in Sources */,
+				FAEAC8B41E8FD39B00E38654 /* DropBoxUtils.m in Sources */,
 				FAB3F4801E8B151100A1A2EF /* Wallet+CoreDataProperties.m in Sources */,
 				FAB3F47F1E8B151100A1A2EF /* Wallet+CoreDataClass.m in Sources */,
 				FA3C73371E845B90000E261F /* MainWalletCollectionViewCell.m in Sources */,
@@ -784,8 +806,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iMoney/iMoney.entitlements;
 				DEVELOPMENT_TEAM = 87MSJM99B6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Color-Picker-for-iOS\"",
+					"\"${PODS_ROOT}/Headers/Public/LGPlusButtonsView\"",
+					"\"$(SRCROOT)\"/**",
+				);
 				INFOPLIST_FILE = iMoney/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -802,8 +835,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iMoney/iMoney.entitlements;
 				DEVELOPMENT_TEAM = 87MSJM99B6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Color-Picker-for-iOS\"",
+					"\"${PODS_ROOT}/Headers/Public/LGPlusButtonsView\"",
+					"\"$(SRCROOT)\"/**",
+				);
 				INFOPLIST_FILE = iMoney/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

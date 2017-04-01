@@ -7,12 +7,15 @@
 //
 
 #import "MainViewController.h"
+#import "DropBoxUtils.h"
 
-@interface MainViewController ()
+@interface MainViewController () <DropBoxDelegate>
 
 @end
 
-@implementation MainViewController
+@implementation MainViewController{
+    
+}
 
 - (void)viewDidLoad {
     
@@ -22,11 +25,22 @@
     [self mainTableViewSetup];
 }
 
+
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    self.collectionDelegates.walletsArray = [CoreDataRequestManager getAllWallets];
-    [self.walletsCollectionView reloadData];
+    
+    [[DropBoxUtils sharedInstance] setDelegate:self];
+    [[DropBoxUtils sharedInstance] logInOrDoStuff:^{
+        self.collectionDelegates.walletsArray = [CoreDataRequestManager getAllWallets];
+        [self.walletsCollectionView reloadData];
+    }];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+//    [[DropBoxUtils sharedInstance] logOut];
+//    [[DropBoxUtils sharedInstance] uploadCoreData];
 }
 
 #pragma mark - Initializations
@@ -82,6 +96,13 @@
         [self.revealButtonItem setAction: @selector(revealToggle:)];
         [self.navigationController.navigationBar addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+}
+
+#pragma mark - DropBoxDelegate
+
+- (void)downloadCoreDataFinished {
+    self.collectionDelegates.walletsArray = [CoreDataRequestManager getAllWallets];
+    [self.walletsCollectionView reloadData];
 }
 
 @end

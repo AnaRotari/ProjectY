@@ -7,6 +7,7 @@
 //
 
 #import "DatabaseSyncManager.h"
+#import "DropBoxUtils.h"
 
 @implementation DatabaseSyncManager
 
@@ -34,8 +35,7 @@
 
 - (void)coreDataChangeObserver:(NSNotification *)notification {
     
-#warning TODO: Upload to databse to Firebase
-    NSLog(@"Need to upload in Firebase");
+    [[DropBoxUtils sharedInstance] uploadCoreData];
 }
 
 - (void)dealloc {

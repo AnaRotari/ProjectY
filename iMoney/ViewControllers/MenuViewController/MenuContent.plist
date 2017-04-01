@@ -13,6 +13,7 @@
 	<array>
 		<string>ic_help</string>
 		<string>ic_settings</string>
+		<string>ic_logout</string>
 	</array>
 </array>
 </plist>

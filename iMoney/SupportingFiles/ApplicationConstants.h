@@ -15,6 +15,8 @@ FOUNDATION_EXPORT NSString *const kDBiMoneySQLite;
 FOUNDATION_EXPORT NSString *const kDBiMoneySQLiteSHM;
 FOUNDATION_EXPORT NSString *const kDBiMoneySQLiteWAL;
 
+FOUNDATION_EXPORT NSString *const kUserName;
+
 //Currency constants
 FOUNDATION_EXPORT NSString *const kCurrencyCountryName;
 FOUNDATION_EXPORT NSString *const kCurrencyCountryCode;

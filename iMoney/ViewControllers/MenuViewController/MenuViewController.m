@@ -7,11 +7,13 @@
 //
 
 #import "MenuViewController.h"
+#import "DropBoxUtils.h"
 
-@interface MenuViewController ()
+@interface MenuViewController ()<DropBoxDelegate>
 
 @property (strong, nonatomic) NSArray *menuItemsArray;
 @property (strong, nonatomic) NSArray *menuImagesArray;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 
 @end
 
@@ -21,6 +23,13 @@
     
     [super viewDidLoad];
     [self setupTableView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    [[DropBoxUtils sharedInstance] setDelegate:self];
+    [_userNameLabel setText:[[NSUserDefaults standardUserDefaults] objectForKey:kUserName]];
 }
 
 - (void)setupTableView {
@@ -65,9 +74,6 @@
         case 1:
             return @"Modules";
             break;
-        case 2:
-            return @"More";
-            break;
         default:
             break;
     }
@@ -76,7 +82,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"%@",indexPath);
+    if (indexPath.section == 1 && indexPath.row == 2) {
+        [self logoutUser];
+    }
 }
 
 #pragma mark - UITableViewDelegate
@@ -89,6 +97,35 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
     return 20;
+}
+
+-(void)DropBoxStateChangedWithText:(NSString *)text{
+    [_userNameLabel setText:text];
+}
+
+#pragma mark - Side menu actions
+
+- (void)logoutUser {
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSArray<NSString *> *fileNames = @[kDBiMoneySQLite, kDBiMoneySQLiteSHM, kDBiMoneySQLiteWAL];
+    
+    for (NSString *fileName in fileNames) {
+        
+        NSString *filePath = [documentsPath stringByAppendingPathComponent:fileName];
+        NSError *error;
+        BOOL success = [fileManager removeItemAtPath:filePath error:&error];
+        if (!success) {
+            NSLog(@"Cant delete: %@ because: %@",fileName,[error localizedDescription]);
+        }
+        else {
+            NSLog(@"Success");
+        }
+    }
+
+    [[DropBoxUtils sharedInstance] logOut];
+    [[DropBoxUtils sharedInstance] logIn];
 }
 
 @end

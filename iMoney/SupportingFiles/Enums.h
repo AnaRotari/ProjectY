@@ -15,4 +15,37 @@ typedef NS_ENUM(NSInteger, AddEditWallet)
     kEditWallt
 };
 
+typedef NS_ENUM(NSInteger, TransactionCategory)
+{
+    kTransactionCategoryFoodAndDrinks,
+    kTransactionCategoryShopping,
+    kTransactionCategoryHousing,
+    kTransactionCategoryTransportation,
+    kTransactionCategoryVechicle,
+    kTransactionCategoryLifeAndEntertainments,
+    kTransactionCategoryPC,
+    kTransactionCategoryFinancialExpenses,
+    kTransactionCategoryInvestments,
+    kTransactionCategoryIncome,
+    kTransactionCategoryOther
+};
+
+typedef NS_ENUM(NSInteger, PaymentType)
+{
+    kPaymentTypeCash,
+    kPaymentTypeDebitCard,
+    kPaymentTypeCreditCard,
+    kPaymentTypeBankTransfer,
+    kPaymentTypeVouvher,
+    kPaymentTypeMobilePayment,
+    kPaymentTypeWebPayment
+};
+
+typedef NS_ENUM(NSInteger, TransactionType)
+{
+    kTransactionTypeIncome,
+    kTransactionTypeExpense,
+    kTransactionTypeTransfer
+};
+
 #endif /* Enums_h */

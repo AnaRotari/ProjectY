@@ -525,6 +525,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="menuTableView" destination="dmk-rC-Mzc" id="Brb-hw-P3N"/>
+                        <outlet property="userNameLabel" destination="r28-PC-Kcb" id="wCD-hO-4aj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jle-rY-YhN" userLabel="First Responder" sceneMemberID="firstResponder"/>

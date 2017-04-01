@@ -13,6 +13,7 @@
 	<array>
 		<string>Help</string>
 		<string>Settings</string>
+		<string>Logout</string>
 	</array>
 </array>
 </plist>

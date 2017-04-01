@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DatabaseSyncManager.h"
+#import "DropBoxUtils.h"
 
 @interface AppDelegate ()
 
@@ -19,11 +20,20 @@
     
     NSLog(@"🗂: %@",[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory
                                                             inDomains:NSUserDomainMask] lastObject]);
-#warning TODO: FIREBASE
-//    [FIRApp configure];
     [[DatabaseSyncManager sharedInstance] startSyncronize];
     [iMoneyUtils setupAppearance];
     return YES;
+}
+
+//iOS 9 workflow
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
+    return [[DropBoxUtils sharedInstance] setupDropBox:url];
+    return true;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url sourceApplication:(NSString *)source annotation:(id)annotation {
+    return [[DropBoxUtils sharedInstance] setupDropBox:url];
+    return false;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
