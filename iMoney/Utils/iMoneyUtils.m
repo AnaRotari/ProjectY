@@ -57,4 +57,41 @@
                      }];
 }
 
++ (NSString *)formatDate:(NSDate *)dateToFormat {
+    
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateStyle:NSDateFormatterShortStyle];
+    NSLocale *locale = [NSLocale currentLocale];
+    [format setTimeZone:[NSTimeZone systemTimeZone]];
+    [format setLocale:locale];
+    
+    return [format stringFromDate:dateToFormat];
+}
+
++ (void)showAlertView:(NSString*)title withMessage:(NSString*)message {
+    
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:title
+                                 message:message
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* okButton = [UIAlertAction
+                               actionWithTitle:@"OK"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action) { }];
+    
+    [alert addAction:okButton];
+    [[iMoneyUtils topMostController] presentViewController:alert animated:YES completion:nil];
+}
+
++ (UIViewController*)topMostController {
+    
+    UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    while (topController.presentedViewController)
+    {
+        topController = topController.presentedViewController;
+    }
+    return topController;
+}
+
 @end

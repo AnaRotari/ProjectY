@@ -10,6 +10,10 @@
 
 @implementation ApplicationConstants
 
+NSString *const kFirstAppRun         = @"kFirstAppRun";
+
+NSString *const kAppFolder           = @"iMoneyAttachments";
+
 NSString *const kDBiMoneySQLite      = @"iMoney.sqlite";
 NSString *const kDBiMoneySQLiteSHM   = @"iMoney.sqlite-shm";
 NSString *const kDBiMoneySQLiteWAL   = @"iMoney.sqlite-wal";

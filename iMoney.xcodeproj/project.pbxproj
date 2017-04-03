@@ -27,6 +27,7 @@
 		FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */; };
 		FA9693231E872A6A00F86873 /* ColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9693221E872A6A00F86873 /* ColorPickerViewController.m */; };
 		FA9693271E87324100F86873 /* UIColor+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9693261E87324100F86873 /* UIColor+CoreData.m */; };
+		FA9CDBD71E9031A600BA2992 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9CDBD61E9031A600BA2992 /* MapKit.framework */; };
 		FAA8384E1E868CE3005BFADF /* MenuImages.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAA8384D1E868CE3005BFADF /* MenuImages.plist */; };
 		FAA8385D1E86CA54005BFADF /* TransactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA8385B1E86CA54005BFADF /* TransactionTableViewCell.m */; };
 		FAA8385E1E86CA54005BFADF /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA8385C1E86CA54005BFADF /* TransactionTableViewCell.xib */; };
@@ -44,6 +45,7 @@
 		FAC10AE11E81C93600118899 /* MenuContent.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC10AE01E81C93600118899 /* MenuContent.plist */; };
 		FAC10AE41E81D7D900118899 /* MainViewControllerCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC10AE31E81D7D900118899 /* MainViewControllerCollectionView.m */; };
 		FAC10AE71E81D7EC00118899 /* MainViewControllerTablleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC10AE61E81D7EC00118899 /* MainViewControllerTablleView.m */; };
+		FACCD6261E92CFF200C8E698 /* TransactionViewController+DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FACCD6251E92CFF200C8E698 /* TransactionViewController+DataSource.m */; };
 		FAD2FF571E87CBF5001BB364 /* CurrencyPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD2FF561E87CBF5001BB364 /* CurrencyPickerViewController.m */; };
 		FADB2E971E88381100319EB6 /* HWViewPager.m in Sources */ = {isa = PBXBuildFile; fileRef = FADB2E961E88381100319EB6 /* HWViewPager.m */; };
 		FAE101771E7DC8AF003525DF /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE101761E7DC8AF003525DF /* MenuViewController.m */; };
@@ -95,6 +97,7 @@
 		FA9693221E872A6A00F86873 /* ColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerViewController.m; sourceTree = "<group>"; };
 		FA9693251E87324100F86873 /* UIColor+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CoreData.h"; sourceTree = "<group>"; };
 		FA9693261E87324100F86873 /* UIColor+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CoreData.m"; sourceTree = "<group>"; };
+		FA9CDBD61E9031A600BA2992 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FAA8384D1E868CE3005BFADF /* MenuImages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MenuImages.plist; sourceTree = "<group>"; };
 		FAA8385A1E86CA54005BFADF /* TransactionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionTableViewCell.h; sourceTree = "<group>"; };
 		FAA8385B1E86CA54005BFADF /* TransactionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTableViewCell.m; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 		FAC10AE31E81D7D900118899 /* MainViewControllerCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerCollectionView.m; sourceTree = "<group>"; };
 		FAC10AE51E81D7EC00118899 /* MainViewControllerTablleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewControllerTablleView.h; sourceTree = "<group>"; };
 		FAC10AE61E81D7EC00118899 /* MainViewControllerTablleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerTablleView.m; sourceTree = "<group>"; };
+		FACCD6241E92CFF200C8E698 /* TransactionViewController+DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TransactionViewController+DataSource.h"; sourceTree = "<group>"; };
+		FACCD6251E92CFF200C8E698 /* TransactionViewController+DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TransactionViewController+DataSource.m"; sourceTree = "<group>"; };
 		FAD2FF551E87CBF5001BB364 /* CurrencyPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyPickerViewController.h; sourceTree = "<group>"; };
 		FAD2FF561E87CBF5001BB364 /* CurrencyPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyPickerViewController.m; sourceTree = "<group>"; };
 		FADB2E951E88381100319EB6 /* HWViewPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWViewPager.h; sourceTree = "<group>"; };
@@ -155,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAEAC8AF1E8FCF7400E38654 /* DropboxSDK.framework in Frameworks */,
+				FA9CDBD71E9031A600BA2992 /* MapKit.framework in Frameworks */,
 				CC632467DCA99E63795C5D67 /* libPods-iMoney.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +171,7 @@
 		4E8A75AEE0F221F971457C3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA9CDBD61E9031A600BA2992 /* MapKit.framework */,
 				FAEAC8AE1E8FCF7400E38654 /* DropboxSDK.framework */,
 				11C586DD88F1E8E3AB5C9D4B /* libPods-iMoney.a */,
 			);
@@ -509,6 +516,8 @@
 			children = (
 				FAFF39FB1E88415400524084 /* TransactionViewController.h */,
 				FAFF39FC1E88415400524084 /* TransactionViewController.m */,
+				FACCD6241E92CFF200C8E698 /* TransactionViewController+DataSource.h */,
+				FACCD6251E92CFF200C8E698 /* TransactionViewController+DataSource.m */,
 			);
 			path = TransactionViewController;
 			sourceTree = "<group>";
@@ -550,6 +559,9 @@
 						DevelopmentTeam = 87MSJM99B6;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
 							com.apple.iCloud = {
 								enabled = 1;
 							};
@@ -676,6 +688,7 @@
 				84D92FC91E61F9D000F823DD /* CoreDataAccessLayer.m in Sources */,
 				FAC10AE41E81D7D900118899 /* MainViewControllerCollectionView.m in Sources */,
 				FAAC9F911E7DE79B0077B160 /* MenuTableViewCell.m in Sources */,
+				FACCD6261E92CFF200C8E698 /* TransactionViewController+DataSource.m in Sources */,
 				FAE101831E7DD182003525DF /* SWRevealViewController.m in Sources */,
 				FA9693231E872A6A00F86873 /* ColorPickerViewController.m in Sources */,
 				FAC10AE71E81D7EC00118899 /* MainViewControllerTablleView.m in Sources */,

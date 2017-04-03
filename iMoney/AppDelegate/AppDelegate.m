@@ -22,6 +22,7 @@
                                                             inDomains:NSUserDomainMask] lastObject]);
     [[DatabaseSyncManager sharedInstance] startSyncronize];
     [iMoneyUtils setupAppearance];
+    [self checkFirstRun];
     return YES;
 }
 
@@ -34,6 +35,24 @@
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url sourceApplication:(NSString *)source annotation:(id)annotation {
     return [[DropBoxUtils sharedInstance] setupDropBox:url];
     return false;
+}
+
+- (void)checkFirstRun {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (![defaults boolForKey:kFirstAppRun]) {
+        [defaults setBool:YES forKey:kFirstAppRun];
+        [defaults synchronize];
+        
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *videoFolderPath = [paths firstObject];
+        videoFolderPath = [NSString stringWithFormat:@"%@/%@", videoFolderPath, kAppFolder];
+        
+        [[NSFileManager defaultManager] createDirectoryAtPath:videoFolderPath
+                                  withIntermediateDirectories:YES
+                                                   attributes:nil
+                                                        error:nil];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

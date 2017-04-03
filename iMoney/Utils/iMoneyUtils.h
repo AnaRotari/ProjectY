@@ -14,5 +14,7 @@
 + (UIBarButtonItem *)getNavigationButton:(NSString *)imageName target:(id)target andSelector:(SEL)action;
 + (NSDate *)getTodayFormatedDate;
 + (void)setStatusBarBackgroundColor:(UIColor *)color forNavigationController:(UINavigationController *)controller;
++ (NSString *)formatDate:(NSDate *)dateToFormat;
++ (void)showAlertView:(NSString*)title withMessage:(NSString*)message;
 
 @end

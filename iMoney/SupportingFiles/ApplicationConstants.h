@@ -10,6 +10,10 @@
 
 @interface ApplicationConstants : NSObject
 
+FOUNDATION_EXPORT NSString *const kFirstAppRun;
+
+FOUNDATION_EXPORT NSString *const kAppFolder;
+
 //Export CoreData constants
 FOUNDATION_EXPORT NSString *const kDBiMoneySQLite;
 FOUNDATION_EXPORT NSString *const kDBiMoneySQLiteSHM;
