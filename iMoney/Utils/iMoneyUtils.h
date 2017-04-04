@@ -16,5 +16,6 @@
 + (void)setStatusBarBackgroundColor:(UIColor *)color forNavigationController:(UINavigationController *)controller;
 + (NSString *)formatDate:(NSDate *)dateToFormat;
 + (void)showAlertView:(NSString*)title withMessage:(NSString*)message;
++ (NSString*)getUniqID;
 
 @end

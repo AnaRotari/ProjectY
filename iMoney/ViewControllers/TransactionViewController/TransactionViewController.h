@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MKDropdownMenu.h"
 
-@interface TransactionViewController : UIViewController <MKDropdownMenuDataSource,MKDropdownMenuDelegate, UIScrollViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface TransactionViewController : UIViewController <MKDropdownMenuDataSource,MKDropdownMenuDelegate, UIScrollViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 
 //Data flow
 @property (strong, nonatomic) Wallet *parentWallet;
@@ -44,6 +44,7 @@
 //Collection View
 @property (weak, nonatomic) IBOutlet UICollectionView *imagesCollectionView;
 @property (weak, nonatomic) IBOutlet UILabel *noImagesLabel;
+@property (strong,nonatomic) NSMutableArray *arrayWithImages;
 
 
 @end

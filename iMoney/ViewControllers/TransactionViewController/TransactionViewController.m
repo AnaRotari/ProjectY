@@ -8,6 +8,7 @@
 
 #import "TransactionViewController.h"
 #import "TransactionViewController+DataSource.h"
+#import "UserImagesCollectionViewCell.h"
 
 @interface TransactionViewController ()
 
@@ -41,6 +42,12 @@
     self.dateLabel.text = [iMoneyUtils formatDate:[NSDate date]];
     self.imagesCollectionView.layer.borderWidth = 1.f/[[UIScreen mainScreen] scale];
     self.imagesCollectionView.layer.borderColor = RGBColor(203, 203, 203, 1).CGColor;
+    
+    //Colletionview
+    [self.imagesCollectionView registerNib:[UINib nibWithNibName:@"UserImagesCollectionViewCell" bundle:nil]
+                forCellWithReuseIdentifier:@"UserImagesCollectionViewCell"];
+    
+    self.arrayWithImages = [[NSMutableArray alloc] init];
 }
 
 - (void)doneButtonAction:(id)sender {
@@ -57,7 +64,7 @@
 - (void)constructTransaction {
    
     NSDictionary *finalTransactionsDetails = @{kTransactionAmount      : self.amountTextField.text,
-                                               kTransactionAttachemts  : @"",
+                                               kTransactionAttachemts  : self.arrayWithImages,
                                                kTransactionCategory    : self.selectedTransactionCategoryLabel.text,
                                                kTransactionDate        : [iMoneyUtils getTodayFormatedDate],
                                                kTransactionDescription : self.descriptionLabel.text,
@@ -145,17 +152,13 @@
     
     UIAlertController* alert = [UIAlertController
                                 alertControllerWithTitle:nil
-                                message:nil
+                                message:@"Options"
                                 preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* cancelButton = [UIAlertAction
                                    actionWithTitle:@"Cancel"
                                    style:UIAlertActionStyleCancel
-                                   handler:^(UIAlertAction * _Nonnull action) {
-                                       
-                                       
-                                   }];
-    
+                                   handler:^(UIAlertAction * _Nonnull action) {}];
     
     UIAlertAction* addFromGaleryButton = [UIAlertAction
                                           actionWithTitle:@"Choose from library"
@@ -204,12 +207,76 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-//    [arrayWithImages addObject:chosenImage];
-//    [self.userImagesCollectionView reloadData];
-//    
-//    arrayWithImages.count ? [self.noImagesLabelOutlet setHidden:YES] : [self.noImagesLabelOutlet setHidden:NO];
+    [chosenImage setAccessibilityIdentifier:[iMoneyUtils getUniqID]];
+    [self.arrayWithImages addObject:chosenImage];
+    [self.imagesCollectionView reloadData];
+    
+    self.arrayWithImages.count ? [self.noImagesLabel setHidden:YES] : [self.noImagesLabel setHidden:NO];
     
     [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+    return self.arrayWithImages.count;
+}
+
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UserImagesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UserImagesCollectionViewCell" forIndexPath:indexPath];
+    cell.imageCollectionViewOutlet.image = self.arrayWithImages[indexPath.row];
+    return cell;
+}
+
+#pragma mark - UICollectionViewDelegate
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(170,170);
+}
+
+- (IBAction)didLongPressCell:(UILongPressGestureRecognizer*)gesture {
+    
+    CGPoint tapLocation = [gesture locationInView:self.imagesCollectionView];
+    NSIndexPath *indexPath = [self.imagesCollectionView indexPathForItemAtPoint:tapLocation];
+    if (indexPath && gesture.state == UIGestureRecognizerStateBegan) {
+        
+        UIAlertController* alert = [UIAlertController
+                                    alertControllerWithTitle:nil
+                                    message:@"Delete image ?"
+                                    preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* cancelButton = [UIAlertAction
+                                       actionWithTitle:@"Cancel"
+                                       style:UIAlertActionStyleCancel
+                                       handler:^(UIAlertAction * _Nonnull action) {
+                                           
+                                           
+                                       }];
+        
+        UIAlertAction* deleteImageButton = [UIAlertAction
+                                            actionWithTitle:@"Delete"
+                                            style:UIAlertActionStyleDefault
+                                            handler:^(UIAlertAction * _Nonnull action) {
+                                                
+                                                [self deleteImageFromCollectionView:(int)indexPath.item];
+                                            }];
+    
+        [alert addAction:deleteImageButton];
+        [alert addAction:cancelButton];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+        
+    }
+}
+
+- (void)deleteImageFromCollectionView:(int)index {
+    
+    [self.arrayWithImages removeObjectAtIndex:index];
+    [self.imagesCollectionView reloadData];
+    self.arrayWithImages.count ? [self.noImagesLabel setHidden:YES] : [self.noImagesLabel setHidden:NO];
 }
 
 @end

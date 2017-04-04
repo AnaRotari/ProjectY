@@ -94,4 +94,9 @@
     return topController;
 }
 
++ (NSString*)getUniqID {
+    
+    return [[NSUUID UUID] UUIDString];
+}
+
 @end

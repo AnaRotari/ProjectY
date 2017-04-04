@@ -34,9 +34,36 @@
     }
 }
 
+/*
+ kTransactionAttachemts  : self.arrayWithImages,
+ */
+
 + (void)createTransaction:(NSDictionary *)transactionDetails toWallet:(Wallet *)wallet {
     
+    NSError *error = nil;
+    NSManagedObjectContext *context = [[CoreDataAccessLayer sharedInstance] managedObjectContext];
     
+    Transaction *newTransaction = [NSEntityDescription insertNewObjectForEntityForName:@"Transaction"
+                                                                inManagedObjectContext:context];
+    
+    newTransaction.transactionAmount      = [[NSDecimalNumber alloc] initWithString:transactionDetails[kTransactionAmount]];
+    newTransaction.transactionCategory    = [transactionDetails[kTransactionCategory] intValue];
+    newTransaction.transactionDate        = transactionDetails[kTransactionDate];
+    newTransaction.transactionDescription = transactionDetails[kTransactionDescription];
+    newTransaction.transactionPayee       = transactionDetails[kTransactionPayee];
+    newTransaction.transactionPaymentType = [transactionDetails[kTransactionPaymentType] intValue];
+    newTransaction.transactionType        = [transactionDetails[kTransactionType] intValue];
+  
+//    @property (nullable, nonatomic, copy) NSString *transactionAttachments;
+//    @property (nullable, nonatomic, retain) NSObject *transactionLocation;
+    
+    [wallet addTransactionsObject:newTransaction];
+    
+    if(![context save:&error]) {
+        NSLog(@"%@",[error localizedDescription]);
+    } else {
+        NSLog(@"successfull saved");
+    }
 }
 
 @end

@@ -25,6 +25,8 @@
 		FA3C73371E845B90000E261F /* MainWalletCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3C73351E845B90000E261F /* MainWalletCollectionViewCell.m */; };
 		FA3C73381E845B90000E261F /* MainWalletCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3C73361E845B90000E261F /* MainWalletCollectionViewCell.xib */; };
 		FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */; };
+		FA745CBD1E94201E0035BB58 /* UserImagesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA745CBB1E94201E0035BB58 /* UserImagesCollectionViewCell.m */; };
+		FA745CBE1E94201E0035BB58 /* UserImagesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA745CBC1E94201E0035BB58 /* UserImagesCollectionViewCell.xib */; };
 		FA9693231E872A6A00F86873 /* ColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9693221E872A6A00F86873 /* ColorPickerViewController.m */; };
 		FA9693271E87324100F86873 /* UIColor+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9693261E87324100F86873 /* UIColor+CoreData.m */; };
 		FA9CDBD71E9031A600BA2992 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9CDBD61E9031A600BA2992 /* MapKit.framework */; };
@@ -93,6 +95,9 @@
 		FA3C73361E845B90000E261F /* MainWalletCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWalletCollectionViewCell.xib; sourceTree = "<group>"; };
 		FA5540171E7E995900A4C773 /* DatabaseSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseSyncManager.h; sourceTree = "<group>"; };
 		FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseSyncManager.m; sourceTree = "<group>"; };
+		FA745CBA1E94201E0035BB58 /* UserImagesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserImagesCollectionViewCell.h; sourceTree = "<group>"; };
+		FA745CBB1E94201E0035BB58 /* UserImagesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserImagesCollectionViewCell.m; sourceTree = "<group>"; };
+		FA745CBC1E94201E0035BB58 /* UserImagesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserImagesCollectionViewCell.xib; sourceTree = "<group>"; };
 		FA9693211E872A6A00F86873 /* ColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerViewController.h; sourceTree = "<group>"; };
 		FA9693221E872A6A00F86873 /* ColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerViewController.m; sourceTree = "<group>"; };
 		FA9693251E87324100F86873 /* UIColor+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CoreData.h"; sourceTree = "<group>"; };
@@ -344,6 +349,16 @@
 			path = DatabaseSyncManager;
 			sourceTree = "<group>";
 		};
+		FA745CB91E94201E0035BB58 /* UserImagesCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA745CBA1E94201E0035BB58 /* UserImagesCollectionViewCell.h */,
+				FA745CBB1E94201E0035BB58 /* UserImagesCollectionViewCell.m */,
+				FA745CBC1E94201E0035BB58 /* UserImagesCollectionViewCell.xib */,
+			);
+			path = UserImagesCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		FA9693201E872A4D00F86873 /* ColorPickerViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -514,6 +529,7 @@
 		FAFF39F71E88412F00524084 /* TransactionViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FA745CB91E94201E0035BB58 /* UserImagesCollectionViewCell */,
 				FAFF39FB1E88415400524084 /* TransactionViewController.h */,
 				FAFF39FC1E88415400524084 /* TransactionViewController.m */,
 				FACCD6241E92CFF200C8E698 /* TransactionViewController+DataSource.h */,
@@ -598,6 +614,7 @@
 				FA3C73381E845B90000E261F /* MainWalletCollectionViewCell.xib in Resources */,
 				8402D1771E61F6C600968EA2 /* Assets.xcassets in Resources */,
 				FA0ACEEE1E87D55D000A42EE /* CurrencyTableViewCell.xib in Resources */,
+				FA745CBE1E94201E0035BB58 /* UserImagesCollectionViewCell.xib in Resources */,
 				FAA8385E1E86CA54005BFADF /* TransactionTableViewCell.xib in Resources */,
 				FAA8384E1E868CE3005BFADF /* MenuImages.plist in Resources */,
 				FAAC9F921E7DE79B0077B160 /* MenuTableViewCell.xib in Resources */,
@@ -667,6 +684,7 @@
 				FAD2FF571E87CBF5001BB364 /* CurrencyPickerViewController.m in Sources */,
 				FA0330801E7D75C400BB8DBA /* main.m in Sources */,
 				FAE43DC71E847A7600C90817 /* CustomTabBarController.m in Sources */,
+				FA745CBD1E94201E0035BB58 /* UserImagesCollectionViewCell.m in Sources */,
 				FAA838751E870BC9005BFADF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				FAA838721E870BC9005BFADF /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				FAFF39FA1E88414600524084 /* SelectedWalletViewController.m in Sources */,
