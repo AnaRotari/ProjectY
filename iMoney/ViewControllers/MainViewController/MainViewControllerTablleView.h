@@ -10,4 +10,6 @@
 
 @interface MainViewControllerTablleView : NSObject <UITableViewDelegate, UITableViewDataSource>
 
+@property (strong, nonatomic) NSArray <Transaction *> *transactionsArray;
+
 @end

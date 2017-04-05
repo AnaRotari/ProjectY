@@ -23,7 +23,8 @@
 
 - (void)initData {
     
-    self.transactionTypeArray = @[@"Income",@"Expense"];
+    self.transactionTypeArray = @[@"Income",
+                                  @"Expense"];
     
     self.transactionCategoryArray = @[@"Food And Drinks",
                                       @"Shopping",
@@ -38,7 +39,13 @@
                                       @"Gregories",
                                       @"Other"];
     
-    self.paymentArray = @[@"Cash",@"Debit Card",@"Credit Card",@"Transfer",@"Voucher",@"Mobile Payment",@"Web Payment"];
+    self.paymentArray = @[@"Cash",
+                          @"Debit Card",
+                          @"Credit Card",
+                          @"Transfer",
+                          @"Voucher",
+                          @"Mobile Payment",
+                          @"Web Payment"];
 }
 
 @end

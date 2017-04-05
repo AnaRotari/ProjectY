@@ -11,6 +11,8 @@
 
 @interface MainViewController () <DropBoxDelegate>
 
+@property (assign, nonatomic) NSInteger selectedWalletIndex;
+
 @end
 
 @implementation MainViewController{
@@ -23,8 +25,8 @@
     [self customSetup];
     [self mainCollectionViewSetup];
     [self mainTableViewSetup];
+    [self todayDateSetup];
 }
-
 
 - (void)viewWillAppear:(BOOL)animated {
     
@@ -34,13 +36,13 @@
     [[DropBoxUtils sharedInstance] logInOrDoStuff:^{
         self.collectionDelegates.walletsArray = [CoreDataRequestManager getAllWallets];
         [self.walletsCollectionView reloadData];
+        
+        if (self.collectionDelegates.walletsArray.count) {
+            self.tableDelegates.transactionsArray = [CoreDataRequestManager getTodayTransactionsForWallet:self.collectionDelegates.walletsArray[self.selectedWalletIndex]];
+        }
+        self.tableDelegates.transactionsArray.count ? [self.noTransactionsLabel setHidden:YES] : [self.noTransactionsLabel setHidden:NO];
+        [self.transactionsTableView reloadData];
     }];
-}
-
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-//    [[DropBoxUtils sharedInstance] logOut];
-//    [[DropBoxUtils sharedInstance] uploadCoreData];
 }
 
 #pragma mark - Initializations
@@ -62,6 +64,14 @@
     [self.transactionsTableView setDelegate:self.tableDelegates];
 }
 
+- (void)todayDateSetup {
+    
+    NSDate *todayDate = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEEE, dd MMMM"];
+    self.todayDateLabel.text = [dateFormatter stringFromDate:todayDate];
+}
+
 #pragma mark - Button action
 
 - (IBAction)addWalletButtonAction:(id)sender {
@@ -75,7 +85,12 @@
 
 - (void)userDidScrollToWallet:(NSInteger)walletNumber {
     
-    //Need to update UI
+    self.selectedWalletIndex = walletNumber;
+    self.tableDelegates.transactionsArray = [CoreDataRequestManager getTodayTransactionsForWallet:self.collectionDelegates.walletsArray[self.selectedWalletIndex]];
+    
+    self.tableDelegates.transactionsArray.count ? [self.noTransactionsLabel setHidden:YES] : [self.noTransactionsLabel setHidden:NO];
+
+    [self.transactionsTableView reloadData];
 }
 
 - (void)userDidSelectWallet:(NSInteger)walletSelected {
@@ -101,8 +116,16 @@
 #pragma mark - DropBoxDelegate
 
 - (void)downloadCoreDataFinished {
+    
     self.collectionDelegates.walletsArray = [CoreDataRequestManager getAllWallets];
     [self.walletsCollectionView reloadData];
+    
+    if (self.collectionDelegates.walletsArray.count) {
+        self.tableDelegates.transactionsArray = [CoreDataRequestManager getTodayTransactionsForWallet:self.collectionDelegates.walletsArray[self.selectedWalletIndex]];
+    }
+    
+    self.tableDelegates.transactionsArray.count ? [self.noTransactionsLabel setHidden:YES] : [self.noTransactionsLabel setHidden:NO];
+    [self.transactionsTableView reloadData];
 }
 
 @end

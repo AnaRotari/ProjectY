@@ -11,6 +11,15 @@
 
 @implementation MainViewControllerCollectionView
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.walletsArray = [NSArray array];
+    }
+    return self;
+}
+
 #pragma mark - UICollectionViewDataSource
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

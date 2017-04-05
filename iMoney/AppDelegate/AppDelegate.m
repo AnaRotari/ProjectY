@@ -23,6 +23,11 @@
     [[DatabaseSyncManager sharedInstance] startSyncronize];
     [iMoneyUtils setupAppearance];
     [self checkFirstRun];
+    
+//    [[[CoreDataAccessLayer sharedInstance] managedObjectContext] performBlockAndWait:^{
+//       [[CoreDataAccessLayer sharedInstance] resetDatabase];
+//    }];
+    
     return YES;
 }
 

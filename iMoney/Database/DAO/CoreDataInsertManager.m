@@ -54,6 +54,19 @@
     newTransaction.transactionPaymentType = [transactionDetails[kTransactionPaymentType] intValue];
     newTransaction.transactionType        = [transactionDetails[kTransactionType] intValue];
   
+    switch ([transactionDetails[kTransactionType] intValue]) {
+        case kTransactionTypeIncome:
+            
+            wallet.walletBalance = [wallet.walletBalance decimalNumberByAdding:[[NSDecimalNumber alloc] initWithString:transactionDetails[kTransactionAmount]]];
+            break;
+        case kTransactionTypeExpense:
+            wallet.walletBalance = [wallet.walletBalance decimalNumberBySubtracting:[[NSDecimalNumber alloc] initWithString:transactionDetails[kTransactionAmount]]];
+            break;
+            
+        default:
+            break;
+    }
+    
 //    @property (nullable, nonatomic, copy) NSString *transactionAttachments;
 //    @property (nullable, nonatomic, retain) NSObject *transactionLocation;
     

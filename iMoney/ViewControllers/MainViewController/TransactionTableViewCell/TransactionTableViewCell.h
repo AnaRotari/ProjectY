@@ -10,4 +10,11 @@
 
 @interface TransactionTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *transactionCategoryImage;
+@property (weak, nonatomic) IBOutlet UILabel *transactionCategoryNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *transactionAmountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
+- (void)initTransactionCell:(Transaction *)transaction hidesDateLabel:(BOOL)hide;
+
 @end

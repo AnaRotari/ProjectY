@@ -94,15 +94,23 @@
                                     <constraint firstAttribute="trailing" secondItem="tpq-8Z-NwI" secondAttribute="trailing" constant="8" id="iYW-6f-mxR"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No transactions today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLT-SD-5rf">
+                                <rect key="frame" x="103.5" y="471.5" width="168.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7A1-ik-lPc" firstAttribute="top" secondItem="9bh-us-7kG" secondAttribute="bottom" id="37C-C8-g6P"/>
                             <constraint firstItem="t6X-60-4MJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3X0-qh-IxQ"/>
+                            <constraint firstItem="aLT-SD-5rf" firstAttribute="centerY" secondItem="vcs-iD-1he" secondAttribute="centerY" id="5aK-BA-MAh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vcs-iD-1he" secondAttribute="bottom" id="7YC-Hi-aKI"/>
                             <constraint firstItem="vcs-iD-1he" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8ES-wn-EeB"/>
                             <constraint firstItem="t6X-60-4MJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="AKI-YY-Ezd"/>
+                            <constraint firstItem="aLT-SD-5rf" firstAttribute="centerX" secondItem="vcs-iD-1he" secondAttribute="centerX" id="IlF-H4-EYj"/>
                             <constraint firstItem="7A1-ik-lPc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PBy-yc-JXs"/>
                             <constraint firstItem="9bh-us-7kG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="R0r-BX-zIg"/>
                             <constraint firstItem="9bh-us-7kG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SJE-uL-fFv"/>
@@ -127,7 +135,9 @@
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="noTransactionsLabel" destination="aLT-SD-5rf" id="jWm-02-aIg"/>
                         <outlet property="revealButtonItem" destination="HuD-mf-jw6" id="XKW-X1-g4s"/>
+                        <outlet property="todayDateLabel" destination="CBn-N5-fk4" id="aao-L2-Ovn"/>
                         <outlet property="transactionsTableView" destination="vcs-iD-1he" id="oeI-7p-Kpg"/>
                         <outlet property="walletsCollectionView" destination="9bh-us-7kG" id="K9T-83-QeW"/>
                     </connections>
@@ -408,6 +418,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="-64" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cNu-dQ-Fz9" id="IAK-NX-X3E"/>
+                                    <outlet property="delegate" destination="cNu-dQ-Fz9" id="fqY-nn-34W"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

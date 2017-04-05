@@ -11,16 +11,26 @@
 
 @implementation MainViewControllerTablleView
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.transactionsArray = [NSArray array];
+    }
+    return self;
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 10;
+    return self.transactionsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     TransactionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TransactionTableViewCell" forIndexPath:indexPath];
+    [cell initTransactionCell:self.transactionsArray[indexPath.row] hidesDateLabel:YES];
     return cell;
 }
 

@@ -22,4 +22,8 @@
 @property (strong, nonatomic) MainViewControllerCollectionView *collectionDelegates;
 @property (strong, nonatomic) MainViewControllerTablleView *tableDelegates;
 
+@property (weak, nonatomic) IBOutlet UILabel *todayDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *noTransactionsLabel;
+
+
 @end

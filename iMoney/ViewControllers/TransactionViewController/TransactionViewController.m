@@ -10,7 +10,12 @@
 #import "TransactionViewController+DataSource.h"
 #import "UserImagesCollectionViewCell.h"
 
-@interface TransactionViewController ()
+@interface TransactionViewController () {
+    
+    NSInteger selectedTransactionType;
+    NSInteger selectedTransactionCateogory;
+    NSInteger selectedPaymentType;
+}
 
 @end
 
@@ -62,15 +67,15 @@
 }
 
 - (void)constructTransaction {
-   
+    
     NSDictionary *finalTransactionsDetails = @{kTransactionAmount      : self.amountTextField.text,
                                                kTransactionAttachemts  : self.arrayWithImages,
-                                               kTransactionCategory    : self.selectedTransactionCategoryLabel.text,
+                                               kTransactionCategory    : @(selectedTransactionCateogory),
                                                kTransactionDate        : [iMoneyUtils getTodayFormatedDate],
                                                kTransactionDescription : self.descriptionLabel.text,
                                                kTransactionPayee       : self.payeeLabel.text,
-                                               kTransactionPaymentType : self.selectedPaymentTypeLabel.text,
-                                               kTransactionType        : self.selectedTransactionTypeLabel.text};
+                                               kTransactionPaymentType : @(selectedPaymentType),
+                                               kTransactionType        : @(selectedTransactionType)};
     
     [CoreDataInsertManager createTransaction:finalTransactionsDetails
                                     toWallet:self.parentWallet];
@@ -132,12 +137,15 @@
     [dropdownMenu closeAllComponentsAnimated:YES];
     if ([dropdownMenu isEqual:self.transactionType]) {
         self.selectedTransactionTypeLabel.text = self.transactionTypeArray[row];
+        selectedTransactionType = row;
     }
     if ([dropdownMenu isEqual:self.transactionCategory]) {
         self.selectedTransactionCategoryLabel.text = self.transactionCategoryArray[row];
+        selectedTransactionCateogory = row;
     }
     if ([dropdownMenu isEqual:self.paymentType]) {
         self.selectedPaymentTypeLabel.text = self.paymentArray[row];
+        selectedPaymentType = row;
     }
 }
 
@@ -251,10 +259,7 @@
         UIAlertAction* cancelButton = [UIAlertAction
                                        actionWithTitle:@"Cancel"
                                        style:UIAlertActionStyleCancel
-                                       handler:^(UIAlertAction * _Nonnull action) {
-                                           
-                                           
-                                       }];
+                                       handler:^(UIAlertAction * _Nonnull action) {}];
         
         UIAlertAction* deleteImageButton = [UIAlertAction
                                             actionWithTitle:@"Delete"
@@ -268,7 +273,6 @@
         [alert addAction:cancelButton];
         
         [self presentViewController:alert animated:YES completion:nil];
-        
     }
 }
 
