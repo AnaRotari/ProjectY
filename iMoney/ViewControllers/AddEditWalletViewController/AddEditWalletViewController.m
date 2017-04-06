@@ -56,26 +56,67 @@
     
     self.walletSelectedColor.layer.borderWidth = 1;
     self.walletSelectedColor.layer.borderColor = RGBColor(205, 205, 205, 1).CGColor;
+    
+    if (self.walletAction == kEditWallt) {
+        self.walletSelectedColor.backgroundColor = [[UIColor alloc] colorWithData:self.walletToEdit.walletColor];
+        self.walletCurrencyLabel.text = self.walletToEdit.walletCurrency;
+        self.walletDescriptionTextField.text = self.walletToEdit.walletDescription;
+        self.walletInitValueTextField.text = [self.walletToEdit.walletBalance stringValue];
+        self.walletNameTextField.text = self.walletToEdit.walletName;
+    }
 }
 
 #pragma mark - Button actions
 
 - (void)doneButtonAction:(id)sender {
     
+    switch (self.walletAction) {
+        case kAddWallet:
+            [self addNewWalletToDB];
+            break;
+        case kEditWallt:
+            [self updateExistingWallet];
+            break;
+        default:
+            break;
+    }
+    
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)addNewWalletToDB {
+    
     NSDictionary *newWallet = @{kWalletColor       : self.walletSelectedColor.backgroundColor,
                                 kWalletCurrency    : self.walletCurrencyLabel.text,
                                 kWalletDescription : self.walletDescriptionTextField.text,
                                 kWalletBalance     : self.walletInitValueTextField.text,
                                 kWalletName        : self.walletNameTextField.text};
-
+    
     [CoreDataInsertManager createWallet:newWallet];
-    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)updateExistingWallet {
+    
+    NSError *error;
+    self.walletToEdit.walletColor = self.walletSelectedColor.backgroundColor.encode;
+    self.walletToEdit.walletCurrency = self.walletCurrencyLabel.text;
+    self.walletToEdit.walletDescription = self.walletDescriptionTextField.text;
+    self.walletToEdit.walletBalance = [NSDecimalNumber decimalNumberWithString:self.walletInitValueTextField.text];
+    self.walletToEdit.walletName = self.walletNameTextField.text;
+    if(![[[CoreDataAccessLayer sharedInstance] managedObjectContext] save:&error]) {
+        NSLog(@"Cant update wallet :%@",[error localizedDescription]);
+    }
 }
 
 - (void)deleteButtonAction:(id)sender {
     
-#warning TODO:DELETE WALLET
-    [self.navigationController popViewControllerAnimated:YES];
+    NSError *error;
+    [[[CoreDataAccessLayer sharedInstance] managedObjectContext] deleteObject:self.walletToEdit];
+    if(![[[CoreDataAccessLayer sharedInstance] managedObjectContext] save:&error]) {
+        NSLog(@"Cant delete wallet :%@",[error localizedDescription]);
+    }
+    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:YES];
 }
 
 - (IBAction)selectColorButtonAction:(id)sender {

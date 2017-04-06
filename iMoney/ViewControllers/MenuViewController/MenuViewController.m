@@ -8,6 +8,7 @@
 
 #import "MenuViewController.h"
 #import "DropBoxUtils.h"
+#import "ReminderViewController.h"
 
 @interface MenuViewController ()<DropBoxDelegate>
 
@@ -60,8 +61,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     MenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuTableViewCell" forIndexPath:indexPath];
-    [cell initCellWithValue:self.menuImagesArray[indexPath.section][indexPath.row]
-               andImageName:self.menuItemsArray[indexPath.section][indexPath.row]];
+    [cell initCellWithValue:self.menuItemsArray[indexPath.section][indexPath.row]
+               andImageName:self.menuImagesArray[indexPath.section][indexPath.row]];
     return cell;
 }
 
@@ -69,10 +70,10 @@
     
     switch (section) {
         case 0:
-            return @"Main";
+            return @"Modules";
             break;
         case 1:
-            return @"Modules";
+            return @"Other";
             break;
         default:
             break;
@@ -82,6 +83,33 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        [self openPlannedPayments];
+    }
+    if (indexPath.section == 0 && indexPath.row == 1) {
+        [self openExports];
+    }
+    if (indexPath.section == 0 && indexPath.row == 2) {
+        [self openDebts];
+    }
+    if (indexPath.section == 0 && indexPath.row == 3) {
+        [self openShoppingLists];
+    }
+    if (indexPath.section == 0 && indexPath.row == 4) {
+        [self openWarranties];
+    }
+    if (indexPath.section == 0 && indexPath.row == 5) {
+        [self openLocations];
+    }
+    if (indexPath.section == 0 && indexPath.row == 6) {
+        [self openReminderViewController];
+    }
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        [self logoutUser];
+    }
+    if (indexPath.section == 1 && indexPath.row == 1) {
+        [self logoutUser];
+    }
     if (indexPath.section == 1 && indexPath.row == 2) {
         [self logoutUser];
     }
@@ -104,6 +132,52 @@
 }
 
 #pragma mark - Side menu actions
+
+- (void)openPlannedPayments {
+    
+    
+}
+
+- (void)openExports {
+    
+    
+}
+
+- (void)openDebts {
+    
+    
+}
+
+- (void)openShoppingLists {
+    
+    
+}
+
+- (void)openWarranties {
+    
+    
+}
+
+- (void)openLocations {
+    
+    
+}
+
+- (void)openReminderViewController {
+    
+    ReminderViewController *reminderViewController = [[ReminderViewController alloc] init];
+    [self presentViewController:reminderViewController animated:YES completion:nil];
+}
+
+- (void)openHelp {
+    
+    
+}
+
+- (void)openSettings {
+    
+    
+}
 
 - (void)logoutUser {
     

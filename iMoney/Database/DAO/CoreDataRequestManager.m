@@ -60,6 +60,7 @@
     
     NSArray *resultArray = [[[CoreDataAccessLayer sharedInstance] managedObjectContext ] executeFetchRequest:request
                                                                                                        error:&requestError];
+    
     return resultArray;
 }
 

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -126,12 +127,20 @@
                         <barButtonItem key="leftBarButtonItem" image="beaconMenuV2" id="HuD-mf-jw6">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="X7E-wm-su3">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="addWalletButtonAction:" destination="BYZ-38-t0r" id="uIq-3s-Hiv"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="X7E-wm-su3">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="addWalletButtonAction:" destination="BYZ-38-t0r" id="uIq-3s-Hiv"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="ic_reorderWallets" style="plain" id="Adi-x0-Khy">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="reorderWalletsButtonAction:" destination="BYZ-38-t0r" id="EdT-4u-FXN"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
@@ -745,6 +754,66 @@
             </objects>
             <point key="canvasLocation" x="1253.5999999999999" y="232.53373313343329"/>
         </scene>
+        <!--Reorder Wallets View Controller-->
+        <scene sceneID="0ai-yj-PZh">
+            <objects>
+                <viewController storyboardIdentifier="ReorderWalletsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ywO-Gg-xT6" customClass="ReorderWalletsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HGN-sL-m2V"/>
+                        <viewControllerLayoutGuide type="bottom" id="XW2-iB-iSn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b1H-Wi-bUb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ArG-7J-9bd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.16470588235294117" green="0.011764705882352941" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ywO-Gg-xT6" id="2k6-xK-CC2"/>
+                                    <outlet property="delegate" destination="ywO-Gg-xT6" id="frC-0y-NMe"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="OwJ-Ra-U3U">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="IV1-L2-GzQ"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="g1B-Q9-5DS">
+                                        <connections>
+                                            <action selector="cancelButtonAction:" destination="ywO-Gg-xT6" id="Wbw-Pt-QT0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="save" id="ZUO-3g-nOH">
+                                        <connections>
+                                            <action selector="saveButtonAction:" destination="ywO-Gg-xT6" id="fYo-IC-31B"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XW2-iB-iSn" firstAttribute="top" secondItem="OwJ-Ra-U3U" secondAttribute="bottom" id="3eG-wr-NGF"/>
+                            <constraint firstItem="ArG-7J-9bd" firstAttribute="leading" secondItem="b1H-Wi-bUb" secondAttribute="leading" id="95E-kc-WqZ"/>
+                            <constraint firstAttribute="trailing" secondItem="OwJ-Ra-U3U" secondAttribute="trailing" id="avy-qT-WSE"/>
+                            <constraint firstItem="ArG-7J-9bd" firstAttribute="top" secondItem="HGN-sL-m2V" secondAttribute="bottom" id="jSx-ux-5PG"/>
+                            <constraint firstAttribute="trailing" secondItem="ArG-7J-9bd" secondAttribute="trailing" id="s49-ls-UNT"/>
+                            <constraint firstItem="OwJ-Ra-U3U" firstAttribute="leading" secondItem="b1H-Wi-bUb" secondAttribute="leading" id="ubc-TW-vgc"/>
+                            <constraint firstItem="OwJ-Ra-U3U" firstAttribute="top" secondItem="ArG-7J-9bd" secondAttribute="bottom" id="xaj-ls-M4i"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="walletsTableView" destination="ArG-7J-9bd" id="KNp-C9-dbw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDb-a8-und" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2044" y="232.53373313343329"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="WK2-VL-pxA">
             <objects>
@@ -931,6 +1000,7 @@
         <image name="ic_dashboard" width="32" height="32"/>
         <image name="ic_raports" width="32" height="32"/>
         <image name="ic_records" width="32" height="32"/>
+        <image name="ic_reorderWallets" width="16" height="16"/>
         <image name="ic_selectCurrency" width="32" height="32"/>
     </resources>
 </document>

@@ -3,17 +3,18 @@
 <plist version="1.0">
 <array>
 	<array>
-		<string>ic_plannedPayments</string>
-		<string>ic_exports</string>
-		<string>ic_debts</string>
-		<string>ic_shoppingLists</string>
-		<string>ic_warranties</string>
-		<string>ic_locations</string>
+		<string>Planned payments</string>
+		<string>Exports</string>
+		<string>Debts</string>
+		<string>Shopping lists</string>
+		<string>Warranties</string>
+		<string>Locations</string>
+		<string>Reminder</string>
 	</array>
 	<array>
-		<string>ic_help</string>
-		<string>ic_settings</string>
-		<string>ic_logout</string>
+		<string>Help</string>
+		<string>Settings</string>
+		<string>Logout</string>
 	</array>
 </array>
 </plist>

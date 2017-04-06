@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Medium.otf">
+            <string>SFUIText-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReminderViewController">
+            <connections>
+                <outlet property="afterNDaysButton" destination="nM1-ix-Nch" id="COM-40-r6P"/>
+                <outlet property="afterNDaysFrequencyLabel" destination="tDK-wL-Fc8" id="H3x-ai-ClR"/>
+                <outlet property="afterNDaysInactivityButton" destination="Nrn-D9-5uQ" id="OUr-Wl-e4H"/>
+                <outlet property="afterNDaysLabel" destination="hpj-fT-jOx" id="FuU-Bf-Ccj"/>
+                <outlet property="afterNDaysSwitch" destination="tT0-J5-XdO" id="NQl-35-7Ea"/>
+                <outlet property="coverView" destination="jr8-RJ-C8V" id="e6s-m7-Vp6"/>
+                <outlet property="dailyHourButton" destination="A4Y-ud-i7y" id="qHk-DE-C36"/>
+                <outlet property="dailyReminderLabel" destination="uGw-bW-TrM" id="3gA-pC-HQ6"/>
+                <outlet property="dailySwitch" destination="bO3-Ff-l7Y" id="wIE-4p-gam"/>
+                <outlet property="editNotificationPermissionButton" destination="wpK-NM-FD3" id="PBa-sD-qew"/>
+                <outlet property="setTimeCancelButton" destination="j6W-t2-6kc" id="XsO-S1-UC7"/>
+                <outlet property="setTimeDoneButton" destination="avB-3j-eOU" id="3v3-WY-RsD"/>
+                <outlet property="setTimeInactiveDayPicker" destination="7NM-tO-ty4" id="lUP-FN-8rV"/>
+                <outlet property="setTimeReminderPicker" destination="cZL-nH-BuM" id="SAE-ao-Env"/>
+                <outlet property="setTimeView" destination="0Q5-Mw-qZw" id="acS-ap-Gbd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rcE-Es-DUF">
+                    <rect key="frame" x="0.0" y="21" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="Title" id="Lbc-5P-LTI">
+                            <barButtonItem key="leftBarButtonItem" title="Cancel" id="H65-T4-ZRu">
+                                <color key="tintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="cancelButtonAction:" destination="-1" id="GBo-vL-2y3"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Save" id="wC2-IB-ew9">
+                                <color key="tintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="saveButtonAction:" destination="-1" id="FN4-Sx-JWi"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkf-0W-ynP">
+                    <rect key="frame" x="0.0" y="65" width="320" height="130"/>
+                    <subviews>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bO3-Ff-l7Y">
+                            <rect key="frame" x="263" y="50" width="51" height="31"/>
+                            <color key="onTintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </switch>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGw-bW-TrM">
+                            <rect key="frame" x="8" y="17" width="109" height="20"/>
+                            <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="17"/>
+                            <color key="textColor" red="0.18823529411764706" green="0.20000000000000001" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4Y-ud-i7y">
+                            <rect key="frame" x="8" y="45" width="150" height="40"/>
+                            <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="1gZ-WY-jkl"/>
+                                <constraint firstAttribute="height" constant="40" id="3RK-9h-gnb"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="17"/>
+                            <state key="normal" title="11:00 AM">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="dailyReminderButtonAction:" destination="-1" eventType="touchUpInside" id="zrA-Vw-Fwy"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="uGw-bW-TrM" firstAttribute="leading" secondItem="rkf-0W-ynP" secondAttribute="leading" constant="8" id="06j-tO-WeU"/>
+                        <constraint firstItem="A4Y-ud-i7y" firstAttribute="leading" secondItem="rkf-0W-ynP" secondAttribute="leading" constant="8" id="2sR-gg-b4e"/>
+                        <constraint firstAttribute="trailing" secondItem="bO3-Ff-l7Y" secondAttribute="trailing" constant="8" id="Flg-ZU-e2a"/>
+                        <constraint firstItem="A4Y-ud-i7y" firstAttribute="top" secondItem="uGw-bW-TrM" secondAttribute="bottom" constant="8" id="HfA-Uo-W1p"/>
+                        <constraint firstItem="bO3-Ff-l7Y" firstAttribute="centerY" secondItem="rkf-0W-ynP" secondAttribute="centerY" id="Xlc-7i-sIl"/>
+                        <constraint firstAttribute="height" constant="130" id="YVr-nd-a1E"/>
+                        <constraint firstItem="A4Y-ud-i7y" firstAttribute="centerY" secondItem="rkf-0W-ynP" secondAttribute="centerY" id="nGh-IH-IKa"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wai-7x-MAu">
+                    <rect key="frame" x="0.0" y="196" width="320" height="130"/>
+                    <subviews>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tT0-J5-XdO">
+                            <rect key="frame" x="263" y="50" width="51" height="31"/>
+                            <color key="onTintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </switch>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="After N days of inavtivity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpj-fT-jOx">
+                            <rect key="frame" x="8" y="17" width="185" height="20"/>
+                            <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="17"/>
+                            <color key="textColor" red="0.18823529411764706" green="0.20000000000000001" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM1-ix-Nch">
+                            <rect key="frame" x="8" y="45" width="150" height="40"/>
+                            <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="bFh-Zq-ulg"/>
+                                <constraint firstAttribute="width" constant="150" id="rjf-zI-j8g"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="17"/>
+                            <state key="normal" title="01:00 PM">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="afterNDaysButtonAction:" destination="-1" eventType="touchUpInside" id="dt6-mU-PT4"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency(Days)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDK-wL-Fc8">
+                            <rect key="frame" x="8" y="93" width="127" height="20"/>
+                            <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nrn-D9-5uQ">
+                            <rect key="frame" x="147" y="88" width="30" height="30"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="N83-U4-yZh"/>
+                                <constraint firstAttribute="height" constant="30" id="nE4-4y-sd2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="16"/>
+                            <state key="normal" title="15">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="adterNDaysNumberButtonAction:" destination="-1" eventType="touchUpInside" id="TnH-Jo-t95"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="nM1-ix-Nch" firstAttribute="centerY" secondItem="Wai-7x-MAu" secondAttribute="centerY" id="5hn-lL-WKz"/>
+                        <constraint firstItem="nM1-ix-Nch" firstAttribute="leading" secondItem="Wai-7x-MAu" secondAttribute="leading" constant="8" id="BHY-br-lai"/>
+                        <constraint firstItem="tDK-wL-Fc8" firstAttribute="top" secondItem="nM1-ix-Nch" secondAttribute="bottom" constant="8" id="FrL-2J-ncV"/>
+                        <constraint firstAttribute="trailing" secondItem="tT0-J5-XdO" secondAttribute="trailing" constant="8" id="J03-6a-EVE"/>
+                        <constraint firstItem="tDK-wL-Fc8" firstAttribute="leading" secondItem="Wai-7x-MAu" secondAttribute="leading" constant="8" id="Lmd-lS-QF2"/>
+                        <constraint firstItem="hpj-fT-jOx" firstAttribute="leading" secondItem="Wai-7x-MAu" secondAttribute="leading" constant="8" id="M2F-OJ-wRu"/>
+                        <constraint firstAttribute="height" constant="130" id="NNV-G0-uV4"/>
+                        <constraint firstItem="tT0-J5-XdO" firstAttribute="centerY" secondItem="Wai-7x-MAu" secondAttribute="centerY" id="O0B-Gu-dsc"/>
+                        <constraint firstItem="Nrn-D9-5uQ" firstAttribute="leading" secondItem="tDK-wL-Fc8" secondAttribute="trailing" constant="12" id="jUe-RL-4nU"/>
+                        <constraint firstItem="nM1-ix-Nch" firstAttribute="top" secondItem="hpj-fT-jOx" secondAttribute="bottom" constant="8" id="ofc-99-HTz"/>
+                        <constraint firstItem="Nrn-D9-5uQ" firstAttribute="centerY" secondItem="tDK-wL-Fc8" secondAttribute="centerY" id="ydy-Qv-wHD"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpK-NM-FD3">
+                    <rect key="frame" x="8" y="334" width="304" height="32"/>
+                    <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="17"/>
+                    <state key="normal" title="Edit notification permission in IOS settings">
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="editNotificationPermissionsButtonAction:" destination="-1" eventType="touchUpInside" id="zwJ-8k-g6W"/>
+                    </connections>
+                </button>
+                <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jr8-RJ-C8V" customClass="UIToolbar">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Q5-Mw-qZw">
+                    <rect key="frame" x="0.0" y="308" width="320" height="260"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6QJ-K1-BAo">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6W-t2-6kc">
+                                    <rect key="frame" x="0.0" y="10" width="95" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="20"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="setTimeCancelButtonAction:" destination="-1" eventType="touchUpInside" id="U5F-DD-ZxI"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avB-3j-eOU">
+                                    <rect key="frame" x="225" y="10" width="95" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI Text" pointSize="20"/>
+                                    <state key="normal" title="Done">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="setTimeDoneButtonAction:" destination="-1" eventType="touchUpInside" id="VSN-0z-gXs"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cZL-nH-BuM">
+                            <rect key="frame" x="0.0" y="57" width="320" height="203"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                            <date key="date" timeIntervalSinceReferenceDate="504001051.07159299">
+                                <!--2016-12-21 08:17:31 +0000-->
+                            </date>
+                        </datePicker>
+                        <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NM-tO-ty4">
+                            <rect key="frame" x="0.0" y="57" width="320" height="203"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="3UH-UU-85P"/>
+                                <outlet property="delegate" destination="-1" id="2cF-Xx-jE0"/>
+                            </connections>
+                        </pickerView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rkf-0W-ynP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="29C-z9-fcD"/>
+                <constraint firstItem="Wai-7x-MAu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7R2-bh-jGn"/>
+                <constraint firstItem="Wai-7x-MAu" firstAttribute="top" secondItem="rkf-0W-ynP" secondAttribute="bottom" constant="1" id="Fk1-mF-Oai"/>
+                <constraint firstAttribute="trailing" secondItem="Wai-7x-MAu" secondAttribute="trailing" id="Sk2-gY-iv5"/>
+                <constraint firstItem="wpK-NM-FD3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="ZSV-2s-Jbu"/>
+                <constraint firstItem="wpK-NM-FD3" firstAttribute="top" secondItem="Wai-7x-MAu" secondAttribute="bottom" constant="8" id="gMZ-ig-ZvG"/>
+                <constraint firstAttribute="trailing" secondItem="rkf-0W-ynP" secondAttribute="trailing" id="iPP-oK-vEz"/>
+                <constraint firstAttribute="trailing" secondItem="wpK-NM-FD3" secondAttribute="trailing" constant="8" id="pl8-yW-6ra"/>
+                <constraint firstItem="rkf-0W-ynP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="zG0-BF-C0z"/>
+            </constraints>
+            <point key="canvasLocation" x="24" y="51"/>
+        </view>
+    </objects>
+</document>

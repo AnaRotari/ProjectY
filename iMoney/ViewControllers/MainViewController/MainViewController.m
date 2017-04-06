@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "ReorderWalletsViewController.h"
 #import "DropBoxUtils.h"
 
 @interface MainViewController () <DropBoxDelegate>
@@ -34,15 +35,24 @@
     
     [[DropBoxUtils sharedInstance] setDelegate:self];
     [[DropBoxUtils sharedInstance] logInOrDoStuff:^{
+        
         self.collectionDelegates.walletsArray = [CoreDataRequestManager getAllWallets];
         [self.walletsCollectionView reloadData];
         
         if (self.collectionDelegates.walletsArray.count) {
-            self.tableDelegates.transactionsArray = [CoreDataRequestManager getTodayTransactionsForWallet:self.collectionDelegates.walletsArray[self.selectedWalletIndex]];
+            self.tableDelegates.transactionsArray = [[CoreDataRequestManager getTodayTransactionsForWallet:self.collectionDelegates.walletsArray[self.selectedWalletIndex]] mutableCopy];
+        } else {
+            [self.tableDelegates.transactionsArray removeAllObjects];
         }
         self.tableDelegates.transactionsArray.count ? [self.noTransactionsLabel setHidden:YES] : [self.noTransactionsLabel setHidden:NO];
         [self.transactionsTableView reloadData];
     }];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear:animated];
+    self.selectedWalletIndex = 0;
 }
 
 #pragma mark - Initializations
@@ -81,12 +91,18 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
+- (IBAction)reorderWalletsButtonAction:(id)sender {
+    
+    ReorderWalletsViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ReorderWalletsViewController"];
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
 #pragma mark - MainViewControllerCollectionViewDelegate
 
 - (void)userDidScrollToWallet:(NSInteger)walletNumber {
     
     self.selectedWalletIndex = walletNumber;
-    self.tableDelegates.transactionsArray = [CoreDataRequestManager getTodayTransactionsForWallet:self.collectionDelegates.walletsArray[self.selectedWalletIndex]];
+    self.tableDelegates.transactionsArray = [[CoreDataRequestManager getTodayTransactionsForWallet:self.collectionDelegates.walletsArray[self.selectedWalletIndex]] mutableCopy];
     
     self.tableDelegates.transactionsArray.count ? [self.noTransactionsLabel setHidden:YES] : [self.noTransactionsLabel setHidden:NO];
 
@@ -121,9 +137,10 @@
     [self.walletsCollectionView reloadData];
     
     if (self.collectionDelegates.walletsArray.count) {
-        self.tableDelegates.transactionsArray = [CoreDataRequestManager getTodayTransactionsForWallet:self.collectionDelegates.walletsArray[self.selectedWalletIndex]];
+        self.tableDelegates.transactionsArray = [[CoreDataRequestManager getTodayTransactionsForWallet:self.collectionDelegates.walletsArray[self.selectedWalletIndex]] mutableCopy];
+    } else {
+        [self.tableDelegates.transactionsArray removeAllObjects];
     }
-    
     self.tableDelegates.transactionsArray.count ? [self.noTransactionsLabel setHidden:YES] : [self.noTransactionsLabel setHidden:NO];
     [self.transactionsTableView reloadData];
 }

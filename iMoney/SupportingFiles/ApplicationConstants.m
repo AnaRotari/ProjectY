@@ -42,4 +42,10 @@ NSString *const kTransactionPayee       = @"kTransactionPayee";
 NSString *const kTransactionPaymentType = @"kTransactionPaymentType";
 NSString *const kTransactionType        = @"kTransactionType";
 
+NSString *const kDailyReminder         = @"kDailyReminder";
+NSString *const kInactivityReminder    = @"kInactivityReminder";
+NSString *const kInactivityLenght      = @"kInactivityLenght";
+NSString *const kDailySwitchState      = @"kDailySwitchState";
+NSString *const kAfterNDaysSwitchState = @"kAfterNDaysSwitchState";
+
 @end

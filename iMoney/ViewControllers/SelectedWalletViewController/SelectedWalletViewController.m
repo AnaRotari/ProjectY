@@ -9,11 +9,12 @@
 #import "SelectedWalletViewController.h"
 #import "SelectedWalletViewController+UI.h"
 #import "TransactionTableViewCell.h"
+#import "AddEditWalletViewController.h"
 
 @interface SelectedWalletViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *transactionsTableView;
-@property (strong, nonatomic) NSArray <Transaction *> *transactionsArray;
+@property (strong, nonatomic) NSMutableArray <Transaction *> *transactionsArray;
 
 @end
 
@@ -33,7 +34,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
-    self.transactionsArray = [CoreDataRequestManager getAllTransactionForWallet:self.selectedWallet];
+    self.transactionsArray = [[CoreDataRequestManager getAllTransactionForWallet:self.selectedWallet] mutableCopy];
     [self.transactionsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
                               withRowAnimation:UITableViewRowAnimationFade];
 }
@@ -99,7 +100,10 @@
 
 - (void)editWalletButtonAction:(id)sender {
     
-#warning TODO: NEED TO EDIT WALLET
+    AddEditWalletViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"AddEditWalletViewController"];
+    controller.walletAction = kEditWallt;
+    controller.walletToEdit = self.selectedWallet;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - LGPlusButtonsView actions
@@ -167,6 +171,51 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     return 60;
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        Transaction *deletedTransaction = self.transactionsArray[indexPath.row];
+    
+        switch (deletedTransaction.transactionType) {
+            
+            case kTransactionTypeIncome:
+                self.selectedWallet.walletBalance = [self.selectedWallet.walletBalance decimalNumberBySubtracting:deletedTransaction.transactionAmount];
+                break;
+            case kTransactionTypeExpense:
+                self.selectedWallet.walletBalance = [self.selectedWallet.walletBalance decimalNumberByAdding:deletedTransaction.transactionAmount];
+                break;
+                
+            default:
+                break;
+        }
+        
+        NSManagedObjectContext *context = [[CoreDataAccessLayer sharedInstance] managedObjectContext];
+        NSError *error = nil;
+        
+        [context deleteObject:deletedTransaction];
+        
+        if (![context save:&error]) {
+            NSLog(@"Can't delete: %@",[error localizedDescription]);
+        }
+        
+        [self.transactionsArray removeObjectAtIndex:indexPath.row];
+        
+        [self.transactionsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
+                                  withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 @end

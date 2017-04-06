@@ -46,4 +46,11 @@ FOUNDATION_EXPORT NSString *const kTransactionPayee;
 FOUNDATION_EXPORT NSString *const kTransactionPaymentType;
 FOUNDATION_EXPORT NSString *const kTransactionType;
 
+//Reminder
+FOUNDATION_EXPORT NSString *const kDailyReminder;
+FOUNDATION_EXPORT NSString *const kInactivityReminder;
+FOUNDATION_EXPORT NSString *const kInactivityLenght;
+FOUNDATION_EXPORT NSString *const kDailySwitchState;
+FOUNDATION_EXPORT NSString *const kAfterNDaysSwitchState;
+
 @end

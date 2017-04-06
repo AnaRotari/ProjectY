@@ -15,7 +15,7 @@
 {
     self = [super init];
     if (self) {
-        self.transactionsArray = [NSArray array];
+        self.transactionsArray = [NSMutableArray array];
     }
     return self;
 }

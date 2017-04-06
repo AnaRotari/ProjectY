@@ -48,4 +48,11 @@ typedef NS_ENUM(NSInteger, TransactionType)
     kTransactionTypeExpense
 };
 
+typedef NS_ENUM(NSInteger, UIPickerType)
+{
+    kUIPickerTypeDaily       = 0,
+    kUIPickerTypeAfterNDays  = 1,
+    kUIPickerTypeRepetitions = 2
+};
+
 #endif /* Enums_h */
