@@ -26,6 +26,7 @@
     
     [iMoneyUtils setStatusBarBackgroundColor:RGBColor(42, 3, 70, 1)
                      forNavigationController:self.navigationController];
+    self.walletsTableView.tableFooterView = [UIView new];
     [self.walletsTableView setEditing:YES animated:YES];
 }
 

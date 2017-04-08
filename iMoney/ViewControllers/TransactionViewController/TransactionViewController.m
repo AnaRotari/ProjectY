@@ -216,12 +216,25 @@
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     [chosenImage setAccessibilityIdentifier:[iMoneyUtils getUniqID]];
-    [self.arrayWithImages addObject:chosenImage];
+    
+    [self writeToDocumentsImage:UIImagePNGRepresentation(chosenImage) withName:chosenImage.accessibilityIdentifier];
+    
+    [self.arrayWithImages addObject:chosenImage.accessibilityIdentifier];
     [self.imagesCollectionView reloadData];
     
     self.arrayWithImages.count ? [self.noImagesLabel setHidden:YES] : [self.noImagesLabel setHidden:NO];
     
     [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)writeToDocumentsImage:(NSData *)imageData withName:(NSString *)imageName {
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *videoFolderPath = [paths firstObject];
+    videoFolderPath = [NSString stringWithFormat:@"%@/%@", videoFolderPath, kAppFolder];
+    
+    NSString *filePath = [videoFolderPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",imageName]];
+    [imageData writeToFile:filePath atomically:YES];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -235,7 +248,14 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     UserImagesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UserImagesCollectionViewCell" forIndexPath:indexPath];
-    cell.imageCollectionViewOutlet.image = self.arrayWithImages[indexPath.row];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *videoFolderPath = [paths firstObject];
+    videoFolderPath = [NSString stringWithFormat:@"%@/%@/%@.png", videoFolderPath, kAppFolder, self.arrayWithImages[indexPath.row]];
+    NSData *pngData = [NSData dataWithContentsOfFile:videoFolderPath];
+    UIImage *image = [UIImage imageWithData:pngData];
+    
+    cell.imageCollectionViewOutlet.image = image;
     return cell;
 }
 

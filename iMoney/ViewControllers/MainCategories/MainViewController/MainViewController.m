@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "ReorderWalletsViewController.h"
 #import "DropBoxUtils.h"
+#import "TransactionDetailViewController.h"
 
 @interface MainViewController () <DropBoxDelegate>
 
@@ -70,8 +71,10 @@
     
     [self.transactionsTableView registerNib:[UINib nibWithNibName:@"TransactionTableViewCell" bundle:nil] forCellReuseIdentifier:@"TransactionTableViewCell"];
     self.tableDelegates = [[MainViewControllerTablleView alloc] init];
+    self.tableDelegates.delegate = self;
     [self.transactionsTableView setDataSource:self.tableDelegates];
     [self.transactionsTableView setDelegate:self.tableDelegates];
+    self.transactionsTableView.tableFooterView = [UIView new];
 }
 
 - (void)todayDateSetup {
@@ -113,6 +116,15 @@
     
     SelectedWalletViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"SelectedWalletViewController"];
     controller.selectedWallet = self.collectionDelegates.walletsArray[walletSelected];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+#pragma mark - MainViewControllerTablleViewDelegate
+
+- (void)userDidSelectTransaction:(Transaction *)selectedTransaction {
+    
+    TransactionDetailViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TransactionDetailViewController"];
+    controller.transactionDetail = selectedTransaction;
     [self.navigationController pushViewController:controller animated:YES];
 }
 

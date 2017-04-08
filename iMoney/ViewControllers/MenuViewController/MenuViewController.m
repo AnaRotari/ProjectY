@@ -105,10 +105,10 @@
         [self openReminderViewController];
     }
     if (indexPath.section == 1 && indexPath.row == 0) {
-        [self logoutUser];
+        [self openHelp];
     }
     if (indexPath.section == 1 && indexPath.row == 1) {
-        [self logoutUser];
+        [self openSettings];
     }
     if (indexPath.section == 1 && indexPath.row == 2) {
         [self logoutUser];

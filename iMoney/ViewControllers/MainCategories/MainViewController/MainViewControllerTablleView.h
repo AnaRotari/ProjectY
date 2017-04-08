@@ -8,7 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol MainViewControllerTablleViewDelegate <NSObject>
+
+- (void)userDidSelectTransaction:(Transaction *)selectedTransaction;
+
+@end
+
 @interface MainViewControllerTablleView : NSObject <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, weak) id <MainViewControllerTablleViewDelegate> delegate;
 
 @property (strong, nonatomic) NSMutableArray <Transaction *> *transactionsArray;
 

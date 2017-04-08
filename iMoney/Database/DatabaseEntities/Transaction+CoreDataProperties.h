@@ -2,7 +2,7 @@
 //  Transaction+CoreDataProperties.h
 //  
 //
-//  Created by Alex on 3/29/17.
+//  Created by Alex on 4/8/17.
 //
 //
 
@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSFetchRequest<Transaction *> *)fetchRequest;
 
 @property (nullable, nonatomic, copy) NSDecimalNumber *transactionAmount;
-@property (nullable, nonatomic, copy) NSString *transactionAttachments;
+@property (nullable, nonatomic, retain) NSData *transactionAttachments;
 @property (nonatomic) int32_t transactionCategory;
 @property (nullable, nonatomic, copy) NSDate *transactionDate;
 @property (nullable, nonatomic, copy) NSString *transactionDescription;

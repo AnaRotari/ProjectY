@@ -37,6 +37,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(userDidSelectTransaction:)]) {
+        [self.delegate userDidSelectTransaction:self.transactionsArray[indexPath.row]];
+    }
 }
 
 #pragma mark - UITableViewDelegate

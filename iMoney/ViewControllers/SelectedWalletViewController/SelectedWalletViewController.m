@@ -10,6 +10,7 @@
 #import "SelectedWalletViewController+UI.h"
 #import "TransactionTableViewCell.h"
 #import "AddEditWalletViewController.h"
+#import "TransactionDetailViewController.h"
 
 @interface SelectedWalletViewController ()
 
@@ -166,6 +167,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    TransactionDetailViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TransactionDetailViewController"];
+    controller.transactionDetail = self.transactionsArray[indexPath.row];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

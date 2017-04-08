@@ -53,6 +53,8 @@
     newTransaction.transactionPayee       = transactionDetails[kTransactionPayee];
     newTransaction.transactionPaymentType = [transactionDetails[kTransactionPaymentType] intValue];
     newTransaction.transactionType        = [transactionDetails[kTransactionType] intValue];
+    NSArray *arrayWithAttachements        = transactionDetails[kTransactionAttachemts];
+    newTransaction.transactionAttachments = arrayWithAttachements.encode;
   
     switch ([transactionDetails[kTransactionType] intValue]) {
         case kTransactionTypeIncome:
@@ -67,7 +69,6 @@
             break;
     }
     
-//    @property (nullable, nonatomic, copy) NSString *transactionAttachments;
 //    @property (nullable, nonatomic, retain) NSObject *transactionLocation;
     
     [wallet addTransactionsObject:newTransaction];
