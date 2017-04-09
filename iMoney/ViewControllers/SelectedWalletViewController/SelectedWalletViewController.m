@@ -66,7 +66,7 @@
     
     self.navigationItem.rightBarButtonItems = @[addButton,editButton];
     
-    _plusButtonsViewNavBar = [LGPlusButtonsView plusButtonsViewWithNumberOfButtons:5
+    _plusButtonsViewNavBar = [LGPlusButtonsView plusButtonsViewWithNumberOfButtons:4
                                                            firstButtonIsPlusButton:NO
                                                                      showAfterInit:NO
                                                                      actionHandler:^(LGPlusButtonsView *plusButtonView, NSString *title, NSString *description, NSUInteger index)
@@ -80,12 +80,9 @@
                                           [self addNewRecord];
                                           break;
                                       case 2:
-                                          [self transfer];
-                                          break;
-                                      case 3:
                                           [self chooseTemplate];
                                           break;
-                                      case 4:
+                                      case 3:
                                           [self adjustBalance];
                                           break;
                                           
@@ -115,17 +112,6 @@
     TransactionViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TransactionViewController"];
     controller.parentWallet = self.selectedWallet;
     [self.navigationController pushViewController:controller animated:YES];
-}
-
-- (void)transfer {
-    
-    NSLog(@"transfer");
-    NSArray *totalWallets = [CoreDataRequestManager getAllWallets];
-    if (totalWallets.count > 1) {
-        NSLog(@"you can transfer");
-    } else {
-        [iMoneyUtils showAlertView:@"Alert" withMessage:@"You cant transfer amount if you have less than 1 wallet !"];
-    }
 }
 
 - (void)chooseTemplate {

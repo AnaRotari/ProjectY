@@ -838,6 +838,7 @@
                                 <segments>
                                     <segment title="Income"/>
                                     <segment title="Expense"/>
+                                    <segment title="Transfer"/>
                                 </segments>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

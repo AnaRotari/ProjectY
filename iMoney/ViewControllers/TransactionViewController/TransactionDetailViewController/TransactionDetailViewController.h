@@ -12,7 +12,7 @@
 #import <MapKit/MapKit.h>
 #import "UserImagesCollectionViewCell.h"
 
-@interface TransactionDetailViewController : BaseViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface TransactionDetailViewController : BaseViewController <UICollectionViewDataSource, UICollectionViewDelegate, UIActionSheetDelegate>
 
 //Data flow
 @property (strong, nonatomic) Transaction *transactionDetail;
@@ -30,5 +30,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *noImagesLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *attachmentsCollectionView;
 @property (strong, nonatomic) NSArray <NSString *> *attachmentsArray;
+
+@property (strong, nonatomic) NSArray <Wallet *> *totalWallets;
 
 @end

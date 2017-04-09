@@ -20,6 +20,8 @@
     self.title = @"Transaction details";
     [self segmentControllSetup];
     [self initUIWithTransaction:self.transactionDetail];
+    
+    self.totalWallets = [CoreDataRequestManager getAllWalletsWithoutWallet:self.transactionDetail.wallet];
 }
 
 #pragma mark - Initializations
@@ -32,6 +34,9 @@
     [self.attachmentsCollectionView registerNib:[UINib nibWithNibName:@"UserImagesCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"UserImagesCollectionViewCell"];
     
     [self labelsSetup];
+}
+
+- (void)labelsSetup {
     
     switch (self.transactionDetail.transactionType) {
         case kTransactionTypeIncome:
@@ -43,9 +48,6 @@
         default:
             break;
     }
-}
-
-- (void)labelsSetup {
     
     self.transactionAmountLabel.text   = [self.transactionDetail.transactionAmount stringValue];
     self.transactionCategoryLabel.text = [iMoneyUtils getCategoryName:self.transactionDetail.transactionCategory];
@@ -136,10 +138,12 @@
         case kTransactionTypeExpense:
             [self changeToExpense];
             break;
+        case kTransactionTypeTransfer:
+            [self transferTransaction];
+            break;
         default:
             break;
     }
-    [self labelsSetup];
 }
 
 - (void)changeToIncome {
@@ -158,6 +162,60 @@
     number = [number decimalNumberByAdding:number];
     self.transactionDetail.wallet.walletBalance = [self.transactionDetail.wallet.walletBalance decimalNumberBySubtracting:number];
     [[CoreDataAccessLayer sharedInstance] saveContext];
+}
+
+- (void)transferTransaction {
+    
+    if (self.totalWallets.count > 0) {
+        [self moveTransactionToWallet:self.totalWallets];
+    } else {
+        [iMoneyUtils showAlertView:@"Alert" withMessage:@"You cant transfer amount if you have less than 1 wallet !"];
+    }
+}
+
+- (void)moveTransactionToWallet:(NSArray <Wallet *> *)wallets {
+    
+    UIActionSheet* actionSheet = [[UIActionSheet alloc] init];
+    actionSheet.title = @"Available wallets";
+    actionSheet.delegate = self;
+    
+    for (Wallet *extractedWallet in wallets) {
+        
+        [actionSheet addButtonWithTitle:extractedWallet.walletName];
+    }
+    
+    actionSheet.cancelButtonIndex = [actionSheet addButtonWithTitle:@"Cancel"];
+    [actionSheet showInView: self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    Wallet *sourceWallet = self.transactionDetail.wallet;
+    Wallet *walletToTransfer = self.totalWallets[buttonIndex];
+    
+    [walletToTransfer addTransactionsObject:self.transactionDetail];
+
+    switch (self.transactionDetail.transactionType) {
+        case kTransactionTypeIncome:
+            
+            walletToTransfer.walletBalance = [walletToTransfer.walletBalance decimalNumberByAdding:self.transactionDetail.transactionAmount];
+            
+            sourceWallet.walletBalance = [sourceWallet.walletBalance decimalNumberBySubtracting:self.transactionDetail.transactionAmount];
+            
+            break;
+        case kTransactionTypeExpense:
+            
+            walletToTransfer.walletBalance = [walletToTransfer.walletBalance decimalNumberBySubtracting:self.transactionDetail.transactionAmount];
+            sourceWallet.walletBalance = [sourceWallet.walletBalance decimalNumberByAdding:self.transactionDetail.transactionAmount];
+            
+            break;
+            
+        default:
+            break;
+    }
+    
+    [[CoreDataAccessLayer sharedInstance] saveContext];
+    [self labelsSetup];
 }
 
 @end

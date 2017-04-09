@@ -28,6 +28,27 @@
     return resultArray;
 }
 
++ (NSArray <Wallet *> *)getAllWalletsWithoutWallet:(Wallet*)extractedWallet {
+    
+    NSError *requestError = nil;
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    NSEntityDescription *description = [NSEntityDescription entityForName:@"Wallet"
+                                                   inManagedObjectContext:[[CoreDataAccessLayer sharedInstance] managedObjectContext]];
+    [request setEntity:description];
+    
+    NSSortDescriptor *exerciseOrderDescriptor = [[NSSortDescriptor alloc] initWithKey:@"walletSort" ascending:YES];
+    [request setSortDescriptors:@[exerciseOrderDescriptor]];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"walletID != %@",extractedWallet.walletID];
+    [request setPredicate:predicate];
+    
+    [request setReturnsObjectsAsFaults:NO];
+    
+    NSArray *resultArray = [[[CoreDataAccessLayer sharedInstance] managedObjectContext ] executeFetchRequest:request
+                                                                                                       error:&requestError];
+    return resultArray;
+}
+
 + (NSArray <Transaction *> *)getTodayTransactionsForWallet:(Wallet *)wallet {
     
     NSError *requestError = nil;

@@ -12,6 +12,8 @@
 @interface CoreDataRequestManager : NSObject
 
 + (NSArray <Wallet *> *)getAllWallets;
++ (NSArray <Wallet *> *)getAllWalletsWithoutWallet:(Wallet*)extractedWallet;
+
 + (NSArray <Transaction *> *)getAllTransactionForWallet:(Wallet *)wallet;
 + (NSArray <Transaction *> *)getTodayTransactionsForWallet:(Wallet *)wallet;
 

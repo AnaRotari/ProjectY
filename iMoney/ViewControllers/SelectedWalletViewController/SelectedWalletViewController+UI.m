@@ -16,8 +16,8 @@
     button.appearingAnimationType = LGPlusButtonsAppearingAnimationTypeCrossDissolveAndPop;
     button.position = LGPlusButtonsViewPositionTopRight;
     
-    [button setButtonsTitles:@[@"0", @"1", @"2", @"3", @"4"] forState:UIControlStateNormal];
-    [button setDescriptionsTexts:@[@"", @"New record", @"Transfer", @"Choose template", @"Adjust balance"]];
+    [button setButtonsTitles:@[@"0", @"1", @"2", @"3"] forState:UIControlStateNormal];
+    [button setDescriptionsTexts:@[@"", @"New record", @"Choose template", @"Adjust balance"]];
     
     [button setButtonsTitleFont:[UIFont boldSystemFontOfSize:32.f] forOrientation:LGPlusButtonsViewOrientationAll];
     [button setButtonsSize:CGSizeMake(52.f, 52.f) forOrientation:LGPlusButtonsViewOrientationAll];
