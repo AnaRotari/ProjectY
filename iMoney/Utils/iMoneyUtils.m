@@ -99,4 +99,79 @@
     return [[NSUUID UUID] UUIDString];
 }
 
++ (NSString *)getCategoryName:(TransactionCategory)category {
+    
+    switch (category) {
+        case kTransactionCategoryFoodAndDrinks:
+            return @"Food And Drinks";
+            break;
+        case kTransactionCategoryShopping:
+            return @"Shopping";
+            break;
+        case kTransactionCategoryHousing:
+            return @"Housing";
+            break;
+        case kTransactionCategoryTransportation:
+            return @"Transportation";
+            break;
+        case kTransactionCategoryVechicle:
+            return @"Vechicle";
+            break;
+        case kTransactionCategoryLifeAndEntertainments:
+            return @"Life And Entertainments";
+            break;
+        case kTransactionCategoryPC:
+            return @"PC";
+            break;
+        case kTransactionCategoryFinancialExpenses:
+            return @"Financial Expenses";
+            break;
+        case kTransactionCategoryInvestments:
+            return @"Investments";
+            break;
+        case kTransactionCategoryIncome:
+            return @"Income";
+            break;
+        case kTransactionCategoryGregories:
+            return @"Gregories";
+            break;
+        case kTransactionCategoryOther:
+            return @"Other";
+            break;
+            
+        default:
+            break;
+    }
+}
+
++ (NSString *)getTransactionTypeName:(PaymentType)type {
+    
+    switch (type) {
+        case kPaymentTypeCash:
+            return @"Cash";
+            break;
+        case kPaymentTypeDebitCard:
+            return @"Debit Card";
+            break;
+        case kPaymentTypeCreditCard:
+            return @"Credit Card";
+            break;
+        case kPaymentTypeBankTransfer:
+            return @"Bank Transfer";
+            break;
+        case kPaymentTypeVouvher:
+            return @"Vouvher";
+            break;
+        case kPaymentTypeMobilePayment:
+            return @"Mobile Payment";
+            break;
+        case kPaymentTypeWebPayment:
+            return @"Web Payment";
+            break;
+            
+        default:
+            break;
+    }
+}
+
 @end

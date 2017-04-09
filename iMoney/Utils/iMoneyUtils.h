@@ -18,4 +18,7 @@
 + (void)showAlertView:(NSString*)title withMessage:(NSString*)message;
 + (NSString*)getUniqID;
 
++ (NSString *)getCategoryName:(TransactionCategory)category;
++ (NSString *)getTransactionTypeName:(PaymentType)type;
+
 @end

@@ -24,8 +24,7 @@
 - (void)initData {
     
     self.transactionTypeArray = @[@"Income",
-                                  @"Expense",
-                                  @"Transfer"];
+                                  @"Expense"];
     
     self.transactionCategoryArray = @[@"Food And Drinks",
                                       @"Shopping",

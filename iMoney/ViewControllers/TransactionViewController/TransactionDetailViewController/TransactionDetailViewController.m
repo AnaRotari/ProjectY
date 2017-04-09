@@ -19,8 +19,40 @@
     [super viewDidLoad];
     self.title = @"Transaction details";
     [self segmentControllSetup];
-    NSArray *test = [[NSArray alloc] arrayWithData:self.transactionDetail.transactionAttachments];
-    NSLog(@"%@",test);
+    [self initUIWithTransaction:self.transactionDetail];
+}
+
+#pragma mark - Initializations
+
+- (void)initUIWithTransaction:(Transaction *)transaction {
+    
+    self.attachmentsArray = [[NSArray alloc] arrayWithData:self.transactionDetail.transactionAttachments];
+    self.attachmentsArray.count ? [self.noImagesLabel setHidden:YES] : [self.noImagesLabel setHidden:NO];
+    
+    [self.attachmentsCollectionView registerNib:[UINib nibWithNibName:@"UserImagesCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"UserImagesCollectionViewCell"];
+    
+    [self labelsSetup];
+    
+    switch (self.transactionDetail.transactionType) {
+        case kTransactionTypeIncome:
+            [self.segmentedButtons setSelectedSegmentIndex:0];
+            break;
+        case kTransactionTypeExpense:
+            [self.segmentedButtons setSelectedSegmentIndex:1];
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)labelsSetup {
+    
+    self.transactionAmountLabel.text   = [self.transactionDetail.transactionAmount stringValue];
+    self.transactionCategoryLabel.text = [iMoneyUtils getCategoryName:self.transactionDetail.transactionCategory];
+    self.transactionDateLabel.text     = [iMoneyUtils formatDate:self.transactionDetail.transactionDate];
+    self.transactionDescription.text   = self.transactionDetail.transactionDescription;
+    self.transactionPayee.text         = self.transactionDetail.transactionPayee;
+    self.transactionPaymentsType.text  = [iMoneyUtils getTransactionTypeName:self.transactionDetail.transactionPaymentType];
 }
 
 #pragma mark - Segmented Controll
@@ -29,13 +61,103 @@
     
     [self.segmentedButtons setSegmentsColor];
     [self.segmentedButtons setFonts];
-    [self.segmentedButtons setSelectedSegmentIndex:1];
 }
 
 - (IBAction)segmentControlAction:(HistorySegmentedControl *)sender {
     
     int tag = (int)[sender selectedSegmentIndex];
+    if (tag != self.transactionDetail.transactionType) {
+        [self showChangeAlert:tag];
+    }
+}
+
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
+    return self.attachmentsArray.count;
+}
+
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UserImagesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UserImagesCollectionViewCell" forIndexPath:indexPath];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *videoFolderPath = [paths firstObject];
+    videoFolderPath = [NSString stringWithFormat:@"%@/%@/%@.png", videoFolderPath, kAppFolder, self.attachmentsArray[indexPath.row]];
+    NSData *pngData = [NSData dataWithContentsOfFile:videoFolderPath];
+    UIImage *image = [UIImage imageWithData:pngData];
+    
+    cell.imageCollectionViewOutlet.image = image;
+    return cell;
+}
+
+#pragma mark - UICollectionViewDelegate
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(170,170);
+}
+
+#pragma mark - UIAlertController
+
+- (void)showChangeAlert:(TransactionType)type {
+    
+    UIAlertController *alert = [UIAlertController
+                                 alertControllerWithTitle:@"Alert"
+                                 message:@"Do you wont to change transaction type ?"
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelButton = [UIAlertAction
+                                   actionWithTitle:@"Cancel"
+                                   style:UIAlertActionStyleDefault
+                                   handler:^(UIAlertAction * action) { }];
+    
+    UIAlertAction* okButton = [UIAlertAction
+                               actionWithTitle:@"OK"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action) {
+                                   
+                                   [self changeTransactionType:type];
+                               }];
+    
+    [alert addAction:okButton];
+    [alert addAction:cancelButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)changeTransactionType:(TransactionType)selectedType {
+    
+    switch (selectedType) {
+        case kTransactionTypeIncome:
+            [self changeToIncome];
+            break;
+        case kTransactionTypeExpense:
+            [self changeToExpense];
+            break;
+        default:
+            break;
+    }
+    [self labelsSetup];
+}
+
+- (void)changeToIncome {
+    
+    self.transactionDetail.transactionType = kTransactionTypeIncome;
+    NSDecimalNumber *number = self.transactionDetail.transactionAmount;
+    number = [number decimalNumberByAdding:number];
+    self.transactionDetail.wallet.walletBalance = [self.transactionDetail.wallet.walletBalance decimalNumberByAdding:number];
+    [[CoreDataAccessLayer sharedInstance] saveContext];
+}
+
+- (void)changeToExpense {
+    
+    self.transactionDetail.transactionType = kTransactionTypeExpense;
+    NSDecimalNumber *number = self.transactionDetail.transactionAmount;
+    number = [number decimalNumberByAdding:number];
+    self.transactionDetail.wallet.walletBalance = [self.transactionDetail.wallet.walletBalance decimalNumberBySubtracting:number];
+    [[CoreDataAccessLayer sharedInstance] saveContext];
 }
 
 @end

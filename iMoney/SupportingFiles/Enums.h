@@ -44,8 +44,9 @@ typedef NS_ENUM(NSInteger, PaymentType)
 
 typedef NS_ENUM(NSInteger, TransactionType)
 {
-    kTransactionTypeIncome = 0,
-    kTransactionTypeExpense
+    kTransactionTypeIncome   = 0,
+    kTransactionTypeExpense  = 1,
+    kTransactionTypeTransfer = 2
 };
 
 typedef NS_ENUM(NSInteger, UIPickerType)
