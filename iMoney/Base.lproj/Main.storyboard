@@ -1064,6 +1064,33 @@
             </objects>
             <point key="canvasLocation" x="2784.8000000000002" y="232.53373313343329"/>
         </scene>
+        <!--Shopping Lists View Controller-->
+        <scene sceneID="peh-6r-eaw">
+            <objects>
+                <viewController storyboardIdentifier="ShoppingListsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nW4-lO-OF4" customClass="ShoppingListsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rqv-W7-qra"/>
+                        <viewControllerLayoutGuide type="bottom" id="cF9-Rh-5GP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QU9-nt-sCp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShK-g9-O3e">
+                                <rect key="frame" x="20" y="28" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8rC-bl-fEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3649" y="233"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="WK2-VL-pxA">
             <objects>

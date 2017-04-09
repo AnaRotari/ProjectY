@@ -9,6 +9,7 @@
 #import "MenuViewController.h"
 #import "DropBoxUtils.h"
 #import "ReminderViewController.h"
+#import "ShoppingListsViewController.h"
 
 @interface MenuViewController ()<DropBoxDelegate>
 
@@ -150,7 +151,8 @@
 
 - (void)openShoppingLists {
     
-    
+    ShoppingListsViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ShoppingListsViewController"];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 - (void)openWarranties {

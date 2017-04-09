@@ -18,6 +18,9 @@
 		FA0330801E7D75C400BB8DBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03307E1E7D75C400BB8DBA /* main.m */; };
 		FA0330841E7D786800BB8DBA /* ApplicationConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0330831E7D786800BB8DBA /* ApplicationConstants.m */; };
 		FA0330961E7D7F9F00BB8DBA /* iMoneyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0330951E7D7F9F00BB8DBA /* iMoneyUtils.m */; };
+		FA0842F01E9AD305007F5CED /* CoreDataHelpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0842EF1E9AD305007F5CED /* CoreDataHelpManager.m */; };
+		FA0842F41E9AD50F007F5CED /* ShoppingListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0842F31E9AD50F007F5CED /* ShoppingListsViewController.m */; };
+		FA0842FA1E9ADE8F007F5CED /* ShoppingListsViewController+UserInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0842F91E9ADE8F007F5CED /* ShoppingListsViewController+UserInterface.m */; };
 		FA0ACEE81E87D2ED000A42EE /* currency.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA0ACEE71E87D2ED000A42EE /* currency.plist */; };
 		FA0ACEED1E87D55D000A42EE /* CurrencyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0ACEEB1E87D55D000A42EE /* CurrencyTableViewCell.m */; };
 		FA0ACEEE1E87D55D000A42EE /* CurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0ACEEC1E87D55D000A42EE /* CurrencyTableViewCell.xib */; };
@@ -98,6 +101,12 @@
 		FA0330831E7D786800BB8DBA /* ApplicationConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationConstants.m; sourceTree = "<group>"; };
 		FA0330941E7D7F9F00BB8DBA /* iMoneyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iMoneyUtils.h; sourceTree = "<group>"; };
 		FA0330951E7D7F9F00BB8DBA /* iMoneyUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iMoneyUtils.m; sourceTree = "<group>"; };
+		FA0842EE1E9AD305007F5CED /* CoreDataHelpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelpManager.h; sourceTree = "<group>"; };
+		FA0842EF1E9AD305007F5CED /* CoreDataHelpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelpManager.m; sourceTree = "<group>"; };
+		FA0842F21E9AD50F007F5CED /* ShoppingListsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListsViewController.h; sourceTree = "<group>"; };
+		FA0842F31E9AD50F007F5CED /* ShoppingListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingListsViewController.m; sourceTree = "<group>"; };
+		FA0842F81E9ADE8F007F5CED /* ShoppingListsViewController+UserInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShoppingListsViewController+UserInterface.h"; sourceTree = "<group>"; };
+		FA0842F91E9ADE8F007F5CED /* ShoppingListsViewController+UserInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShoppingListsViewController+UserInterface.m"; sourceTree = "<group>"; };
 		FA0ACEE71E87D2ED000A42EE /* currency.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = currency.plist; sourceTree = "<group>"; };
 		FA0ACEEA1E87D55D000A42EE /* CurrencyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyTableViewCell.h; sourceTree = "<group>"; };
 		FA0ACEEB1E87D55D000A42EE /* CurrencyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyTableViewCell.m; sourceTree = "<group>"; };
@@ -302,6 +311,8 @@
 				FA0ACEF01E87EAEE000A42EE /* CoreDataInsertManager.m */,
 				84D92FC61E61F9D000F823DD /* CoreDataRequestManager.h */,
 				84D92FC71E61F9D000F823DD /* CoreDataRequestManager.m */,
+				FA0842EE1E9AD305007F5CED /* CoreDataHelpManager.h */,
+				FA0842EF1E9AD305007F5CED /* CoreDataHelpManager.m */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -361,8 +372,20 @@
 				FAFF39F61E88412F00524084 /* SelectedWalletViewController */,
 				FAFF39F71E88412F00524084 /* TransactionViewController */,
 				FAECCFBB1E96AD78001D4B8F /* ReminderViewController */,
+				FA0842F11E9AD4D1007F5CED /* ShoppingListsViewController */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FA0842F11E9AD4D1007F5CED /* ShoppingListsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FA0842F21E9AD50F007F5CED /* ShoppingListsViewController.h */,
+				FA0842F31E9AD50F007F5CED /* ShoppingListsViewController.m */,
+				FA0842F81E9ADE8F007F5CED /* ShoppingListsViewController+UserInterface.h */,
+				FA0842F91E9ADE8F007F5CED /* ShoppingListsViewController+UserInterface.m */,
+			);
+			path = ShoppingListsViewController;
 			sourceTree = "<group>";
 		};
 		FA0ACEE91E87D54C000A42EE /* CurrencyTableViewCell */ = {
@@ -855,6 +878,7 @@
 				FADB2E971E88381100319EB6 /* HWViewPager.m in Sources */,
 				FA0330841E7D786800BB8DBA /* ApplicationConstants.m in Sources */,
 				FAE632821E982A88002A0455 /* TransactionTableViewCell.m in Sources */,
+				FA0842F41E9AD50F007F5CED /* ShoppingListsViewController.m in Sources */,
 				FA0ACEF11E87EAEE000A42EE /* CoreDataInsertManager.m in Sources */,
 				FAD2FF571E87CBF5001BB364 /* CurrencyPickerViewController.m in Sources */,
 				FA0330801E7D75C400BB8DBA /* main.m in Sources */,
@@ -863,6 +887,7 @@
 				FAECCFC31E96B1C0001D4B8F /* AppDelegate+Notifications.m in Sources */,
 				FAE632971E982E55002A0455 /* BaseViewController.m in Sources */,
 				FAE632801E982A88002A0455 /* MainWalletCollectionViewCell.m in Sources */,
+				FA0842F01E9AD305007F5CED /* CoreDataHelpManager.m in Sources */,
 				FA745CBD1E94201E0035BB58 /* UserImagesCollectionViewCell.m in Sources */,
 				FAA838751E870BC9005BFADF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				FAA838721E870BC9005BFADF /* TPKeyboardAvoidingCollectionView.m in Sources */,
@@ -882,6 +907,7 @@
 				FAA838631E86E1FA005BFADF /* AddEditWalletViewController.m in Sources */,
 				FA0ACEED1E87D55D000A42EE /* CurrencyTableViewCell.m in Sources */,
 				FAFF3A001E8858D500524084 /* SelectedWalletViewController+UI.m in Sources */,
+				FA0842FA1E9ADE8F007F5CED /* ShoppingListsViewController+UserInterface.m in Sources */,
 				FAECCFBF1E96AD78001D4B8F /* ReminderViewController.m in Sources */,
 				FAE632A61E98571E002A0455 /* Transaction+CoreDataProperties.m in Sources */,
 				FAE6327D1E982A88002A0455 /* MainViewController.m in Sources */,

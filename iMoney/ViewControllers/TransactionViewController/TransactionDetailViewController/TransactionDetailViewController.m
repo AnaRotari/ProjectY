@@ -193,28 +193,10 @@
     Wallet *sourceWallet = self.transactionDetail.wallet;
     Wallet *walletToTransfer = self.totalWallets[buttonIndex];
     
-    [walletToTransfer addTransactionsObject:self.transactionDetail];
-
-    switch (self.transactionDetail.transactionType) {
-        case kTransactionTypeIncome:
-            
-            walletToTransfer.walletBalance = [walletToTransfer.walletBalance decimalNumberByAdding:self.transactionDetail.transactionAmount];
-            
-            sourceWallet.walletBalance = [sourceWallet.walletBalance decimalNumberBySubtracting:self.transactionDetail.transactionAmount];
-            
-            break;
-        case kTransactionTypeExpense:
-            
-            walletToTransfer.walletBalance = [walletToTransfer.walletBalance decimalNumberBySubtracting:self.transactionDetail.transactionAmount];
-            sourceWallet.walletBalance = [sourceWallet.walletBalance decimalNumberByAdding:self.transactionDetail.transactionAmount];
-            
-            break;
-            
-        default:
-            break;
-    }
+    [CoreDataHelpManager transferTransaction:self.transactionDetail
+                            fromSourceWallet:sourceWallet
+                         toDestinationWallet:walletToTransfer];
     
-    [[CoreDataAccessLayer sharedInstance] saveContext];
     [self labelsSetup];
 }
 
