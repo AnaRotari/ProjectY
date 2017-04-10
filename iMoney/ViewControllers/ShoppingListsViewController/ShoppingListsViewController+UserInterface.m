@@ -17,15 +17,15 @@
     self.plusButtonsViewMain.plusButtonAnimationType = LGPlusButtonAnimationTypeRotate;
     
     [self.plusButtonsViewMain setButtonsTitles:@[@"+", @"", @"", @""] forState:UIControlStateNormal];
-    [self.plusButtonsViewMain setDescriptionsTexts:@[@"", @"Take a photo", @"Choose from gallery", @"Send a message"]];
+    [self.plusButtonsViewMain setDescriptionsTexts:@[@"", @"Add item", @"Rename shopping list", @"New shopping list"]];
     [self.plusButtonsViewMain setButtonsImages:@[[NSNull new], [UIImage imageNamed:@"ic_shopping_addItem"], [UIImage imageNamed:@"ic_shopping_editItem"], [UIImage imageNamed:@"ic_shopping_Plus"]]
                                   forState:UIControlStateNormal
                             forOrientation:LGPlusButtonsViewOrientationAll];
     
     [self.plusButtonsViewMain setButtonsAdjustsImageWhenHighlighted:NO];
-    [self.plusButtonsViewMain setButtonsBackgroundColor:[UIColor colorWithRed:0.f green:0.5 blue:1.f alpha:1.f] forState:UIControlStateNormal];
-    [self.plusButtonsViewMain setButtonsBackgroundColor:[UIColor colorWithRed:0.2 green:0.6 blue:1.f alpha:1.f] forState:UIControlStateHighlighted];
-    [self.plusButtonsViewMain setButtonsBackgroundColor:[UIColor colorWithRed:0.2 green:0.6 blue:1.f alpha:1.f] forState:UIControlStateHighlighted|UIControlStateSelected];
+    [self.plusButtonsViewMain setButtonsBackgroundColor:[UIColor colorWithRed:42/255.f green:3/255.f blue:80/255.f alpha:1.f] forState:UIControlStateNormal];
+    [self.plusButtonsViewMain setButtonsBackgroundColor:[UIColor colorWithRed:42/255.f green:3/255.f blue:80/255.f alpha:0.8f] forState:UIControlStateHighlighted];
+    [self.plusButtonsViewMain setButtonsBackgroundColor:[UIColor colorWithRed:42/255.f green:3/255.f blue:80/255.f alpha:0.8f] forState:UIControlStateHighlighted|UIControlStateSelected];
     [self.plusButtonsViewMain setButtonsSize:CGSizeMake(44.f, 44.f) forOrientation:LGPlusButtonsViewOrientationAll];
     [self.plusButtonsViewMain setButtonsLayerCornerRadius:44.f/2.f forOrientation:LGPlusButtonsViewOrientationAll];
     [self.plusButtonsViewMain setButtonsTitleFont:[UIFont boldSystemFontOfSize:24.f] forOrientation:LGPlusButtonsViewOrientationAll];

@@ -2,7 +2,7 @@
 //  Transaction+CoreDataProperties.h
 //  
 //
-//  Created by Alex on 4/8/17.
+//  Created by Alex on 4/10/17.
 //
 //
 

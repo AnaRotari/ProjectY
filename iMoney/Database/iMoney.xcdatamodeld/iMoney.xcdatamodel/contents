@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1421" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="ListItem" representedClassName="ListItem" syncable="YES" codeGenerationType="class">
+        <attribute name="itemIsDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="itemName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemSort" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="list" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShoppingList" inverseName="items" inverseEntity="ShoppingList" syncable="YES"/>
+    </entity>
+    <entity name="ShoppingList" representedClassName="ShoppingList" syncable="YES" codeGenerationType="class">
+        <attribute name="listName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ListItem" inverseName="list" inverseEntity="ListItem" syncable="YES"/>
+    </entity>
     <entity name="Transaction" representedClassName="Transaction" syncable="YES">
         <attribute name="transactionAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="transactionAttachments" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -23,7 +33,9 @@
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Transaction" inverseName="wallet" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Transaction" positionX="855" positionY="1431" width="128" height="193"/>
+        <element name="Transaction" positionX="862" positionY="1449" width="128" height="193"/>
         <element name="Wallet" positionX="648" positionY="1467" width="128" height="165"/>
+        <element name="ShoppingList" positionX="646" positionY="1727" width="128" height="73"/>
+        <element name="ListItem" positionX="862" positionY="1697" width="128" height="103"/>
     </elements>
 </model>

@@ -11,7 +11,7 @@
 #import "ReminderViewController.h"
 #import "ShoppingListsViewController.h"
 
-@interface MenuViewController ()<DropBoxDelegate>
+@interface MenuViewController () <DropBoxDelegate>
 
 @property (strong, nonatomic) NSArray *menuItemsArray;
 @property (strong, nonatomic) NSArray *menuImagesArray;

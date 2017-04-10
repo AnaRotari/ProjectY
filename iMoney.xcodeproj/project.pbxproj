@@ -25,7 +25,13 @@
 		FA0ACEED1E87D55D000A42EE /* CurrencyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0ACEEB1E87D55D000A42EE /* CurrencyTableViewCell.m */; };
 		FA0ACEEE1E87D55D000A42EE /* CurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0ACEEC1E87D55D000A42EE /* CurrencyTableViewCell.xib */; };
 		FA0ACEF11E87EAEE000A42EE /* CoreDataInsertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0ACEF01E87EAEE000A42EE /* CoreDataInsertManager.m */; };
+		FA342D781E9C208D0040033E /* Transaction+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA342D6D1E9C208D0040033E /* Transaction+CoreDataClass.m */; };
+		FA342D791E9C208D0040033E /* Transaction+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA342D6F1E9C208D0040033E /* Transaction+CoreDataProperties.m */; };
+		FA342D7A1E9C208D0040033E /* Wallet+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA342D711E9C208D0040033E /* Wallet+CoreDataClass.m */; };
+		FA342D7B1E9C208D0040033E /* Wallet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA342D731E9C208D0040033E /* Wallet+CoreDataProperties.m */; };
 		FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */; };
+		FA58D09E1E9C1298008C6D3E /* ShoppingListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA58D09C1E9C1298008C6D3E /* ShoppingListTableViewCell.m */; };
+		FA58D09F1E9C1298008C6D3E /* ShoppingListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA58D09D1E9C1298008C6D3E /* ShoppingListTableViewCell.xib */; };
 		FA745CBD1E94201E0035BB58 /* UserImagesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA745CBB1E94201E0035BB58 /* UserImagesCollectionViewCell.m */; };
 		FA745CBE1E94201E0035BB58 /* UserImagesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA745CBC1E94201E0035BB58 /* UserImagesCollectionViewCell.xib */; };
 		FA9693231E872A6A00F86873 /* ColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9693221E872A6A00F86873 /* ColorPickerViewController.m */; };
@@ -38,9 +44,6 @@
 		FAA838751E870BC9005BFADF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA838711E870BC9005BFADF /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		FAAC9F911E7DE79B0077B160 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAC9F8F1E7DE79B0077B160 /* MenuTableViewCell.m */; };
 		FAAC9F921E7DE79B0077B160 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAC9F901E7DE79B0077B160 /* MenuTableViewCell.xib */; };
-		FAB3F47D1E8B151100A1A2EF /* Transaction+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB3F4761E8B151100A1A2EF /* Transaction+CoreDataClass.m */; };
-		FAB3F47F1E8B151100A1A2EF /* Wallet+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB3F47A1E8B151100A1A2EF /* Wallet+CoreDataClass.m */; };
-		FAB3F4801E8B151100A1A2EF /* Wallet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB3F47C1E8B151100A1A2EF /* Wallet+CoreDataProperties.m */; };
 		FACCD6261E92CFF200C8E698 /* TransactionViewController+DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FACCD6251E92CFF200C8E698 /* TransactionViewController+DataSource.m */; };
 		FAD2FF571E87CBF5001BB364 /* CurrencyPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD2FF561E87CBF5001BB364 /* CurrencyPickerViewController.m */; };
 		FADB2E971E88381100319EB6 /* HWViewPager.m in Sources */ = {isa = PBXBuildFile; fileRef = FADB2E961E88381100319EB6 /* HWViewPager.m */; };
@@ -62,7 +65,6 @@
 		FAE6329B1E98318C002A0455 /* TransactionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE6329A1E98318C002A0455 /* TransactionDetailViewController.m */; };
 		FAE632A01E983635002A0455 /* HistorySegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE6329F1E983635002A0455 /* HistorySegmentedControl.m */; };
 		FAE632A31E9855F2002A0455 /* NSArray+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE632A21E9855F2002A0455 /* NSArray+CoreData.m */; };
-		FAE632A61E98571E002A0455 /* Transaction+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE632A51E98571E002A0455 /* Transaction+CoreDataProperties.m */; };
 		FAEAC8AF1E8FCF7400E38654 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEAC8AE1E8FCF7400E38654 /* DropboxSDK.framework */; };
 		FAEAC8B41E8FD39B00E38654 /* DropBoxUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEAC8B31E8FD39B00E38654 /* DropBoxUtils.m */; };
 		FAECCFBF1E96AD78001D4B8F /* ReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAECCFBD1E96AD78001D4B8F /* ReminderViewController.m */; };
@@ -113,8 +115,19 @@
 		FA0ACEEC1E87D55D000A42EE /* CurrencyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrencyTableViewCell.xib; sourceTree = "<group>"; };
 		FA0ACEEF1E87EAEE000A42EE /* CoreDataInsertManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataInsertManager.h; sourceTree = "<group>"; };
 		FA0ACEF01E87EAEE000A42EE /* CoreDataInsertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataInsertManager.m; sourceTree = "<group>"; };
+		FA342D6C1E9C208D0040033E /* Transaction+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataClass.h"; sourceTree = "<group>"; };
+		FA342D6D1E9C208D0040033E /* Transaction+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataClass.m"; sourceTree = "<group>"; };
+		FA342D6E1E9C208D0040033E /* Transaction+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FA342D6F1E9C208D0040033E /* Transaction+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FA342D701E9C208D0040033E /* Wallet+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataClass.h"; sourceTree = "<group>"; };
+		FA342D711E9C208D0040033E /* Wallet+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataClass.m"; sourceTree = "<group>"; };
+		FA342D721E9C208D0040033E /* Wallet+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FA342D731E9C208D0040033E /* Wallet+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataProperties.m"; sourceTree = "<group>"; };
 		FA5540171E7E995900A4C773 /* DatabaseSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseSyncManager.h; sourceTree = "<group>"; };
 		FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseSyncManager.m; sourceTree = "<group>"; };
+		FA58D09B1E9C1298008C6D3E /* ShoppingListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListTableViewCell.h; sourceTree = "<group>"; };
+		FA58D09C1E9C1298008C6D3E /* ShoppingListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingListTableViewCell.m; sourceTree = "<group>"; };
+		FA58D09D1E9C1298008C6D3E /* ShoppingListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingListTableViewCell.xib; sourceTree = "<group>"; };
 		FA745CBA1E94201E0035BB58 /* UserImagesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserImagesCollectionViewCell.h; sourceTree = "<group>"; };
 		FA745CBB1E94201E0035BB58 /* UserImagesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserImagesCollectionViewCell.m; sourceTree = "<group>"; };
 		FA745CBC1E94201E0035BB58 /* UserImagesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserImagesCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -137,12 +150,6 @@
 		FAAC9F8E1E7DE79B0077B160 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
 		FAAC9F8F1E7DE79B0077B160 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
 		FAAC9F901E7DE79B0077B160 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
-		FAB3F4751E8B151100A1A2EF /* Transaction+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataClass.h"; sourceTree = "<group>"; };
-		FAB3F4761E8B151100A1A2EF /* Transaction+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataClass.m"; sourceTree = "<group>"; };
-		FAB3F4791E8B151100A1A2EF /* Wallet+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataClass.h"; sourceTree = "<group>"; };
-		FAB3F47A1E8B151100A1A2EF /* Wallet+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataClass.m"; sourceTree = "<group>"; };
-		FAB3F47B1E8B151100A1A2EF /* Wallet+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataProperties.h"; sourceTree = "<group>"; };
-		FAB3F47C1E8B151100A1A2EF /* Wallet+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataProperties.m"; sourceTree = "<group>"; };
 		FACCD6241E92CFF200C8E698 /* TransactionViewController+DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TransactionViewController+DataSource.h"; sourceTree = "<group>"; };
 		FACCD6251E92CFF200C8E698 /* TransactionViewController+DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TransactionViewController+DataSource.m"; sourceTree = "<group>"; };
 		FAD2FF551E87CBF5001BB364 /* CurrencyPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyPickerViewController.h; sourceTree = "<group>"; };
@@ -183,8 +190,6 @@
 		FAE6329F1E983635002A0455 /* HistorySegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistorySegmentedControl.m; sourceTree = "<group>"; };
 		FAE632A11E9855F2002A0455 /* NSArray+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CoreData.h"; sourceTree = "<group>"; };
 		FAE632A21E9855F2002A0455 /* NSArray+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CoreData.m"; sourceTree = "<group>"; };
-		FAE632A41E98571E002A0455 /* Transaction+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataProperties.h"; sourceTree = "<group>"; };
-		FAE632A51E98571E002A0455 /* Transaction+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataProperties.m"; sourceTree = "<group>"; };
 		FAEAC8AE1E8FCF7400E38654 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
 		FAEAC8B21E8FD39B00E38654 /* DropBoxUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBoxUtils.h; sourceTree = "<group>"; };
 		FAEAC8B31E8FD39B00E38654 /* DropBoxUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBoxUtils.m; sourceTree = "<group>"; };
@@ -349,14 +354,14 @@
 		FA0330851E7D794C00BB8DBA /* DatabaseEntities */ = {
 			isa = PBXGroup;
 			children = (
-				FAB3F4751E8B151100A1A2EF /* Transaction+CoreDataClass.h */,
-				FAB3F4761E8B151100A1A2EF /* Transaction+CoreDataClass.m */,
-				FAE632A41E98571E002A0455 /* Transaction+CoreDataProperties.h */,
-				FAE632A51E98571E002A0455 /* Transaction+CoreDataProperties.m */,
-				FAB3F4791E8B151100A1A2EF /* Wallet+CoreDataClass.h */,
-				FAB3F47A1E8B151100A1A2EF /* Wallet+CoreDataClass.m */,
-				FAB3F47B1E8B151100A1A2EF /* Wallet+CoreDataProperties.h */,
-				FAB3F47C1E8B151100A1A2EF /* Wallet+CoreDataProperties.m */,
+				FA342D6C1E9C208D0040033E /* Transaction+CoreDataClass.h */,
+				FA342D6D1E9C208D0040033E /* Transaction+CoreDataClass.m */,
+				FA342D6E1E9C208D0040033E /* Transaction+CoreDataProperties.h */,
+				FA342D6F1E9C208D0040033E /* Transaction+CoreDataProperties.m */,
+				FA342D701E9C208D0040033E /* Wallet+CoreDataClass.h */,
+				FA342D711E9C208D0040033E /* Wallet+CoreDataClass.m */,
+				FA342D721E9C208D0040033E /* Wallet+CoreDataProperties.h */,
+				FA342D731E9C208D0040033E /* Wallet+CoreDataProperties.m */,
 			);
 			path = DatabaseEntities;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 		FA0842F11E9AD4D1007F5CED /* ShoppingListsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FA58D09A1E9C127B008C6D3E /* ShoppingListTableViewCell */,
 				FA0842F21E9AD50F007F5CED /* ShoppingListsViewController.h */,
 				FA0842F31E9AD50F007F5CED /* ShoppingListsViewController.m */,
 				FA0842F81E9ADE8F007F5CED /* ShoppingListsViewController+UserInterface.h */,
@@ -405,6 +411,16 @@
 				FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */,
 			);
 			path = DatabaseSyncManager;
+			sourceTree = "<group>";
+		};
+		FA58D09A1E9C127B008C6D3E /* ShoppingListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA58D09B1E9C1298008C6D3E /* ShoppingListTableViewCell.h */,
+				FA58D09C1E9C1298008C6D3E /* ShoppingListTableViewCell.m */,
+				FA58D09D1E9C1298008C6D3E /* ShoppingListTableViewCell.xib */,
+			);
+			path = ShoppingListTableViewCell;
 			sourceTree = "<group>";
 		};
 		FA745CB91E94201E0035BB58 /* UserImagesCollectionViewCell */ = {
@@ -808,6 +824,7 @@
 				FAE632811E982A88002A0455 /* MainWalletCollectionViewCell.xib in Resources */,
 				FAECCFC01E96AD78001D4B8F /* ReminderViewController.xib in Resources */,
 				8402D1771E61F6C600968EA2 /* Assets.xcassets in Resources */,
+				FA58D09F1E9C1298008C6D3E /* ShoppingListTableViewCell.xib in Resources */,
 				FA0ACEEE1E87D55D000A42EE /* CurrencyTableViewCell.xib in Resources */,
 				FAECCFCA1E96C6AA001D4B8F /* MenuContent.plist in Resources */,
 				FAE632831E982A88002A0455 /* TransactionTableViewCell.xib in Resources */,
@@ -874,7 +891,6 @@
 			files = (
 				FAECCFCE1E96E232001D4B8F /* ReorderWalletsViewController.m in Sources */,
 				FAE632A01E983635002A0455 /* HistorySegmentedControl.m in Sources */,
-				FAB3F47D1E8B151100A1A2EF /* Transaction+CoreDataClass.m in Sources */,
 				FADB2E971E88381100319EB6 /* HWViewPager.m in Sources */,
 				FA0330841E7D786800BB8DBA /* ApplicationConstants.m in Sources */,
 				FAE632821E982A88002A0455 /* TransactionTableViewCell.m in Sources */,
@@ -888,17 +904,20 @@
 				FAE632971E982E55002A0455 /* BaseViewController.m in Sources */,
 				FAE632801E982A88002A0455 /* MainWalletCollectionViewCell.m in Sources */,
 				FA0842F01E9AD305007F5CED /* CoreDataHelpManager.m in Sources */,
+				FA342D7A1E9C208D0040033E /* Wallet+CoreDataClass.m in Sources */,
+				FA342D791E9C208D0040033E /* Transaction+CoreDataProperties.m in Sources */,
 				FA745CBD1E94201E0035BB58 /* UserImagesCollectionViewCell.m in Sources */,
 				FAA838751E870BC9005BFADF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				FAA838721E870BC9005BFADF /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				FAFF39FA1E88414600524084 /* SelectedWalletViewController.m in Sources */,
 				FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */,
+				FA342D781E9C208D0040033E /* Transaction+CoreDataClass.m in Sources */,
+				FA58D09E1E9C1298008C6D3E /* ShoppingListTableViewCell.m in Sources */,
 				84D92FCD1E61FB9800F823DD /* iMoney.xcdatamodeld in Sources */,
 				FAE6328D1E982BDA002A0455 /* ChartsViewController.m in Sources */,
 				FAEAC8B41E8FD39B00E38654 /* DropBoxUtils.m in Sources */,
+				FA342D7B1E9C208D0040033E /* Wallet+CoreDataProperties.m in Sources */,
 				FAE6328A1E982BCC002A0455 /* RecordsViewController.m in Sources */,
-				FAB3F4801E8B151100A1A2EF /* Wallet+CoreDataProperties.m in Sources */,
-				FAB3F47F1E8B151100A1A2EF /* Wallet+CoreDataClass.m in Sources */,
 				84D92FCA1E61F9D000F823DD /* CoreDataRequestManager.m in Sources */,
 				FA9693271E87324100F86873 /* UIColor+CoreData.m in Sources */,
 				FAE632931E982BEF002A0455 /* BudgetsViewController.m in Sources */,
@@ -909,7 +928,6 @@
 				FAFF3A001E8858D500524084 /* SelectedWalletViewController+UI.m in Sources */,
 				FA0842FA1E9ADE8F007F5CED /* ShoppingListsViewController+UserInterface.m in Sources */,
 				FAECCFBF1E96AD78001D4B8F /* ReminderViewController.m in Sources */,
-				FAE632A61E98571E002A0455 /* Transaction+CoreDataProperties.m in Sources */,
 				FAE6327D1E982A88002A0455 /* MainViewController.m in Sources */,
 				FAE632A31E9855F2002A0455 /* NSArray+CoreData.m in Sources */,
 				FAE6327E1E982A88002A0455 /* MainViewControllerCollectionView.m in Sources */,
