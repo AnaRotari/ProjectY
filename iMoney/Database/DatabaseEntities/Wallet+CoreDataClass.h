@@ -2,7 +2,7 @@
 //  Wallet+CoreDataClass.h
 //  
 //
-//  Created by Alex on 4/10/17.
+//  Created by Alexandr Pavlov on 4/11/17.
 //
 //
 

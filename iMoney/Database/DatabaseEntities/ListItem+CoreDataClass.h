@@ -1,5 +1,5 @@
 //
-//  Transaction+CoreDataClass.h
+//  ListItem+CoreDataClass.h
 //  
 //
 //  Created by Alexandr Pavlov on 4/11/17.
@@ -9,14 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class NSObject, Wallet;
+@class ShoppingList;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Transaction : NSManagedObject
+@interface ListItem : NSManagedObject
 
 @end
 
 NS_ASSUME_NONNULL_END
 
-#import "Transaction+CoreDataProperties.h"
+#import "ListItem+CoreDataProperties.h"
