@@ -11,6 +11,8 @@
 //Entities
 #import "Wallet+CoreDataClass.h"
 #import "Transaction+CoreDataClass.h"
+#import "ShoppingList+CoreDataClass.h"
+#import "ListItem+CoreDataClass.h"
 
 @interface CoreDataAccessLayer : NSObject
 

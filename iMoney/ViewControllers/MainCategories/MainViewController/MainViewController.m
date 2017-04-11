@@ -10,8 +10,12 @@
 #import "ReorderWalletsViewController.h"
 #import "DropBoxUtils.h"
 #import "TransactionDetailViewController.h"
+#import "MainViewController+Navigation.h"
 
-@interface MainViewController () <DropBoxDelegate>
+@interface MainViewController () <DropBoxDelegate> {
+    
+    MenuViewController *sideMenuController;
+}
 
 @property (assign, nonatomic) NSInteger selectedWalletIndex;
 
@@ -38,6 +42,7 @@
     [[DropBoxUtils sharedInstance] logInOrDoStuff:^{
         
         self.collectionDelegates.walletsArray = [CoreDataRequestManager getAllWallets];
+        self.collectionDelegates.walletsArray.count ? [self.noWalletsLabel setHidden:YES] : [self.noWalletsLabel setHidden:NO];
         [self.walletsCollectionView reloadData];
         
         if (self.collectionDelegates.walletsArray.count) {
@@ -139,6 +144,8 @@
         [self.revealButtonItem setAction: @selector(revealToggle:)];
         [self.navigationController.navigationBar addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    sideMenuController = (MenuViewController *)revealViewController.rearViewController;
+    sideMenuController.delegate = self;
 }
 
 #pragma mark - DropBoxDelegate
@@ -146,6 +153,7 @@
 - (void)downloadCoreDataFinished {
     
     self.collectionDelegates.walletsArray = [CoreDataRequestManager getAllWallets];
+    self.collectionDelegates.walletsArray.count ? [self.noWalletsLabel setHidden:YES] : [self.noWalletsLabel setHidden:NO];
     [self.walletsCollectionView reloadData];
     
     if (self.collectionDelegates.walletsArray.count) {
@@ -155,6 +163,50 @@
     }
     self.tableDelegates.transactionsArray.count ? [self.noTransactionsLabel setHidden:YES] : [self.noTransactionsLabel setHidden:NO];
     [self.transactionsTableView reloadData];
+}
+
+#pragma mark - MenuViewControllerDelegate
+
+- (void)userNavigateTo:(MenuItems)menuItem {
+    
+    [self.revealViewController revealToggleAnimated:NO];
+    
+    switch (menuItem) {
+        case kMenuItemPlannedPayments:
+            NSLog(@"kMenuItemPlannedPayments - not done");
+            break;
+        case kMenuItemExports:
+            NSLog(@"kMenuItemExports - not done");
+            break;
+        case kMenuItemDebs:
+            NSLog(@"kMenuItemDebs - not done");
+            break;
+        case kMenuItemShoppingLists:
+            NSLog(@"Shopping list - maybe done");
+            [self goToShoppingList];
+            break;
+        case kMenuItemWarranties:
+            NSLog(@"kMenuItemWarranties - not done");
+            break;
+        case kMenuItemLocations:
+            NSLog(@"kMenuItemLocations - not done");
+            break;
+        case kMenuItemReminder:
+            NSLog(@"kMenuItemReminder - done");
+            break;
+        case kMenuItemHelp:
+            NSLog(@"kMenuItemHelp - not done");
+            break;
+        case kMenuItemSettings:
+            NSLog(@"kMenuItemSettings - not done");
+            break;
+        case kMenuItemLogout:
+            NSLog(@"kMenuItemLogout - done");
+            break;
+            
+        default:
+            break;
+    }
 }
 
 @end

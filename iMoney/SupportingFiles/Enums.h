@@ -56,4 +56,18 @@ typedef NS_ENUM(NSInteger, UIPickerType)
     kUIPickerTypeRepetitions = 2
 };
 
+typedef NS_ENUM(NSInteger, MenuItems)
+{
+    kMenuItemPlannedPayments = 0,
+    kMenuItemExports,
+    kMenuItemDebs,
+    kMenuItemShoppingLists,
+    kMenuItemWarranties,
+    kMenuItemLocations,
+    kMenuItemReminder,
+    kMenuItemHelp,
+    kMenuItemSettings,
+    kMenuItemLogout
+};
+
 #endif /* Enums_h */

@@ -9,8 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "MenuTableViewCell.h"
 
+@protocol MenuViewControllerDelegate <NSObject>
+
+@optional
+- (void)userNavigateTo:(MenuItems)menuItem;
+
+@end
+
 @interface MenuViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (weak, nonatomic) IBOutlet UITableView *menuTableView;
+@property (weak, nonatomic) id <MenuViewControllerDelegate> delegate;
 
 @end

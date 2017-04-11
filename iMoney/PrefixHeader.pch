@@ -13,6 +13,7 @@
 #import "CoreDataRequestManager.h"
 #import "CoreDataInsertManager.h"
 #import "CoreDataHelpManager.h"
+#import "CoreDataShoppingListManager.h"
 #import "SWRevealViewController.h"
 #import "Enums.h"
 #import "iMoneyUtils.h"

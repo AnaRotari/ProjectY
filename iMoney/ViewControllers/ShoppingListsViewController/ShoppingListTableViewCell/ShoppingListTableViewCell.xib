@@ -12,58 +12,39 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ShoppingListTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OrL-YP-x3d" customClass="BEMCheckBox">
-                        <rect key="frame" x="8" y="24" width="20" height="20"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shopping Cart-96" translatesAutoresizingMaskIntoConstraints="NO" id="rjX-Z1-dHJ">
+                        <rect key="frame" x="16" y="8" width="43" height="43"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="20" id="gXR-cC-zgb"/>
-                            <constraint firstAttribute="height" constant="20" id="vJc-OP-PMc"/>
+                            <constraint firstAttribute="width" constant="43" id="9LR-Bp-Ndq"/>
+                            <constraint firstAttribute="height" constant="43" id="vOD-zp-dLG"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                <real key="value" value="1"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="animationDuration">
-                                <real key="value" value="0.0"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01O-CZ-mKl">
-                        <rect key="frame" x="36" y="24" width="228" height="20"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXH-c6-kPh">
+                        <rect key="frame" x="67" y="19" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0W-At-sb4">
-                        <rect key="frame" x="272" y="15" width="40" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="30" id="VJW-S3-tk5"/>
-                            <constraint firstAttribute="height" constant="30" id="dz8-0w-4u6"/>
-                        </constraints>
-                        <state key="normal" backgroundImage="ic_shopping_trash"/>
-                    </button>
                 </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="OrL-YP-x3d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="IAk-i9-PcW"/>
-                    <constraint firstItem="01O-CZ-mKl" firstAttribute="centerY" secondItem="OrL-YP-x3d" secondAttribute="centerY" id="Jvs-4Z-sSy"/>
-                    <constraint firstItem="OrL-YP-x3d" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ti2-et-pcZ"/>
-                    <constraint firstItem="Y0W-At-sb4" firstAttribute="leading" secondItem="01O-CZ-mKl" secondAttribute="trailing" constant="8" id="XbK-bv-3hi"/>
-                    <constraint firstItem="01O-CZ-mKl" firstAttribute="leading" secondItem="OrL-YP-x3d" secondAttribute="trailing" constant="8" id="ZlA-uG-5N5"/>
-                    <constraint firstItem="Y0W-At-sb4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bhD-Ic-ei7"/>
-                    <constraint firstAttribute="trailing" secondItem="Y0W-At-sb4" secondAttribute="trailing" constant="8" id="eWU-LM-GOj"/>
+                    <constraint firstItem="pXH-c6-kPh" firstAttribute="leading" secondItem="rjX-Z1-dHJ" secondAttribute="trailing" constant="8" id="0qJ-Dl-MTZ"/>
+                    <constraint firstItem="rjX-Z1-dHJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4WN-hO-jaJ"/>
+                    <constraint firstItem="rjX-Z1-dHJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="RsG-vC-EHZ"/>
+                    <constraint firstItem="pXH-c6-kPh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="nqA-iG-spi"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="shoppingListNameLabel" destination="pXH-c6-kPh" id="MkL-k2-UFf"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic_shopping_trash" width="32" height="32"/>
+        <image name="Shopping Cart-96" width="32" height="32"/>
     </resources>
 </document>

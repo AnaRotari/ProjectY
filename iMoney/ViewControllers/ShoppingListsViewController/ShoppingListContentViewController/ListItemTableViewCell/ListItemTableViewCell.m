@@ -1,14 +1,14 @@
 //
-//  ShoppingListTableViewCell.m
+//  ListItemTableViewCell.m
 //  iMoney
 //
 //  Created by Alex on 4/12/17.
 //  Copyright © 2017 Ana Rotari. All rights reserved.
 //
 
-#import "ShoppingListTableViewCell.h"
+#import "ListItemTableViewCell.h"
 
-@implementation ShoppingListTableViewCell
+@implementation ListItemTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
