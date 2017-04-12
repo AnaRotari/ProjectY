@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-#import <LGAlertView/LGAlertView.h>
 #import "ShoppingListTableViewCell.h"
 
 @interface ShoppingListViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, LGAlertViewDelegate>

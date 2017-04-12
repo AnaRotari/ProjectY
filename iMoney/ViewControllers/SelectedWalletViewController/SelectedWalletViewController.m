@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *transactionsTableView;
 @property (strong, nonatomic) NSMutableArray <Transaction *> *transactionsArray;
+@property (strong, nonatomic) LGAlertView *adjustBalanceAlertView;
 
 @end
 
@@ -121,7 +122,25 @@
 
 - (void)adjustBalance {
     
-    NSLog(@"adjustBalance");
+    self.adjustBalanceAlertView = [[LGAlertView alloc] initWithTextFieldsAndTitle:@"Adjust balance"
+                                                                               message:@"New account balance"
+                                                                    numberOfTextFields:1
+                                                                textFieldsSetupHandler:^(UITextField *textField, NSUInteger index) {
+                                                                    
+                                                                    textField.tag = 1;
+                                                                    textField.delegate = self;
+                                                                    textField.enablesReturnKeyAutomatically = YES;
+                                                                    textField.autocapitalizationType = NO;
+                                                                    textField.autocorrectionType = NO;
+                                                                    textField.keyboardType = UIKeyboardTypeNumberPad;
+                                                                }
+                                                                          buttonTitles:@[@"Done"]
+                                                                     cancelButtonTitle:@"Cancel"
+                                                                destructiveButtonTitle:nil
+                                                                              delegate:self];
+    
+    [self.adjustBalanceAlertView setButtonEnabled:NO atIndex:0];
+    [self.adjustBalanceAlertView showAnimated:YES completionHandler:nil];
 }
 
 - (void)showHideButtonsAction {
@@ -132,6 +151,47 @@
     else {
         [self.plusButtonsViewNavBar showAnimated:YES completionHandler:nil];
     }
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    NSMutableString *currentString = textField.text.mutableCopy;
+    [currentString replaceCharactersInRange:range withString:string];
+    [self.adjustBalanceAlertView setButtonEnabled:(currentString.length > 0) atIndex:0];
+    
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField.tag < 1) {
+        [self.adjustBalanceAlertView.textFieldsArray[(textField.tag + 1)] becomeFirstResponder];
+    }
+    else {
+        if ([self.adjustBalanceAlertView isButtonEnabledAtIndex:0]) {
+            [self.adjustBalanceAlertView dismissAnimated:YES completionHandler:nil];
+        }
+        else {
+            [textField resignFirstResponder];
+        }
+    }
+    return YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    
+    [CoreDataInsertManager adjustWalletBalance:self.selectedWallet withBalance:textField.text];
+}
+
+#pragma mark - LGAlertViewDelegate
+
+- (void)alertViewWillDismiss:(nonnull LGAlertView *)alertView {
+    
+    [self.transactionsArray removeAllObjects];
+    self.transactionsArray = [[CoreDataRequestManager getAllTransactionForWallet:self.selectedWallet] mutableCopy];
+    [self.transactionsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
+                              withRowAnimation:UITableViewRowAnimationFade];
 }
 
 #pragma mark - UITableViewDataSource

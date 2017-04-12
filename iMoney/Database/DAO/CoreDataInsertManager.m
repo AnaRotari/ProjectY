@@ -74,9 +74,52 @@
     [wallet addTransactionsObject:newTransaction];
     
     if(![context save:&error]) {
-        NSLog(@"%@",[error localizedDescription]);
+        NSLog(@"Error: %@",[error localizedDescription]);
     } else {
         NSLog(@"successfull saved");
+    }
+}
+
++ (void)adjustWalletBalance:(Wallet *)wallet withBalance:(NSString *)newAmount {
+    
+    NSError *error = nil;
+    NSManagedObjectContext *context = [[CoreDataAccessLayer sharedInstance] managedObjectContext];
+    
+    
+    
+    Transaction *newTransaction = [NSEntityDescription insertNewObjectForEntityForName:@"Transaction"
+                                                                inManagedObjectContext:context];
+    
+    newTransaction.transactionCategory    = kTransactionCategoryOther;
+    newTransaction.transactionDate        = [iMoneyUtils getTodayFormatedDate];
+    newTransaction.transactionDescription = @"";
+    newTransaction.transactionPayee       = @"";
+    newTransaction.transactionPaymentType = kPaymentTypeCash;
+    newTransaction.transactionAttachments = @[].encode;
+    
+    NSDecimalNumber *incomeNumber = [[NSDecimalNumber alloc] initWithString:newAmount];
+    
+    if (wallet.walletBalance.doubleValue >= incomeNumber.doubleValue)
+    {
+        newTransaction.transactionType = kTransactionTypeExpense;
+        double transactionAmount = wallet.walletBalance.doubleValue - incomeNumber.doubleValue;
+        newTransaction.transactionAmount = [[NSDecimalNumber alloc] initWithDouble:transactionAmount];
+    }
+    else
+    {
+        newTransaction.transactionType = kTransactionTypeIncome;
+        double transactionAmount = incomeNumber.doubleValue - wallet.walletBalance.doubleValue;
+        newTransaction.transactionAmount = [[NSDecimalNumber alloc] initWithDouble:transactionAmount];
+    }
+    
+    [wallet addTransactionsObject:newTransaction];
+    
+    wallet.walletBalance = incomeNumber;
+    
+    if(![context save:&error]) {
+        NSLog(@"Error: %@",[error localizedDescription]);
+    } else {
+        NSLog(@"Successfull updated wallet amount");
     }
 }
 

@@ -20,6 +20,7 @@
 #import "UIColor+CoreData.h"
 #import "NSArray+CoreData.h"
 #import "ApplicationConstants.h"
+#import <LGAlertView/LGAlertView.h>
 
 #define RGBColor(r,g,b,a) [UIColor colorWithRed:(r/(float)255) green:(g/(float)255) blue:(b/(float)255) alpha:a]
 
