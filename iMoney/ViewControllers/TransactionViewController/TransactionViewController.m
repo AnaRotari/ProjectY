@@ -9,12 +9,16 @@
 #import "TransactionViewController.h"
 #import "TransactionViewController+DataSource.h"
 #import "UserImagesCollectionViewCell.h"
+#import <MapKit/MapKit.h>
 
-@interface TransactionViewController () {
+@interface TransactionViewController ()<MKMapViewDelegate, CLLocationManagerDelegate> {
     
     NSInteger selectedTransactionType;
     NSInteger selectedTransactionCateogory;
     NSInteger selectedPaymentType;
+    IBOutlet MKMapView *mapViewOutlet;
+    CLLocationManager *locationManager;
+    CLLocation* currentLocation;
 }
 
 @end
@@ -30,6 +34,7 @@
     [self initData];
     [self setupDropDownMenuApperance];
     [self otherInitializations];
+    [self setUpMapView];
 }
 
 - (void)setupNavigationBar {
@@ -303,4 +308,54 @@
     self.arrayWithImages.count ? [self.noImagesLabel setHidden:YES] : [self.noImagesLabel setHidden:NO];
 }
 
+#pragma mark - map view methods
+
+-(void)setUpMapView{
+    if ([CLLocationManager locationServicesEnabled] ){
+        locationManager = [[CLLocationManager alloc] init];
+        locationManager.delegate = self;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters;
+        
+//        [locationManager requestLocation];
+        [locationManager requestAlwaysAuthorization];
+        [locationManager startUpdatingLocation];
+        [mapViewOutlet setUserTrackingMode:MKUserTrackingModeFollowWithHeading];
+        [mapViewOutlet setDelegate:self];
+    }else{
+        //TODO: show alert to activate location from settings
+    }
+}
+
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    NSLog(@"latitude----->%f", mapView.region.center.latitude);
+    NSLog(@"longitude---->%f", mapView.region.center.longitude);
+    
+    double latitude = mapView.region.center.latitude;
+    double longitude = mapView.region.center.longitude;
+    
+    if (latitude && longitude != 0) {
+        MKCoordinateRegion mapRegion;
+        mapRegion.center = CLLocationCoordinate2DMake(latitude, longitude);
+        mapRegion.span.latitudeDelta = 1;
+        mapRegion.span.longitudeDelta = 1;
+        
+        [mapView setRegion:mapRegion animated: YES];
+//        AIzaSyBsrWIkSGvj-8ep8pn44POP3ztKTxPAwjA google key
+//        [mapView setUserTrackingMode:MKUserTrackingModeNone];
+    }
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    currentLocation = [locations lastObject];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    NSLog(@"%@", error);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
+    NSLog(@"");
+}
 @end

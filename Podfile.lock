@@ -1,0 +1,35 @@
+PODS:
+  - BEMCheckBox (1.4.0)
+  - Color-Picker-for-iOS (2.0.2)
+  - GoogleMaps (2.2.0):
+    - GoogleMaps/Maps (= 2.2.0)
+  - GoogleMaps/Base (2.2.0)
+  - GoogleMaps/Maps (2.2.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.2.0):
+    - GoogleMaps/Base (= 2.2.0)
+  - LGAlertView (2.1.1)
+  - LGPlusButtonsView (1.1.1)
+  - MKDropdownMenu (1.4)
+
+DEPENDENCIES:
+  - BEMCheckBox
+  - Color-Picker-for-iOS (~> 2.0)
+  - GoogleMaps
+  - GooglePlaces
+  - LGAlertView
+  - LGPlusButtonsView (~> 1.1.0)
+  - MKDropdownMenu
+
+SPEC CHECKSUMS:
+  BEMCheckBox: e18e4a148905b290bd03d98b767651c104f4eda3
+  Color-Picker-for-iOS: 4980589b3e3cfe7198f227dd50be9adb02d8bc0b
+  GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
+  GooglePlaces: bca867d5e9da15384c794b945e4226848bc6e9d9
+  LGAlertView: e9bcdb5eff9eeabdafdb3d804994ac80188b6a1c
+  LGPlusButtonsView: 57878cd3d461d0ee2042f5b7b25d1c017e22a084
+  MKDropdownMenu: 269df4a41d21a1db684ce8bc709befe419fc5bae
+
+PODFILE CHECKSUM: 825b35a31553b745eb305319998cf48ea3e27387
+
+COCOAPODS: 1.2.0

@@ -10,6 +10,10 @@
 #import "DatabaseSyncManager.h"
 #import "DropBoxUtils.h"
 #import "AppDelegate+Notifications.h"
+@import GoogleMaps;
+@import GooglePlaces;
+
+static NSString *const kGoogleApiKey = @"AIzaSyBsrWIkSGvj-8ep8pn44POP3ztKTxPAwjA";
 
 @interface AppDelegate ()
 
@@ -21,6 +25,10 @@
     
     NSLog(@"🗂: %@",[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory
                                                             inDomains:NSUserDomainMask] lastObject]);
+    
+    [GMSServices provideAPIKey:kGoogleApiKey];
+    [GMSPlacesClient provideAPIKey:kGoogleApiKey];
+    
     [[DatabaseSyncManager sharedInstance] startSyncronize];
     [iMoneyUtils setupAppearance];
     [self checkFirstRun];

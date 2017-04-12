@@ -37,6 +37,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
+    [[self.tabBarController.tabBar.items objectAtIndex:0] setTitle:@"Dashboard"];
     
     [[DropBoxUtils sharedInstance] setDelegate:self];
     [[DropBoxUtils sharedInstance] logInOrDoStuff:^{

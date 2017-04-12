@@ -8,5 +8,7 @@ pod 'LGPlusButtonsView', '~> 1.1.0'
 pod 'MKDropdownMenu'
 pod 'BEMCheckBox'
 pod 'LGAlertView'
+pod 'GoogleMaps'
+pod 'GooglePlaces'
 
 end

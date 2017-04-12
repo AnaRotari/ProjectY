@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JDF-WB-fQC">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JDF-WB-fQC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -607,7 +607,7 @@
                                                 <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xyg-OP-K3h">
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsCompass="NO" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xyg-OP-K3h">
                                                 <rect key="frame" x="8" y="294" width="359" height="158"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="158" id="eJX-kd-kyF"/>
@@ -617,6 +617,9 @@
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="aaH-XV-oDD" id="Vfd-2W-utm"/>
+                                                </connections>
                                             </mapView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attachments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkG-kr-iey">
                                                 <rect key="frame" x="8" y="460" width="98" height="21"/>
@@ -665,6 +668,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="djT-V6-nIW" customClass="GMSMapView">
+                                                <rect key="frame" x="8" y="294" width="359" height="158"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -751,6 +759,7 @@
                         <outlet property="dateLabel" destination="orL-ph-8xl" id="dEa-v5-lQB"/>
                         <outlet property="descriptionLabel" destination="IAe-uz-qUh" id="E1q-Uj-2rh"/>
                         <outlet property="imagesCollectionView" destination="5II-YN-WsP" id="Pr7-tq-g3J"/>
+                        <outlet property="mapViewOutlet" destination="xyg-OP-K3h" id="U9A-Ws-aEt"/>
                         <outlet property="noImagesLabel" destination="bhx-zS-2lY" id="ffW-Zg-Ekh"/>
                         <outlet property="payeeLabel" destination="fKf-Il-I4m" id="bJd-wi-7a6"/>
                         <outlet property="paymentType" destination="5Jo-w4-P4X" id="uqj-Z3-SvX"/>

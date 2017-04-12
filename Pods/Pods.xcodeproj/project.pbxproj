@@ -1,0 +1,1308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		001CE018E274B16E6E007AB08660D8B5 /* HRBrightnessCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8373B6FC21BDA542F7BDA6869A9BB /* HRBrightnessCursor.m */; };
+		026F94EB25869D67D7287B7449418C5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		07AF3FC1C0018971C3CAF6CDAFBDD40E /* LGAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B36BA5DAAFA2F24465229CC31C4F95B4 /* LGAlertViewController.m */; };
+		0A020A4F55C7A98E7A09CDB127099F5D /* LGAlertViewTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 506552BC8E1ECBF555333DC5596B5A71 /* LGAlertViewTextField.m */; };
+		11B69DF4F439BD54C077D9ED79ED532A /* UIImage+CoreGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AF0724AC67926F3241789EECB892808 /* UIImage+CoreGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1397527E70AB314B02DC62A080402047 /* BEMAnimationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D4F512C574DA3C3FCF6659243CF60E /* BEMAnimationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A775601A82A21EF89B9ED70B959FC7A /* LGAlertViewSharedOpen.h in Headers */ = {isa = PBXBuildFile; fileRef = 26DDA66FAFD07E044464A78B5469B356 /* LGAlertViewSharedOpen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C197B09E16C4680E1E3A6E8D7C88D10 /* LGAlertViewWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = B35137A097BAF8BB27B1E0EA2C337758 /* LGAlertViewWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CD41BE01BEC32163E0436CEF2ED30EC /* MKDropdownMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C515EF3C44EEE5584A169ADE7F9ED22F /* MKDropdownMenu-dummy.m */; };
+		22070F61B09BA42858CC48073D6893D4 /* BEMCheckBoxGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CB523F644803B4EE1A8F2B97264FB3C /* BEMCheckBoxGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23865E13B0CB2A8C7744AFD325CEF7F5 /* LGPlusButtonsViewShared.h in Headers */ = {isa = PBXBuildFile; fileRef = D07AA1D3DF97373755A0EFEC70346E54 /* LGPlusButtonsViewShared.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2483BFAB5600F39F74BF2E836C06B602 /* HRColorMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83508A07AA933AC09A9A9DDE2726B2C9 /* HRColorMapView.m */; };
+		255066088BB0C0A261A6DEB2040C314A /* LGPlusButtonDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 350BDE0D53DB3A1159E0AACC8CB56910 /* LGPlusButtonDescription.m */; };
+		275FA8A5C33D35324F093CAC4A4447E5 /* HRBrightnessCursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6A6921310DF1DDB33E5542904EB901 /* HRBrightnessCursor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDD8D71675F255F817DFF0650F2D855 /* LGAlertViewTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CAD974C4FDF1DE47EDFF5B40B0B302E /* LGAlertViewTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31F88A5EBB4EB2438E137CA584FFF45B /* LGAlertViewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B03EBC55B37FAB4F31E3C290E965AA1C /* LGAlertViewWindow.m */; };
+		320B694DB3AA97711690F3B20817DE68 /* BEMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 832AA36DB889516397061A5FDD30F385 /* BEMCheckBoxGroup.m */; };
+		3353666CED8075BB126EC6DC7CEBB321 /* HRHSVColorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2B9EF78A5F7BFA896A9DC994E2FD84 /* HRHSVColorUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3EB5591DB744B515CB32E003BACAD07A /* HRColorInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A143B4868F7A01CE6D1321AB1CB8FC /* HRColorInfoView.m */; };
+		40372C56143EC23D91CBAB5209984EDA /* BEMCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 855700ECB3C48D32A491B7FD4DC10998 /* BEMCheckBox.m */; };
+		4C1C480A1DE477ACE7A4A10EA8573A57 /* HRColorPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4195E48071318770BF092A8C972C0B7E /* HRColorPickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F9F7A43E5BAD6F1778DBA5468E3A316 /* LGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B32A475948047ABF01A1621861B2EEC9 /* LGAlertView.m */; };
+		4FA47B06D01DA86FAB2730721F7FD721 /* BEMCheckBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 525E82B0F554ACDA49DD5A3768C3614C /* BEMCheckBox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51DF683301C5FBD8A8B16C6530A4C096 /* LGPlusButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5728408C6F52E04D2E815BB096D67968 /* LGPlusButtonsView.m */; };
+		536911028D31089A77DA60177417929D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		55B9109FAF83D66797B0366D1972C129 /* LGAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E65C9E50286C0F63AEA1886754F6163F /* LGAlertView-dummy.m */; };
+		61C6D5DD82CB7A9728A0CFB60ADEED76 /* HRColorMapView.h in Headers */ = {isa = PBXBuildFile; fileRef = E6B7CBC4CF9522C0C59BDB281D591C3A /* HRColorMapView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64A83D2EE3771FE71CCF5FF013B642D3 /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6B977097E788835A7839C8A58DF1D5 /* BEMAnimationManager.m */; };
+		6CABF4830D7A9102A7CCCFB8D2D99C1C /* LGAlertViewButtonProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5586A11B32AEE67A32B77758F55C05CF /* LGAlertViewButtonProperties.m */; };
+		6D933A772BF48611A49BD2B98A000933 /* LGAlertViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7A65AFCD9895BC380C7CE0EE498D6F /* LGAlertViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DCF6D758A9AACCA4046BE7B0E855C70 /* Color-Picker-for-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D2B4335E459AC1A842283AE065A9D7 /* Color-Picker-for-iOS-dummy.m */; };
+		6FB633E2C4CFEE2C3B2448F5FECC9938 /* LGPlusButtonsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 193FE06B7746217A73D6CBF69B565FA3 /* LGPlusButtonsView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7369A4350C26B6D184D0A77572378A9D /* HRColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B21D33C6E8D96091ABC523834D675 /* HRColorPickerView.m */; };
+		759714475104FDA29EEDE71D62DA768C /* BEMCheckBox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5034A9F6963641CE5959195AAAC158F7 /* BEMCheckBox-dummy.m */; };
+		779AFCEBEF3FF01FAD678CD51748C730 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8741BA3BEB2663393CE7668E3B78376F /* BEMPathManager.m */; };
+		78A7F90E4AD50B76E09DB3D01927DB10 /* LGPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F9EFF3A07C7ED449839D24AAFCD2B5 /* LGPlusButton.m */; };
+		7C3CD9C3541F55F7CDCDB5C7B919C74A /* HRColorInfoView.h in Headers */ = {isa = PBXBuildFile; fileRef = FB0BA69E3B7414F2476899EB970069BA /* HRColorInfoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83C8A580EDCA4139A72D087D6D4EE2E0 /* LGAlertViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4D8D6DAB1805FF7A0C2B06C454F2B6 /* LGAlertViewCell.m */; };
+		85F49A846B14A592C778C34917FDF14D /* LGPlusButtonsViewShared.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A3BB030B3B62F3D12D372B95DD9579 /* LGPlusButtonsViewShared.m */; };
+		86664B02578B4978B587D194FEB48926 /* HRColorCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B0DB647C7E691C61C4BEDF5D85C8DB /* HRColorCursor.m */; };
+		873134357F9A134FFD6FBEBDC98AAE1B /* LGAlertViewSharedPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 91C4C6E16EC470FC72C674628CC3B76E /* LGAlertViewSharedPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C56BDE167A7CA16BA8EEF4DA98B3C5C /* HRHSVColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C0EBCA950DD50BD5F493DB2F00A38B /* HRHSVColorUtil.m */; };
+		8E8AC3B8FC40335F0D7D492DFA5088A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		9191AE9CD807EE699EE43D1C401DC9CF /* LGAlertViewButtonProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C24EDF4F20223AB7F47DC0E4599E3135 /* LGAlertViewButtonProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E919A6884C88FC64153BB85B795B3F4 /* MKDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B66A5C2238F3EE9153A17DAB7E7B74 /* MKDropdownMenu.m */; };
+		A2A6E6745B38CB431531003B35C5C33E /* LGPlusButtonsView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5617A1DA6AD6906A1322F9A38B195179 /* LGPlusButtonsView-dummy.m */; };
+		A51B2B59113B148AED916261DB225D4C /* UIWindow+LGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 986CCF21B1FACF14971C5C2A7A7CD2EA /* UIWindow+LGAlertView.m */; };
+		AFDE4CE739C0F5E3DEBB25D3D9F82C33 /* BEMPathManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE3C8EB59A5EF41EA83CC9896680905 /* BEMPathManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0A8546ABA45B0663F941BA374041CF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		B678BD26B6FB6D60E7B4382F0385F270 /* HRBrightnessSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC867E3B8CE20472B8C3239D0528246 /* HRBrightnessSlider.m */; };
+		B7C95D2BB187169BE61A883D79147287 /* LGAlertViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C57A1DFB9170DE4347EF89DEFC711FFD /* LGAlertViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9E45D5B8A02EBBE5951FBEC8A1DCC44 /* HRBrightnessSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = A29F5077F6F49871F703FCD3B80008C9 /* HRBrightnessSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA9A9D59B03BDB81FB8DC4C089B36065 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		BC6607DDC370ECF65203EBD444CE8A73 /* MKDropdownMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F4921BE75A27ADB74247F11801941CF /* MKDropdownMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0565F30EE083581F4C3662E6B45EAA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		C3B2130A1E394EA17F0F13E36D1F4B05 /* Pods-iMoney-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 838719820B0625458E9E8A7EA21C6C25 /* Pods-iMoney-dummy.m */; };
+		C40C2D27B028D43368344112D5C6A4EE /* HRColorCursor.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC2687D64B239B16D6D5244E42395B9 /* HRColorCursor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C50C2D1A8814B8FAFAAE3C0A5F373AD0 /* UIImage+CoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4994DE74F7118353197CE8620A4E3454 /* UIImage+CoreGraphics.m */; };
+		C667F491F1DA28052F889D365D83F479 /* LGPlusButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B829C0B1946E4825EBD86126938D004 /* LGPlusButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCB7088E735F115C71869407E3EA2273 /* LGAlertViewButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 08819C33226069C2AC6A14FBD77B2E78 /* LGAlertViewButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2FF5CB57BBEF46670FF327FA60B66A2 /* LGAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = B94DC8507ABD9A8B7C10F50A3503CE2D /* LGAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7FB53F96D27150FFF45C1FFD234A9F8 /* LGPlusButtonDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = FF01A4E4BCB6144049483B4DA21E2135 /* LGPlusButtonDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB9524244C54036D7401C2F3C2268A6A /* LGAlertViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CD77BE68F343B3DA49C1CB15BB7194A4 /* LGAlertViewButton.m */; };
+		E6E5B4CEA579C2C005E17CA37BB74575 /* UIWindow+LGAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = FB1873C2CE9AFA78836CE040CF13C04B /* UIWindow+LGAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34259B4EA58B8BC6340CB770BEAB98A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23C46D12E093E8E822378781F8728EEC;
+			remoteInfo = BEMCheckBox;
+		};
+		7EADC0170028A6A20038592EC474E0FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C3085ED4C6B66E4848EFC7993C6B045;
+			remoteInfo = "Color-Picker-for-iOS";
+		};
+		8DD27D0514C2C5D6CE0236F3B01F980C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E4F42329B6B9617356E7A571F7942B9;
+			remoteInfo = LGPlusButtonsView;
+		};
+		B13C5FE91E28A1E84187B7848F415847 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28EA3934AEB522FE409F1433470ABA96;
+			remoteInfo = LGAlertView;
+		};
+		C35B093CAAE86F5963928D151A026980 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 558DD321411961505CC7A5A2F7CE5CDE;
+			remoteInfo = MKDropdownMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00108D434C81F45DB32F71FB7055D11B /* BEMCheckBox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BEMCheckBox.xcconfig; sourceTree = "<group>"; };
+		08819C33226069C2AC6A14FBD77B2E78 /* LGAlertViewButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LGAlertViewButton.h; path = LGAlertView/LGAlertViewButton.h; sourceTree = "<group>"; };
+		09B0DB647C7E691C61C4BEDF5D85C8DB /* HRColorCursor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorCursor.m; path = ColorPicker/HRColorCursor.m; sourceTree = "<group>"; };
+		0BAC648141785B10A25ADFEF34A70681 /* MKDropdownMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MKDropdownMenu-prefix.pch"; sourceTree = "<group>"; };
+		0CAD974C4FDF1DE47EDFF5B40B0B302E /* LGAlertViewTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LGAlertViewTextField.h; path = LGAlertView/LGAlertViewTextField.h; sourceTree = "<group>"; };
+		119F75F1DEAACB692B3614656D0DB41B /* libLGPlusButtonsView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLGPlusButtonsView.a; path = libLGPlusButtonsView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		15D2B4335E459AC1A842283AE065A9D7 /* Color-Picker-for-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Color-Picker-for-iOS-dummy.m"; sourceTree = "<group>"; };
+		193FE06B7746217A73D6CBF69B565FA3 /* LGPlusButtonsView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LGPlusButtonsView.h; path = LGPlusButtonsView/LGPlusButtonsView.h; sourceTree = "<group>"; };
+		1B4D8D6DAB1805FF7A0C2B06C454F2B6 /* LGAlertViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LGAlertViewCell.m; path = LGAlertView/LGAlertViewCell.m; sourceTree = "<group>"; };
+		1B6FF08D48C13F62C87B4AB5FC321272 /* Pods-iMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iMoney.debug.xcconfig"; sourceTree = "<group>"; };
+		1EA99E29FFD3B3B0A068EBA62AEEAB14 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		26DDA66FAFD07E044464A78B5469B356 /* LGAlertViewSharedOpen.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LGAlertViewSharedOpen.h; path = LGAlertView/LGAlertViewSharedOpen.h; sourceTree = "<group>"; };
+		2FA9376BB59A31684D97154B87FAD283 /* LGPlusButtonsView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LGPlusButtonsView.xcconfig; sourceTree = "<group>"; };
+		33F8373B6FC21BDA542F7BDA6869A9BB /* HRBrightnessCursor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRBrightnessCursor.m; path = ColorPicker/HRBrightnessCursor.m; sourceTree = "<group>"; };
+		350BDE0D53DB3A1159E0AACC8CB56910 /* LGPlusButtonDescription.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LGPlusButtonDescription.m; path = LGPlusButtonsView/LGPlusButtonDescription.m; sourceTree = "<group>"; };
+		36F9EFF3A07C7ED449839D24AAFCD2B5 /* LGPlusButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LGPlusButton.m; path = LGPlusButtonsView/LGPlusButton.m; sourceTree = "<group>"; };
+		375BBFECF6ECB736326EEC8634DFBA75 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		3A7A65AFCD9895BC380C7CE0EE498D6F /* LGAlertViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LGAlertViewController.h; path = LGAlertView/LGAlertViewController.h; sourceTree = "<group>"; };
+		3B2B9EF78A5F7BFA896A9DC994E2FD84 /* HRHSVColorUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRHSVColorUtil.h; path = ColorPicker/HRHSVColorUtil.h; sourceTree = "<group>"; };
+		3BD593A36AED31F4EE3BC7DAA76E6874 /* Pods-iMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iMoney.release.xcconfig"; sourceTree = "<group>"; };
+		4195E48071318770BF092A8C972C0B7E /* HRColorPickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorPickerView.h; path = ColorPicker/HRColorPickerView.h; sourceTree = "<group>"; };
+		4438913D73671C3E1B93EB50383942E6 /* Pods-iMoney-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iMoney-resources.sh"; sourceTree = "<group>"; };
+		4994DE74F7118353197CE8620A4E3454 /* UIImage+CoreGraphics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CoreGraphics.m"; path = "ColorPicker/UIImage+CoreGraphics.m"; sourceTree = "<group>"; };
+		4E6A6921310DF1DDB33E5542904EB901 /* HRBrightnessCursor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRBrightnessCursor.h; path = ColorPicker/HRBrightnessCursor.h; sourceTree = "<group>"; };
+		5034A9F6963641CE5959195AAAC158F7 /* BEMCheckBox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BEMCheckBox-dummy.m"; sourceTree = "<group>"; };
+		506552BC8E1ECBF555333DC5596B5A71 /* LGAlertViewTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LGAlertViewTextField.m; path = LGAlertView/LGAlertViewTextField.m; sourceTree = "<group>"; };
+		525E82B0F554ACDA49DD5A3768C3614C /* BEMCheckBox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMCheckBox.h; path = Classes/BEMCheckBox.h; sourceTree = "<group>"; };
+		52B66A5C2238F3EE9153A17DAB7E7B74 /* MKDropdownMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKDropdownMenu.m; path = MKDropdownMenu/MKDropdownMenu.m; sourceTree = "<group>"; };
+		5586A11B32AEE67A32B77758F55C05CF /* LGAlertViewButtonProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LGAlertViewButtonProperties.m; path = LGAlertView/LGAlertViewButtonProperties.m; sourceTree = "<group>"; };
+		5617A1DA6AD6906A1322F9A38B195179 /* LGPlusButtonsView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LGPlusButtonsView-dummy.m"; sourceTree = "<group>"; };
+		5728408C6F52E04D2E815BB096D67968 /* LGPlusButtonsView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LGPlusButtonsView.m; path = LGPlusButtonsView/LGPlusButtonsView.m; sourceTree = "<group>"; };
+		5F37FE7112F09BB8743F11381975DEAE /* BEMCheckBox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BEMCheckBox-prefix.pch"; sourceTree = "<group>"; };
+		5F4921BE75A27ADB74247F11801941CF /* MKDropdownMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKDropdownMenu.h; path = MKDropdownMenu/MKDropdownMenu.h; sourceTree = "<group>"; };
+		68EF3922DB1C00779877A679822DB05D /* Pods-iMoney-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iMoney-acknowledgements.plist"; sourceTree = "<group>"; };
+		6CA9B1C31F457DBD367781CBBA0A06C6 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		6DC867E3B8CE20472B8C3239D0528246 /* HRBrightnessSlider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRBrightnessSlider.m; path = ColorPicker/HRBrightnessSlider.m; sourceTree = "<group>"; };
+		6FAEDEBB562EBD051A67F8A77A509B8E /* libPods-iMoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-iMoney.a"; path = "libPods-iMoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FEEFA14839A20A60A26113C9AFBDAEA /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		832AA36DB889516397061A5FDD30F385 /* BEMCheckBoxGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMCheckBoxGroup.m; path = Classes/BEMCheckBoxGroup.m; sourceTree = "<group>"; };
+		83508A07AA933AC09A9A9DDE2726B2C9 /* HRColorMapView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorMapView.m; path = ColorPicker/HRColorMapView.m; sourceTree = "<group>"; };
+		838719820B0625458E9E8A7EA21C6C25 /* Pods-iMoney-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iMoney-dummy.m"; sourceTree = "<group>"; };
+		855700ECB3C48D32A491B7FD4DC10998 /* BEMCheckBox.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMCheckBox.m; path = Classes/BEMCheckBox.m; sourceTree = "<group>"; };
+		8741BA3BEB2663393CE7668E3B78376F /* BEMPathManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMPathManager.m; path = Classes/BEMPathManager.m; sourceTree = "<group>"; };
+		87A143B4868F7A01CE6D1321AB1CB8FC /* HRColorInfoView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorInfoView.m; path = ColorPicker/HRColorInfoView.m; sourceTree = "<group>"; };
+		8AF0724AC67926F3241789EECB892808 /* UIImage+CoreGraphics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+CoreGraphics.h"; path = "ColorPicker/UIImage+CoreGraphics.h"; sourceTree = "<group>"; };
+		8B829C0B1946E4825EBD86126938D004 /* LGPlusButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LGPlusButton.h; path = LGPlusButtonsView/LGPlusButton.h; sourceTree = "<group>"; };
+		8CB523F644803B4EE1A8F2B97264FB3C /* BEMCheckBoxGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMCheckBoxGroup.h; path = Classes/BEMCheckBoxGroup.h; sourceTree = "<group>"; };
+		91C4C6E16EC470FC72C674628CC3B76E /* LGAlertViewSharedPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LGAlertViewSharedPrivate.h; path = LGAlertView/LGAlertViewSharedPrivate.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96C34D0B7737E1E2B210A162AE0E24C3 /* LGPlusButtonsView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LGPlusButtonsView-prefix.pch"; sourceTree = "<group>"; };
+		986CCF21B1FACF14971C5C2A7A7CD2EA /* UIWindow+LGAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWindow+LGAlertView.m"; path = "LGAlertView/UIWindow+LGAlertView.m"; sourceTree = "<group>"; };
+		9D5B21D33C6E8D96091ABC523834D675 /* HRColorPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorPickerView.m; path = ColorPicker/HRColorPickerView.m; sourceTree = "<group>"; };
+		9F4BB251876EB1DA59DCB8B1B7A10AC5 /* LGAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LGAlertView-prefix.pch"; sourceTree = "<group>"; };
+		A0094969340CE22CAD9C7A80F12C4BF7 /* Color-Picker-for-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Color-Picker-for-iOS-prefix.pch"; sourceTree = "<group>"; };
+		A11B8536BAE5F111AA03C2E22A281665 /* Pods-iMoney-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iMoney-frameworks.sh"; sourceTree = "<group>"; };
+		A29F5077F6F49871F703FCD3B80008C9 /* HRBrightnessSlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRBrightnessSlider.h; path = ColorPicker/HRBrightnessSlider.h; sourceTree = "<group>"; };
+		A2C0EBCA950DD50BD5F493DB2F00A38B /* HRHSVColorUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRHSVColorUtil.m; path = ColorPicker/HRHSVColorUtil.m; sourceTree = "<group>"; };
+		AE257CF3EF7327A9B1D9BCFF761FE789 /* libColor-Picker-for-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libColor-Picker-for-iOS.a"; path = "libColor-Picker-for-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA6E7B45D8ACD348ACBD508D23FE31E /* MKDropdownMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MKDropdownMenu.xcconfig; sourceTree = "<group>"; };
+		B03EBC55B37FAB4F31E3C290E965AA1C /* LGAlertViewWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LGAlertViewWindow.m; path = LGAlertView/LGAlertViewWindow.m; sourceTree = "<group>"; };
+		B32A475948047ABF01A1621861B2EEC9 /* LGAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LGAlertView.m; path = LGAlertView/LGAlertView.m; sourceTree = "<group>"; };
+		B35137A097BAF8BB27B1E0EA2C337758 /* LGAlertViewWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LGAlertViewWindow.h; path = LGAlertView/LGAlertViewWindow.h; sourceTree = "<group>"; };
+		B36BA5DAAFA2F24465229CC31C4F95B4 /* LGAlertViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LGAlertViewController.m; path = LGAlertView/LGAlertViewController.m; sourceTree = "<group>"; };
+		B94DC8507ABD9A8B7C10F50A3503CE2D /* LGAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LGAlertView.h; path = LGAlertView/LGAlertView.h; sourceTree = "<group>"; };
+		BB6B977097E788835A7839C8A58DF1D5 /* BEMAnimationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMAnimationManager.m; path = Classes/BEMAnimationManager.m; sourceTree = "<group>"; };
+		BD24C5C7A597B539369CA87DAF8599C2 /* Pods-iMoney-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iMoney-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C24EDF4F20223AB7F47DC0E4599E3135 /* LGAlertViewButtonProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LGAlertViewButtonProperties.h; path = LGAlertView/LGAlertViewButtonProperties.h; sourceTree = "<group>"; };
+		C515EF3C44EEE5584A169ADE7F9ED22F /* MKDropdownMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MKDropdownMenu-dummy.m"; sourceTree = "<group>"; };
+		C57A1DFB9170DE4347EF89DEFC711FFD /* LGAlertViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LGAlertViewCell.h; path = LGAlertView/LGAlertViewCell.h; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CC191AECAA8973D4F69D1F56D079798A /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		CD77BE68F343B3DA49C1CB15BB7194A4 /* LGAlertViewButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LGAlertViewButton.m; path = LGAlertView/LGAlertViewButton.m; sourceTree = "<group>"; };
+		CF13AD64901F0A3700D447EBFDA0A9A7 /* libMKDropdownMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMKDropdownMenu.a; path = libMKDropdownMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D07AA1D3DF97373755A0EFEC70346E54 /* LGPlusButtonsViewShared.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LGPlusButtonsViewShared.h; path = LGPlusButtonsView/LGPlusButtonsViewShared.h; sourceTree = "<group>"; };
+		D3A3BB030B3B62F3D12D372B95DD9579 /* LGPlusButtonsViewShared.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LGPlusButtonsViewShared.m; path = LGPlusButtonsView/LGPlusButtonsViewShared.m; sourceTree = "<group>"; };
+		E5F544D7D30194A1E7B3A2F90E7259FB /* libLGAlertView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLGAlertView.a; path = libLGAlertView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E65C9E50286C0F63AEA1886754F6163F /* LGAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LGAlertView-dummy.m"; sourceTree = "<group>"; };
+		E6B7CBC4CF9522C0C59BDB281D591C3A /* HRColorMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorMapView.h; path = ColorPicker/HRColorMapView.h; sourceTree = "<group>"; };
+		EA669D42562DC54CB8B6AF34F6317CAB /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		EBF4E92F11D0B902523C8499B79A8D9E /* Color-Picker-for-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Color-Picker-for-iOS.xcconfig"; sourceTree = "<group>"; };
+		EEC2687D64B239B16D6D5244E42395B9 /* HRColorCursor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorCursor.h; path = ColorPicker/HRColorCursor.h; sourceTree = "<group>"; };
+		EEE3C8EB59A5EF41EA83CC9896680905 /* BEMPathManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMPathManager.h; path = Classes/BEMPathManager.h; sourceTree = "<group>"; };
+		F3B40E872694C4371E747236AF8ECC8E /* LGAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LGAlertView.xcconfig; sourceTree = "<group>"; };
+		F9D4F512C574DA3C3FCF6659243CF60E /* BEMAnimationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMAnimationManager.h; path = Classes/BEMAnimationManager.h; sourceTree = "<group>"; };
+		FB0BA69E3B7414F2476899EB970069BA /* HRColorInfoView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorInfoView.h; path = ColorPicker/HRColorInfoView.h; sourceTree = "<group>"; };
+		FB1873C2CE9AFA78836CE040CF13C04B /* UIWindow+LGAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWindow+LGAlertView.h"; path = "LGAlertView/UIWindow+LGAlertView.h"; sourceTree = "<group>"; };
+		FBCB9DD129940603DA26C472B8DCE8E5 /* libBEMCheckBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libBEMCheckBox.a; path = libBEMCheckBox.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF01A4E4BCB6144049483B4DA21E2135 /* LGPlusButtonDescription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LGPlusButtonDescription.h; path = LGPlusButtonsView/LGPlusButtonDescription.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		186377ACC4DFFC1920C37A095E2E5C44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E8AC3B8FC40335F0D7D492DFA5088A7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F8105AE506185AE23AC377E506F8F2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0A8546ABA45B0663F941BA374041CF0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		264C5A8E8E06F831AF5833A4A60069D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				536911028D31089A77DA60177417929D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50B011ACA50719F1EEAC77DCF5B3A35F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA9A9D59B03BDB81FB8DC4C089B36065 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		962ED7712E9DDEA078E996D92CED55AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				026F94EB25869D67D7287B7449418C5B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECF50CEB0B9AA4F441B7CF5A54F9E286 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0565F30EE083581F4C3662E6B45EAA3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0ABC08780533F574DA7B48C8811390E0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2FA9376BB59A31684D97154B87FAD283 /* LGPlusButtonsView.xcconfig */,
+				5617A1DA6AD6906A1322F9A38B195179 /* LGPlusButtonsView-dummy.m */,
+				96C34D0B7737E1E2B210A162AE0E24C3 /* LGPlusButtonsView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LGPlusButtonsView";
+			sourceTree = "<group>";
+		};
+		16C4418686E1AECA594BC9487BF056B6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEA6E7B45D8ACD348ACBD508D23FE31E /* MKDropdownMenu.xcconfig */,
+				C515EF3C44EEE5584A169ADE7F9ED22F /* MKDropdownMenu-dummy.m */,
+				0BAC648141785B10A25ADFEF34A70681 /* MKDropdownMenu-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MKDropdownMenu";
+			sourceTree = "<group>";
+		};
+		1B882EEFCE180655C1FB582B14E34EE1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				79DF57FCDFCD87510BAB830F18231F95 /* Pods-iMoney */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		27A436644956EFF851CBCC7E70769414 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50DE4B1C3D958D03D22ABC25BD6ABD9C /* BEMCheckBox */,
+				85D06825873F5F24DD91883BD9340E3A /* Color-Picker-for-iOS */,
+				E4F4A797B3999063752D65EA62CCF102 /* GoogleMaps */,
+				C591382B1A90892F7BC565C9B24C576F /* GooglePlaces */,
+				C4203F289229B6934CB7E9D488F87F3F /* LGAlertView */,
+				638B9855DDF178E86C35B9529B994090 /* LGPlusButtonsView */,
+				61D866F94B1C4BAA7CE4A96543AFEFF9 /* MKDropdownMenu */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3C57851B32F4CD2C982D06BCF9129507 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FEEFA14839A20A60A26113C9AFBDAEA /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50DE4B1C3D958D03D22ABC25BD6ABD9C /* BEMCheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				F9D4F512C574DA3C3FCF6659243CF60E /* BEMAnimationManager.h */,
+				BB6B977097E788835A7839C8A58DF1D5 /* BEMAnimationManager.m */,
+				525E82B0F554ACDA49DD5A3768C3614C /* BEMCheckBox.h */,
+				855700ECB3C48D32A491B7FD4DC10998 /* BEMCheckBox.m */,
+				8CB523F644803B4EE1A8F2B97264FB3C /* BEMCheckBoxGroup.h */,
+				832AA36DB889516397061A5FDD30F385 /* BEMCheckBoxGroup.m */,
+				EEE3C8EB59A5EF41EA83CC9896680905 /* BEMPathManager.h */,
+				8741BA3BEB2663393CE7668E3B78376F /* BEMPathManager.m */,
+				9604C41DF65C86FF57D568C7E2A41652 /* Support Files */,
+			);
+			name = BEMCheckBox;
+			path = BEMCheckBox;
+			sourceTree = "<group>";
+		};
+		587DCECEA30139CB08338E1B81BF6D81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBCB9DD129940603DA26C472B8DCE8E5 /* libBEMCheckBox.a */,
+				AE257CF3EF7327A9B1D9BCFF761FE789 /* libColor-Picker-for-iOS.a */,
+				E5F544D7D30194A1E7B3A2F90E7259FB /* libLGAlertView.a */,
+				119F75F1DEAACB692B3614656D0DB41B /* libLGPlusButtonsView.a */,
+				CF13AD64901F0A3700D447EBFDA0A9A7 /* libMKDropdownMenu.a */,
+				6FAEDEBB562EBD051A67F8A77A509B8E /* libPods-iMoney.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61D866F94B1C4BAA7CE4A96543AFEFF9 /* MKDropdownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				5F4921BE75A27ADB74247F11801941CF /* MKDropdownMenu.h */,
+				52B66A5C2238F3EE9153A17DAB7E7B74 /* MKDropdownMenu.m */,
+				16C4418686E1AECA594BC9487BF056B6 /* Support Files */,
+			);
+			name = MKDropdownMenu;
+			path = MKDropdownMenu;
+			sourceTree = "<group>";
+		};
+		638B9855DDF178E86C35B9529B994090 /* LGPlusButtonsView */ = {
+			isa = PBXGroup;
+			children = (
+				8B829C0B1946E4825EBD86126938D004 /* LGPlusButton.h */,
+				36F9EFF3A07C7ED449839D24AAFCD2B5 /* LGPlusButton.m */,
+				FF01A4E4BCB6144049483B4DA21E2135 /* LGPlusButtonDescription.h */,
+				350BDE0D53DB3A1159E0AACC8CB56910 /* LGPlusButtonDescription.m */,
+				193FE06B7746217A73D6CBF69B565FA3 /* LGPlusButtonsView.h */,
+				5728408C6F52E04D2E815BB096D67968 /* LGPlusButtonsView.m */,
+				D07AA1D3DF97373755A0EFEC70346E54 /* LGPlusButtonsViewShared.h */,
+				D3A3BB030B3B62F3D12D372B95DD9579 /* LGPlusButtonsViewShared.m */,
+				0ABC08780533F574DA7B48C8811390E0 /* Support Files */,
+			);
+			name = LGPlusButtonsView;
+			path = LGPlusButtonsView;
+			sourceTree = "<group>";
+		};
+		6B29414DBB5E28DD4EC37A6DD5788E97 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3B40E872694C4371E747236AF8ECC8E /* LGAlertView.xcconfig */,
+				E65C9E50286C0F63AEA1886754F6163F /* LGAlertView-dummy.m */,
+				9F4BB251876EB1DA59DCB8B1B7A10AC5 /* LGAlertView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LGAlertView";
+			sourceTree = "<group>";
+		};
+		6BF0EEC7D2376E3114A0A6E31971E8DD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AE016D37A09D77797446AB8819556358 /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		6FD0670D3DD3582894EFD0266BDECE90 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6CA9B1C31F457DBD367781CBBA0A06C6 /* GooglePlaces.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		79DF57FCDFCD87510BAB830F18231F95 /* Pods-iMoney */ = {
+			isa = PBXGroup;
+			children = (
+				BD24C5C7A597B539369CA87DAF8599C2 /* Pods-iMoney-acknowledgements.markdown */,
+				68EF3922DB1C00779877A679822DB05D /* Pods-iMoney-acknowledgements.plist */,
+				838719820B0625458E9E8A7EA21C6C25 /* Pods-iMoney-dummy.m */,
+				A11B8536BAE5F111AA03C2E22A281665 /* Pods-iMoney-frameworks.sh */,
+				4438913D73671C3E1B93EB50383942E6 /* Pods-iMoney-resources.sh */,
+				1B6FF08D48C13F62C87B4AB5FC321272 /* Pods-iMoney.debug.xcconfig */,
+				3BD593A36AED31F4EE3BC7DAA76E6874 /* Pods-iMoney.release.xcconfig */,
+			);
+			name = "Pods-iMoney";
+			path = "Target Support Files/Pods-iMoney";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				27A436644956EFF851CBCC7E70769414 /* Pods */,
+				587DCECEA30139CB08338E1B81BF6D81 /* Products */,
+				1B882EEFCE180655C1FB582B14E34EE1 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7EC2F7A691837E6D41A42FEC957E9677 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				375BBFECF6ECB736326EEC8634DFBA75 /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		85D06825873F5F24DD91883BD9340E3A /* Color-Picker-for-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4E6A6921310DF1DDB33E5542904EB901 /* HRBrightnessCursor.h */,
+				33F8373B6FC21BDA542F7BDA6869A9BB /* HRBrightnessCursor.m */,
+				A29F5077F6F49871F703FCD3B80008C9 /* HRBrightnessSlider.h */,
+				6DC867E3B8CE20472B8C3239D0528246 /* HRBrightnessSlider.m */,
+				EEC2687D64B239B16D6D5244E42395B9 /* HRColorCursor.h */,
+				09B0DB647C7E691C61C4BEDF5D85C8DB /* HRColorCursor.m */,
+				FB0BA69E3B7414F2476899EB970069BA /* HRColorInfoView.h */,
+				87A143B4868F7A01CE6D1321AB1CB8FC /* HRColorInfoView.m */,
+				E6B7CBC4CF9522C0C59BDB281D591C3A /* HRColorMapView.h */,
+				83508A07AA933AC09A9A9DDE2726B2C9 /* HRColorMapView.m */,
+				4195E48071318770BF092A8C972C0B7E /* HRColorPickerView.h */,
+				9D5B21D33C6E8D96091ABC523834D675 /* HRColorPickerView.m */,
+				3B2B9EF78A5F7BFA896A9DC994E2FD84 /* HRHSVColorUtil.h */,
+				A2C0EBCA950DD50BD5F493DB2F00A38B /* HRHSVColorUtil.m */,
+				8AF0724AC67926F3241789EECB892808 /* UIImage+CoreGraphics.h */,
+				4994DE74F7118353197CE8620A4E3454 /* UIImage+CoreGraphics.m */,
+				E36098634466B3AC10B54E8805C85F92 /* Support Files */,
+			);
+			name = "Color-Picker-for-iOS";
+			path = "Color-Picker-for-iOS";
+			sourceTree = "<group>";
+		};
+		9604C41DF65C86FF57D568C7E2A41652 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				00108D434C81F45DB32F71FB7055D11B /* BEMCheckBox.xcconfig */,
+				5034A9F6963641CE5959195AAAC158F7 /* BEMCheckBox-dummy.m */,
+				5F37FE7112F09BB8743F11381975DEAE /* BEMCheckBox-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BEMCheckBox";
+			sourceTree = "<group>";
+		};
+		AE016D37A09D77797446AB8819556358 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC191AECAA8973D4F69D1F56D079798A /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4203F289229B6934CB7E9D488F87F3F /* LGAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				B94DC8507ABD9A8B7C10F50A3503CE2D /* LGAlertView.h */,
+				B32A475948047ABF01A1621861B2EEC9 /* LGAlertView.m */,
+				08819C33226069C2AC6A14FBD77B2E78 /* LGAlertViewButton.h */,
+				CD77BE68F343B3DA49C1CB15BB7194A4 /* LGAlertViewButton.m */,
+				C24EDF4F20223AB7F47DC0E4599E3135 /* LGAlertViewButtonProperties.h */,
+				5586A11B32AEE67A32B77758F55C05CF /* LGAlertViewButtonProperties.m */,
+				C57A1DFB9170DE4347EF89DEFC711FFD /* LGAlertViewCell.h */,
+				1B4D8D6DAB1805FF7A0C2B06C454F2B6 /* LGAlertViewCell.m */,
+				3A7A65AFCD9895BC380C7CE0EE498D6F /* LGAlertViewController.h */,
+				B36BA5DAAFA2F24465229CC31C4F95B4 /* LGAlertViewController.m */,
+				26DDA66FAFD07E044464A78B5469B356 /* LGAlertViewSharedOpen.h */,
+				91C4C6E16EC470FC72C674628CC3B76E /* LGAlertViewSharedPrivate.h */,
+				0CAD974C4FDF1DE47EDFF5B40B0B302E /* LGAlertViewTextField.h */,
+				506552BC8E1ECBF555333DC5596B5A71 /* LGAlertViewTextField.m */,
+				B35137A097BAF8BB27B1E0EA2C337758 /* LGAlertViewWindow.h */,
+				B03EBC55B37FAB4F31E3C290E965AA1C /* LGAlertViewWindow.m */,
+				FB1873C2CE9AFA78836CE040CF13C04B /* UIWindow+LGAlertView.h */,
+				986CCF21B1FACF14971C5C2A7A7CD2EA /* UIWindow+LGAlertView.m */,
+				6B29414DBB5E28DD4EC37A6DD5788E97 /* Support Files */,
+			);
+			name = LGAlertView;
+			path = LGAlertView;
+			sourceTree = "<group>";
+		};
+		C591382B1A90892F7BC565C9B24C576F /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				3C57851B32F4CD2C982D06BCF9129507 /* Frameworks */,
+				6FD0670D3DD3582894EFD0266BDECE90 /* Resources */,
+			);
+			name = GooglePlaces;
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		E36098634466B3AC10B54E8805C85F92 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBF4E92F11D0B902523C8499B79A8D9E /* Color-Picker-for-iOS.xcconfig */,
+				15D2B4335E459AC1A842283AE065A9D7 /* Color-Picker-for-iOS-dummy.m */,
+				A0094969340CE22CAD9C7A80F12C4BF7 /* Color-Picker-for-iOS-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Color-Picker-for-iOS";
+			sourceTree = "<group>";
+		};
+		E4F4A797B3999063752D65EA62CCF102 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				6BF0EEC7D2376E3114A0A6E31971E8DD /* Base */,
+				F820D499565FFBC79547C421524A72CA /* Maps */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		F820D499565FFBC79547C421524A72CA /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				FDB8835943ECD3CCD586E7EFC31F0564 /* Frameworks */,
+				7EC2F7A691837E6D41A42FEC957E9677 /* Resources */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		FDB8835943ECD3CCD586E7EFC31F0564 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EA99E29FFD3B3B0A068EBA62AEEAB14 /* GoogleMaps.framework */,
+				EA669D42562DC54CB8B6AF34F6317CAB /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1CD6B1488EB0D354A5C81E9D4615D5E6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1397527E70AB314B02DC62A080402047 /* BEMAnimationManager.h in Headers */,
+				4FA47B06D01DA86FAB2730721F7FD721 /* BEMCheckBox.h in Headers */,
+				22070F61B09BA42858CC48073D6893D4 /* BEMCheckBoxGroup.h in Headers */,
+				AFDE4CE739C0F5E3DEBB25D3D9F82C33 /* BEMPathManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F722B4C6CC98FE65884291A847BA010 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C667F491F1DA28052F889D365D83F479 /* LGPlusButton.h in Headers */,
+				D7FB53F96D27150FFF45C1FFD234A9F8 /* LGPlusButtonDescription.h in Headers */,
+				6FB633E2C4CFEE2C3B2448F5FECC9938 /* LGPlusButtonsView.h in Headers */,
+				23865E13B0CB2A8C7744AFD325CEF7F5 /* LGPlusButtonsViewShared.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0AE590028383B2231458C0C5FA7B896 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC6607DDC370ECF65203EBD444CE8A73 /* MKDropdownMenu.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5550423F16EAB8054A57DB42C1EF115 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2FF5CB57BBEF46670FF327FA60B66A2 /* LGAlertView.h in Headers */,
+				CCB7088E735F115C71869407E3EA2273 /* LGAlertViewButton.h in Headers */,
+				9191AE9CD807EE699EE43D1C401DC9CF /* LGAlertViewButtonProperties.h in Headers */,
+				B7C95D2BB187169BE61A883D79147287 /* LGAlertViewCell.h in Headers */,
+				6D933A772BF48611A49BD2B98A000933 /* LGAlertViewController.h in Headers */,
+				1A775601A82A21EF89B9ED70B959FC7A /* LGAlertViewSharedOpen.h in Headers */,
+				873134357F9A134FFD6FBEBDC98AAE1B /* LGAlertViewSharedPrivate.h in Headers */,
+				2CDD8D71675F255F817DFF0650F2D855 /* LGAlertViewTextField.h in Headers */,
+				1C197B09E16C4680E1E3A6E8D7C88D10 /* LGAlertViewWindow.h in Headers */,
+				E6E5B4CEA579C2C005E17CA37BB74575 /* UIWindow+LGAlertView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E60AA5609D3B451DB8EECB1B4198C433 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275FA8A5C33D35324F093CAC4A4447E5 /* HRBrightnessCursor.h in Headers */,
+				B9E45D5B8A02EBBE5951FBEC8A1DCC44 /* HRBrightnessSlider.h in Headers */,
+				C40C2D27B028D43368344112D5C6A4EE /* HRColorCursor.h in Headers */,
+				7C3CD9C3541F55F7CDCDB5C7B919C74A /* HRColorInfoView.h in Headers */,
+				61C6D5DD82CB7A9728A0CFB60ADEED76 /* HRColorMapView.h in Headers */,
+				4C1C480A1DE477ACE7A4A10EA8573A57 /* HRColorPickerView.h in Headers */,
+				3353666CED8075BB126EC6DC7CEBB321 /* HRHSVColorUtil.h in Headers */,
+				11B69DF4F439BD54C077D9ED79ED532A /* UIImage+CoreGraphics.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0A7EEA8278EAA4109583BFA760C6A07F /* Pods-iMoney */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 654D80EB9BE770AE4B6F6F4799A01011 /* Build configuration list for PBXNativeTarget "Pods-iMoney" */;
+			buildPhases = (
+				F72CDEF02ED86347C8319516388185DC /* Sources */,
+				264C5A8E8E06F831AF5833A4A60069D7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F6E00A5D32BC87FE7A18D32786A8C32 /* PBXTargetDependency */,
+				52D55B57AADDDF8D920C7E0EF6C622EA /* PBXTargetDependency */,
+				2E7B4029ADFEEF7AA0754586389F73BB /* PBXTargetDependency */,
+				ED1CDADA9DC900AE7C58882C5A38629D /* PBXTargetDependency */,
+				4E6B4F9CECCAE6B4BE0A82F17C080754 /* PBXTargetDependency */,
+			);
+			name = "Pods-iMoney";
+			productName = "Pods-iMoney";
+			productReference = 6FAEDEBB562EBD051A67F8A77A509B8E /* libPods-iMoney.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		23C46D12E093E8E822378781F8728EEC /* BEMCheckBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBBEFCD817BB38203A7FB7028CC24D3D /* Build configuration list for PBXNativeTarget "BEMCheckBox" */;
+			buildPhases = (
+				70597FE97BC87DCD8DEDE14A33E06E51 /* Sources */,
+				ECF50CEB0B9AA4F441B7CF5A54F9E286 /* Frameworks */,
+				1CD6B1488EB0D354A5C81E9D4615D5E6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BEMCheckBox;
+			productName = BEMCheckBox;
+			productReference = FBCB9DD129940603DA26C472B8DCE8E5 /* libBEMCheckBox.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		28EA3934AEB522FE409F1433470ABA96 /* LGAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E56E4118D152853873810C7F4F4317FE /* Build configuration list for PBXNativeTarget "LGAlertView" */;
+			buildPhases = (
+				19E3AA06CF3B287DC30E9291AB513F8B /* Sources */,
+				50B011ACA50719F1EEAC77DCF5B3A35F /* Frameworks */,
+				D5550423F16EAB8054A57DB42C1EF115 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LGAlertView;
+			productName = LGAlertView;
+			productReference = E5F544D7D30194A1E7B3A2F90E7259FB /* libLGAlertView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3E4F42329B6B9617356E7A571F7942B9 /* LGPlusButtonsView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE8AAD564B96C1D1B92A6643CED8D2E3 /* Build configuration list for PBXNativeTarget "LGPlusButtonsView" */;
+			buildPhases = (
+				F07D245DB31FEFB1E725D946A98F7F1F /* Sources */,
+				1F8105AE506185AE23AC377E506F8F2F /* Frameworks */,
+				5F722B4C6CC98FE65884291A847BA010 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LGPlusButtonsView;
+			productName = LGPlusButtonsView;
+			productReference = 119F75F1DEAACB692B3614656D0DB41B /* libLGPlusButtonsView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		558DD321411961505CC7A5A2F7CE5CDE /* MKDropdownMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6AB77F822867FA3C0DA8836ECBCB034 /* Build configuration list for PBXNativeTarget "MKDropdownMenu" */;
+			buildPhases = (
+				000BA37E51D17CA999DD489239B95830 /* Sources */,
+				186377ACC4DFFC1920C37A095E2E5C44 /* Frameworks */,
+				A0AE590028383B2231458C0C5FA7B896 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MKDropdownMenu;
+			productName = MKDropdownMenu;
+			productReference = CF13AD64901F0A3700D447EBFDA0A9A7 /* libMKDropdownMenu.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7C3085ED4C6B66E4848EFC7993C6B045 /* Color-Picker-for-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A59F328AE331400E492391029384023F /* Build configuration list for PBXNativeTarget "Color-Picker-for-iOS" */;
+			buildPhases = (
+				ED83DFD79B905E36EF3BFC534BCBE541 /* Sources */,
+				962ED7712E9DDEA078E996D92CED55AE /* Frameworks */,
+				E60AA5609D3B451DB8EECB1B4198C433 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Color-Picker-for-iOS";
+			productName = "Color-Picker-for-iOS";
+			productReference = AE257CF3EF7327A9B1D9BCFF761FE789 /* libColor-Picker-for-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 587DCECEA30139CB08338E1B81BF6D81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23C46D12E093E8E822378781F8728EEC /* BEMCheckBox */,
+				7C3085ED4C6B66E4848EFC7993C6B045 /* Color-Picker-for-iOS */,
+				28EA3934AEB522FE409F1433470ABA96 /* LGAlertView */,
+				3E4F42329B6B9617356E7A571F7942B9 /* LGPlusButtonsView */,
+				558DD321411961505CC7A5A2F7CE5CDE /* MKDropdownMenu */,
+				0A7EEA8278EAA4109583BFA760C6A07F /* Pods-iMoney */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000BA37E51D17CA999DD489239B95830 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CD41BE01BEC32163E0436CEF2ED30EC /* MKDropdownMenu-dummy.m in Sources */,
+				9E919A6884C88FC64153BB85B795B3F4 /* MKDropdownMenu.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19E3AA06CF3B287DC30E9291AB513F8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B9109FAF83D66797B0366D1972C129 /* LGAlertView-dummy.m in Sources */,
+				4F9F7A43E5BAD6F1778DBA5468E3A316 /* LGAlertView.m in Sources */,
+				DB9524244C54036D7401C2F3C2268A6A /* LGAlertViewButton.m in Sources */,
+				6CABF4830D7A9102A7CCCFB8D2D99C1C /* LGAlertViewButtonProperties.m in Sources */,
+				83C8A580EDCA4139A72D087D6D4EE2E0 /* LGAlertViewCell.m in Sources */,
+				07AF3FC1C0018971C3CAF6CDAFBDD40E /* LGAlertViewController.m in Sources */,
+				0A020A4F55C7A98E7A09CDB127099F5D /* LGAlertViewTextField.m in Sources */,
+				31F88A5EBB4EB2438E137CA584FFF45B /* LGAlertViewWindow.m in Sources */,
+				A51B2B59113B148AED916261DB225D4C /* UIWindow+LGAlertView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70597FE97BC87DCD8DEDE14A33E06E51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64A83D2EE3771FE71CCF5FF013B642D3 /* BEMAnimationManager.m in Sources */,
+				759714475104FDA29EEDE71D62DA768C /* BEMCheckBox-dummy.m in Sources */,
+				40372C56143EC23D91CBAB5209984EDA /* BEMCheckBox.m in Sources */,
+				320B694DB3AA97711690F3B20817DE68 /* BEMCheckBoxGroup.m in Sources */,
+				779AFCEBEF3FF01FAD678CD51748C730 /* BEMPathManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED83DFD79B905E36EF3BFC534BCBE541 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DCF6D758A9AACCA4046BE7B0E855C70 /* Color-Picker-for-iOS-dummy.m in Sources */,
+				001CE018E274B16E6E007AB08660D8B5 /* HRBrightnessCursor.m in Sources */,
+				B678BD26B6FB6D60E7B4382F0385F270 /* HRBrightnessSlider.m in Sources */,
+				86664B02578B4978B587D194FEB48926 /* HRColorCursor.m in Sources */,
+				3EB5591DB744B515CB32E003BACAD07A /* HRColorInfoView.m in Sources */,
+				2483BFAB5600F39F74BF2E836C06B602 /* HRColorMapView.m in Sources */,
+				7369A4350C26B6D184D0A77572378A9D /* HRColorPickerView.m in Sources */,
+				8C56BDE167A7CA16BA8EEF4DA98B3C5C /* HRHSVColorUtil.m in Sources */,
+				C50C2D1A8814B8FAFAAE3C0A5F373AD0 /* UIImage+CoreGraphics.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F07D245DB31FEFB1E725D946A98F7F1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78A7F90E4AD50B76E09DB3D01927DB10 /* LGPlusButton.m in Sources */,
+				255066088BB0C0A261A6DEB2040C314A /* LGPlusButtonDescription.m in Sources */,
+				A2A6E6745B38CB431531003B35C5C33E /* LGPlusButtonsView-dummy.m in Sources */,
+				51DF683301C5FBD8A8B16C6530A4C096 /* LGPlusButtonsView.m in Sources */,
+				85F49A846B14A592C778C34917FDF14D /* LGPlusButtonsViewShared.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F72CDEF02ED86347C8319516388185DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3B2130A1E394EA17F0F13E36D1F4B05 /* Pods-iMoney-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F6E00A5D32BC87FE7A18D32786A8C32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BEMCheckBox;
+			target = 23C46D12E093E8E822378781F8728EEC /* BEMCheckBox */;
+			targetProxy = 34259B4EA58B8BC6340CB770BEAB98A4 /* PBXContainerItemProxy */;
+		};
+		2E7B4029ADFEEF7AA0754586389F73BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LGAlertView;
+			target = 28EA3934AEB522FE409F1433470ABA96 /* LGAlertView */;
+			targetProxy = B13C5FE91E28A1E84187B7848F415847 /* PBXContainerItemProxy */;
+		};
+		4E6B4F9CECCAE6B4BE0A82F17C080754 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MKDropdownMenu;
+			target = 558DD321411961505CC7A5A2F7CE5CDE /* MKDropdownMenu */;
+			targetProxy = C35B093CAAE86F5963928D151A026980 /* PBXContainerItemProxy */;
+		};
+		52D55B57AADDDF8D920C7E0EF6C622EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Color-Picker-for-iOS";
+			target = 7C3085ED4C6B66E4848EFC7993C6B045 /* Color-Picker-for-iOS */;
+			targetProxy = 7EADC0170028A6A20038592EC474E0FB /* PBXContainerItemProxy */;
+		};
+		ED1CDADA9DC900AE7C58882C5A38629D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LGPlusButtonsView;
+			target = 3E4F42329B6B9617356E7A571F7942B9 /* LGPlusButtonsView */;
+			targetProxy = 8DD27D0514C2C5D6CE0236F3B01F980C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		1CDDB9583DBD64370213CF476C5B7300 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FA9376BB59A31684D97154B87FAD283 /* LGPlusButtonsView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LGPlusButtonsView/LGPlusButtonsView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2FB1054EAF8DBA1FBD59676CC0A9DD6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3B40E872694C4371E747236AF8ECC8E /* LGAlertView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LGAlertView/LGAlertView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		30B71F9854EA43E79BB2D03A6A09EA51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3B40E872694C4371E747236AF8ECC8E /* LGAlertView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LGAlertView/LGAlertView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49BED4E55F315A17D5D080C0B3DCC286 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00108D434C81F45DB32F71FB7055D11B /* BEMCheckBox.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BEMCheckBox/BEMCheckBox-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		662F0F6D42E7B59C475DC50E0C45BCB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBF4E92F11D0B902523C8499B79A8D9E /* Color-Picker-for-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Color-Picker-for-iOS/Color-Picker-for-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7344DCB696950F0CB92734E32B7F629F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FA9376BB59A31684D97154B87FAD283 /* LGPlusButtonsView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LGPlusButtonsView/LGPlusButtonsView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9FDEEF2E34B75D5182CFB290B7665CE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B6FF08D48C13F62C87B4AB5FC321272 /* Pods-iMoney.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		ABC66BF482C1EC36829ADFEA33736B7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00108D434C81F45DB32F71FB7055D11B /* BEMCheckBox.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BEMCheckBox/BEMCheckBox-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B4D633B01137C33A98F4213C88525E81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BD593A36AED31F4EE3BC7DAA76E6874 /* Pods-iMoney.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D96237512C8C262FE4B1E6A7FDBA63C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEA6E7B45D8ACD348ACBD508D23FE31E /* MKDropdownMenu.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MKDropdownMenu/MKDropdownMenu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E57E285D5E1A855015E6A3589E712A86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBF4E92F11D0B902523C8499B79A8D9E /* Color-Picker-for-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Color-Picker-for-iOS/Color-Picker-for-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FDC29FB2038743BEA29025EA16A5A5C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEA6E7B45D8ACD348ACBD508D23FE31E /* MKDropdownMenu.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MKDropdownMenu/MKDropdownMenu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		654D80EB9BE770AE4B6F6F4799A01011 /* Build configuration list for PBXNativeTarget "Pods-iMoney" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FDEEF2E34B75D5182CFB290B7665CE7 /* Debug */,
+				B4D633B01137C33A98F4213C88525E81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A59F328AE331400E492391029384023F /* Build configuration list for PBXNativeTarget "Color-Picker-for-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				662F0F6D42E7B59C475DC50E0C45BCB7 /* Debug */,
+				E57E285D5E1A855015E6A3589E712A86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6AB77F822867FA3C0DA8836ECBCB034 /* Build configuration list for PBXNativeTarget "MKDropdownMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D96237512C8C262FE4B1E6A7FDBA63C4 /* Debug */,
+				FDC29FB2038743BEA29025EA16A5A5C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE8AAD564B96C1D1B92A6643CED8D2E3 /* Build configuration list for PBXNativeTarget "LGPlusButtonsView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7344DCB696950F0CB92734E32B7F629F /* Debug */,
+				1CDDB9583DBD64370213CF476C5B7300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBBEFCD817BB38203A7FB7028CC24D3D /* Build configuration list for PBXNativeTarget "BEMCheckBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49BED4E55F315A17D5D080C0B3DCC286 /* Debug */,
+				ABC66BF482C1EC36829ADFEA33736B7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E56E4118D152853873810C7F4F4317FE /* Build configuration list for PBXNativeTarget "LGAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FB1054EAF8DBA1FBD59676CC0A9DD6F /* Debug */,
+				30B71F9854EA43E79BB2D03A6A09EA51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
