@@ -14,4 +14,6 @@
 @property (weak, nonatomic) IBOutlet BEMCheckBox *itemCheckBox;
 @property (weak, nonatomic) IBOutlet UILabel *itemName;
 
+- (void)setCompletedItem:(BOOL)itemIsDone;
+
 @end

@@ -11,5 +11,6 @@
 @interface MainViewController (Navigation)
 
 - (void)goToShoppingList;
+- (void)goToLocationViewController;
 
 @end

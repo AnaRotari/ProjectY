@@ -32,6 +32,7 @@
 		FA0ACEED1E87D55D000A42EE /* CurrencyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0ACEEB1E87D55D000A42EE /* CurrencyTableViewCell.m */; };
 		FA0ACEEE1E87D55D000A42EE /* CurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0ACEEC1E87D55D000A42EE /* CurrencyTableViewCell.xib */; };
 		FA0ACEF11E87EAEE000A42EE /* CoreDataInsertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0ACEF01E87EAEE000A42EE /* CoreDataInsertManager.m */; };
+		FA0CC0071E9EA10000D27444 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0CC0061E9EA10000D27444 /* LocationViewController.m */; };
 		FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */; };
 		FA745CBD1E94201E0035BB58 /* UserImagesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA745CBB1E94201E0035BB58 /* UserImagesCollectionViewCell.m */; };
 		FA745CBE1E94201E0035BB58 /* UserImagesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA745CBC1E94201E0035BB58 /* UserImagesCollectionViewCell.xib */; };
@@ -137,6 +138,8 @@
 		FA0ACEEC1E87D55D000A42EE /* CurrencyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrencyTableViewCell.xib; sourceTree = "<group>"; };
 		FA0ACEEF1E87EAEE000A42EE /* CoreDataInsertManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataInsertManager.h; sourceTree = "<group>"; };
 		FA0ACEF01E87EAEE000A42EE /* CoreDataInsertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataInsertManager.m; sourceTree = "<group>"; };
+		FA0CC0051E9EA10000D27444 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		FA0CC0061E9EA10000D27444 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		FA5540171E7E995900A4C773 /* DatabaseSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseSyncManager.h; sourceTree = "<group>"; };
 		FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseSyncManager.m; sourceTree = "<group>"; };
 		FA745CBA1E94201E0035BB58 /* UserImagesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserImagesCollectionViewCell.h; sourceTree = "<group>"; };
@@ -415,6 +418,7 @@
 				FAFF39F71E88412F00524084 /* TransactionViewController */,
 				FAECCFBB1E96AD78001D4B8F /* ReminderViewController */,
 				FA0842F11E9AD4D1007F5CED /* ShoppingListsViewController */,
+				FA0CC0041E9EA0CB00D27444 /* LocationViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -438,6 +442,15 @@
 				FA0ACEEC1E87D55D000A42EE /* CurrencyTableViewCell.xib */,
 			);
 			path = CurrencyTableViewCell;
+			sourceTree = "<group>";
+		};
+		FA0CC0041E9EA0CB00D27444 /* LocationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FA0CC0051E9EA10000D27444 /* LocationViewController.h */,
+				FA0CC0061E9EA10000D27444 /* LocationViewController.m */,
+			);
+			path = LocationViewController;
 			sourceTree = "<group>";
 		};
 		FA5540161E7E995900A4C773 /* DatabaseSyncManager */ = {
@@ -977,6 +990,7 @@
 				FAE6329B1E98318C002A0455 /* TransactionDetailViewController.m in Sources */,
 				FAA838631E86E1FA005BFADF /* AddEditWalletViewController.m in Sources */,
 				FA0ACEED1E87D55D000A42EE /* CurrencyTableViewCell.m in Sources */,
+				FA0CC0071E9EA10000D27444 /* LocationViewController.m in Sources */,
 				FAFF3A001E8858D500524084 /* SelectedWalletViewController+UI.m in Sources */,
 				FAECCFBF1E96AD78001D4B8F /* ReminderViewController.m in Sources */,
 				FAE6327D1E982A88002A0455 /* MainViewController.m in Sources */,

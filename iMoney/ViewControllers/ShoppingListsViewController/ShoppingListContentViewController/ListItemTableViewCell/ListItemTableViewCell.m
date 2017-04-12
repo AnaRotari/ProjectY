@@ -21,4 +21,20 @@
     // Configure the view for the selected state
 }
 
+- (void)setCompletedItem:(BOOL)itemIsDone {
+    
+    if (itemIsDone) {
+        [self.itemCheckBox setOn:YES];
+        
+        NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:self.itemName.text];
+        [attributeString addAttribute:NSStrikethroughStyleAttributeName
+                                value:@2
+                                range:NSMakeRange(0, [attributeString length])];
+        self.itemName.attributedText = attributeString;
+        
+    } else {
+        [self.itemCheckBox setOn:NO];
+    }
+}
+
 @end

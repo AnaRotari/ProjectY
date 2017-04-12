@@ -170,7 +170,7 @@
 
 - (void)userNavigateTo:(MenuItems)menuItem {
     
-    [self.revealViewController revealToggleAnimated:NO];
+    [self.revealViewController revealToggleAnimated:YES];
     
     switch (menuItem) {
         case kMenuItemPlannedPayments:
@@ -191,6 +191,7 @@
             break;
         case kMenuItemLocations:
             NSLog(@"kMenuItemLocations - not done");
+            [self goToLocationViewController];
             break;
         case kMenuItemReminder:
             NSLog(@"kMenuItemReminder - done");

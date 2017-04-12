@@ -8,10 +8,17 @@
 
 #import "ShoppingListContentViewController.h"
 
-@interface ShoppingListContentViewController ()
+@interface ShoppingListContentViewController () {
+    
+    Wallet *walletToInsert;
+    NSString *insertAmount;
+}
 
 @property (strong,nonatomic) NSMutableArray <ListItem *> *listItemsArray;
+@property (strong,nonatomic) NSArray <Wallet *> *walletsArray;
+
 @property (strong, nonatomic) LGAlertView *createItemListAlertView;
+@property (strong, nonatomic) LGAlertView *insertMoneyAlertView;
 
 @end
 
@@ -23,6 +30,7 @@
     self.shoppingListNameTextField.text = self.selectedShoppingList.listName;
     [self setupNavigationBar];
     [self setupItemsTableView];
+    self.walletsArray = [CoreDataRequestManager getAllWallets];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -43,7 +51,11 @@
                                                                                 target:self
                                                                                 action:@selector(editButtonAction)];
     
-    self.navigationItem.rightBarButtonItems = @[addButton,editButton];
+    UIBarButtonItem *addToWalletAmount = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose
+                                                                                       target:self
+                                                                                       action:@selector(addToWalletAmountButtonAction)];
+    
+    self.navigationItem.rightBarButtonItems = @[addButton,editButton,addToWalletAmount];
 }
 
 - (void)setupItemsTableView {
@@ -67,7 +79,7 @@
                                                                     numberOfTextFields:1
                                                                 textFieldsSetupHandler:^(UITextField *textField, NSUInteger index) {
                                                                     
-                                                                    textField.tag = 1;
+                                                                    textField.tag = 20;
                                                                     textField.delegate = self;
                                                                     textField.enablesReturnKeyAutomatically = YES;
                                                                     textField.autocapitalizationType = NO;
@@ -87,39 +99,129 @@
     self.listItemsTableView.isEditing ? [self.listItemsTableView setEditing:NO animated:YES] : [self.listItemsTableView setEditing:YES animated:YES];
 }
 
+- (void)addToWalletAmountButtonAction {
+    
+    self.insertMoneyAlertView = [[LGAlertView alloc] initWithTextFieldsAndTitle:@"Insert in Wallet"
+                                                                               message:@"Enter amount"
+                                                                    numberOfTextFields:1
+                                                                textFieldsSetupHandler:^(UITextField *textField, NSUInteger index) {
+                                                                    
+                                                                    textField.tag = 30;
+                                                                    textField.delegate = self;
+                                                                    textField.enablesReturnKeyAutomatically = YES;
+                                                                    textField.autocapitalizationType = NO;
+                                                                    textField.autocorrectionType = NO;
+                                                                    textField.keyboardType = UIKeyboardTypeNumberPad;
+                                                                }
+                                                                          buttonTitles:@[@"Done"]
+                                                                     cancelButtonTitle:@"Cancel"
+                                                                destructiveButtonTitle:nil
+                                                                              delegate:self];
+    
+    [self.insertMoneyAlertView setButtonEnabled:NO atIndex:0];
+    [self.insertMoneyAlertView showAnimated:YES completionHandler:nil];
+}
+
+- (void)showWalletActionSheet:(NSArray <Wallet *> *)wallets {
+    
+    UIActionSheet* actionSheet = [[UIActionSheet alloc] init];
+    actionSheet.title = @"Available wallets";
+    actionSheet.delegate = self;
+    
+    for (Wallet *extractedWallet in wallets) {
+        
+        [actionSheet addButtonWithTitle:extractedWallet.walletName];
+    }
+    
+    actionSheet.cancelButtonIndex = [actionSheet addButtonWithTitle:@"Cancel"];
+    [actionSheet showInView: self.view];
+}
+
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    NSDictionary *newTransaction = @{kTransactionAmount      : insertAmount,
+                                     kTransactionAttachemts  : @[],
+                                     kTransactionCategory    : @(1),
+                                     kTransactionDate        : [iMoneyUtils getTodayFormatedDate],
+                                     kTransactionDescription : @"",
+                                     kTransactionPayee       : @"",
+                                     kTransactionPaymentType : @(0),
+                                     kTransactionType        : @(1)};;
+
+    [CoreDataInsertManager createTransaction:newTransaction toWallet:self.walletsArray[buttonIndex]];
+}
+
 #pragma mark - UITextFieldDelegate
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     
-    if ([textField isEqual:self.shoppingListNameTextField]) {
+    if (textField.tag == 10)
+    {
         self.selectedShoppingList.listName = textField.text;
         [[CoreDataAccessLayer sharedInstance] saveContext];
-    } else {
+    }
+    if (textField.tag == 20)
+    {
         [CoreDataShoppingListManager createItemInShoppingList:self.selectedShoppingList withName:textField.text];
+    }
+    if (textField.tag == 30)
+    {
+        insertAmount = textField.text;
     }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     
-    if (textField.tag < 1) {
-        [self.createItemListAlertView.textFieldsArray[(textField.tag + 1)] becomeFirstResponder];
+    if (textField.tag == 10)
+    {
+        [textField resignFirstResponder];
     }
-    else {
-        if ([self.createItemListAlertView isButtonEnabledAtIndex:0]) {
+    if (textField.tag == 20)
+    {
+        if ([self.createItemListAlertView isButtonEnabledAtIndex:0])
+        {
             [self.createItemListAlertView dismissAnimated:YES completionHandler:nil];
         }
-        else {
+        else
+        {
             [textField resignFirstResponder];
         }
     }
+    if (textField.tag == 30)
+    {
+        if ([self.insertMoneyAlertView isButtonEnabledAtIndex:0])
+        {
+            [self.insertMoneyAlertView dismissAnimated:YES completionHandler:nil];
+        }
+        else
+        {
+            [textField resignFirstResponder];
+        }
+    }
+
     return YES;
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     
-    NSMutableString *currentString = textField.text.mutableCopy;
-    [currentString replaceCharactersInRange:range withString:string];
-    [self.createItemListAlertView setButtonEnabled:(currentString.length > 2) atIndex:0];
+    if (textField.tag == 10)
+    {
+        
+    }
+    if (textField.tag == 20)
+    {
+        NSMutableString *currentString = textField.text.mutableCopy;
+        [currentString replaceCharactersInRange:range withString:string];
+        [self.createItemListAlertView setButtonEnabled:(currentString.length > 1) atIndex:0];
+    }
+    if (textField.tag == 30)
+    {
+        NSMutableString *currentString = textField.text.mutableCopy;
+        [currentString replaceCharactersInRange:range withString:string];
+        [self.insertMoneyAlertView setButtonEnabled:(currentString.length > 1) atIndex:0];
+    }
     
     return YES;
 }
@@ -135,8 +237,7 @@
     
     ListItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListItemTableViewCell" forIndexPath:indexPath];
     cell.itemName.text = self.listItemsArray[indexPath.row].itemName;
-    
-    self.listItemsArray[indexPath.row].itemIsDone ? [cell.itemCheckBox setOn:YES] : [cell.itemCheckBox setOn:NO];
+    [cell setCompletedItem:self.listItemsArray[indexPath.row].itemIsDone];
 
     return cell;
 }
@@ -211,7 +312,13 @@
 
 - (void)alertViewWillDismiss:(nonnull LGAlertView *)alertView {
     
-    [self reloadItems];
+    if ([alertView isEqual:self.createItemListAlertView]) {
+        [self reloadItems];
+    }
+    if ([alertView isEqual:self.insertMoneyAlertView]) {
+        
+        [self showWalletActionSheet:self.walletsArray];
+    }
 }
 
 @end
