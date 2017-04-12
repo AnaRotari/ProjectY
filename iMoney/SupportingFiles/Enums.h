@@ -70,4 +70,13 @@ typedef NS_ENUM(NSInteger, MenuItems)
     kMenuItemLogout
 };
 
+typedef NS_ENUM(NSInteger, SortOptions)
+{
+    kSortOptionShowAll = 0,
+    kSortOptionShowToday,
+    kSortOptionShowLastWeek,
+    kSortOptionShowLastMonth,
+    kSortOptionShowLastYear
+};
+
 #endif /* Enums_h */

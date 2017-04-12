@@ -16,5 +16,6 @@
 
 + (NSArray <Transaction *> *)getAllTransactionForWallet:(Wallet *)wallet;
 + (NSArray <Transaction *> *)getTodayTransactionsForWallet:(Wallet *)wallet;
++ (NSArray <Transaction *> *)getAllTransactionForWallet:(Wallet *)wallet withSortOption:(SortOptions)option;
 
 @end

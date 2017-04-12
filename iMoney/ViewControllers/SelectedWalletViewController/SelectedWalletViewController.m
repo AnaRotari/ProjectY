@@ -65,7 +65,11 @@
                                                             target:self
                                                        andSelector:@selector(editWalletButtonAction:)];
     
-    self.navigationItem.rightBarButtonItems = @[addButton,editButton];
+    UIBarButtonItem *sortButton = [iMoneyUtils getNavigationButton:@"ic_sort"
+                                                            target:self
+                                                       andSelector:@selector(sortButtonAction:)];
+
+    self.navigationItem.rightBarButtonItems = @[addButton,editButton,sortButton];
     
     _plusButtonsViewNavBar = [LGPlusButtonsView plusButtonsViewWithNumberOfButtons:4
                                                            firstButtonIsPlusButton:NO
@@ -103,6 +107,11 @@
     controller.walletAction = kEditWallt;
     controller.walletToEdit = self.selectedWallet;
     [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (void)sortButtonAction:(id)sender {
+    
+    [self showSortActionSheet:@[@"Show all",@"Show today",@"Show last week",@"Show last month",@"Show last year"]];
 }
 
 #pragma mark - LGPlusButtonsView actions
@@ -266,6 +275,34 @@
         [self.transactionsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
                                   withRowAnimation:UITableViewRowAnimationFade];
     }
+}
+
+#pragma mark - UIActionSheetDelegate
+
+- (void)showSortActionSheet:(NSArray <NSString *> *)sortOptionsArray {
+    
+    UIActionSheet* actionSheet = [[UIActionSheet alloc] init];
+    actionSheet.title = @"Sorting options";
+    actionSheet.delegate = self;
+    
+    for (NSString *option in sortOptionsArray) {
+        
+        [actionSheet addButtonWithTitle:option];
+    }
+    
+    actionSheet.cancelButtonIndex = [actionSheet addButtonWithTitle:@"Cancel"];
+    [actionSheet showInView: self.view];
+}
+
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    [self.transactionsArray removeAllObjects];
+    self.transactionsArray = [[CoreDataRequestManager getAllTransactionForWallet:self.selectedWallet
+                                                                 withSortOption:buttonIndex] mutableCopy];
+    [self.transactionsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
+                              withRowAnimation:UITableViewRowAnimationFade];
 }
 
 @end

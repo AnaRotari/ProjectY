@@ -85,4 +85,47 @@
     return resultArray;
 }
 
++ (NSArray <Transaction *> *)getAllTransactionForWallet:(Wallet *)wallet withSortOption:(SortOptions)option {
+    
+    NSError *requestError = nil;
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    NSEntityDescription *description = [NSEntityDescription entityForName:@"Transaction"
+                                                   inManagedObjectContext:[[CoreDataAccessLayer sharedInstance] managedObjectContext]];
+    [request setEntity:description];
+    
+    NSDate *referenceDay = [NSDate date];
+    
+    switch (option) {
+        case kSortOptionShowAll:
+            //hz treb de testat
+            referenceDay = [NSDate dateWithTimeIntervalSince1970:NSTimeIntervalSince1970];
+            break;
+        case kSortOptionShowToday:
+            referenceDay = [iMoneyUtils getTodayFormatedDate];
+            break;
+        case kSortOptionShowLastWeek:
+//            NSDate *now = [NSDate date];
+//            NSDate *sevenDaysAgo = [now dateByAddingTimeInterval:-7*24*60*60];
+//            NSLog(@"7 days ago: %@", sevenDaysAgo);
+            break;
+        case kSortOptionShowLastMonth:
+            
+            break;
+        case kSortOptionShowLastYear:
+            
+            break;
+        default:
+            break;
+    }
+    
+    NSDate *todayDate = [iMoneyUtils getTodayFormatedDate];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"wallet == %@ AND transactionDate BETWEEN %@",wallet,@[referenceDay,todayDate]];
+    [request setPredicate:predicate];
+    
+    NSArray *resultArray = [[[CoreDataAccessLayer sharedInstance] managedObjectContext ] executeFetchRequest:request
+                                                                                                       error:&requestError];
+    
+    return resultArray;
+}
+
 @end

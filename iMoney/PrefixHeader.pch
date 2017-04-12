@@ -10,12 +10,12 @@
 #define PrefixHeader_pch
 
 #import "CoreDataAccessLayer.h"
+#import "Enums.h"
 #import "CoreDataRequestManager.h"
 #import "CoreDataInsertManager.h"
 #import "CoreDataHelpManager.h"
 #import "CoreDataShoppingListManager.h"
 #import "SWRevealViewController.h"
-#import "Enums.h"
 #import "iMoneyUtils.h"
 #import "UIColor+CoreData.h"
 #import "NSArray+CoreData.h"
