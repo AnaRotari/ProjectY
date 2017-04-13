@@ -2,7 +2,7 @@
 //  Transaction+CoreDataProperties.h
 //  
 //
-//  Created by Alexandr Pavlov on 4/11/17.
+//  Created by Ivan on 4/13/17.
 //
 //
 
@@ -20,10 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) int32_t transactionCategory;
 @property (nullable, nonatomic, copy) NSDate *transactionDate;
 @property (nullable, nonatomic, copy) NSString *transactionDescription;
-@property (nullable, nonatomic, retain) NSObject *transactionLocation;
 @property (nullable, nonatomic, copy) NSString *transactionPayee;
 @property (nonatomic) int32_t transactionPaymentType;
 @property (nonatomic) int32_t transactionType;
+@property (nonatomic) double transactionLatitude;
+@property (nonatomic) double transactionLongitude;
 @property (nullable, nonatomic, retain) Wallet *wallet;
 
 @end

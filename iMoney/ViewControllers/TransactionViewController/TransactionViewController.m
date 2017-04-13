@@ -10,15 +10,20 @@
 #import "TransactionViewController+DataSource.h"
 #import "UserImagesCollectionViewCell.h"
 #import <MapKit/MapKit.h>
+@import GoogleMaps;
+@import GooglePlaces;
 
-@interface TransactionViewController ()<MKMapViewDelegate, CLLocationManagerDelegate> {
+@interface TransactionViewController ()<CLLocationManagerDelegate, GMSMapViewDelegate> {
     
     NSInteger selectedTransactionType;
     NSInteger selectedTransactionCateogory;
     NSInteger selectedPaymentType;
-    IBOutlet MKMapView *mapViewOutlet;
+    
+    __weak IBOutlet GMSMapView *mapViewOutlet;
     CLLocationManager *locationManager;
-    CLLocation* currentLocation;
+    
+    float zoomLevel;
+    double savedLatitude, savedLongitude;
 }
 
 @end
@@ -80,7 +85,9 @@
                                                kTransactionDescription : self.descriptionLabel.text,
                                                kTransactionPayee       : self.payeeLabel.text,
                                                kTransactionPaymentType : @(selectedPaymentType),
-                                               kTransactionType        : @(selectedTransactionType)};
+                                               kTransactionType        : @(selectedTransactionType),
+                                               kTransactionLatitude    : @(savedLatitude),
+                                               kTransactionLongitude   : @(savedLongitude)};
     
     [CoreDataInsertManager createTransaction:finalTransactionsDetails
                                     toWallet:self.parentWallet];
@@ -311,51 +318,54 @@
 #pragma mark - map view methods
 
 -(void)setUpMapView{
+    zoomLevel = 15;
+    [mapViewOutlet setDelegate:self];
+    
     if ([CLLocationManager locationServicesEnabled] ){
         locationManager = [[CLLocationManager alloc] init];
         locationManager.delegate = self;
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters;
+        locationManager.distanceFilter = 50;
         
-//        [locationManager requestLocation];
         [locationManager requestAlwaysAuthorization];
         [locationManager startUpdatingLocation];
-        [mapViewOutlet setUserTrackingMode:MKUserTrackingModeFollowWithHeading];
-        [mapViewOutlet setDelegate:self];
     }else{
         //TODO: show alert to activate location from settings
     }
-}
-
--(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
-{
-    NSLog(@"latitude----->%f", mapView.region.center.latitude);
-    NSLog(@"longitude---->%f", mapView.region.center.longitude);
     
-    double latitude = mapView.region.center.latitude;
-    double longitude = mapView.region.center.longitude;
-    
-    if (latitude && longitude != 0) {
-        MKCoordinateRegion mapRegion;
-        mapRegion.center = CLLocationCoordinate2DMake(latitude, longitude);
-        mapRegion.span.latitudeDelta = 1;
-        mapRegion.span.longitudeDelta = 1;
-        
-        [mapView setRegion:mapRegion animated: YES];
-//        AIzaSyBsrWIkSGvj-8ep8pn44POP3ztKTxPAwjA google key
-//        [mapView setUserTrackingMode:MKUserTrackingModeNone];
-    }
+    mapViewOutlet.settings.myLocationButton = true;
+    mapViewOutlet.myLocationEnabled = YES;
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
-    currentLocation = [locations lastObject];
+    CLLocation *location = [locations lastObject];
+    double latitude = location.coordinate.latitude;
+    double longitude = location.coordinate.longitude;
+    
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:latitude
+                                                            longitude:longitude
+                                                                 zoom:zoomLevel];
+    mapViewOutlet.camera = camera;
+    
+    GMSMarker *marker = [GMSMarker markerWithPosition:CLLocationCoordinate2DMake(latitude, longitude)];
+    [mapViewOutlet clear];
+    marker.map = mapViewOutlet;
+    
+    savedLatitude = latitude;
+    savedLongitude = longitude;
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
     NSLog(@"%@", error);
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
-    NSLog(@"");
+- (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate{
+    GMSMarker *marker = [GMSMarker markerWithPosition:coordinate];
+    [mapViewOutlet clear];
+    marker.map = mapViewOutlet;
+    
+    savedLatitude = coordinate.latitude;
+    savedLongitude = coordinate.longitude;
 }
+
 @end

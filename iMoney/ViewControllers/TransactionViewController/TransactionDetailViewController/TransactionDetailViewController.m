@@ -7,12 +7,18 @@
 //
 
 #import "TransactionDetailViewController.h"
+@import GoogleMaps;
+@import GooglePlaces;
 
 @interface TransactionDetailViewController ()
 
 @end
 
-@implementation TransactionDetailViewController
+@implementation TransactionDetailViewController{
+    __weak IBOutlet GMSMapView *mapViewOutlet;
+    
+    float zoomLevel;
+}
 
 - (void)viewDidLoad {
     
@@ -22,6 +28,8 @@
     [self initUIWithTransaction:self.transactionDetail];
     
     self.totalWallets = [CoreDataRequestManager getAllWalletsWithoutWallet:self.transactionDetail.wallet];
+    
+    [self setUpMapView];
 }
 
 #pragma mark - Initializations
@@ -200,4 +208,24 @@
     [self labelsSetup];
 }
 
+#pragma mark - map view methods
+
+-(void)setUpMapView{
+    zoomLevel = 15;
+    
+    mapViewOutlet.settings.myLocationButton = true;
+    mapViewOutlet.myLocationEnabled = YES;
+    
+    double latitude = _transactionDetail.transactionLatitude;
+    double longitude = _transactionDetail.transactionLongitude;
+    
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:latitude
+                                                            longitude:longitude
+                                                                 zoom:zoomLevel];
+    mapViewOutlet.camera = camera;
+    
+    GMSMarker *marker = [GMSMarker markerWithPosition:CLLocationCoordinate2DMake(latitude, longitude)];
+    [mapViewOutlet clear];
+    marker.map = mapViewOutlet;
+}
 @end
