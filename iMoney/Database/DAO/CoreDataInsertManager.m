@@ -55,6 +55,8 @@
     newTransaction.transactionType        = [transactionDetails[kTransactionType] intValue];
     NSArray *arrayWithAttachements        = transactionDetails[kTransactionAttachemts];
     newTransaction.transactionAttachments = arrayWithAttachements.encode;
+    newTransaction.transactionLatitude    = [transactionDetails[kTransactionLatitude] doubleValue];
+    newTransaction.transactionLongitude   = [transactionDetails[kTransactionLongitude] doubleValue];
   
     switch ([transactionDetails[kTransactionType] intValue]) {
         case kTransactionTypeIncome:
