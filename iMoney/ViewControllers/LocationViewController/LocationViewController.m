@@ -10,12 +10,20 @@
 @import GoogleMaps;
 @import GooglePlaces;
 
+typedef NS_ENUM(NSInteger, SortType){
+    DateSort,
+    TransactionTypeSort
+};
+
 @interface LocationViewController()<UIActionSheetDelegate>
 
 @end
 
 @interface LocationViewController (){
     GMSMapView *mapView;
+    SortType sortType;
+    TransactionType selectedTransactionType;
+    SortOptions _sortOption;
 }
 
 @end
@@ -24,28 +32,53 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setUpSortButton];
+    [self setUpSortButtons];
     [self reloadDataForSortOption:kSortOptionShowAll];
 }
 
 #pragma mark - reload data
 
 -(void)reloadDataForSortOption:(SortOptions)sortOption{
+    _sortOption = sortOption;
     NSArray<Transaction*> *transactions = [CoreDataRequestManager getAllTransactionsForSortOption:sortOption];
-    [self setUpMapView:transactions];
+    [self setUpMapViewForTransactions:transactions];
+}
+
+-(void)sortByTransactionType:(TransactionType)type{
+    NSArray<Transaction*> *transactions = [CoreDataRequestManager getAllTransactionsForSortOption:_sortOption];
+    NSMutableArray<Transaction*> *tmpTransactions = [NSMutableArray array];
+    
+    for (Transaction *transaction in transactions) {
+        if (transaction.transactionType == type) {
+            [tmpTransactions addObject:transaction];
+        }
+    }
+    
+    [self setUpMapViewForTransactions:tmpTransactions];
 }
 
 #pragma mark - sort methods
 
--(void)setUpSortButton{
-    UIBarButtonItem *sortButton = [iMoneyUtils getNavigationButton:@"ic_sort"
+-(void)setUpSortButtons{
+    UIBarButtonItem *sortButtonByDate = [iMoneyUtils getNavigationButton:@"ic_sort"
                                                             target:self
-                                                       andSelector:@selector(sortButtonAction:)];
-    self.navigationItem.rightBarButtonItem = sortButton;
+                                                       andSelector:@selector(sortButtonActionByDate:)];
+    
+    UIBarButtonItem *sortButtonByTransactionType = [iMoneyUtils getNavigationButton:@"ic_sort"
+                                                            target:self
+                                                       andSelector:@selector(sortButtonActionTransactionType:)];
+    
+    self.navigationItem.rightBarButtonItems = @[sortButtonByDate, sortButtonByTransactionType];
 }
 
-- (void)sortButtonAction:(id)sender {
+- (void)sortButtonActionByDate:(UIBarButtonItem *)sender {
+    sortType = DateSort;
     [self showSortActionSheet:@[@"Show all",@"Show today",@"Show last week",@"Show last month",@"Show last year"]];
+}
+
+- (void)sortButtonActionTransactionType:(UIBarButtonItem *)sender {
+    sortType = TransactionTypeSort;
+    [self showSortActionSheet:@[@"Income",@"Expense"]];
 }
 
 #pragma mark - UIActionSheetDelegate
@@ -68,12 +101,21 @@
 #pragma mark - UIActionSheetDelegate
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex <= kSortOptionShowLastYear) {
-        [self reloadDataForSortOption:buttonIndex];
+    if (buttonIndex != actionSheet.cancelButtonIndex) {
+        switch (sortType) {
+            case DateSort:
+                [self reloadDataForSortOption:buttonIndex];
+                break;
+            case TransactionTypeSort:
+                [self sortByTransactionType:buttonIndex];
+                break;
+            default:
+                break;
+        }
     }
 }
 
--(void)setUpMapView:(NSArray<Transaction*> *)transactions{
+-(void)setUpMapViewForTransactions:(NSArray<Transaction*> *)transactions{
     if (transactions.count == 0) {
         if (mapView) {
             [mapView clear];
