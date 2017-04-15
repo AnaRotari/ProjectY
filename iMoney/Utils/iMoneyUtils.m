@@ -7,6 +7,7 @@
 //
 
 #import "iMoneyUtils.h"
+#import <CoreLocation/CoreLocation.h>
 
 @implementation iMoneyUtils
 
@@ -135,6 +136,9 @@
         case kTransactionCategoryGregories:
             return @"Gregories";
             break;
+        case kTransactionCategorySale:
+            return @"Sale";
+            break;
         case kTransactionCategoryOther:
             return @"Other";
             break;
@@ -172,6 +176,37 @@
         default:
             break;
     }
+}
+
++ (NSDictionary *)getUserCurrentLocation {
+    
+    CLLocationManager *locationManager;
+    if ([CLLocationManager locationServicesEnabled] ){
+        locationManager = [[CLLocationManager alloc] init];
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        locationManager.distanceFilter = 50;
+        [locationManager requestAlwaysAuthorization];
+        [locationManager startUpdatingLocation];
+        [locationManager stopUpdatingLocation];
+    }
+    
+    return @{kTransactionLatitude  : @(locationManager.location.coordinate.latitude),
+             kTransactionLongitude : @(locationManager.location.coordinate.longitude)};
+}
+
++ (NSDate *)getWarrientyLength:(NSString *)length {
+    
+    NSDate *warrientyLength = [[NSDate alloc] init];
+    
+    if ([length isEqualToString:@"12 month's warranty"])
+    {
+        warrientyLength = [[iMoneyUtils getTodayFormatedDate] dateByAddingTimeInterval: 365 * 24 * 60 * 60];
+    }
+    else
+    {
+        warrientyLength = [[iMoneyUtils getTodayFormatedDate] dateByAddingTimeInterval: 730 * 24 * 60 * 60];
+    }
+    return warrientyLength;
 }
 
 @end

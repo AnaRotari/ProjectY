@@ -12,8 +12,6 @@
 		2C62010A1E9F857800F605D8 /* ListItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6200FC1E9F857800F605D8 /* ListItem+CoreDataProperties.m */; };
 		2C62010B1E9F857800F605D8 /* ShoppingList+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6200FE1E9F857800F605D8 /* ShoppingList+CoreDataClass.m */; };
 		2C62010C1E9F857800F605D8 /* ShoppingList+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6201001E9F857800F605D8 /* ShoppingList+CoreDataProperties.m */; };
-		2C62010D1E9F857800F605D8 /* Transaction+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6201021E9F857800F605D8 /* Transaction+CoreDataClass.m */; };
-		2C62010E1E9F857800F605D8 /* Transaction+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6201041E9F857800F605D8 /* Transaction+CoreDataProperties.m */; };
 		2C62010F1E9F857800F605D8 /* Wallet+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6201061E9F857800F605D8 /* Wallet+CoreDataClass.m */; };
 		2C6201101E9F857800F605D8 /* Wallet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6201081E9F857800F605D8 /* Wallet+CoreDataProperties.m */; };
 		8402D1721E61F6C600968EA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8402D1701E61F6C600968EA2 /* Main.storyboard */; };
@@ -34,6 +32,13 @@
 		FA0ACEF11E87EAEE000A42EE /* CoreDataInsertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0ACEF01E87EAEE000A42EE /* CoreDataInsertManager.m */; };
 		FA0CC0071E9EA10000D27444 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0CC0061E9EA10000D27444 /* LocationViewController.m */; };
 		FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */; };
+		FA6BC0841EA259BD00ECBA5E /* WarrantiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6BC0831EA259BD00ECBA5E /* WarrantiesViewController.m */; };
+		FA6BC0891EA267AE00ECBA5E /* WarrantiesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6BC0871EA267AE00ECBA5E /* WarrantiesTableViewCell.m */; };
+		FA6BC08A1EA267AE00ECBA5E /* WarrantiesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6BC0881EA267AE00ECBA5E /* WarrantiesTableViewCell.xib */; };
+		FA6BC08F1EA26B6C00ECBA5E /* Transaction+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6BC08C1EA26B6C00ECBA5E /* Transaction+CoreDataClass.m */; };
+		FA6BC0901EA26B6C00ECBA5E /* Transaction+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6BC08E1EA26B6C00ECBA5E /* Transaction+CoreDataProperties.m */; };
+		FA6BC0961EA2B9FC00ECBA5E /* MRAlertButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6BC0931EA2B9FC00ECBA5E /* MRAlertButton.m */; };
+		FA6BC0971EA2B9FC00ECBA5E /* MRAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6BC0951EA2B9FC00ECBA5E /* MRAlertView.m */; };
 		FA745CBD1E94201E0035BB58 /* UserImagesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA745CBB1E94201E0035BB58 /* UserImagesCollectionViewCell.m */; };
 		FA745CBE1E94201E0035BB58 /* UserImagesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA745CBC1E94201E0035BB58 /* UserImagesCollectionViewCell.xib */; };
 		FA9693231E872A6A00F86873 /* ColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9693221E872A6A00F86873 /* ColorPickerViewController.m */; };
@@ -102,10 +107,6 @@
 		2C6200FE1E9F857800F605D8 /* ShoppingList+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShoppingList+CoreDataClass.m"; sourceTree = "<group>"; };
 		2C6200FF1E9F857800F605D8 /* ShoppingList+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShoppingList+CoreDataProperties.h"; sourceTree = "<group>"; };
 		2C6201001E9F857800F605D8 /* ShoppingList+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShoppingList+CoreDataProperties.m"; sourceTree = "<group>"; };
-		2C6201011E9F857800F605D8 /* Transaction+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataClass.h"; sourceTree = "<group>"; };
-		2C6201021E9F857800F605D8 /* Transaction+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataClass.m"; sourceTree = "<group>"; };
-		2C6201031E9F857800F605D8 /* Transaction+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataProperties.h"; sourceTree = "<group>"; };
-		2C6201041E9F857800F605D8 /* Transaction+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2C6201051E9F857800F605D8 /* Wallet+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataClass.h"; sourceTree = "<group>"; };
 		2C6201061E9F857800F605D8 /* Wallet+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataClass.m"; sourceTree = "<group>"; };
 		2C6201071E9F857800F605D8 /* Wallet+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -142,6 +143,19 @@
 		FA0CC0061E9EA10000D27444 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		FA5540171E7E995900A4C773 /* DatabaseSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseSyncManager.h; sourceTree = "<group>"; };
 		FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseSyncManager.m; sourceTree = "<group>"; };
+		FA6BC0821EA259BD00ECBA5E /* WarrantiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarrantiesViewController.h; sourceTree = "<group>"; };
+		FA6BC0831EA259BD00ECBA5E /* WarrantiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarrantiesViewController.m; sourceTree = "<group>"; };
+		FA6BC0861EA267AE00ECBA5E /* WarrantiesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarrantiesTableViewCell.h; sourceTree = "<group>"; };
+		FA6BC0871EA267AE00ECBA5E /* WarrantiesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarrantiesTableViewCell.m; sourceTree = "<group>"; };
+		FA6BC0881EA267AE00ECBA5E /* WarrantiesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WarrantiesTableViewCell.xib; sourceTree = "<group>"; };
+		FA6BC08B1EA26B6C00ECBA5E /* Transaction+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataClass.h"; sourceTree = "<group>"; };
+		FA6BC08C1EA26B6C00ECBA5E /* Transaction+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataClass.m"; sourceTree = "<group>"; };
+		FA6BC08D1EA26B6C00ECBA5E /* Transaction+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FA6BC08E1EA26B6C00ECBA5E /* Transaction+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FA6BC0921EA2B9FC00ECBA5E /* MRAlertButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRAlertButton.h; sourceTree = "<group>"; };
+		FA6BC0931EA2B9FC00ECBA5E /* MRAlertButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRAlertButton.m; sourceTree = "<group>"; };
+		FA6BC0941EA2B9FC00ECBA5E /* MRAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRAlertView.h; sourceTree = "<group>"; };
+		FA6BC0951EA2B9FC00ECBA5E /* MRAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRAlertView.m; sourceTree = "<group>"; };
 		FA745CBA1E94201E0035BB58 /* UserImagesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserImagesCollectionViewCell.h; sourceTree = "<group>"; };
 		FA745CBB1E94201E0035BB58 /* UserImagesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserImagesCollectionViewCell.m; sourceTree = "<group>"; };
 		FA745CBC1E94201E0035BB58 /* UserImagesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserImagesCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -394,14 +408,14 @@
 				2C6200FE1E9F857800F605D8 /* ShoppingList+CoreDataClass.m */,
 				2C6200FF1E9F857800F605D8 /* ShoppingList+CoreDataProperties.h */,
 				2C6201001E9F857800F605D8 /* ShoppingList+CoreDataProperties.m */,
-				2C6201011E9F857800F605D8 /* Transaction+CoreDataClass.h */,
-				2C6201021E9F857800F605D8 /* Transaction+CoreDataClass.m */,
-				2C6201031E9F857800F605D8 /* Transaction+CoreDataProperties.h */,
-				2C6201041E9F857800F605D8 /* Transaction+CoreDataProperties.m */,
 				2C6201051E9F857800F605D8 /* Wallet+CoreDataClass.h */,
 				2C6201061E9F857800F605D8 /* Wallet+CoreDataClass.m */,
 				2C6201071E9F857800F605D8 /* Wallet+CoreDataProperties.h */,
 				2C6201081E9F857800F605D8 /* Wallet+CoreDataProperties.m */,
+				FA6BC08B1EA26B6C00ECBA5E /* Transaction+CoreDataClass.h */,
+				FA6BC08C1EA26B6C00ECBA5E /* Transaction+CoreDataClass.m */,
+				FA6BC08D1EA26B6C00ECBA5E /* Transaction+CoreDataProperties.h */,
+				FA6BC08E1EA26B6C00ECBA5E /* Transaction+CoreDataProperties.m */,
 			);
 			path = DatabaseEntities;
 			sourceTree = "<group>";
@@ -419,6 +433,7 @@
 				FAECCFBB1E96AD78001D4B8F /* ReminderViewController */,
 				FA0842F11E9AD4D1007F5CED /* ShoppingListsViewController */,
 				FA0CC0041E9EA0CB00D27444 /* LocationViewController */,
+				FA6BC0811EA259AE00ECBA5E /* WarrantiesViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -460,6 +475,37 @@
 				FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */,
 			);
 			path = DatabaseSyncManager;
+			sourceTree = "<group>";
+		};
+		FA6BC0811EA259AE00ECBA5E /* WarrantiesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FA6BC0851EA2679000ECBA5E /* WarrantiesTableViewCell */,
+				FA6BC0821EA259BD00ECBA5E /* WarrantiesViewController.h */,
+				FA6BC0831EA259BD00ECBA5E /* WarrantiesViewController.m */,
+			);
+			path = WarrantiesViewController;
+			sourceTree = "<group>";
+		};
+		FA6BC0851EA2679000ECBA5E /* WarrantiesTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA6BC0861EA267AE00ECBA5E /* WarrantiesTableViewCell.h */,
+				FA6BC0871EA267AE00ECBA5E /* WarrantiesTableViewCell.m */,
+				FA6BC0881EA267AE00ECBA5E /* WarrantiesTableViewCell.xib */,
+			);
+			path = WarrantiesTableViewCell;
+			sourceTree = "<group>";
+		};
+		FA6BC0911EA2B9FC00ECBA5E /* MRAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				FA6BC0921EA2B9FC00ECBA5E /* MRAlertButton.h */,
+				FA6BC0931EA2B9FC00ECBA5E /* MRAlertButton.m */,
+				FA6BC0941EA2B9FC00ECBA5E /* MRAlertView.h */,
+				FA6BC0951EA2B9FC00ECBA5E /* MRAlertView.m */,
+			);
+			path = MRAlertView;
 			sourceTree = "<group>";
 		};
 		FA745CB91E94201E0035BB58 /* UserImagesCollectionViewCell */ = {
@@ -593,6 +639,7 @@
 		FAE1017F1E7DD182003525DF /* ThirdPartyLibs */ = {
 			isa = PBXGroup;
 			children = (
+				FA6BC0911EA2B9FC00ECBA5E /* MRAlertView */,
 				FADB2E941E88381100319EB6 /* HWViewPager */,
 				FAA838681E870BC9005BFADF /* TPKeyboardAvoiding */,
 				FAE101801E7DD182003525DF /* SWRevealViewController */,
@@ -895,6 +942,7 @@
 				FAAE7B181E9D8DAC0057D648 /* ListItemTableViewCell.xib in Resources */,
 				FAAC9F921E7DE79B0077B160 /* MenuTableViewCell.xib in Resources */,
 				8402D1721E61F6C600968EA2 /* Main.storyboard in Resources */,
+				FA6BC08A1EA267AE00ECBA5E /* WarrantiesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -957,25 +1005,26 @@
 				FAAE7B121E9D8CA80057D648 /* ShoppingListContentViewController.m in Sources */,
 				FAECCFCE1E96E232001D4B8F /* ReorderWalletsViewController.m in Sources */,
 				FAE632A01E983635002A0455 /* HistorySegmentedControl.m in Sources */,
-				2C62010E1E9F857800F605D8 /* Transaction+CoreDataProperties.m in Sources */,
 				FADB2E971E88381100319EB6 /* HWViewPager.m in Sources */,
 				FA0330841E7D786800BB8DBA /* ApplicationConstants.m in Sources */,
+				FA6BC08F1EA26B6C00ECBA5E /* Transaction+CoreDataClass.m in Sources */,
 				FAE632821E982A88002A0455 /* TransactionTableViewCell.m in Sources */,
 				FA0ACEF11E87EAEE000A42EE /* CoreDataInsertManager.m in Sources */,
 				FAD2FF571E87CBF5001BB364 /* CurrencyPickerViewController.m in Sources */,
 				FA0330801E7D75C400BB8DBA /* main.m in Sources */,
 				FAE43DC71E847A7600C90817 /* CustomTabBarController.m in Sources */,
+				FA6BC0971EA2B9FC00ECBA5E /* MRAlertView.m in Sources */,
 				FAE632901E982BE5002A0455 /* ReportsViewController.m in Sources */,
 				2C62010B1E9F857800F605D8 /* ShoppingList+CoreDataClass.m in Sources */,
 				FAECCFC31E96B1C0001D4B8F /* AppDelegate+Notifications.m in Sources */,
 				FAE632971E982E55002A0455 /* BaseViewController.m in Sources */,
 				2C62010A1E9F857800F605D8 /* ListItem+CoreDataProperties.m in Sources */,
 				FAE632801E982A88002A0455 /* MainWalletCollectionViewCell.m in Sources */,
-				2C62010D1E9F857800F605D8 /* Transaction+CoreDataClass.m in Sources */,
 				FA0842F01E9AD305007F5CED /* CoreDataHelpManager.m in Sources */,
 				FA745CBD1E94201E0035BB58 /* UserImagesCollectionViewCell.m in Sources */,
 				FAA838751E870BC9005BFADF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				FAA838721E870BC9005BFADF /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				FA6BC0891EA267AE00ECBA5E /* WarrantiesTableViewCell.m in Sources */,
 				FAAE7B081E9D87F80057D648 /* ShoppingListViewController.m in Sources */,
 				FAFF39FA1E88414600524084 /* SelectedWalletViewController.m in Sources */,
 				FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */,
@@ -996,6 +1045,7 @@
 				FAECCFBF1E96AD78001D4B8F /* ReminderViewController.m in Sources */,
 				FAE6327D1E982A88002A0455 /* MainViewController.m in Sources */,
 				FAE632A31E9855F2002A0455 /* NSArray+CoreData.m in Sources */,
+				FA6BC0961EA2B9FC00ECBA5E /* MRAlertButton.m in Sources */,
 				FAE6327E1E982A88002A0455 /* MainViewControllerCollectionView.m in Sources */,
 				FAE6327F1E982A88002A0455 /* MainViewControllerTablleView.m in Sources */,
 				FAE101771E7DC8AF003525DF /* MenuViewController.m in Sources */,
@@ -1009,8 +1059,10 @@
 				FA9693231E872A6A00F86873 /* ColorPickerViewController.m in Sources */,
 				FAAE7B171E9D8DAC0057D648 /* ListItemTableViewCell.m in Sources */,
 				FAFF39FD1E88415400524084 /* TransactionViewController.m in Sources */,
+				FA6BC0901EA26B6C00ECBA5E /* Transaction+CoreDataProperties.m in Sources */,
 				FA0330961E7D7F9F00BB8DBA /* iMoneyUtils.m in Sources */,
 				FAAE7AFC1E9D69C50057D648 /* CoreDataShoppingListManager.m in Sources */,
+				FA6BC0841EA259BD00ECBA5E /* WarrantiesViewController.m in Sources */,
 				FAECCFD31E96E267001D4B8F /* WalletTableViewCell.m in Sources */,
 				2C62010F1E9F857800F605D8 /* Wallet+CoreDataClass.m in Sources */,
 				84D92FC01E61F88D00F823DD /* AppDelegate.m in Sources */,

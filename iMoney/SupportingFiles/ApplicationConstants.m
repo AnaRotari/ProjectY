@@ -42,6 +42,7 @@ NSString *const kTransactionLongitude   = @"kTransactionLongitude";
 NSString *const kTransactionPayee       = @"kTransactionPayee";
 NSString *const kTransactionPaymentType = @"kTransactionPaymentType";
 NSString *const kTransactionType        = @"kTransactionType";
+NSString *const kTransactionWarrienty   = @"kTransactionWarrienty";
 
 NSString *const kDailyReminder         = @"kDailyReminder";
 NSString *const kInactivityReminder    = @"kInactivityReminder";

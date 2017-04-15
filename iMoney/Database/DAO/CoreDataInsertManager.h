@@ -13,6 +13,7 @@
 
 + (void)createWallet:(NSDictionary *)walletValues;
 + (void)createTransaction:(NSDictionary *)transactionDetails toWallet:(Wallet *)wallet;
++ (void)createWarrientyTransaction:(NSDictionary *)warrientyInfo toWallet:(Wallet *)wallet;
 
 + (void)adjustWalletBalance:(Wallet *)wallet withBalance:(NSString *)newAmount;
 

@@ -183,14 +183,12 @@
             NSLog(@"kMenuItemDebs - not done");
             break;
         case kMenuItemShoppingLists:
-            NSLog(@"Shopping list - maybe done");
             [self goToShoppingList];
             break;
         case kMenuItemWarranties:
-            NSLog(@"kMenuItemWarranties - not done");
+            [self goToWarrantiesViewController];
             break;
         case kMenuItemLocations:
-            NSLog(@"kMenuItemLocations - not done");
             [self goToLocationViewController];
             break;
         case kMenuItemReminder:

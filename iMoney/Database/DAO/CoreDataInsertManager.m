@@ -34,10 +34,6 @@
     }
 }
 
-/*
- kTransactionAttachemts  : self.arrayWithImages,
- */
-
 + (void)createTransaction:(NSDictionary *)transactionDetails toWallet:(Wallet *)wallet {
     
     NSError *error = nil;
@@ -57,6 +53,7 @@
     newTransaction.transactionAttachments = arrayWithAttachements.encode;
     newTransaction.transactionLatitude    = [transactionDetails[kTransactionLatitude] doubleValue];
     newTransaction.transactionLongitude   = [transactionDetails[kTransactionLongitude] doubleValue];
+    newTransaction.transactionWarrienty   = transactionDetails[kTransactionWarrienty];
   
     switch ([transactionDetails[kTransactionType] intValue]) {
         case kTransactionTypeIncome:
@@ -71,7 +68,42 @@
             break;
     }
     
-//    @property (nullable, nonatomic, retain) NSObject *transactionLocation;
+    [wallet addTransactionsObject:newTransaction];
+    
+    if(![context save:&error]) {
+        NSLog(@"Error: %@",[error localizedDescription]);
+    } else {
+        NSLog(@"successfull saved");
+    }
+}
+
++ (void)createWarrientyTransaction:(NSDictionary *)warrientyInfo toWallet:(Wallet *)wallet {
+    
+    NSDictionary* userCurrentLocation = [iMoneyUtils getUserCurrentLocation];
+    NSError *error = nil;
+    NSManagedObjectContext *context = [[CoreDataAccessLayer sharedInstance] managedObjectContext];
+    
+    Transaction *newTransaction = [NSEntityDescription insertNewObjectForEntityForName:@"Transaction"
+                                                                inManagedObjectContext:context];
+    
+    newTransaction.transactionAmount      = [[NSDecimalNumber alloc] initWithString:warrientyInfo[@"WarrientyAmount"]];
+    newTransaction.transactionCategory    = kTransactionCategorySale;
+    newTransaction.transactionDate        = [iMoneyUtils getTodayFormatedDate];
+    newTransaction.transactionDescription = @"Warrienty";
+    newTransaction.transactionPayee       = @"";
+    newTransaction.transactionPaymentType = kPaymentTypeCash;
+    
+    if ([[warrientyInfo objectForKey:@"WarrientyType"] isEqualToString:@"Income"]) {
+        newTransaction.transactionType    = kTransactionTypeIncome;
+        wallet.walletBalance = [wallet.walletBalance decimalNumberByAdding:newTransaction.transactionAmount];
+    } else {
+        newTransaction.transactionType    = kTransactionTypeExpense;
+        wallet.walletBalance = [wallet.walletBalance decimalNumberBySubtracting:newTransaction.transactionAmount];
+    }
+    newTransaction.transactionAttachments = @[].encode;
+    newTransaction.transactionLatitude    = [userCurrentLocation[kTransactionLatitude] doubleValue];
+    newTransaction.transactionLongitude   = [userCurrentLocation[kTransactionLongitude] doubleValue];
+    newTransaction.transactionWarrienty   = [iMoneyUtils getWarrientyLength:warrientyInfo[@"WarrientyLength"]];
     
     [wallet addTransactionsObject:newTransaction];
     
@@ -84,10 +116,9 @@
 
 + (void)adjustWalletBalance:(Wallet *)wallet withBalance:(NSString *)newAmount {
     
+    NSDictionary* userCurrentLocation = [iMoneyUtils getUserCurrentLocation];
     NSError *error = nil;
     NSManagedObjectContext *context = [[CoreDataAccessLayer sharedInstance] managedObjectContext];
-    
-    
     
     Transaction *newTransaction = [NSEntityDescription insertNewObjectForEntityForName:@"Transaction"
                                                                 inManagedObjectContext:context];
@@ -98,6 +129,8 @@
     newTransaction.transactionPayee       = @"";
     newTransaction.transactionPaymentType = kPaymentTypeCash;
     newTransaction.transactionAttachments = @[].encode;
+    newTransaction.transactionLatitude    = [userCurrentLocation[kTransactionLatitude] doubleValue];
+    newTransaction.transactionLongitude   = [userCurrentLocation[kTransactionLongitude] doubleValue];
     
     NSDecimalNumber *incomeNumber = [[NSDecimalNumber alloc] initWithString:newAmount];
     

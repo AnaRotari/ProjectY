@@ -61,6 +61,53 @@
     return resultArray;
 }
 
++ (NSArray <Transaction *> *)getAllTransactionsWithWarrienty:(WarrantiesSortOptions)sortOption {
+    
+    NSError *requestError = nil;
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    NSEntityDescription *description = [NSEntityDescription entityForName:@"Transaction"
+                                                   inManagedObjectContext:[[CoreDataAccessLayer sharedInstance] managedObjectContext]];
+    [request setEntity:description];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"transactionWarrienty != %@",nil];
+    [request setPredicate:predicate];
+    
+    if (sortOption == WarrantieSortOptionByCreationDateNewest)
+    {
+        NSSortDescriptor *sortOrderDescriptor = [[NSSortDescriptor alloc] initWithKey:@"transactionDate" ascending:YES];
+        [request setSortDescriptors:@[sortOrderDescriptor]];
+    }
+    if (sortOption == WarrantieSortOptionByCreationDateOldest)
+    {
+        NSSortDescriptor *sortOrderDescriptor = [[NSSortDescriptor alloc] initWithKey:@"transactionDate" ascending:NO];
+        [request setSortDescriptors:@[sortOrderDescriptor]];
+    }
+    if (sortOption == WarrantieSortOptionByAmountHighest)
+    {
+        NSSortDescriptor *sortOrderDescriptor = [[NSSortDescriptor alloc] initWithKey:@"transactionAmount" ascending:YES];
+        [request setSortDescriptors:@[sortOrderDescriptor]];
+    }
+    if (sortOption == WarrantieSortOptionByAmountLowest)
+    {
+        NSSortDescriptor *sortOrderDescriptor = [[NSSortDescriptor alloc] initWithKey:@"transactionAmount" ascending:NO];
+        [request setSortDescriptors:@[sortOrderDescriptor]];
+    }
+    if (sortOption == WarrantieSortOptionByDueDateNewest)
+    {
+        NSSortDescriptor *sortOrderDescriptor = [[NSSortDescriptor alloc] initWithKey:@"transactionWarrienty" ascending:YES];
+        [request setSortDescriptors:@[sortOrderDescriptor]];
+    }
+    if (sortOption == WarrantieSortOptionByDueDateOldest)
+    {
+        NSSortDescriptor *sortOrderDescriptor = [[NSSortDescriptor alloc] initWithKey:@"transactionWarrienty" ascending:NO];
+        [request setSortDescriptors:@[sortOrderDescriptor]];
+    }
+    
+    NSArray *resultArray = [[[CoreDataAccessLayer sharedInstance] managedObjectContext ] executeFetchRequest:request
+                                                                                                       error:&requestError];
+    return resultArray;
+}
+
 + (NSArray <Transaction *> *)getTodayTransactionsForWallet:(Wallet *)wallet {
     
     NSError *requestError = nil;

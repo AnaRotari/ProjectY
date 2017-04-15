@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="WarrantiesTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15.04.2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ov4-bd-0NB">
+                        <rect key="frame" x="8" y="44" width="70" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 months remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sag-J3-8An">
+                        <rect key="frame" x="175" y="44" width="137" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="1" green="0.01790820513" blue="0.1079320364" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="t3w-Oc-lZL">
+                        <rect key="frame" x="8" y="30" width="304" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="9RZ-2H-dYd"/>
+                        </constraints>
+                        <color key="progressTintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </progressView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZ2-Ih-PpM">
+                        <rect key="frame" x="8" y="8" width="28" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warranty 24 months" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mx-TX-uSH">
+                        <rect key="frame" x="180" y="8" width="132" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Sag-J3-8An" secondAttribute="bottom" constant="8" id="2l3-fx-whr"/>
+                    <constraint firstAttribute="trailing" secondItem="t3w-Oc-lZL" secondAttribute="trailing" constant="8" id="5tW-bb-B2W"/>
+                    <constraint firstItem="EZ2-Ih-PpM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="927-pi-8J0"/>
+                    <constraint firstItem="t3w-Oc-lZL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ngh-ga-2Ij"/>
+                    <constraint firstAttribute="trailing" secondItem="2mx-TX-uSH" secondAttribute="trailing" constant="8" id="OXX-4o-zcS"/>
+                    <constraint firstItem="Ov4-bd-0NB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="ZJa-26-jbB"/>
+                    <constraint firstItem="EZ2-Ih-PpM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="bws-e7-l5Y"/>
+                    <constraint firstAttribute="bottom" secondItem="Ov4-bd-0NB" secondAttribute="bottom" constant="8" id="kR6-7U-3Ye"/>
+                    <constraint firstAttribute="trailing" secondItem="Sag-J3-8An" secondAttribute="trailing" constant="8" id="mO5-ct-Bpn"/>
+                    <constraint firstItem="2mx-TX-uSH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="nGn-v9-Mt1"/>
+                    <constraint firstItem="t3w-Oc-lZL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="zlw-Me-Gmf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="totalWarrientyLabel" destination="2mx-TX-uSH" id="ary-6Q-3ny"/>
+                <outlet property="warrientyDateLabel" destination="Ov4-bd-0NB" id="1fK-AX-B0E"/>
+                <outlet property="warrientyMonthsRemainedLabel" destination="Sag-J3-8An" id="Grq-SI-gsL"/>
+                <outlet property="warrientyProgress" destination="t3w-Oc-lZL" id="XSA-ce-8vV"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

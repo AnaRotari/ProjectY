@@ -2,7 +2,7 @@
 //  Transaction+CoreDataProperties.m
 //  
 //
-//  Created by Ivan on 4/13/17.
+//  Created by Alex on 4/15/17.
 //
 //
 
@@ -19,11 +19,12 @@
 @dynamic transactionCategory;
 @dynamic transactionDate;
 @dynamic transactionDescription;
+@dynamic transactionLatitude;
+@dynamic transactionLongitude;
 @dynamic transactionPayee;
 @dynamic transactionPaymentType;
 @dynamic transactionType;
-@dynamic transactionLatitude;
-@dynamic transactionLongitude;
+@dynamic transactionWarrienty;
 @dynamic wallet;
 
 @end

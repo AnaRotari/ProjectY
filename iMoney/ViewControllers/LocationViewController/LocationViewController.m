@@ -10,11 +10,6 @@
 @import GoogleMaps;
 @import GooglePlaces;
 
-typedef NS_ENUM(NSInteger, SortType){
-    DateSort,
-    TransactionTypeSort
-};
-
 @interface LocationViewController()<UIActionSheetDelegate>
 
 @end

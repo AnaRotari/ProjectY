@@ -28,6 +28,7 @@ typedef NS_ENUM(NSInteger, TransactionCategory)
     kTransactionCategoryInvestments,
     kTransactionCategoryIncome,
     kTransactionCategoryGregories,
+    kTransactionCategorySale,
     kTransactionCategoryOther
 };
 
@@ -77,6 +78,21 @@ typedef NS_ENUM(NSInteger, SortOptions)
     kSortOptionShowLastWeek,
     kSortOptionShowLastMonth,
     kSortOptionShowLastYear
+};
+
+typedef NS_ENUM(NSInteger, WarrantiesSortOptions)
+{
+    WarrantieSortOptionByCreationDateNewest = 0,
+    WarrantieSortOptionByCreationDateOldest,
+    WarrantieSortOptionByAmountHighest,
+    WarrantieSortOptionByAmountLowest,
+    WarrantieSortOptionByDueDateNewest,
+    WarrantieSortOptionByDueDateOldest
+};
+
+typedef NS_ENUM(NSInteger, SortType){
+    DateSort,
+    TransactionTypeSort
 };
 
 #endif /* Enums_h */

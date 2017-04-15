@@ -118,7 +118,6 @@
 
 - (void)addNewRecord {
     
-    NSLog(@"addNewRecord");
     TransactionViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TransactionViewController"];
     controller.parentWallet = self.selectedWallet;
     [self.navigationController pushViewController:controller animated:YES];

@@ -9,6 +9,7 @@
 #import "MainViewController+Navigation.h"
 #import "ShoppingListViewController.h"
 #import "LocationViewController.h"
+#import "WarrantiesViewController.h"
 
 @implementation MainViewController (Navigation)
 
@@ -19,9 +20,28 @@
 }
 
 - (void)goToLocationViewController {
+
+    if ([CoreDataRequestManager getAllTransactions].count > 0) {
+        LocationViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"LocationViewController"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else
+    {
+        [iMoneyUtils showAlertView:@"Alert" withMessage:@"You need create a transaction first !"];
+    }
+}
+
+- (void)goToWarrantiesViewController {
     
-    LocationViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"LocationViewController"];
-    [self.navigationController pushViewController:controller animated:YES];
+    if ([CoreDataRequestManager getAllWallets].count > 0)
+    {
+        WarrantiesViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"WarrantiesViewController"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else
+    {
+        [iMoneyUtils showAlertView:@"Alert" withMessage:@"You should create a wallet first !"];
+    }
 }
 
 @end

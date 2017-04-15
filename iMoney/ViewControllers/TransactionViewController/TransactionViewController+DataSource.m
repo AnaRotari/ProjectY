@@ -37,6 +37,7 @@
                                       @"Investments",
                                       @"Income",
                                       @"Gregories",
+                                      @"Sale",
                                       @"Other"];
     
     self.paymentArray = @[@"Cash",

@@ -21,4 +21,7 @@
 + (NSString *)getCategoryName:(TransactionCategory)category;
 + (NSString *)getTransactionTypeName:(PaymentType)type;
 
++ (NSDictionary *)getUserCurrentLocation;
++ (NSDate *)getWarrientyLength:(NSString *)length;
+
 @end

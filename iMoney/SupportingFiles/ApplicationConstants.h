@@ -46,6 +46,7 @@ FOUNDATION_EXPORT NSString *const kTransactionLongitude;
 FOUNDATION_EXPORT NSString *const kTransactionPayee;
 FOUNDATION_EXPORT NSString *const kTransactionPaymentType;
 FOUNDATION_EXPORT NSString *const kTransactionType;
+FOUNDATION_EXPORT NSString *const kTransactionWarrienty;
 
 //Reminder
 FOUNDATION_EXPORT NSString *const kDailyReminder;
