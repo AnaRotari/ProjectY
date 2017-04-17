@@ -7,7 +7,15 @@
 //
 
 #import "BaseViewController.h"
+#import "MKDropdownMenu.h"
+#import "RecordsTableViewCell.h"
+#import "RecordsCollectionViewCell.h"
+#import "TransactionDetailViewController.h"
 
-@interface RecordsViewController : BaseViewController <UIActionSheetDelegate>
+@interface RecordsViewController : BaseViewController <UIActionSheetDelegate, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, RecordsCollectionViewCellDelegate, UIScrollViewDelegate>
+
+@property (weak, nonatomic) IBOutlet MKDropdownMenu *walletsDropDownMenu;
+@property (weak, nonatomic) IBOutlet UICollectionView *recordsSwitcherCollectionView;
+@property (weak, nonatomic) IBOutlet UITableView *recordsVisualiserTableView;
 
 @end

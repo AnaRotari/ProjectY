@@ -174,7 +174,7 @@
     
     switch (menuItem) {
         case kMenuItemPlannedPayments:
-            NSLog(@"kMenuItemPlannedPayments - not done");
+            [self goToPlannedPayments];
             break;
         case kMenuItemExports:
             NSLog(@"kMenuItemExports - not done");

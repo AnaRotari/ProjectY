@@ -161,6 +161,7 @@
 
 - (void)logoutUser {
     
+    [self.revealViewController revealToggleAnimated:YES];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSArray<NSString *> *fileNames = @[kDBiMoneySQLite, kDBiMoneySQLiteSHM, kDBiMoneySQLiteWAL];

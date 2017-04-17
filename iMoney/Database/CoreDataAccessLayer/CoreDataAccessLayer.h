@@ -13,6 +13,7 @@
 #import "Transaction+CoreDataClass.h"
 #import "ShoppingList+CoreDataClass.h"
 #import "ListItem+CoreDataClass.h"
+#import "PlannedPayments+CoreDataClass.h"
 
 @interface CoreDataAccessLayer : NSObject
 

@@ -2,13 +2,13 @@
 //  Wallet+CoreDataClass.m
 //  
 //
-//  Created by Ivan on 4/13/17.
+//  Created by Alex on 4/18/17.
 //
 //
 
 #import "Wallet+CoreDataClass.h"
+#import "PlannedPayments+CoreDataClass.h"
 #import "Transaction+CoreDataClass.h"
-
 @implementation Wallet
 
 @end

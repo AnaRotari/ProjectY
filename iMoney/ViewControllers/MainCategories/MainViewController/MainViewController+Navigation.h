@@ -13,5 +13,6 @@
 - (void)goToShoppingList;
 - (void)goToLocationViewController;
 - (void)goToWarrantiesViewController;
+- (void)goToPlannedPayments;
 
 @end

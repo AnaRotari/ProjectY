@@ -1067,6 +1067,70 @@
             </objects>
             <point key="canvasLocation" x="3724" y="232.53373313343329"/>
         </scene>
+        <!--Planned Payments View Controller-->
+        <scene sceneID="yYf-2I-Nvr">
+            <objects>
+                <viewController storyboardIdentifier="PlannedPaymentsViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jQH-KY-YGh" customClass="PlannedPaymentsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6WV-QY-H98"/>
+                        <viewControllerLayoutGuide type="bottom" id="wco-fX-SVq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X3f-aO-qfz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BWL-38-uUq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="jQH-KY-YGh" id="KdT-xj-Mac"/>
+                                    <outlet property="delegate" destination="jQH-KY-YGh" id="wVU-Qn-ZEA"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List is empty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAO-GO-wmh">
+                                <rect key="frame" x="131" y="322" width="114" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eAO-GO-wmh" firstAttribute="centerX" secondItem="BWL-38-uUq" secondAttribute="centerX" id="BWE-xQ-jsu"/>
+                            <constraint firstItem="BWL-38-uUq" firstAttribute="top" secondItem="X3f-aO-qfz" secondAttribute="top" id="Oeb-oh-vNG"/>
+                            <constraint firstItem="eAO-GO-wmh" firstAttribute="centerY" secondItem="BWL-38-uUq" secondAttribute="centerY" id="W0h-4x-bsm"/>
+                            <constraint firstAttribute="trailing" secondItem="BWL-38-uUq" secondAttribute="trailing" id="c0E-dL-CM6"/>
+                            <constraint firstItem="wco-fX-SVq" firstAttribute="top" secondItem="BWL-38-uUq" secondAttribute="bottom" id="jct-J6-gxT"/>
+                            <constraint firstItem="BWL-38-uUq" firstAttribute="leading" secondItem="X3f-aO-qfz" secondAttribute="leading" id="vVf-vB-c73"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="plannedListLabel" destination="eAO-GO-wmh" id="cqa-nu-vgh"/>
+                        <outlet property="plannedPaymentsTableView" destination="BWL-38-uUq" id="itd-cM-ThP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cj6-hp-CtD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616.79999999999995" y="-3248.7256371814096"/>
+        </scene>
+        <!--Planned Payments Creator View Controller-->
+        <scene sceneID="5hD-VI-xAj">
+            <objects>
+                <viewController storyboardIdentifier="PlannedPaymentsCreatorViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kJe-iK-bIb" customClass="PlannedPaymentsCreatorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vg9-Cv-bgK"/>
+                        <viewControllerLayoutGuide type="bottom" id="BCI-XH-P82"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZhV-EK-eKv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="doc-6z-6PX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1351" y="-3249"/>
+        </scene>
         <!--Warranties View Controller-->
         <scene sceneID="FwE-en-hIQ">
             <objects>
@@ -1088,7 +1152,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List is empty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYK-Dc-Fwa">
-                                <rect key="frame" x="131" y="321.5" width="113.5" height="24"/>
+                                <rect key="frame" x="131" y="322" width="114" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1397,20 +1461,29 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VNZ-Rg-UZi">
                                 <rect key="frame" x="0.0" y="158" width="375" height="465"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dMB-Rn-g23" id="3pJ-8s-bUd"/>
+                                    <outlet property="delegate" destination="dMB-Rn-g23" id="J1p-2a-J08"/>
+                                </connections>
                             </tableView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7W6-XM-u9z">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7W6-XM-u9z">
                                 <rect key="frame" x="0.0" y="108" width="375" height="50"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="sae-t7-oFM"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="o92-QB-aQI">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="o92-QB-aQI">
+                                    <size key="itemSize" width="0.0" height="0.0"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dMB-Rn-g23" id="bjM-x6-G58"/>
+                                    <outlet property="delegate" destination="dMB-Rn-g23" id="zUj-i3-8f2"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1431,6 +1504,8 @@
                     <navigationItem key="navigationItem" title="Records" id="cS4-HB-3QO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="recordsSwitcherCollectionView" destination="7W6-XM-u9z" id="5le-MS-ian"/>
+                        <outlet property="recordsVisualiserTableView" destination="VNZ-Rg-UZi" id="MJy-qc-unP"/>
                         <outlet property="walletsDropDownMenu" destination="hK3-oK-Nmb" id="wbD-Gj-GLT"/>
                     </connections>
                 </viewController>

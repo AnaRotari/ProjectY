@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RecordsCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxX-QG-T0I">
+                        <rect key="frame" x="320" y="18" width="27" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_L" translatesAutoresizingMaskIntoConstraints="NO" id="rBZ-fL-Aj0">
+                        <rect key="frame" x="8" y="15" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Luz-TJ-DOJ"/>
+                            <constraint firstAttribute="width" constant="20" id="zpR-6y-kbc"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_R" translatesAutoresizingMaskIntoConstraints="NO" id="HTn-tt-4g5">
+                        <rect key="frame" x="347" y="15" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="Ucy-f6-8DJ"/>
+                            <constraint firstAttribute="height" constant="20" id="oO2-X1-2rx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="April 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYA-kF-IVW">
+                        <rect key="frame" x="155" y="8" width="65" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cashflow: -MDL 8388.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OH3-2h-8vX">
+                        <rect key="frame" x="110" y="25" width="155" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g16-KA-WxZ">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="2vW-E0-AsC"/>
+                        </constraints>
+                        <connections>
+                            <action selector="previousButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="WH4-WN-Y1J"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Car-Co-rV6">
+                        <rect key="frame" x="275" y="0.0" width="100" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="PWY-qx-xZz"/>
+                        </constraints>
+                        <connections>
+                            <action selector="nextButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="QYO-Po-cDf"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wex-ZF-9uT">
+                        <rect key="frame" x="28" y="17" width="56" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="HTn-tt-4g5" secondAttribute="trailing" constant="8" id="2Ts-8Z-Inj"/>
+                <constraint firstItem="Wex-ZF-9uT" firstAttribute="centerY" secondItem="rBZ-fL-Aj0" secondAttribute="centerY" id="3gx-2I-ugE"/>
+                <constraint firstItem="HTn-tt-4g5" firstAttribute="leading" secondItem="BxX-QG-T0I" secondAttribute="trailing" id="FuV-wX-07r"/>
+                <constraint firstItem="BxX-QG-T0I" firstAttribute="centerY" secondItem="HTn-tt-4g5" secondAttribute="centerY" id="Go2-EN-nTe"/>
+                <constraint firstItem="Car-Co-rV6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HOw-g3-BSE"/>
+                <constraint firstItem="g16-KA-WxZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="IwR-IB-rLm"/>
+                <constraint firstItem="lYA-kF-IVW" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="KTF-Rz-Mas"/>
+                <constraint firstAttribute="trailing" secondItem="Car-Co-rV6" secondAttribute="trailing" id="Kpu-nR-IUN"/>
+                <constraint firstItem="rBZ-fL-Aj0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="OJW-Dj-mc5"/>
+                <constraint firstAttribute="bottom" secondItem="g16-KA-WxZ" secondAttribute="bottom" id="PPx-EV-p5r"/>
+                <constraint firstAttribute="bottom" secondItem="OH3-2h-8vX" secondAttribute="bottom" constant="8" id="TLe-sD-boL"/>
+                <constraint firstAttribute="bottom" secondItem="Car-Co-rV6" secondAttribute="bottom" id="Y8E-iP-T7Y"/>
+                <constraint firstItem="g16-KA-WxZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dSx-wX-ggl"/>
+                <constraint firstItem="OH3-2h-8vX" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="nJA-t1-nsb"/>
+                <constraint firstItem="rBZ-fL-Aj0" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="qL9-84-qnC"/>
+                <constraint firstItem="Wex-ZF-9uT" firstAttribute="leading" secondItem="rBZ-fL-Aj0" secondAttribute="trailing" id="sV4-W6-JS6"/>
+                <constraint firstItem="lYA-kF-IVW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="stp-3w-WJG"/>
+                <constraint firstItem="HTn-tt-4g5" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="znD-Th-sXu"/>
+            </constraints>
+            <connections>
+                <outlet property="balancePeriodLabel" destination="lYA-kF-IVW" id="bN6-IR-ebf"/>
+                <outlet property="cashflowLabel" destination="OH3-2h-8vX" id="3oG-p4-Uhu"/>
+            </connections>
+            <point key="canvasLocation" x="26.5" y="52"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="arrow_L" width="100" height="100"/>
+        <image name="arrow_R" width="100" height="100"/>
+    </resources>
+</document>

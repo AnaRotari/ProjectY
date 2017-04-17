@@ -10,5 +10,6 @@ pod 'BEMCheckBox'
 pod 'LGAlertView'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
+pod 'BIZPickerViewController' 
 
 end
