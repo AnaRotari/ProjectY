@@ -19,6 +19,8 @@
     NSArray<Wallet*> *wallets;
     NSMutableArray<NSArray<Transaction*>*> *transactions;
     NSArray<NSDate *> *sortedDates;
+    __weak IBOutlet UILabel *walletNameLabel;
+    __weak IBOutlet UILabel *walletAmountLabel;
 }
 
 - (void)viewDidLoad {
@@ -59,9 +61,13 @@
         [transactions addObject:transactionsForDate];
     }
     
-    self.title = wallets[index].walletName;
+    self.title = @"Export";
     
-    [tableViewOutlet reloadData];
+    walletNameLabel.text = wallets[index].walletName;
+    walletAmountLabel.text = [NSString stringWithFormat:@"%@ %.2f",wallets[index].walletCurrency,wallets[index].walletBalance.doubleValue];
+    
+    [tableViewOutlet reloadSections:[NSIndexSet indexSetWithIndex:0]
+                   withRowAnimation:UITableViewRowAnimationFade];
 }
 
 #pragma mark - navigation buttons
@@ -130,6 +136,11 @@
     TransactionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TransactionTableViewCell" forIndexPath:indexPath];
     [cell initTransactionCell:transactions[indexPath.section][indexPath.row] hidesDateLabel:true];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 60;
 }
 
 #pragma mark - create pdf

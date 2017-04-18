@@ -7,7 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "PickerViewController.h"
 
-@interface PlannedPaymentsCreatorViewController : BaseViewController
+@interface PlannedPaymentsCreatorViewController : BaseViewController <PickerViewControllerDelegate>
+
+@property (strong, nonatomic) PlannedPayments *plannedPayment;
 
 @end

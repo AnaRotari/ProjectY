@@ -10,6 +10,8 @@
 
 @interface PlannedPaymentsViewController ()
 
+@property (strong, nonatomic) NSMutableArray <PlannedPayments *> *plannedArray;
+
 @end
 
 @implementation PlannedPaymentsViewController
@@ -19,6 +21,7 @@
     [super viewDidLoad];
     [self setUpNavigationControllerButtons];
     [self prepareTableView];
+    [self reloadDataForIndex:PlannedPaymentsSortByCreationDateNewest];
 }
 
 - (void)prepareTableView {
@@ -45,28 +48,66 @@
 
 - (void)addPlannedPaymentButtonAction {
     
+    PlannedPayments *plannedPayment = [NSEntityDescription insertNewObjectForEntityForName:@"PlannedPayments"
+                                                   inManagedObjectContext:[[CoreDataAccessLayer sharedInstance] managedObjectContext]];
+    
     PlannedPaymentsCreatorViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"PlannedPaymentsCreatorViewController"];
+    controller.plannedPayment = plannedPayment;
     [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)sortButtonAction {
     
+    [self showSortActionSheet:@[@"By creation date - newest",
+                                @"By creation date - oldest",
+                                @"By name - A->Z",
+                                @"By name - Z->A",
+                                @"By amount - Ascending",
+                                @"By amount - Descending"]];
+}
+
+-(void)reloadDataForIndex:(NSInteger)index {
     
+    self.plannedArray = [CoreDataPlannedPaymentsManager getAllPlannedPayments:index];
+    self.plannedArray.count ? [self.plannedListLabel setHidden:YES] : [self.plannedListLabel setHidden:NO];
+    [self.plannedPaymentsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
+                                 withRowAnimation:UITableViewRowAnimationFade];
 }
 
 #pragma mark - UIActionSheetDelegate
 
+- (void)showSortActionSheet:(NSArray <NSString *> *)sortOptionsArray {
+    
+    UIActionSheet* actionSheet = [[UIActionSheet alloc] init];
+    actionSheet.title = @"Sorting options";
+    actionSheet.delegate = self;
+    
+    for (NSString *option in sortOptionsArray) {
+        
+        [actionSheet addButtonWithTitle:option];
+    }
+    
+    actionSheet.cancelButtonIndex = [actionSheet addButtonWithTitle:@"Cancel"];
+    [actionSheet showInView: self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex != actionSheet.cancelButtonIndex) {
+        [self reloadDataForIndex:buttonIndex];
+    }
+}
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 5;
+    return self.plannedArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     PlannedPaymentsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlannedPaymentsTableViewCell" forIndexPath:indexPath];
+    [cell initCellWithPayment:self.plannedArray[indexPath.row]];
     return cell;
 }
 
@@ -81,7 +122,55 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     PlannedPaymentsCreatorViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"PlannedPaymentsCreatorViewController"];
+    controller.plannedPayment = self.plannedArray[indexPath.row];
     [self.navigationController pushViewController:controller animated:YES];
 }
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+//        Transaction *deletedTransaction = self.transactionsArray[indexPath.row];
+//        Wallet *transactionWallet = deletedTransaction.wallet;
+//        
+//        switch (deletedTransaction.transactionType) {
+//                
+//            case kTransactionTypeIncome:
+//                transactionWallet.walletBalance = [transactionWallet.walletBalance decimalNumberBySubtracting:deletedTransaction.transactionAmount];
+//                break;
+//            case kTransactionTypeExpense:
+//                transactionWallet.walletBalance = [transactionWallet.walletBalance decimalNumberByAdding:deletedTransaction.transactionAmount];
+//                break;
+//                
+//            default:
+//                break;
+//        }
+        
+        NSManagedObjectContext *context = [[CoreDataAccessLayer sharedInstance] managedObjectContext];
+        NSError *error = nil;
+        
+        [context deleteObject:self.plannedArray[indexPath.row]];
+        
+        if (![context save:&error]) {
+            NSLog(@"Can't delete: %@",[error localizedDescription]);
+        }
+        
+        [self.plannedArray removeObjectAtIndex:indexPath.row];
+        self.plannedArray.count ? [self.plannedListLabel setHidden:YES] : [self.plannedListLabel setHidden:NO];
+        [self.plannedPaymentsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
+                                     withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
 
 @end

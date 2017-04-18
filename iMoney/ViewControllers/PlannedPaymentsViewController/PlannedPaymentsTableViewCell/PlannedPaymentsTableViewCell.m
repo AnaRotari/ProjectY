@@ -21,4 +21,9 @@
     // Configure the view for the selected state
 }
 
+- (void)initCellWithPayment:(PlannedPayments *)payment {
+    
+    
+}
+
 @end

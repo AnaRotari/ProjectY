@@ -15,6 +15,7 @@
 #import "CoreDataInsertManager.h"
 #import "CoreDataHelpManager.h"
 #import "CoreDataShoppingListManager.h"
+#import "CoreDataPlannedPaymentsManager.h"
 #import "SWRevealViewController.h"
 #import "iMoneyUtils.h"
 #import "UIColor+CoreData.h"

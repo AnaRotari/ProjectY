@@ -34,6 +34,7 @@
 		FA1783831EA53C7900B1D36E /* RecordsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1783811EA53C7900B1D36E /* RecordsCollectionViewCell.xib */; };
 		FA1783871EA53CA700B1D36E /* RecordsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1783851EA53CA700B1D36E /* RecordsTableViewCell.m */; };
 		FA1783881EA53CA700B1D36E /* RecordsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1783861EA53CA700B1D36E /* RecordsTableViewCell.xib */; };
+		FA3D57721EA6A40D00B01454 /* CoreDataPlannedPaymentsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3D57711EA6A40D00B01454 /* CoreDataPlannedPaymentsManager.m */; };
 		FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */; };
 		FA67F1181EA5616F00B59FA1 /* PlannedPaymentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA67F1171EA5616F00B59FA1 /* PlannedPaymentsViewController.m */; };
 		FA67F11D1EA5638700B59FA1 /* PlannedPaymentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA67F11B1EA5638700B59FA1 /* PlannedPaymentsTableViewCell.m */; };
@@ -51,6 +52,11 @@
 		FA9693231E872A6A00F86873 /* ColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9693221E872A6A00F86873 /* ColorPickerViewController.m */; };
 		FA9693271E87324100F86873 /* UIColor+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9693261E87324100F86873 /* UIColor+CoreData.m */; };
 		FA9CDBD71E9031A600BA2992 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9CDBD61E9031A600BA2992 /* MapKit.framework */; };
+		FAA258431EA6C05000950CA0 /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA2583B1EA6C05000950CA0 /* PickerViewController.m */; };
+		FAA258441EA6C05000950CA0 /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA2583C1EA6C05000950CA0 /* PickerViewController.xib */; };
+		FAA258451EA6C05000950CA0 /* TransparentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA2583E1EA6C05000950CA0 /* TransparentViewController.m */; };
+		FAA258461EA6C05000950CA0 /* UILabel+UIDatePickerLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA258401EA6C05000950CA0 /* UILabel+UIDatePickerLabels.m */; };
+		FAA258471EA6C05000950CA0 /* UIViewController+PresentViewControllerOverCurrentContext.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA258421EA6C05000950CA0 /* UIViewController+PresentViewControllerOverCurrentContext.m */; };
 		FAA838631E86E1FA005BFADF /* AddEditWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA838621E86E1FA005BFADF /* AddEditWalletViewController.m */; };
 		FAA838721E870BC9005BFADF /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA8386A1E870BC9005BFADF /* TPKeyboardAvoidingCollectionView.m */; };
 		FAA838731E870BC9005BFADF /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA8386D1E870BC9005BFADF /* TPKeyboardAvoidingScrollView.m */; };
@@ -156,6 +162,8 @@
 		FA1783841EA53CA700B1D36E /* RecordsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordsTableViewCell.h; sourceTree = "<group>"; };
 		FA1783851EA53CA700B1D36E /* RecordsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordsTableViewCell.m; sourceTree = "<group>"; };
 		FA1783861EA53CA700B1D36E /* RecordsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordsTableViewCell.xib; sourceTree = "<group>"; };
+		FA3D57701EA6A40D00B01454 /* CoreDataPlannedPaymentsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataPlannedPaymentsManager.h; sourceTree = "<group>"; };
+		FA3D57711EA6A40D00B01454 /* CoreDataPlannedPaymentsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataPlannedPaymentsManager.m; sourceTree = "<group>"; };
 		FA5540171E7E995900A4C773 /* DatabaseSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseSyncManager.h; sourceTree = "<group>"; };
 		FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseSyncManager.m; sourceTree = "<group>"; };
 		FA67F1161EA5616F00B59FA1 /* PlannedPaymentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlannedPaymentsViewController.h; sourceTree = "<group>"; };
@@ -186,6 +194,15 @@
 		FA9693251E87324100F86873 /* UIColor+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CoreData.h"; sourceTree = "<group>"; };
 		FA9693261E87324100F86873 /* UIColor+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CoreData.m"; sourceTree = "<group>"; };
 		FA9CDBD61E9031A600BA2992 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FAA2583A1EA6C05000950CA0 /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
+		FAA2583B1EA6C05000950CA0 /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
+		FAA2583C1EA6C05000950CA0 /* PickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
+		FAA2583D1EA6C05000950CA0 /* TransparentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransparentViewController.h; sourceTree = "<group>"; };
+		FAA2583E1EA6C05000950CA0 /* TransparentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransparentViewController.m; sourceTree = "<group>"; };
+		FAA2583F1EA6C05000950CA0 /* UILabel+UIDatePickerLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+UIDatePickerLabels.h"; sourceTree = "<group>"; };
+		FAA258401EA6C05000950CA0 /* UILabel+UIDatePickerLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+UIDatePickerLabels.m"; sourceTree = "<group>"; };
+		FAA258411EA6C05000950CA0 /* UIViewController+PresentViewControllerOverCurrentContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PresentViewControllerOverCurrentContext.h"; sourceTree = "<group>"; };
+		FAA258421EA6C05000950CA0 /* UIViewController+PresentViewControllerOverCurrentContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PresentViewControllerOverCurrentContext.m"; sourceTree = "<group>"; };
 		FAA838611E86E1FA005BFADF /* AddEditWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEditWalletViewController.h; sourceTree = "<group>"; };
 		FAA838621E86E1FA005BFADF /* AddEditWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEditWalletViewController.m; sourceTree = "<group>"; };
 		FAA838671E86E34A005BFADF /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
@@ -403,6 +420,8 @@
 				FA0842EF1E9AD305007F5CED /* CoreDataHelpManager.m */,
 				FAAE7AFA1E9D69C50057D648 /* CoreDataShoppingListManager.h */,
 				FAAE7AFB1E9D69C50057D648 /* CoreDataShoppingListManager.m */,
+				FA3D57701EA6A40D00B01454 /* CoreDataPlannedPaymentsManager.h */,
+				FA3D57711EA6A40D00B01454 /* CoreDataPlannedPaymentsManager.m */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -625,6 +644,22 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		FAA258391EA6C05000950CA0 /* BIZPickerViewControllerClasses */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2583A1EA6C05000950CA0 /* PickerViewController.h */,
+				FAA2583B1EA6C05000950CA0 /* PickerViewController.m */,
+				FAA2583C1EA6C05000950CA0 /* PickerViewController.xib */,
+				FAA2583D1EA6C05000950CA0 /* TransparentViewController.h */,
+				FAA2583E1EA6C05000950CA0 /* TransparentViewController.m */,
+				FAA2583F1EA6C05000950CA0 /* UILabel+UIDatePickerLabels.h */,
+				FAA258401EA6C05000950CA0 /* UILabel+UIDatePickerLabels.m */,
+				FAA258411EA6C05000950CA0 /* UIViewController+PresentViewControllerOverCurrentContext.h */,
+				FAA258421EA6C05000950CA0 /* UIViewController+PresentViewControllerOverCurrentContext.m */,
+			);
+			path = BIZPickerViewControllerClasses;
+			sourceTree = "<group>";
+		};
 		FAA838601E86E1ED005BFADF /* AddEditWalletViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -726,6 +761,7 @@
 		FAE1017F1E7DD182003525DF /* ThirdPartyLibs */ = {
 			isa = PBXGroup;
 			children = (
+				FAA258391EA6C05000950CA0 /* BIZPickerViewControllerClasses */,
 				FA6BC0911EA2B9FC00ECBA5E /* MRAlertView */,
 				FADB2E941E88381100319EB6 /* HWViewPager */,
 				FAA838681E870BC9005BFADF /* TPKeyboardAvoiding */,
@@ -1034,6 +1070,7 @@
 				FAAC9F921E7DE79B0077B160 /* MenuTableViewCell.xib in Resources */,
 				8402D1721E61F6C600968EA2 /* Main.storyboard in Resources */,
 				FA1783831EA53C7900B1D36E /* RecordsCollectionViewCell.xib in Resources */,
+				FAA258441EA6C05000950CA0 /* PickerViewController.xib in Resources */,
 				FA6BC08A1EA267AE00ECBA5E /* WarrantiesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1143,17 +1180,20 @@
 				FAE632A31E9855F2002A0455 /* NSArray+CoreData.m in Sources */,
 				FAD99BB11EA56D7E005351DD /* PlannedPayments+CoreDataProperties.m in Sources */,
 				FA6BC0961EA2B9FC00ECBA5E /* MRAlertButton.m in Sources */,
+				FAA258451EA6C05000950CA0 /* TransparentViewController.m in Sources */,
 				FAE6327E1E982A88002A0455 /* MainViewControllerCollectionView.m in Sources */,
 				FAE6327F1E982A88002A0455 /* MainViewControllerTablleView.m in Sources */,
 				FAD99BB01EA56D7E005351DD /* PlannedPayments+CoreDataClass.m in Sources */,
 				FAE101771E7DC8AF003525DF /* MenuViewController.m in Sources */,
 				84D92FC91E61F9D000F823DD /* CoreDataAccessLayer.m in Sources */,
 				FAAC9F911E7DE79B0077B160 /* MenuTableViewCell.m in Sources */,
+				FA3D57721EA6A40D00B01454 /* CoreDataPlannedPaymentsManager.m in Sources */,
 				FAAE7B0D1E9D88AD0057D648 /* ShoppingListTableViewCell.m in Sources */,
 				FACCD6261E92CFF200C8E698 /* TransactionViewController+DataSource.m in Sources */,
 				FAAE7AFF1E9D7C120057D648 /* MainViewController+Navigation.m in Sources */,
 				FAD99BB31EA56D7E005351DD /* Wallet+CoreDataProperties.m in Sources */,
 				FAE101831E7DD182003525DF /* SWRevealViewController.m in Sources */,
+				FAA258431EA6C05000950CA0 /* PickerViewController.m in Sources */,
 				FA9693231E872A6A00F86873 /* ColorPickerViewController.m in Sources */,
 				FAAE7B171E9D8DAC0057D648 /* ListItemTableViewCell.m in Sources */,
 				FAFF39FD1E88415400524084 /* TransactionViewController.m in Sources */,
@@ -1161,8 +1201,10 @@
 				FA0330961E7D7F9F00BB8DBA /* iMoneyUtils.m in Sources */,
 				FA1783821EA53C7900B1D36E /* RecordsCollectionViewCell.m in Sources */,
 				FAAE7AFC1E9D69C50057D648 /* CoreDataShoppingListManager.m in Sources */,
+				FAA258471EA6C05000950CA0 /* UIViewController+PresentViewControllerOverCurrentContext.m in Sources */,
 				FA1783871EA53CA700B1D36E /* RecordsTableViewCell.m in Sources */,
 				FA6BC0841EA259BD00ECBA5E /* WarrantiesViewController.m in Sources */,
+				FAA258461EA6C05000950CA0 /* UILabel+UIDatePickerLabels.m in Sources */,
 				FA67F11D1EA5638700B59FA1 /* PlannedPaymentsTableViewCell.m in Sources */,
 				FAECCFD31E96E267001D4B8F /* WalletTableViewCell.m in Sources */,
 				84D92FC01E61F88D00F823DD /* AppDelegate.m in Sources */,

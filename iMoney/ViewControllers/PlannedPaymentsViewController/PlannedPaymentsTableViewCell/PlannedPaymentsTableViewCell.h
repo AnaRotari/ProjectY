@@ -10,4 +10,6 @@
 
 @interface PlannedPaymentsTableViewCell : UITableViewCell
 
+- (void)initCellWithPayment:(PlannedPayments *)payment;
+
 @end

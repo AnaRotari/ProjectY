@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JDF-WB-fQC">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JDF-WB-fQC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -1082,40 +1082,50 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YNV-6e-Hu1">
                                 <rect key="frame" x="67" y="269" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4aC-4y-kgv">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="Lu7-SL-iui">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKa-Ri-dNQ">
-                                            <rect key="frame" x="8" y="129" width="152" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ MDL 3500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uKa-Ri-dNQ">
+                                            <rect key="frame" x="76" y="94" width="291" height="48"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPi-pl-qCk">
-                                            <rect key="frame" x="215" y="129" width="152" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbF-VD-wed">
+                                            <rect key="frame" x="76" y="8" width="291" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="AeS-Fd-980"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Kmc-7q-nmM">
-                                            <rect key="frame" x="8" y="0.0" width="60" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Kmc-7q-nmM">
+                                            <rect key="frame" x="8" y="45" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="JaD-zD-Ett"/>
+                                                <constraint firstAttribute="height" constant="60" id="Oix-75-h7E"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9Q-ps-uIt">
-                                            <rect key="frame" x="215" y="8" width="152" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="YbF-VD-wed" firstAttribute="top" secondItem="Lu7-SL-iui" secondAttribute="top" constant="8" id="0yO-L7-4Wo"/>
+                                        <constraint firstItem="uKa-Ri-dNQ" firstAttribute="leading" secondItem="Kmc-7q-nmM" secondAttribute="trailing" constant="8" id="2un-mo-iGM"/>
+                                        <constraint firstAttribute="trailing" secondItem="uKa-Ri-dNQ" secondAttribute="trailing" constant="8" id="55J-le-Co1"/>
+                                        <constraint firstItem="Kmc-7q-nmM" firstAttribute="centerY" secondItem="Lu7-SL-iui" secondAttribute="centerY" id="568-0T-UBk"/>
+                                        <constraint firstItem="YbF-VD-wed" firstAttribute="leading" secondItem="Kmc-7q-nmM" secondAttribute="trailing" constant="8" id="58B-6c-Nzh"/>
+                                        <constraint firstItem="Kmc-7q-nmM" firstAttribute="leading" secondItem="Lu7-SL-iui" secondAttribute="leading" constant="8" id="LFR-Rp-TNi"/>
+                                        <constraint firstAttribute="trailing" secondItem="YbF-VD-wed" secondAttribute="trailing" constant="8" id="WJe-3m-Jno"/>
+                                        <constraint firstAttribute="bottom" secondItem="uKa-Ri-dNQ" secondAttribute="bottom" constant="8" id="m1P-vb-HO4"/>
+                                    </constraints>
                                 </view>
                                 <connections>
                                     <outlet property="dataSource" destination="NLi-cr-ZmV" id="P0f-xj-uZp"/>
@@ -1123,7 +1133,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0Ec-dK-6mo" firstAttribute="top" secondItem="4aC-4y-kgv" secondAttribute="bottom" id="bvv-os-CcB"/>
                             <constraint firstItem="4aC-4y-kgv" firstAttribute="top" secondItem="0zx-kk-p4R" secondAttribute="bottom" id="nZ9-EC-nyB"/>
@@ -1131,8 +1141,11 @@
                             <constraint firstItem="4aC-4y-kgv" firstAttribute="leading" secondItem="vQZ-au-x5C" secondAttribute="leading" id="us5-V2-xct"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="tableViewOutlet" destination="4aC-4y-kgv" id="zQn-ML-Aea"/>
+                        <outlet property="walletAmountLabel" destination="uKa-Ri-dNQ" id="Iul-JI-Ao3"/>
+                        <outlet property="walletNameLabel" destination="YbF-VD-wed" id="OGh-vT-gAD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuO-xm-HfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1688,7 +1701,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PgU-dR-132" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Budgets" image="ic_budgets" id="Mwq-Mf-4AR"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ybc-fc-iGl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ybc-fc-iGl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

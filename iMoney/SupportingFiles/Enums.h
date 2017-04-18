@@ -95,4 +95,14 @@ typedef NS_ENUM(NSInteger, SortType){
     TransactionTypeSort
 };
 
+typedef NS_ENUM(NSInteger, PlannedPaymentsSort)
+{
+    PlannedPaymentsSortByCreationDateNewest = 0,
+    PlannedPaymentsSortByCreationDateOldest,
+    PlannedPaymentsSortByNameAZ,
+    PlannedPaymentsSortByNameZA,
+    PlannedPaymentsSortByAmountAscending,
+    PlannedPaymentsSortByAmountDescending
+};
+
 #endif /* Enums_h */
