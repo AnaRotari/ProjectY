@@ -14,5 +14,6 @@
 - (void)goToLocationViewController;
 - (void)goToWarrantiesViewController;
 - (void)goToPlannedPayments;
+- (void)goToExportsViewController;
 
 @end

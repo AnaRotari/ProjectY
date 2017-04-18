@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C605E001EA5FBC50052939E /* ExportsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C605DFF1EA5FBC50052939E /* ExportsViewController.m */; };
 		2C608DBA1E9E789900CEF658 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C608DB91E9E789900CEF658 /* CoreLocation.framework */; };
 		2C6201091E9F857800F605D8 /* ListItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6200FA1E9F857800F605D8 /* ListItem+CoreDataClass.m */; };
 		2C62010A1E9F857800F605D8 /* ListItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6200FC1E9F857800F605D8 /* ListItem+CoreDataProperties.m */; };
@@ -108,6 +109,8 @@
 /* Begin PBXFileReference section */
 		11C586DD88F1E8E3AB5C9D4B /* libPods-iMoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iMoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		154A945D88A862DD47CAD59F /* Pods-iMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMoney/Pods-iMoney.debug.xcconfig"; sourceTree = "<group>"; };
+		2C605DFE1EA5FBC50052939E /* ExportsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportsViewController.h; sourceTree = "<group>"; };
+		2C605DFF1EA5FBC50052939E /* ExportsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportsViewController.m; sourceTree = "<group>"; };
 		2C608DB91E9E789900CEF658 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2C6200F91E9F857800F605D8 /* ListItem+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ListItem+CoreDataClass.h"; sourceTree = "<group>"; };
 		2C6200FA1E9F857800F605D8 /* ListItem+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ListItem+CoreDataClass.m"; sourceTree = "<group>"; };
@@ -297,6 +300,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C605DFD1EA5FB9B0052939E /* ExportsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C605DFE1EA5FBC50052939E /* ExportsViewController.h */,
+				2C605DFF1EA5FBC50052939E /* ExportsViewController.m */,
+			);
+			path = ExportsViewController;
+			sourceTree = "<group>";
+		};
 		4E8A75AEE0F221F971457C3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,6 +478,7 @@
 				FA0CC0041E9EA0CB00D27444 /* LocationViewController */,
 				FA6BC0811EA259AE00ECBA5E /* WarrantiesViewController */,
 				FA67F1151EA5615A00B59FA1 /* PlannedPaymentsViewController */,
+				2C605DFD1EA5FB9B0052939E /* ExportsViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1080,6 +1093,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C605E001EA5FBC50052939E /* ExportsViewController.m in Sources */,
 				2C6201091E9F857800F605D8 /* ListItem+CoreDataClass.m in Sources */,
 				FAAE7B121E9D8CA80057D648 /* ShoppingListContentViewController.m in Sources */,
 				FAECCFCE1E96E232001D4B8F /* ReorderWalletsViewController.m in Sources */,

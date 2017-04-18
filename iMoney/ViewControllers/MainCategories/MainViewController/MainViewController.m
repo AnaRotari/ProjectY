@@ -177,7 +177,7 @@
             [self goToPlannedPayments];
             break;
         case kMenuItemExports:
-            NSLog(@"kMenuItemExports - not done");
+            [self goToExportsViewController];
             break;
         case kMenuItemDebs:
             NSLog(@"kMenuItemDebs - not done");
