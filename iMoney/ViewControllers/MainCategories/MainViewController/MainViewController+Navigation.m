@@ -11,6 +11,7 @@
 #import "LocationViewController.h"
 #import "WarrantiesViewController.h"
 #import "PlannedPaymentsViewController.h"
+#import "ExportsViewController.h"
 
 @implementation MainViewController (Navigation)
 
@@ -50,6 +51,19 @@
     if ([CoreDataRequestManager getAllWallets].count > 0)
     {
         PlannedPaymentsViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"PlannedPaymentsViewController"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else
+    {
+        [iMoneyUtils showAlertView:@"Alert" withMessage:@"You should create a wallet first !"];
+    }
+}
+
+- (void)goToExportsViewController {
+    
+    if ([CoreDataRequestManager getAllWallets].count > 0)
+    {
+        ExportsViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ExportsViewController"];
         [self.navigationController pushViewController:controller animated:YES];
     }
     else

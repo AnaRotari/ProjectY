@@ -32,7 +32,7 @@ static NSString *const kGoogleApiKey = @"AIzaSyBsrWIkSGvj-8ep8pn44POP3ztKTxPAwjA
     [[DatabaseSyncManager sharedInstance] startSyncronize];
     [iMoneyUtils setupAppearance];
     [self checkFirstRun];
-    
+//    [self generateFuckingRecords];
 //    [[[CoreDataAccessLayer sharedInstance] managedObjectContext] performBlockAndWait:^{
 //       [[CoreDataAccessLayer sharedInstance] resetDatabase];
 //    }];
@@ -93,6 +93,38 @@ static NSString *const kGoogleApiKey = @"AIzaSyBsrWIkSGvj-8ep8pn44POP3ztKTxPAwjA
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
+}
+
+- (void)generateFuckingRecords {
+    
+
+    NSMutableDictionary *finalTransactionsDetails = @{kTransactionAmount      : @"100",
+                                               kTransactionAttachemts  : @[],
+                                               kTransactionCategory    : @(1),
+                                               kTransactionDescription : @"TEST",
+                                               kTransactionPayee       : @"TEST",
+                                               kTransactionPaymentType : @(1),
+                                               kTransactionType        : @(1),
+                                               kTransactionLatitude    : @(47.011686),
+                                               kTransactionLongitude   : @(47.011686)}.mutableCopy;
+
+    NSMutableArray *datesArray = [NSMutableArray array];
+    NSDate *date = [iMoneyUtils getTodayFormatedDate];
+    
+    for (int i = 0; i <100; i++) {
+        
+        date = [[iMoneyUtils getTodayFormatedDate] dateByAddingTimeInterval: -i * 24 * 60 * 60];
+        [datesArray addObject:date];
+        
+    }
+    
+    Wallet *wallet = [[CoreDataRequestManager getAllWallets] lastObject];
+    
+    for (int i = 0; i <100; i++) {
+        [finalTransactionsDetails setObject:datesArray[i] forKey:kTransactionDate];
+        [CoreDataInsertManager createTransaction:finalTransactionsDetails
+                                        toWallet:wallet];
+    }
 }
 
 @end
