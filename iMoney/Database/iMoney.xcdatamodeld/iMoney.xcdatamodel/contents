@@ -13,6 +13,7 @@
         <attribute name="plannedDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="plannedFrequency" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="plannedName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="plannedSort" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="plannedType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="wallet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Wallet" inverseName="plannedPayment" inverseEntity="Wallet" syncable="YES"/>
     </entity>
@@ -47,9 +48,9 @@
     </entity>
     <elements>
         <element name="ListItem" positionX="862" positionY="1697" width="128" height="105"/>
+        <element name="PlannedPayments" positionX="421" positionY="1467" width="128" height="178"/>
         <element name="ShoppingList" positionX="646" positionY="1727" width="128" height="75"/>
         <element name="Transaction" positionX="862" positionY="1449" width="128" height="225"/>
         <element name="Wallet" positionX="648" positionY="1467" width="128" height="178"/>
-        <element name="PlannedPayments" positionX="421" positionY="1467" width="128" height="163"/>
     </elements>
 </model>

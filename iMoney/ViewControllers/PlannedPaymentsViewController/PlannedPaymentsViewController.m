@@ -21,6 +21,11 @@
     [super viewDidLoad];
     [self setUpNavigationControllerButtons];
     [self prepareTableView];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
     [self reloadDataForIndex:PlannedPaymentsSortByCreationDateNewest];
 }
 
@@ -37,11 +42,15 @@
                                                                                         target:self
                                                                                         action:@selector(addPlannedPaymentButtonAction)];
     
+    UIBarButtonItem *editPaymentsButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+                                                                                        target:self
+                                                                                        action:@selector(editPlannedPaymentsButtonAction)];
+    
     UIBarButtonItem *sortButton = [iMoneyUtils getNavigationButton:@"ic_sort"
                                                             target:self
                                                        andSelector:@selector(sortButtonAction)];
     
-    self.navigationItem.rightBarButtonItems = @[addWarrientyButton, sortButton];
+    self.navigationItem.rightBarButtonItems = @[addWarrientyButton, sortButton, editPaymentsButton];
 }
 
 #pragma mark - Button actions
@@ -64,6 +73,11 @@
                                 @"By name - Z->A",
                                 @"By amount - Ascending",
                                 @"By amount - Descending"]];
+}
+
+- (void)editPlannedPaymentsButtonAction {
+    
+    self.plannedPaymentsTableView.isEditing ? [self.plannedPaymentsTableView setEditing:NO animated:YES] : [self.plannedPaymentsTableView setEditing:YES animated:YES];
 }
 
 -(void)reloadDataForIndex:(NSInteger)index {
@@ -126,35 +140,55 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
-- (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     return UITableViewCellEditingStyleDelete;
 }
-
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     
     return YES;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    
+    PlannedPayments *plannedPayment = self.plannedArray[sourceIndexPath.row];
+    
+    [self.plannedArray removeObjectAtIndex:sourceIndexPath.row];
+    [self.plannedArray insertObject:plannedPayment atIndex:destinationIndexPath.row];
+    
+    int i = 1;
+    for (PlannedPayments *item in self.plannedArray) {
+        item.plannedSort = i++;
+    }
+    
+    [[CoreDataAccessLayer sharedInstance] saveContext];
+}
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
-//        Transaction *deletedTransaction = self.transactionsArray[indexPath.row];
-//        Wallet *transactionWallet = deletedTransaction.wallet;
-//        
-//        switch (deletedTransaction.transactionType) {
-//                
-//            case kTransactionTypeIncome:
-//                transactionWallet.walletBalance = [transactionWallet.walletBalance decimalNumberBySubtracting:deletedTransaction.transactionAmount];
-//                break;
-//            case kTransactionTypeExpense:
-//                transactionWallet.walletBalance = [transactionWallet.walletBalance decimalNumberByAdding:deletedTransaction.transactionAmount];
-//                break;
-//                
-//            default:
-//                break;
-//        }
+        //        Transaction *deletedTransaction = self.transactionsArray[indexPath.row];
+        //        Wallet *transactionWallet = deletedTransaction.wallet;
+        //
+        //        switch (deletedTransaction.transactionType) {
+        //
+        //            case kTransactionTypeIncome:
+        //                transactionWallet.walletBalance = [transactionWallet.walletBalance decimalNumberBySubtracting:deletedTransaction.transactionAmount];
+        //                break;
+        //            case kTransactionTypeExpense:
+        //                transactionWallet.walletBalance = [transactionWallet.walletBalance decimalNumberByAdding:deletedTransaction.transactionAmount];
+        //                break;
+        //
+        //            default:
+        //                break;
+        //        }
         
         NSManagedObjectContext *context = [[CoreDataAccessLayer sharedInstance] managedObjectContext];
         NSError *error = nil;
@@ -171,6 +205,7 @@
                                      withRowAnimation:UITableViewRowAnimationFade];
     }
 }
+
 
 
 @end

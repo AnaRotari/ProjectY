@@ -105,4 +105,12 @@ typedef NS_ENUM(NSInteger, PlannedPaymentsSort)
     PlannedPaymentsSortByAmountDescending
 };
 
+typedef NS_ENUM(NSInteger, PlannedInterval)
+{
+    PlannedIntervalRepeatDaily = 0,
+    PlannedIntervalRepeatWeekly,
+    PlannedIntervalRepeatMonthly,
+    PlannedIntervalRepeatYearly
+};
+
 #endif /* Enums_h */

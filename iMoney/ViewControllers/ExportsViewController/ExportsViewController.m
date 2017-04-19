@@ -66,8 +66,7 @@
     walletNameLabel.text = wallets[index].walletName;
     walletAmountLabel.text = [NSString stringWithFormat:@"%@ %.2f",wallets[index].walletCurrency,wallets[index].walletBalance.doubleValue];
     
-    [tableViewOutlet reloadSections:[NSIndexSet indexSetWithIndex:0]
-                   withRowAnimation:UITableViewRowAnimationFade];
+    [tableViewOutlet reloadData];
 }
 
 #pragma mark - navigation buttons

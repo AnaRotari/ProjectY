@@ -2,7 +2,7 @@
 //  PlannedPayments+CoreDataProperties.h
 //  
 //
-//  Created by Alex on 4/18/17.
+//  Created by Alex on 4/20/17.
 //
 //
 
@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) int16_t plannedFrequency;
 @property (nullable, nonatomic, copy) NSString *plannedName;
 @property (nonatomic) int16_t plannedType;
+@property (nonatomic) int16_t plannedSort;
 @property (nullable, nonatomic, retain) Wallet *wallet;
 
 @end

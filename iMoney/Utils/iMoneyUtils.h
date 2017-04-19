@@ -20,6 +20,7 @@
 
 + (NSString *)getCategoryName:(TransactionCategory)category;
 + (NSString *)getTransactionTypeName:(PaymentType)type;
++ (NSString *)getPlannedFrequencyName:(PlannedInterval)interval;
 
 + (NSDictionary *)getUserCurrentLocation;
 + (NSDate *)getWarrientyLength:(NSString *)length;

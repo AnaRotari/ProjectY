@@ -178,6 +178,27 @@
     }
 }
 
++ (NSString *)getPlannedFrequencyName:(PlannedInterval)interval {
+    
+    switch (interval) {
+        case PlannedIntervalRepeatDaily:
+            return @"Repeat Daily";
+            break;
+        case PlannedIntervalRepeatWeekly:
+            return @"Repeat Weekly";
+            break;
+        case PlannedIntervalRepeatMonthly:
+            return @"Repeat Monthly";
+            break;
+        case PlannedIntervalRepeatYearly:
+            return @"Repeat Yearly";
+            break;
+            
+        default:
+            break;
+    }
+}
+
 + (NSDictionary *)getUserCurrentLocation {
     
     CLLocationManager *locationManager;

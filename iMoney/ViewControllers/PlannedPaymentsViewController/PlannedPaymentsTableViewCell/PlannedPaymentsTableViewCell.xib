@@ -70,6 +70,14 @@
                     <constraint firstItem="wpE-DM-ofM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="kh7-Fs-Ucg"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="plannedPaymentAmountLabel" destination="bjj-PH-QYf" id="D9l-8j-uXj"/>
+                <outlet property="plannedPaymentCategoryLabel" destination="vmB-If-KEI" id="65E-mi-aeQ"/>
+                <outlet property="plannedPaymentDateLabel" destination="Eyn-Al-EbV" id="YFO-ds-mhq"/>
+                <outlet property="plannedPaymentDescriptionLabel" destination="VpF-PY-nDp" id="PGo-Mc-T8h"/>
+                <outlet property="plannedPaymentFrequencyLabel" destination="H6I-km-H11" id="y21-lg-Sz3"/>
+                <outlet property="plannedPaymentNameLabel" destination="wpE-DM-ofM" id="FUH-Fi-hGf"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>
