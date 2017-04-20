@@ -1677,7 +1677,7 @@
                     <tabBarItem key="tabBarItem" title="Dashboard" image="ic_dashboard" id="bpi-MI-vgU"/>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C4v-b8-Zab">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="C4v-b8-Zab">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1707,12 +1707,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWP-Nc-iSr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-322" y="3250"/>
+            <point key="canvasLocation" x="-209" y="3250"/>
         </scene>
-        <!--Reports-->
+        <!--Data Source-->
         <scene sceneID="dsP-FR-tdg">
             <objects>
-                <viewController id="oqv-YN-VKp" customClass="ReportsViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="oqv-YN-VKp" customClass="ReportsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nuI-lK-H6w"/>
                         <viewControllerLayoutGuide type="bottom" id="GIZ-xJ-qU1"/>
@@ -1720,13 +1720,70 @@
                     <view key="view" contentMode="scaleToFill" id="6q6-MC-0b7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xX6-jW-vWK">
+                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                                <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="WUF-3G-q11">
+                                    <size key="itemSize" width="375" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="oqv-YN-VKp" id="LFx-OB-FYg"/>
+                                    <outlet property="delegate" destination="oqv-YN-VKp" id="bOU-an-QdQ"/>
+                                </connections>
+                            </collectionView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4V-g7-akX">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="JOx-VL-tg7"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" id="wRd-FL-nu9">
+                                        <view key="customView" contentMode="scaleToFill" id="tjO-sL-Zvd" customClass="MKDropdownMenu">
+                                            <rect key="frame" x="16" y="6" width="342" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outlet property="dataSource" destination="oqv-YN-VKp" id="aVh-Te-TJS"/>
+                                                <outlet property="delegate" destination="oqv-YN-VKp" id="cCZ-qm-HSd"/>
+                                            </connections>
+                                        </view>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GIZ-xJ-qU1" firstAttribute="top" secondItem="xX6-jW-vWK" secondAttribute="bottom" id="JAg-KZ-hDc"/>
+                            <constraint firstItem="a4V-g7-akX" firstAttribute="top" secondItem="nuI-lK-H6w" secondAttribute="bottom" id="QgF-iP-T8z"/>
+                            <constraint firstAttribute="trailing" secondItem="xX6-jW-vWK" secondAttribute="trailing" id="Szl-7R-9SO"/>
+                            <constraint firstItem="xX6-jW-vWK" firstAttribute="leading" secondItem="6q6-MC-0b7" secondAttribute="leading" id="XkS-cW-mJw"/>
+                            <constraint firstItem="xX6-jW-vWK" firstAttribute="top" secondItem="a4V-g7-akX" secondAttribute="bottom" id="lZl-xd-0z0"/>
+                            <constraint firstAttribute="trailing" secondItem="a4V-g7-akX" secondAttribute="trailing" id="qb5-YQ-L8l"/>
+                            <constraint firstItem="a4V-g7-akX" firstAttribute="leading" secondItem="6q6-MC-0b7" secondAttribute="leading" id="smY-cT-hdS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Reports" id="Yd3-xu-Hjk"/>
+                    <connections>
+                        <outlet property="reportsCollectionView" destination="xX6-jW-vWK" id="gpV-cK-zdv"/>
+                        <outlet property="walletsDropDownMenu" destination="tjO-sL-Zvd" id="bLu-Or-lmW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u6D-bg-hBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-322" y="2490"/>
+            <point key="canvasLocation" x="-210.40000000000001" y="2489.5052473763121"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="M3n-Yq-Sgr">
@@ -1740,7 +1797,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IU-dy-7An">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IU-dy-7An">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="6op-vB-Hfb"/>
@@ -1748,19 +1805,20 @@
                                 <items>
                                     <barButtonItem style="plain" id="s17-YA-mSb">
                                         <view key="customView" contentMode="scaleToFill" id="hK3-oK-Nmb" customClass="MKDropdownMenu">
-                                            <rect key="frame" x="16" y="6" width="306" height="33"/>
+                                            <rect key="frame" x="16" y="6" width="343" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <outlet property="dataSource" destination="dMB-Rn-g23" id="eBA-or-9zl"/>
-                                                <outlet property="delegate" destination="dMB-Rn-g23" id="XGf-mN-uYp"/>
+                                                <outlet property="dataSource" destination="dMB-Rn-g23" id="Avs-Tk-pxL"/>
+                                                <outlet property="delegate" destination="dMB-Rn-g23" id="mEZ-E5-FsY"/>
                                             </connections>
                                         </view>
-                                    </barButtonItem>
-                                    <barButtonItem image="ic_sort" style="plain" id="slg-w5-IO6">
-                                        <connections>
-                                            <action selector="sortButtonActionByDate:" destination="dMB-Rn-g23" id="9fL-aW-gXJ"/>
-                                        </connections>
                                     </barButtonItem>
                                 </items>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1814,7 +1872,6 @@
                     <connections>
                         <outlet property="recordsSwitcherCollectionView" destination="7W6-XM-u9z" id="5le-MS-ian"/>
                         <outlet property="recordsVisualiserTableView" destination="VNZ-Rg-UZi" id="MJy-qc-unP"/>
-                        <outlet property="walletsDropDownMenu" destination="hK3-oK-Nmb" id="wbD-Gj-GLT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKl-0i-4fw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1838,7 +1895,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i1G-yZ-0vj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-322" y="1719"/>
+            <point key="canvasLocation" x="-210" y="1719"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="S7f-yn-SmW">
@@ -1867,7 +1924,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zye-Km-bp3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Records" image="ic_records" id="n2H-Ex-8Vt"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uDB-2Q-Rcy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uDB-2Q-Rcy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1886,7 +1943,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lfh-0w-rQw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Charts" image="ic_chart" id="dSm-ed-hV2"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hGe-cL-yfe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hGe-cL-yfe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1905,7 +1962,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Npz-q0-1YL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Reports" image="ic_raports" id="Lp9-iX-RXK"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HGL-yn-uCF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HGL-yn-uCF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1924,7 +1981,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PgU-dR-132" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Budgets" image="ic_budgets" id="Mwq-Mf-4AR"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ybc-fc-iGl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ybc-fc-iGl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1950,6 +2007,5 @@
         <image name="ic_records" width="32" height="32"/>
         <image name="ic_reorderWallets" width="16" height="16"/>
         <image name="ic_selectCurrency" width="32" height="32"/>
-        <image name="ic_sort" width="33" height="33"/>
     </resources>
 </document>

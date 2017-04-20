@@ -80,6 +80,8 @@
 		FAE101771E7DC8AF003525DF /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE101761E7DC8AF003525DF /* MenuViewController.m */; };
 		FAE101831E7DD182003525DF /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE101821E7DD182003525DF /* SWRevealViewController.m */; };
 		FAE43DC71E847A7600C90817 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE43DC61E847A7600C90817 /* CustomTabBarController.m */; };
+		FAE6164D1EA946AB00A6BFC5 /* ReportsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE6164B1EA946AB00A6BFC5 /* ReportsCollectionViewCell.m */; };
+		FAE6164E1EA946AB00A6BFC5 /* ReportsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE6164C1EA946AB00A6BFC5 /* ReportsCollectionViewCell.xib */; };
 		FAE6327D1E982A88002A0455 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE632701E982A88002A0455 /* MainViewController.m */; };
 		FAE6327E1E982A88002A0455 /* MainViewControllerCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE632721E982A88002A0455 /* MainViewControllerCollectionView.m */; };
 		FAE6327F1E982A88002A0455 /* MainViewControllerTablleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE632741E982A88002A0455 /* MainViewControllerTablleView.m */; };
@@ -247,6 +249,9 @@
 		FAE101821E7DD182003525DF /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		FAE43DC51E847A7600C90817 /* CustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarController.h; sourceTree = "<group>"; };
 		FAE43DC61E847A7600C90817 /* CustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
+		FAE6164A1EA946AB00A6BFC5 /* ReportsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportsCollectionViewCell.h; sourceTree = "<group>"; };
+		FAE6164B1EA946AB00A6BFC5 /* ReportsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportsCollectionViewCell.m; sourceTree = "<group>"; };
+		FAE6164C1EA946AB00A6BFC5 /* ReportsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportsCollectionViewCell.xib; sourceTree = "<group>"; };
 		FAE6326F1E982A88002A0455 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		FAE632701E982A88002A0455 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		FAE632711E982A88002A0455 /* MainViewControllerCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewControllerCollectionView.h; sourceTree = "<group>"; };
@@ -788,6 +793,16 @@
 			path = CustomTabBarController;
 			sourceTree = "<group>";
 		};
+		FAE616491EA9468000A6BFC5 /* ReportsCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAE6164A1EA946AB00A6BFC5 /* ReportsCollectionViewCell.h */,
+				FAE6164B1EA946AB00A6BFC5 /* ReportsCollectionViewCell.m */,
+				FAE6164C1EA946AB00A6BFC5 /* ReportsCollectionViewCell.xib */,
+			);
+			path = ReportsCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		FAE6326D1E982A88002A0455 /* MainCategories */ = {
 			isa = PBXGroup;
 			children = (
@@ -870,6 +885,7 @@
 		FAE632871E982B8F002A0455 /* ReportsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FAE616491EA9468000A6BFC5 /* ReportsCollectionViewCell */,
 				FAE6328E1E982BE5002A0455 /* ReportsViewController.h */,
 				FAE6328F1E982BE5002A0455 /* ReportsViewController.m */,
 			);
@@ -1061,6 +1077,7 @@
 				FAECCFC01E96AD78001D4B8F /* ReminderViewController.xib in Resources */,
 				8402D1771E61F6C600968EA2 /* Assets.xcassets in Resources */,
 				FAAE7B0E1E9D88AD0057D648 /* ShoppingListTableViewCell.xib in Resources */,
+				FAE6164E1EA946AB00A6BFC5 /* ReportsCollectionViewCell.xib in Resources */,
 				FA0ACEEE1E87D55D000A42EE /* CurrencyTableViewCell.xib in Resources */,
 				FAECCFCA1E96C6AA001D4B8F /* MenuContent.plist in Resources */,
 				FA1783881EA53CA700B1D36E /* RecordsTableViewCell.xib in Resources */,
@@ -1190,6 +1207,7 @@
 				FAAE7B0D1E9D88AD0057D648 /* ShoppingListTableViewCell.m in Sources */,
 				FAF44B521EA8183900FA8B65 /* PlannedPayments+CoreDataClass.m in Sources */,
 				FACCD6261E92CFF200C8E698 /* TransactionViewController+DataSource.m in Sources */,
+				FAE6164D1EA946AB00A6BFC5 /* ReportsCollectionViewCell.m in Sources */,
 				FAAE7AFF1E9D7C120057D648 /* MainViewController+Navigation.m in Sources */,
 				FAD99BB31EA56D7E005351DD /* Wallet+CoreDataProperties.m in Sources */,
 				FAE101831E7DD182003525DF /* SWRevealViewController.m in Sources */,

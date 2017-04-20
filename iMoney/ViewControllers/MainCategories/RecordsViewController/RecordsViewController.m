@@ -24,6 +24,8 @@
     
     [super viewDidLoad];
     [self registerCells];
+    
+    [self.walletsDropDownMenu setDropdownCornerRadius:5];
 }
 
 - (void)registerCells {
@@ -61,39 +63,6 @@
     [dropdownMenu closeAllComponentsAnimated:YES];
 //    self.selectedTransactionTypeLabel.text = self.transactionTypeArray[row];
 //    selectedTransactionType = row;
-}
-
-#pragma mark - Button actions
-
-- (IBAction)sortButtonActionByDate:(UIBarButtonItem *)sender {
-    
-    [self showSortActionSheet:@[@"Show all",@"Show today",@"Show last week",@"Show last month",@"Show last year"]];
-}
-
-#pragma mark - UIActionSheetDelegate
-
-- (void)showSortActionSheet:(NSArray <NSString *> *)sortOptionsArray {
-    
-    UIActionSheet* actionSheet = [[UIActionSheet alloc] init];
-    actionSheet.title = @"Sorting options";
-    actionSheet.delegate = self;
-    
-    for (NSString *option in sortOptionsArray) {
-        
-        [actionSheet addButtonWithTitle:option];
-    }
-    
-    actionSheet.cancelButtonIndex = [actionSheet addButtonWithTitle:@"Cancel"];
-    [actionSheet showInView: self.view];
-}
-
-#pragma mark - UIActionSheetDelegate
-
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    if (buttonIndex != actionSheet.cancelButtonIndex){
-        
-    }
 }
 
 #pragma mark - UITableViewDataSource
