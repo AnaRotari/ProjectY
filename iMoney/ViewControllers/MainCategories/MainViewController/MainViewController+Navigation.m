@@ -12,6 +12,9 @@
 #import "WarrantiesViewController.h"
 #import "PlannedPaymentsViewController.h"
 #import "ExportsViewController.h"
+#import "DebtsViewController.h"
+#import "HelpViewController.h"
+#import "SettingsViewController.h"
 
 @implementation MainViewController (Navigation)
 
@@ -70,6 +73,31 @@
     {
         [iMoneyUtils showAlertView:@"Alert" withMessage:@"You should create a wallet first !"];
     }
+}
+
+- (void)goToDebtsViewController {
+    
+    if ([CoreDataRequestManager getAllWallets].count > 0)
+    {
+        DebtsViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"DebtsViewController"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else
+    {
+        [iMoneyUtils showAlertView:@"Alert" withMessage:@"You should create a wallet first !"];
+    }
+}
+
+- (void)goToHelpViewController {
+    
+    HelpViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"HelpViewController"];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (void)goToSettingsViewController {
+    
+    SettingsViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end

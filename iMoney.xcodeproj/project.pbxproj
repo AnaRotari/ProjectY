@@ -30,6 +30,9 @@
 		FA0ACEEE1E87D55D000A42EE /* CurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0ACEEC1E87D55D000A42EE /* CurrencyTableViewCell.xib */; };
 		FA0ACEF11E87EAEE000A42EE /* CoreDataInsertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0ACEF01E87EAEE000A42EE /* CoreDataInsertManager.m */; };
 		FA0CC0071E9EA10000D27444 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0CC0061E9EA10000D27444 /* LocationViewController.m */; };
+		FA116E031EA96598004C4A19 /* DebtsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA116E021EA96598004C4A19 /* DebtsViewController.m */; };
+		FA116E081EA96688004C4A19 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA116E071EA96688004C4A19 /* HelpViewController.m */; };
+		FA116E0B1EA9669C004C4A19 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA116E0A1EA9669C004C4A19 /* SettingsViewController.m */; };
 		FA1783821EA53C7900B1D36E /* RecordsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1783801EA53C7900B1D36E /* RecordsCollectionViewCell.m */; };
 		FA1783831EA53C7900B1D36E /* RecordsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1783811EA53C7900B1D36E /* RecordsCollectionViewCell.xib */; };
 		FA1783871EA53CA700B1D36E /* RecordsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1783851EA53CA700B1D36E /* RecordsTableViewCell.m */; };
@@ -158,6 +161,12 @@
 		FA0ACEF01E87EAEE000A42EE /* CoreDataInsertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataInsertManager.m; sourceTree = "<group>"; };
 		FA0CC0051E9EA10000D27444 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		FA0CC0061E9EA10000D27444 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		FA116E011EA96598004C4A19 /* DebtsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebtsViewController.h; sourceTree = "<group>"; };
+		FA116E021EA96598004C4A19 /* DebtsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebtsViewController.m; sourceTree = "<group>"; };
+		FA116E061EA96688004C4A19 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		FA116E071EA96688004C4A19 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		FA116E091EA9669C004C4A19 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		FA116E0A1EA9669C004C4A19 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		FA17837F1EA53C7900B1D36E /* RecordsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordsCollectionViewCell.h; sourceTree = "<group>"; };
 		FA1783801EA53C7900B1D36E /* RecordsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordsCollectionViewCell.m; sourceTree = "<group>"; };
 		FA1783811EA53C7900B1D36E /* RecordsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -503,6 +512,9 @@
 				FA6BC0811EA259AE00ECBA5E /* WarrantiesViewController */,
 				FA67F1151EA5615A00B59FA1 /* PlannedPaymentsViewController */,
 				2C605DFD1EA5FB9B0052939E /* ExportsViewController */,
+				FA116E001EA964CC004C4A19 /* DebtsViewController */,
+				FA116E041EA96679004C4A19 /* HelpViewController */,
+				FA116E051EA96679004C4A19 /* SettingsViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -535,6 +547,33 @@
 				FA0CC0061E9EA10000D27444 /* LocationViewController.m */,
 			);
 			path = LocationViewController;
+			sourceTree = "<group>";
+		};
+		FA116E001EA964CC004C4A19 /* DebtsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FA116E011EA96598004C4A19 /* DebtsViewController.h */,
+				FA116E021EA96598004C4A19 /* DebtsViewController.m */,
+			);
+			path = DebtsViewController;
+			sourceTree = "<group>";
+		};
+		FA116E041EA96679004C4A19 /* HelpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FA116E061EA96688004C4A19 /* HelpViewController.h */,
+				FA116E071EA96688004C4A19 /* HelpViewController.m */,
+			);
+			path = HelpViewController;
+			sourceTree = "<group>";
+		};
+		FA116E051EA96679004C4A19 /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FA116E091EA9669C004C4A19 /* SettingsViewController.h */,
+				FA116E0A1EA9669C004C4A19 /* SettingsViewController.m */,
+			);
+			path = SettingsViewController;
 			sourceTree = "<group>";
 		};
 		FA17837D1EA53C5C00B1D36E /* RecordsCollectionViewCell */ = {
@@ -1172,12 +1211,14 @@
 				FAE632801E982A88002A0455 /* MainWalletCollectionViewCell.m in Sources */,
 				FA0842F01E9AD305007F5CED /* CoreDataHelpManager.m in Sources */,
 				FAD99BB21EA56D7E005351DD /* Wallet+CoreDataClass.m in Sources */,
+				FA116E081EA96688004C4A19 /* HelpViewController.m in Sources */,
 				FA745CBD1E94201E0035BB58 /* UserImagesCollectionViewCell.m in Sources */,
 				FAA838751E870BC9005BFADF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				FAA838721E870BC9005BFADF /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				FA6BC0891EA267AE00ECBA5E /* WarrantiesTableViewCell.m in Sources */,
 				FAAE7B081E9D87F80057D648 /* ShoppingListViewController.m in Sources */,
 				FAFF39FA1E88414600524084 /* SelectedWalletViewController.m in Sources */,
+				FA116E0B1EA9669C004C4A19 /* SettingsViewController.m in Sources */,
 				FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */,
 				84D92FCD1E61FB9800F823DD /* iMoney.xcdatamodeld in Sources */,
 				FAE6328D1E982BDA002A0455 /* ChartsViewController.m in Sources */,
@@ -1223,6 +1264,7 @@
 				FA1783871EA53CA700B1D36E /* RecordsTableViewCell.m in Sources */,
 				FA6BC0841EA259BD00ECBA5E /* WarrantiesViewController.m in Sources */,
 				FAA258461EA6C05000950CA0 /* UILabel+UIDatePickerLabels.m in Sources */,
+				FA116E031EA96598004C4A19 /* DebtsViewController.m in Sources */,
 				FA67F11D1EA5638700B59FA1 /* PlannedPaymentsTableViewCell.m in Sources */,
 				FAECCFD31E96E267001D4B8F /* WalletTableViewCell.m in Sources */,
 				84D92FC01E61F88D00F823DD /* AppDelegate.m in Sources */,

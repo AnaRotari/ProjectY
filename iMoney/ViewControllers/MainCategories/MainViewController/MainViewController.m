@@ -180,7 +180,7 @@
             [self goToExportsViewController];
             break;
         case kMenuItemDebs:
-            NSLog(@"kMenuItemDebs - not done");
+            [self goToDebtsViewController];
             break;
         case kMenuItemShoppingLists:
             [self goToShoppingList];
@@ -192,16 +192,14 @@
             [self goToLocationViewController];
             break;
         case kMenuItemReminder:
-            NSLog(@"kMenuItemReminder - done");
             break;
         case kMenuItemHelp:
-            NSLog(@"kMenuItemHelp - not done");
+            [self goToHelpViewController];
             break;
         case kMenuItemSettings:
-            NSLog(@"kMenuItemSettings - not done");
+            [self goToSettingsViewController];
             break;
         case kMenuItemLogout:
-            NSLog(@"kMenuItemLogout - done");
             break;
             
         default:
