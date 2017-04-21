@@ -33,6 +33,7 @@ static NSString *const kGoogleApiKey = @"AIzaSyBsrWIkSGvj-8ep8pn44POP3ztKTxPAwjA
     [iMoneyUtils setupAppearance];
     [self checkFirstRun];
 //    [self generateFuckingRecords];
+    
 //    [[[CoreDataAccessLayer sharedInstance] managedObjectContext] performBlockAndWait:^{
 //       [[CoreDataAccessLayer sharedInstance] resetDatabase];
 //    }];
@@ -98,15 +99,15 @@ static NSString *const kGoogleApiKey = @"AIzaSyBsrWIkSGvj-8ep8pn44POP3ztKTxPAwjA
 - (void)generateFuckingRecords {
     
 
-    NSMutableDictionary *finalTransactionsDetails = @{kTransactionAmount      : @"100",
-                                               kTransactionAttachemts  : @[],
-                                               kTransactionCategory    : @(1),
-                                               kTransactionDescription : @"TEST",
-                                               kTransactionPayee       : @"TEST",
-                                               kTransactionPaymentType : @(1),
-                                               kTransactionType        : @(1),
-                                               kTransactionLatitude    : @(47.011686),
-                                               kTransactionLongitude   : @(47.011686)}.mutableCopy;
+    NSMutableDictionary *finalTransactionsDetails = @{ kTransactionAmount      : @"52",
+                                                       kTransactionAttachemts  : @[],
+                                                       kTransactionCategory    : @(5),
+                                                       kTransactionDescription : @"TEST",
+                                                       kTransactionPayee       : @"TEST",
+                                                       kTransactionPaymentType : @(0),
+                                                       kTransactionType        : @(0),
+                                                       kTransactionLatitude    : @(47.011686),
+                                                       kTransactionLongitude   : @(47.011686)}.mutableCopy;
 
     NSMutableArray *datesArray = [NSMutableArray array];
     NSDate *date = [iMoneyUtils getTodayFormatedDate];
@@ -118,7 +119,7 @@ static NSString *const kGoogleApiKey = @"AIzaSyBsrWIkSGvj-8ep8pn44POP3ztKTxPAwjA
         
     }
     
-    Wallet *wallet = [[CoreDataRequestManager getAllWallets] lastObject];
+    Wallet *wallet = [[CoreDataRequestManager getAllWallets] firstObject];
     
     for (int i = 0; i <100; i++) {
         [finalTransactionsDetails setObject:datesArray[i] forKey:kTransactionDate];

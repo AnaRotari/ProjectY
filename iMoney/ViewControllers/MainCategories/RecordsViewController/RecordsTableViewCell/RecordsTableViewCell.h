@@ -10,4 +10,6 @@
 
 @interface RecordsTableViewCell : UITableViewCell
 
+@property(strong, nonatomic) Transaction *transaction;
+
 @end
