@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JDF-WB-fQC">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JDF-WB-fQC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -1799,7 +1799,7 @@
                                 <items>
                                     <barButtonItem style="plain" id="wRd-FL-nu9">
                                         <view key="customView" contentMode="scaleToFill" id="tjO-sL-Zvd" customClass="MKDropdownMenu">
-                                            <rect key="frame" x="16" y="6" width="342" height="33"/>
+                                            <rect key="frame" x="16" y="5.5" width="342" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1859,7 +1859,7 @@
                                 <items>
                                     <barButtonItem style="plain" id="s17-YA-mSb">
                                         <view key="customView" contentMode="scaleToFill" id="hK3-oK-Nmb" customClass="MKDropdownMenu">
-                                            <rect key="frame" x="16" y="6" width="343" height="33"/>
+                                            <rect key="frame" x="16" y="5.5" width="343" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1886,7 +1886,13 @@
                                     <outlet property="delegate" destination="dMB-Rn-g23" id="J1p-2a-J08"/>
                                 </connections>
                             </tableView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7W6-XM-u9z">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No transactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CD9-Ue-uHe">
+                                <rect key="frame" x="93.5" y="375" width="188.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7W6-XM-u9z">
                                 <rect key="frame" x="0.0" y="108" width="375" height="50"/>
                                 <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1909,6 +1915,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7W6-XM-u9z" firstAttribute="top" secondItem="5IU-dy-7An" secondAttribute="bottom" id="2HV-4z-6VF"/>
+                            <constraint firstItem="CD9-Ue-uHe" firstAttribute="centerX" secondItem="VNZ-Rg-UZi" secondAttribute="centerX" id="38w-cv-v38"/>
                             <constraint firstItem="VNZ-Rg-UZi" firstAttribute="leading" secondItem="Acc-IR-N6m" secondAttribute="leading" id="N65-sZ-mFu"/>
                             <constraint firstItem="5IU-dy-7An" firstAttribute="top" secondItem="jHk-b1-kyZ" secondAttribute="bottom" id="PAv-6F-csa"/>
                             <constraint firstItem="e73-Fm-emp" firstAttribute="top" secondItem="VNZ-Rg-UZi" secondAttribute="bottom" id="VhJ-2n-cgY"/>
@@ -1918,14 +1925,17 @@
                             <constraint firstAttribute="trailing" secondItem="7W6-XM-u9z" secondAttribute="trailing" id="eyt-6z-5yp"/>
                             <constraint firstAttribute="trailing" secondItem="VNZ-Rg-UZi" secondAttribute="trailing" id="sqY-SJ-Nug"/>
                             <constraint firstAttribute="trailing" secondItem="5IU-dy-7An" secondAttribute="trailing" id="ujT-ta-Qcd"/>
+                            <constraint firstItem="CD9-Ue-uHe" firstAttribute="centerY" secondItem="VNZ-Rg-UZi" secondAttribute="centerY" id="ymW-hI-av3"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Records" id="cS4-HB-3QO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="noTransactionsLabel" destination="CD9-Ue-uHe" id="hOT-c3-xNQ"/>
                         <outlet property="recordsSwitcherCollectionView" destination="7W6-XM-u9z" id="5le-MS-ian"/>
                         <outlet property="recordsVisualiserTableView" destination="VNZ-Rg-UZi" id="MJy-qc-unP"/>
+                        <outlet property="walletsDropDownMenu" destination="hK3-oK-Nmb" id="kxu-dd-fUT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKl-0i-4fw" userLabel="First Responder" sceneMemberID="firstResponder"/>
