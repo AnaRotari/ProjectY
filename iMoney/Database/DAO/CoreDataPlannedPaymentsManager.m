@@ -7,6 +7,7 @@
 //
 
 #import "CoreDataPlannedPaymentsManager.h"
+#import "PlannedPaymentsNotificationManager.h"
 
 @implementation CoreDataPlannedPaymentsManager
 
@@ -74,10 +75,13 @@
     NSError *error = nil;
     NSManagedObjectContext *context = [[CoreDataAccessLayer sharedInstance] managedObjectContext];
     
-    if(![context save:&error]) {
+    if(![context save:&error])
+    {
         NSLog(@"%@",[error localizedDescription]);
-    } else {
-        NSLog(@"successfull saved planned payment");
+    }
+    else
+    {
+        [PlannedPaymentsNotificationManager createScheduledNotificationForPlannedPayment:plannedPayment];
     }
 }
 

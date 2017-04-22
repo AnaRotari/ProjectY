@@ -11,6 +11,7 @@
 #import "DropBoxUtils.h"
 #import "AppDelegate+Notifications.h"
 #import "PlannedPaymentsNotificationManager.h"
+
 @import GoogleMaps;
 @import GooglePlaces;
 
@@ -33,9 +34,6 @@ static NSString *const kGoogleApiKey = @"AIzaSyBsrWIkSGvj-8ep8pn44POP3ztKTxPAwjA
     [[DatabaseSyncManager sharedInstance] startSyncronize];
     [iMoneyUtils setupAppearance];
     [self checkFirstRun];
-    
-    //[PlannedPaymentsNotificationManager createTestInteractiveNotification];
-    
 //    [self generateFuckingRecords];
     return YES;
 }
@@ -57,7 +55,7 @@ handleActionWithIdentifier:(NSString *)identifier
 forLocalNotification:(UILocalNotification *)notification
   completionHandler:(void (^)())completionHandler {
     
-    [PlannedPaymentsNotificationManager handleLocalNotification:notification];
+    [PlannedPaymentsNotificationManager handleLocalNotification:notification withIdentifier:identifier];
     completionHandler();
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "ReminderViewController.h"
+#import "PlannedPaymentsNotificationManager.h"
 
 @interface ReminderViewController () {
     
@@ -248,7 +249,7 @@
     }
     else
     {
-        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+        [self cancelReminderNotificatons];
     }
     //After N days of inactivity notification
     if (self.afterNDaysSwitch.isOn)
@@ -290,14 +291,15 @@
 
 - (void)setLocalNotification:(NSDate*)setDate {
     
+    [self cancelReminderNotificatons];
+    
     NSCalendar *calendar = [NSCalendar currentCalendar] ;
     [calendar setLocale:[NSLocale currentLocale]];
-    
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    UILocalNotification *reminderNotification = [[UILocalNotification alloc] init];
     NSDateComponents *components = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:setDate];
     [components setSecond:0];
     NSDate *exactTime = [calendar dateFromComponents:components];
+    
+    UILocalNotification *reminderNotification = [[UILocalNotification alloc] init];
     reminderNotification.fireDate = exactTime;
     reminderNotification.alertBody = @"Don't forget to record your expenses !";
     reminderNotification.soundName = UILocalNotificationDefaultSoundName;
@@ -363,6 +365,19 @@
                          
                          self.tabBarController.tabBar.frame = tabBarFrame;
                      }];
+}
+
+- (void)cancelReminderNotificatons {
+    
+    NSArray *arrayOfLocalNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications] ;
+    
+    for (UILocalNotification *localNotification in arrayOfLocalNotifications) {
+        
+        if (![localNotification.category isEqualToString:PlannedPaymentsNotificationCategoryIdentifier])
+        {
+            [[UIApplication sharedApplication] cancelLocalNotification:localNotification];
+        }
+    }
 }
 
 @end

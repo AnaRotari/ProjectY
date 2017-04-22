@@ -7,6 +7,7 @@
 //
 
 #import "PlannedPaymentsViewController.h"
+#import "PlannedPaymentsNotificationManager.h"
 
 @interface PlannedPaymentsViewController ()
 
@@ -174,22 +175,7 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
-        //        Transaction *deletedTransaction = self.transactionsArray[indexPath.row];
-        //        Wallet *transactionWallet = deletedTransaction.wallet;
-        //
-        //        switch (deletedTransaction.transactionType) {
-        //
-        //            case kTransactionTypeIncome:
-        //                transactionWallet.walletBalance = [transactionWallet.walletBalance decimalNumberBySubtracting:deletedTransaction.transactionAmount];
-        //                break;
-        //            case kTransactionTypeExpense:
-        //                transactionWallet.walletBalance = [transactionWallet.walletBalance decimalNumberByAdding:deletedTransaction.transactionAmount];
-        //                break;
-        //
-        //            default:
-        //                break;
-        //        }
-        
+        [PlannedPaymentsNotificationManager deleteScheduledNotificationForPlannedPayment:self.plannedArray[indexPath.row]];
         NSManagedObjectContext *context = [[CoreDataAccessLayer sharedInstance] managedObjectContext];
         NSError *error = nil;
         
@@ -205,7 +191,5 @@
                                      withRowAnimation:UITableViewRowAnimationFade];
     }
 }
-
-
 
 @end

@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString* const PlannedPaymentsNotificationCategoryIdentifier;
+extern NSString* const PlannedPaymentsNotificationConfirmButtonIdentifier;
+extern NSString* const PlannedPaymentsNotificationIgnoreButtonIdentifier;
+
 @interface PlannedPaymentsNotificationManager : NSObject
 
-+ (void)createTestInteractiveNotification;
-
-+ (void)handleLocalNotification:(UILocalNotification *)notification;
++ (void)createScheduledNotificationForPlannedPayment:(PlannedPayments *)payment;
++ (void)deleteScheduledNotificationForPlannedPayment:(PlannedPayments *)payment;
++ (void)handleLocalNotification:(UILocalNotification *)notification withIdentifier:(NSString *)identifier;
 
 @end

@@ -116,10 +116,17 @@
 
 - (void)doneButtonAction {
     
+    NSCalendar *calendar = [NSCalendar currentCalendar] ;
+    [calendar setLocale:[NSLocale currentLocale]];
+    NSDateComponents *components = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:self.fromDate];
+    [components setSecond:0];
+    [components setMinute:0];
+    NSDate *exactTime = [calendar dateFromComponents:components];
+    
     [CoreDataPlannedPaymentsManager savePlannedPayment:self.plannedPayment
                                               withData:@{@"plannedAmount":self.plannedAmountTextField.text,
                                                          @"plannedCategory":@(self.categoryArrayIndex),
-                                                         @"plannedDate":self.fromDate,
+                                                         @"plannedDate":exactTime,
                                                          @"plannedDescription":self.plannedDescriptionTextField.text,
                                                          @"plannedFrequency":@(self.frequencyArrayIndex),
                                                          @"plannedName":self.plannedNameTextField.text,
@@ -199,7 +206,7 @@
     
     if ([picker isEqual:self.datePickerViewController]) {
     
-        self.fromDate = [self getTodayFormatedDate:date];
+        self.fromDate = date;
         self.planedFromDateLabel.text = [iMoneyUtils formatDate:self.fromDate];
     }
 }
