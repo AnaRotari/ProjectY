@@ -109,13 +109,13 @@ forLocalNotification:(UILocalNotification *)notification
 - (void)generateFuckingRecords {
     
 
-    NSMutableDictionary *finalTransactionsDetails = @{ kTransactionAmount      : @"52",
+    NSMutableDictionary *finalTransactionsDetails = @{ kTransactionAmount      : @"312",
                                                        kTransactionAttachemts  : @[],
-                                                       kTransactionCategory    : @(5),
+                                                       kTransactionCategory    : @(2),
                                                        kTransactionDescription : @"TEST",
                                                        kTransactionPayee       : @"TEST",
                                                        kTransactionPaymentType : @(0),
-                                                       kTransactionType        : @(0),
+                                                       kTransactionType        : @(1),
                                                        kTransactionLatitude    : @(47.011686),
                                                        kTransactionLongitude   : @(47.011686)}.mutableCopy;
 

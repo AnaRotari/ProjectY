@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -35,18 +35,14 @@
                                     <constraint firstAttribute="width" constant="20" id="N1P-K6-8Ji"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFe-nf-GAo">
-                                <rect key="frame" x="28" y="17" width="56" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xV-qD-HEg">
-                                <rect key="frame" x="317" y="17" width="30" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbW-y1-0JP">
+                                <rect key="frame" x="311" y="17" width="40" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="OmY-lb-hYk"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APRIL 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFN-ha-NTw">
                                 <rect key="frame" x="150" y="5" width="74" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -59,6 +55,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwH-aX-yae">
+                                <rect key="frame" x="23" y="10" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Previous"/>
+                                <connections>
+                                    <action selector="previousButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="TaJ-vY-F8x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -66,15 +70,11 @@
                             <constraint firstItem="m3k-xa-Vrz" firstAttribute="centerX" secondItem="9B5-7O-IuK" secondAttribute="centerX" id="9MI-Nd-Xcp"/>
                             <constraint firstItem="gFN-ha-NTw" firstAttribute="top" secondItem="9B5-7O-IuK" secondAttribute="top" constant="5" id="IXC-9k-9r6"/>
                             <constraint firstAttribute="trailing" secondItem="a3a-bY-PhV" secondAttribute="trailing" constant="8" id="Oej-hd-sDd"/>
-                            <constraint firstItem="a3a-bY-PhV" firstAttribute="leading" secondItem="5xV-qD-HEg" secondAttribute="trailing" id="Tt5-Gw-E6m"/>
-                            <constraint firstItem="5xV-qD-HEg" firstAttribute="centerY" secondItem="a3a-bY-PhV" secondAttribute="centerY" id="Xgv-se-k79"/>
                             <constraint firstAttribute="bottom" secondItem="m3k-xa-Vrz" secondAttribute="bottom" constant="5" id="bRo-h5-Woe"/>
                             <constraint firstAttribute="height" constant="50" id="cvP-DR-BOf"/>
                             <constraint firstItem="gFN-ha-NTw" firstAttribute="centerX" secondItem="9B5-7O-IuK" secondAttribute="centerX" id="e2r-uw-2qc"/>
                             <constraint firstItem="qgW-IV-Tcr" firstAttribute="centerY" secondItem="9B5-7O-IuK" secondAttribute="centerY" id="he7-Ym-SFh"/>
                             <constraint firstItem="qgW-IV-Tcr" firstAttribute="leading" secondItem="9B5-7O-IuK" secondAttribute="leading" constant="8" id="htp-Ns-b4t"/>
-                            <constraint firstItem="eFe-nf-GAo" firstAttribute="leading" secondItem="qgW-IV-Tcr" secondAttribute="trailing" id="q86-bq-c5b"/>
-                            <constraint firstItem="eFe-nf-GAo" firstAttribute="centerY" secondItem="qgW-IV-Tcr" secondAttribute="centerY" id="xjN-MS-czu"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jsx-MD-DkA">
@@ -420,7 +420,7 @@
                 <outlet property="netEndingBalanceLabel" destination="86v-5e-WAe" id="jTa-YP-fZc"/>
                 <outlet property="startingBalanceLabel" destination="br8-sB-yzN" id="ESC-oj-tW3"/>
             </connections>
-            <point key="canvasLocation" x="26.5" y="52"/>
+            <point key="canvasLocation" x="220" y="-111"/>
         </collectionViewCell>
     </objects>
     <resources>

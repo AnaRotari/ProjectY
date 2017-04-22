@@ -184,6 +184,7 @@
     cell.cashflowLabel.text = [self cashflowString];
     
     cell.delegate = self;
+    
     return cell;
 }
 
