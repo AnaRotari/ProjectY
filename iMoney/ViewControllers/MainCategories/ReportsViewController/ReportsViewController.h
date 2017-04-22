@@ -8,8 +8,9 @@
 
 #import "BaseViewController.h"
 #import "MKDropdownMenu.h"
+#import "ReportsCollectionViewCell.h"
 
-@interface ReportsViewController : BaseViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, MKDropdownMenuDelegate, MKDropdownMenuDataSource>
+@interface ReportsViewController : BaseViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, MKDropdownMenuDelegate, MKDropdownMenuDataSource, ReportsCollectionViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *reportsCollectionView;
 @property (weak, nonatomic) IBOutlet MKDropdownMenu *walletsDropDownMenu;

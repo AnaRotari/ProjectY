@@ -8,7 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ReportsCollectionViewCellDelegate <NSObject>
+
+@optional
+- (void)collectionNextButtonPushed;
+- (void)collectionPreviousButtonPushed;
+
+@end
+
 @interface ReportsCollectionViewCell : UICollectionViewCell
+
+@property(weak, nonatomic) id<ReportsCollectionViewCellDelegate> delegate;
+@property(strong, nonatomic) Transaction *transaction;
 
 //Top hreni violet
 @property (weak, nonatomic) IBOutlet UILabel *currentMonthLabel;

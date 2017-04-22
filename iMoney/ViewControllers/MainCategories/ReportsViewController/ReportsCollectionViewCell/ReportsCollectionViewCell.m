@@ -8,11 +8,31 @@
 
 #import "ReportsCollectionViewCell.h"
 
-@implementation ReportsCollectionViewCell
+@implementation ReportsCollectionViewCell{
+    Wallet *wallet;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+}
+
+-(void)setTransaction:(Transaction *)transaction{
+    wallet = transaction.wallet;
+}
+
+- (IBAction)previousButtonAction:(UIButton *)sender {
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(collectionPreviousButtonPushed)]) {
+        [self.delegate collectionPreviousButtonPushed];
+    }
+}
+
+- (IBAction)nextButtonAction:(UIButton *)sender {
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(collectionNextButtonPushed)]) {
+        [self.delegate collectionNextButtonPushed];
+    }
 }
 
 @end
