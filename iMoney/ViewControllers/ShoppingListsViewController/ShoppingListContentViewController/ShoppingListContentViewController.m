@@ -141,16 +141,19 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     
-    NSDictionary *newTransaction = @{kTransactionAmount      : insertAmount,
-                                     kTransactionAttachemts  : @[],
-                                     kTransactionCategory    : @(1),
-                                     kTransactionDate        : [iMoneyUtils getTodayFormatedDate],
-                                     kTransactionDescription : @"",
-                                     kTransactionPayee       : @"",
-                                     kTransactionPaymentType : @(0),
-                                     kTransactionType        : @(1)};;
-
-    [CoreDataInsertManager createTransaction:newTransaction toWallet:self.walletsArray[buttonIndex]];
+    if (buttonIndex != actionSheet.cancelButtonIndex) {
+     
+        NSDictionary *newTransaction = @{kTransactionAmount      : insertAmount,
+                                         kTransactionAttachemts  : @[],
+                                         kTransactionCategory    : @(1),
+                                         kTransactionDate        : [iMoneyUtils getTodayFormatedDate],
+                                         kTransactionDescription : @"",
+                                         kTransactionPayee       : @"",
+                                         kTransactionPaymentType : @(0),
+                                         kTransactionType        : @(1)};;
+        
+        [CoreDataInsertManager createTransaction:newTransaction toWallet:self.walletsArray[buttonIndex]];
+    }
 }
 
 #pragma mark - UITextFieldDelegate

@@ -293,15 +293,15 @@
     [actionSheet showInView: self.view];
 }
 
-#pragma mark - UIActionSheetDelegate
-
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    [self.transactionsArray removeAllObjects];
-    self.transactionsArray = [[CoreDataRequestManager getAllTransactionForWallet:self.selectedWallet
-                                                                 withSortOption:buttonIndex] mutableCopy];
-    [self.transactionsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
-                              withRowAnimation:UITableViewRowAnimationFade];
+ 
+    if (buttonIndex != actionSheet.cancelButtonIndex) {
+        [self.transactionsArray removeAllObjects];
+        self.transactionsArray = [[CoreDataRequestManager getAllTransactionForWallet:self.selectedWallet
+                                                                      withSortOption:buttonIndex] mutableCopy];
+        [self.transactionsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
+                                  withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 @end

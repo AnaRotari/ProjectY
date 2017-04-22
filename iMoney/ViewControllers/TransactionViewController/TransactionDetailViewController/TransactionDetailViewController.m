@@ -198,14 +198,17 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     
-    Wallet *sourceWallet = self.transactionDetail.wallet;
-    Wallet *walletToTransfer = self.totalWallets[buttonIndex];
-    
-    [CoreDataHelpManager transferTransaction:self.transactionDetail
-                            fromSourceWallet:sourceWallet
-                         toDestinationWallet:walletToTransfer];
-    
-    [self labelsSetup];
+    if (buttonIndex != actionSheet.cancelButtonIndex) {
+        
+        Wallet *sourceWallet = self.transactionDetail.wallet;
+        Wallet *walletToTransfer = self.totalWallets[buttonIndex];
+        
+        [CoreDataHelpManager transferTransaction:self.transactionDetail
+                                fromSourceWallet:sourceWallet
+                             toDestinationWallet:walletToTransfer];
+        
+        [self labelsSetup];
+    }
 }
 
 #pragma mark - map view methods
