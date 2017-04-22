@@ -34,7 +34,7 @@ static NSString *const kGoogleApiKey = @"AIzaSyBsrWIkSGvj-8ep8pn44POP3ztKTxPAwjA
     [iMoneyUtils setupAppearance];
     [self checkFirstRun];
     
-    [PlannedPaymentsNotificationManager createTestInteractiveNotification];
+    //[PlannedPaymentsNotificationManager createTestInteractiveNotification];
     
 //    [self generateFuckingRecords];
     return YES;

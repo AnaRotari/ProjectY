@@ -15,10 +15,27 @@
 @implementation ReportsViewController{
     NSString *walletName;
     NSInteger selectedWalletIndex, selectedYear, selectedMonthIndex;
-    __weak IBOutlet UILabel *noTransactionsLabel;
     
     NSArray <Wallet *> *walletsArray;
     NSArray <Transaction *> *transactionsArray;
+    
+    //UI
+    __weak IBOutlet UILabel *noTransactionsLabel;
+    __weak IBOutlet UIView *supportView;
+    //Income
+    __weak IBOutlet UILabel *incomeCountLabel;
+    __weak IBOutlet UILabel *incomeAverageDayLabel;
+    __weak IBOutlet UILabel *incomeAverageRecordLabel;
+    __weak IBOutlet UILabel *incomeTotalLabel;
+    //Expense
+    __weak IBOutlet UILabel *expenseCountLabel;
+    __weak IBOutlet UILabel *expenseAverageDayLabel;
+    __weak IBOutlet UILabel *expenseAverageRecordLabel;
+    __weak IBOutlet UILabel *expenseTotalLabel;
+    //Bottom
+    __weak IBOutlet UILabel *startingBalanceLabel;
+    __weak IBOutlet UILabel *netEndingBalanceLabel;
+    __weak IBOutlet UILabel *cashflowLabel;
 }
 
 - (void)viewDidLoad {
@@ -132,7 +149,7 @@
 #pragma mark - UICollectionViewDataSource 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    
+
     return 12;
 }
 
