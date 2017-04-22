@@ -50,6 +50,7 @@
 		FA6BC0901EA26B6C00ECBA5E /* Transaction+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6BC08E1EA26B6C00ECBA5E /* Transaction+CoreDataProperties.m */; };
 		FA6BC0961EA2B9FC00ECBA5E /* MRAlertButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6BC0931EA2B9FC00ECBA5E /* MRAlertButton.m */; };
 		FA6BC0971EA2B9FC00ECBA5E /* MRAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6BC0951EA2B9FC00ECBA5E /* MRAlertView.m */; };
+		FA73EB4F1EABA8B6006222B5 /* PlannedPaymentsNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA73EB4E1EABA8B6006222B5 /* PlannedPaymentsNotificationManager.m */; };
 		FA745CBD1E94201E0035BB58 /* UserImagesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA745CBB1E94201E0035BB58 /* UserImagesCollectionViewCell.m */; };
 		FA745CBE1E94201E0035BB58 /* UserImagesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA745CBC1E94201E0035BB58 /* UserImagesCollectionViewCell.xib */; };
 		FA9693231E872A6A00F86873 /* ColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9693221E872A6A00F86873 /* ColorPickerViewController.m */; };
@@ -197,6 +198,8 @@
 		FA6BC0931EA2B9FC00ECBA5E /* MRAlertButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRAlertButton.m; sourceTree = "<group>"; };
 		FA6BC0941EA2B9FC00ECBA5E /* MRAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRAlertView.h; sourceTree = "<group>"; };
 		FA6BC0951EA2B9FC00ECBA5E /* MRAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRAlertView.m; sourceTree = "<group>"; };
+		FA73EB4D1EABA8B6006222B5 /* PlannedPaymentsNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlannedPaymentsNotificationManager.h; sourceTree = "<group>"; };
+		FA73EB4E1EABA8B6006222B5 /* PlannedPaymentsNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlannedPaymentsNotificationManager.m; sourceTree = "<group>"; };
 		FA745CBA1E94201E0035BB58 /* UserImagesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserImagesCollectionViewCell.h; sourceTree = "<group>"; };
 		FA745CBB1E94201E0035BB58 /* UserImagesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserImagesCollectionViewCell.m; sourceTree = "<group>"; };
 		FA745CBC1E94201E0035BB58 /* UserImagesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserImagesCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -608,6 +611,7 @@
 		FA67F1151EA5615A00B59FA1 /* PlannedPaymentsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FA73EB4C1EABA8B6006222B5 /* PlannedPaymentsNotificationManager */,
 				FA67F1191EA5637300B59FA1 /* PlannedPaymentsTableViewCell */,
 				FA67F1161EA5616F00B59FA1 /* PlannedPaymentsViewController.h */,
 				FA67F1171EA5616F00B59FA1 /* PlannedPaymentsViewController.m */,
@@ -656,6 +660,15 @@
 				FA6BC0951EA2B9FC00ECBA5E /* MRAlertView.m */,
 			);
 			path = MRAlertView;
+			sourceTree = "<group>";
+		};
+		FA73EB4C1EABA8B6006222B5 /* PlannedPaymentsNotificationManager */ = {
+			isa = PBXGroup;
+			children = (
+				FA73EB4D1EABA8B6006222B5 /* PlannedPaymentsNotificationManager.h */,
+				FA73EB4E1EABA8B6006222B5 /* PlannedPaymentsNotificationManager.m */,
+			);
+			path = PlannedPaymentsNotificationManager;
 			sourceTree = "<group>";
 		};
 		FA745CB91E94201E0035BB58 /* UserImagesCollectionViewCell */ = {
@@ -1210,6 +1223,7 @@
 				2C62010A1E9F857800F605D8 /* ListItem+CoreDataProperties.m in Sources */,
 				FAE632801E982A88002A0455 /* MainWalletCollectionViewCell.m in Sources */,
 				FA0842F01E9AD305007F5CED /* CoreDataHelpManager.m in Sources */,
+				FA73EB4F1EABA8B6006222B5 /* PlannedPaymentsNotificationManager.m in Sources */,
 				FAD99BB21EA56D7E005351DD /* Wallet+CoreDataClass.m in Sources */,
 				FA116E081EA96688004C4A19 /* HelpViewController.m in Sources */,
 				FA745CBD1E94201E0035BB58 /* UserImagesCollectionViewCell.m in Sources */,

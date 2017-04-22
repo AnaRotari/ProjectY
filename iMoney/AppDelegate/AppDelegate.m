@@ -10,6 +10,7 @@
 #import "DatabaseSyncManager.h"
 #import "DropBoxUtils.h"
 #import "AppDelegate+Notifications.h"
+#import "PlannedPaymentsNotificationManager.h"
 @import GoogleMaps;
 @import GooglePlaces;
 
@@ -32,16 +33,15 @@ static NSString *const kGoogleApiKey = @"AIzaSyBsrWIkSGvj-8ep8pn44POP3ztKTxPAwjA
     [[DatabaseSyncManager sharedInstance] startSyncronize];
     [iMoneyUtils setupAppearance];
     [self checkFirstRun];
+    
+    [PlannedPaymentsNotificationManager createTestInteractiveNotification];
+    
 //    [self generateFuckingRecords];
-    
-//    [[[CoreDataAccessLayer sharedInstance] managedObjectContext] performBlockAndWait:^{
-//       [[CoreDataAccessLayer sharedInstance] resetDatabase];
-//    }];
-    
     return YES;
 }
 
-//iOS 9 workflow
+//Dropbox activity
+
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
     return [[DropBoxUtils sharedInstance] setupDropBox:url];
     return true;
@@ -51,6 +51,16 @@ static NSString *const kGoogleApiKey = @"AIzaSyBsrWIkSGvj-8ep8pn44POP3ztKTxPAwjA
     return [[DropBoxUtils sharedInstance] setupDropBox:url];
     return false;
 }
+
+- (void)application:(UIApplication *)application
+handleActionWithIdentifier:(NSString *)identifier
+forLocalNotification:(UILocalNotification *)notification
+  completionHandler:(void (^)())completionHandler {
+    
+    [PlannedPaymentsNotificationManager handleLocalNotification:notification];
+    completionHandler();
+}
+
 
 - (void)checkFirstRun {
     
