@@ -25,54 +25,70 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spent 100 MDL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8D-rM-StQ">
-                        <rect key="frame" x="8" y="81" width="87" height="14.5"/>
+                        <rect key="frame" x="8" y="80" width="87" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.78315071780000001" green="0.0" blue="0.0073316655739999997" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remains 1000 MDL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETf-EX-vwe">
-                        <rect key="frame" x="203" y="81" width="109" height="14.5"/>
+                        <rect key="frame" x="203" y="80" width="109" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8g-x2-o5H">
-                        <rect key="frame" x="253.5" y="4" width="58.5" height="17"/>
+                        <rect key="frame" x="253" y="4" width="59" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="W0q-8b-Bh5">
-                        <rect key="frame" x="8" y="42.5" width="304" height="15"/>
+                        <rect key="frame" x="8" y="61" width="304" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="15" id="xj8-e4-UYT"/>
+                            <constraint firstAttribute="height" constant="15" id="RIL-jO-tP0"/>
                         </constraints>
                         <color key="progressTintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </progressView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MDL 1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buM-Us-iDw">
-                        <rect key="frame" x="120.5" y="13" width="79" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="8" y="29" width="94" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCc-a0-L2C">
+                        <rect key="frame" x="239" y="29" width="73" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="s8D-rM-StQ" secondAttribute="bottom" constant="4" id="5Ee-GW-5IJ"/>
+                    <constraint firstItem="W0q-8b-Bh5" firstAttribute="top" secondItem="dCc-a0-L2C" secondAttribute="bottom" constant="8" id="5uN-pv-7e6"/>
                     <constraint firstItem="Y5Y-VF-HeF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="6Jr-BK-gK2"/>
-                    <constraint firstAttribute="trailing" secondItem="W0q-8b-Bh5" secondAttribute="trailing" constant="8" id="BZT-ft-yZV"/>
                     <constraint firstItem="Y5Y-VF-HeF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="Hpz-pS-UBc"/>
                     <constraint firstItem="s8D-rM-StQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="LIP-Lm-jmV"/>
-                    <constraint firstItem="W0q-8b-Bh5" firstAttribute="top" secondItem="buM-Us-iDw" secondAttribute="bottom" constant="8" id="ONv-ku-oci"/>
+                    <constraint firstAttribute="trailing" secondItem="W0q-8b-Bh5" secondAttribute="trailing" constant="8" id="NbJ-TA-BbX"/>
                     <constraint firstItem="O8g-x2-o5H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="QAE-Vr-3QD"/>
+                    <constraint firstItem="ETf-EX-vwe" firstAttribute="top" secondItem="W0q-8b-Bh5" secondAttribute="bottom" constant="4" id="URK-mV-wSp"/>
+                    <constraint firstAttribute="trailing" secondItem="dCc-a0-L2C" secondAttribute="trailing" constant="8" id="bif-ws-YIC"/>
                     <constraint firstAttribute="trailing" secondItem="O8g-x2-o5H" secondAttribute="trailing" constant="8" id="dEn-Bx-hsd"/>
-                    <constraint firstItem="W0q-8b-Bh5" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="hJs-B9-L8S"/>
                     <constraint firstAttribute="bottom" secondItem="ETf-EX-vwe" secondAttribute="bottom" constant="4" id="iJK-oe-Elr"/>
-                    <constraint firstItem="buM-Us-iDw" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="iiG-gK-kzl"/>
-                    <constraint firstItem="W0q-8b-Bh5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="l9S-sI-R0J"/>
-                    <constraint firstItem="W0q-8b-Bh5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="oxr-e7-uUm"/>
+                    <constraint firstItem="W0q-8b-Bh5" firstAttribute="top" secondItem="buM-Us-iDw" secondAttribute="bottom" constant="8" id="k3f-yF-6HB"/>
                     <constraint firstAttribute="trailing" secondItem="ETf-EX-vwe" secondAttribute="trailing" constant="8" id="wCr-Lt-Lry"/>
+                    <constraint firstItem="W0q-8b-Bh5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="xvg-eV-oob"/>
+                    <constraint firstItem="buM-Us-iDw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="zN1-gX-7V4"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="budgetNameLabel" destination="Y5Y-VF-HeF" id="Z71-1y-5zE"/>
+                <outlet property="budgetProgressView" destination="W0q-8b-Bh5" id="Jqq-kY-8OQ"/>
+                <outlet property="budgetTypeLabel" destination="dCc-a0-L2C" id="ueB-i0-ey1"/>
+                <outlet property="finishDateLabel" destination="O8g-x2-o5H" id="80I-q4-oJh"/>
+                <outlet property="remainAmountLabel" destination="ETf-EX-vwe" id="UBu-na-Llh"/>
+                <outlet property="spentAmountLabel" destination="s8D-rM-StQ" id="G0X-Gf-oTx"/>
+                <outlet property="totalBudgetAmountLabel" destination="buM-Us-iDw" id="hR6-ZN-5Tc"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

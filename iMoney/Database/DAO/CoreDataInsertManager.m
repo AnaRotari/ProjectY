@@ -74,6 +74,7 @@
         NSLog(@"Error: %@",[error localizedDescription]);
     } else {
         NSLog(@"successfull saved");
+        [CoreDataBudgetManager handleTransaction:newTransaction];
     }
 }
 

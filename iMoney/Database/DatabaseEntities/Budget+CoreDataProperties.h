@@ -2,7 +2,7 @@
 //  Budget+CoreDataProperties.h
 //  
 //
-//  Created by Alex on 4/23/17.
+//  Created by Alex on 4/24/17.
 //
 //
 
@@ -15,12 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<Budget *> *)fetchRequest;
 
-@property (nullable, nonatomic, copy) NSDecimalNumber *budgetTotalAmount;
+@property (nullable, nonatomic, copy) NSDecimalNumber *budgetCurrentAmount;
 @property (nullable, nonatomic, copy) NSDate *budgetFinishDate;
 @property (nonatomic) int16_t budgetInterval;
 @property (nullable, nonatomic, copy) NSString *budgetName;
 @property (nullable, nonatomic, copy) NSDate *budgetStartDate;
-@property (nullable, nonatomic, copy) NSDecimalNumber *budgetCurrentAmount;
+@property (nullable, nonatomic, copy) NSDecimalNumber *budgetTotalAmount;
 @property (nullable, nonatomic, retain) NSSet<Transaction *> *transactions;
 @property (nullable, nonatomic, retain) NSSet<Wallet *> *wallets;
 

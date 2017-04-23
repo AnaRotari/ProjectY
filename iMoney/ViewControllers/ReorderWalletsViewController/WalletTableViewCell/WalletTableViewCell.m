@@ -26,6 +26,7 @@
     self.walletColorView.backgroundColor = [[UIColor alloc] colorWithData:wallet.walletColor];
     self.walletNameLabel.text = wallet.walletName;
     self.walletDescriptionLabel.text = wallet.walletDescription;
+    self.walletCurrencyLabel.text = wallet.walletCurrency;
 }
 
 @end

@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIView *walletColorView;
 @property (weak, nonatomic) IBOutlet UILabel *walletNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *walletDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *walletCurrencyLabel;
 
 - (void)initCellWithWallet:(Wallet *)wallet;
 

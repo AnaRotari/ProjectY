@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JDF-WB-fQC">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JDF-WB-fQC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -1731,7 +1731,7 @@
                     <tabBarItem key="tabBarItem" title="Dashboard" image="ic_dashboard" id="bpi-MI-vgU"/>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C4v-b8-Zab">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="C4v-b8-Zab">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1920,12 +1920,40 @@
                     <view key="view" contentMode="scaleToFill" id="aQ7-PL-DLG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="txt-tg-hwS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="bdE-Ic-30f" id="LWM-zg-Den"/>
+                                    <outlet property="delegate" destination="bdE-Ic-30f" id="PSY-nT-jEQ"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No transaction yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zII-0I-ES3">
+                                <rect key="frame" x="106" y="322" width="164" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Ug-lf-oid" firstAttribute="top" secondItem="txt-tg-hwS" secondAttribute="bottom" id="6yD-9h-A9U"/>
+                            <constraint firstItem="zII-0I-ES3" firstAttribute="centerX" secondItem="txt-tg-hwS" secondAttribute="centerX" id="GNb-iE-4eu"/>
+                            <constraint firstItem="txt-tg-hwS" firstAttribute="leading" secondItem="aQ7-PL-DLG" secondAttribute="leading" id="JtV-px-HDC"/>
+                            <constraint firstItem="txt-tg-hwS" firstAttribute="top" secondItem="aQ7-PL-DLG" secondAttribute="top" id="VFB-Am-bqQ"/>
+                            <constraint firstAttribute="trailing" secondItem="txt-tg-hwS" secondAttribute="trailing" id="w2G-vT-Tuk"/>
+                            <constraint firstItem="zII-0I-ES3" firstAttribute="centerY" secondItem="txt-tg-hwS" secondAttribute="centerY" id="y16-eC-u9Z"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="budgetTransactionTableView" destination="txt-tg-hwS" id="vWB-rm-VVw"/>
+                        <outlet property="noTransactionLabel" destination="zII-0I-ES3" id="Vtk-qz-s3c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fxc-dg-QYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191" y="3250"/>
+            <point key="canvasLocation" x="1189.5999999999999" y="3249.6251874062973"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="dsP-FR-tdg">
@@ -1966,7 +1994,7 @@
                                 <items>
                                     <barButtonItem style="plain" id="wRd-FL-nu9">
                                         <view key="customView" contentMode="scaleToFill" id="tjO-sL-Zvd" customClass="MKDropdownMenu">
-                                            <rect key="frame" x="16" y="5.5" width="342" height="33"/>
+                                            <rect key="frame" x="16" y="6" width="342" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2261,7 +2289,7 @@
                                 <items>
                                     <barButtonItem style="plain" id="s17-YA-mSb">
                                         <view key="customView" contentMode="scaleToFill" id="hK3-oK-Nmb" customClass="MKDropdownMenu">
-                                            <rect key="frame" x="16" y="5.5" width="343" height="33"/>
+                                            <rect key="frame" x="16" y="6" width="343" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2390,7 +2418,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zye-Km-bp3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Records" image="ic_records" id="n2H-Ex-8Vt"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uDB-2Q-Rcy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uDB-2Q-Rcy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2409,7 +2437,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lfh-0w-rQw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Charts" image="ic_chart" id="dSm-ed-hV2"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hGe-cL-yfe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hGe-cL-yfe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2428,7 +2456,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Npz-q0-1YL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Reports" image="ic_raports" id="Lp9-iX-RXK"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HGL-yn-uCF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HGL-yn-uCF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2447,7 +2475,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PgU-dR-132" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Budgets" image="ic_budgets" id="Mwq-Mf-4AR"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ybc-fc-iGl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ybc-fc-iGl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

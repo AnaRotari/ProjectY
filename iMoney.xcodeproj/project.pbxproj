@@ -41,10 +41,12 @@
 		FA2AF1321EACC10A003BD143 /* ShoppingList+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF1221EACC10A003BD143 /* ShoppingList+CoreDataProperties.m */; };
 		FA2AF1331EACC10A003BD143 /* Transaction+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF1241EACC10A003BD143 /* Transaction+CoreDataClass.m */; };
 		FA2AF1341EACC10A003BD143 /* Transaction+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF1261EACC10A003BD143 /* Transaction+CoreDataProperties.m */; };
-		FA2AF1351EACC10A003BD143 /* Wallet+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF1281EACC10A003BD143 /* Wallet+CoreDataClass.m */; };
-		FA2AF1361EACC10A003BD143 /* Wallet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF12A1EACC10A003BD143 /* Wallet+CoreDataProperties.m */; };
 		FA3D57721EA6A40D00B01454 /* CoreDataPlannedPaymentsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3D57711EA6A40D00B01454 /* CoreDataPlannedPaymentsManager.m */; };
 		FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */; };
+		FA5D53361EAD697100C252B2 /* Budget+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5D532F1EAD697100C252B2 /* Budget+CoreDataClass.m */; };
+		FA5D53371EAD697100C252B2 /* Budget+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5D53311EAD697100C252B2 /* Budget+CoreDataProperties.m */; };
+		FA5D53381EAD697100C252B2 /* Wallet+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5D53331EAD697100C252B2 /* Wallet+CoreDataClass.m */; };
+		FA5D53391EAD697100C252B2 /* Wallet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5D53351EAD697100C252B2 /* Wallet+CoreDataProperties.m */; };
 		FA67F1181EA5616F00B59FA1 /* PlannedPaymentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA67F1171EA5616F00B59FA1 /* PlannedPaymentsViewController.m */; };
 		FA67F11D1EA5638700B59FA1 /* PlannedPaymentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA67F11B1EA5638700B59FA1 /* PlannedPaymentsTableViewCell.m */; };
 		FA67F11E1EA5638700B59FA1 /* PlannedPaymentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA67F11C1EA5638700B59FA1 /* PlannedPaymentsTableViewCell.xib */; };
@@ -55,8 +57,6 @@
 		FA6BC0961EA2B9FC00ECBA5E /* MRAlertButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6BC0931EA2B9FC00ECBA5E /* MRAlertButton.m */; };
 		FA6BC0971EA2B9FC00ECBA5E /* MRAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6BC0951EA2B9FC00ECBA5E /* MRAlertView.m */; };
 		FA72C82A1EACE5BD00E2114E /* CoreDataBudgetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA72C8291EACE5BD00E2114E /* CoreDataBudgetManager.m */; };
-		FA72C82F1EACEA5C00E2114E /* Budget+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA72C82C1EACEA5C00E2114E /* Budget+CoreDataClass.m */; };
-		FA72C8301EACEA5C00E2114E /* Budget+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA72C82E1EACEA5C00E2114E /* Budget+CoreDataProperties.m */; };
 		FA72C8381EAD03B700E2114E /* BudgetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA72C8361EAD03B700E2114E /* BudgetTableViewCell.m */; };
 		FA72C8391EAD03B700E2114E /* BudgetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA72C8371EAD03B700E2114E /* BudgetTableViewCell.xib */; };
 		FA73EB4F1EABA8B6006222B5 /* PlannedPaymentsNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA73EB4E1EABA8B6006222B5 /* PlannedPaymentsNotificationManager.m */; };
@@ -191,14 +191,18 @@
 		FA2AF1241EACC10A003BD143 /* Transaction+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataClass.m"; sourceTree = "<group>"; };
 		FA2AF1251EACC10A003BD143 /* Transaction+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataProperties.h"; sourceTree = "<group>"; };
 		FA2AF1261EACC10A003BD143 /* Transaction+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataProperties.m"; sourceTree = "<group>"; };
-		FA2AF1271EACC10A003BD143 /* Wallet+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataClass.h"; sourceTree = "<group>"; };
-		FA2AF1281EACC10A003BD143 /* Wallet+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataClass.m"; sourceTree = "<group>"; };
-		FA2AF1291EACC10A003BD143 /* Wallet+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataProperties.h"; sourceTree = "<group>"; };
-		FA2AF12A1EACC10A003BD143 /* Wallet+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataProperties.m"; sourceTree = "<group>"; };
 		FA3D57701EA6A40D00B01454 /* CoreDataPlannedPaymentsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataPlannedPaymentsManager.h; sourceTree = "<group>"; };
 		FA3D57711EA6A40D00B01454 /* CoreDataPlannedPaymentsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataPlannedPaymentsManager.m; sourceTree = "<group>"; };
 		FA5540171E7E995900A4C773 /* DatabaseSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseSyncManager.h; sourceTree = "<group>"; };
 		FA5540181E7E995900A4C773 /* DatabaseSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseSyncManager.m; sourceTree = "<group>"; };
+		FA5D532E1EAD697100C252B2 /* Budget+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Budget+CoreDataClass.h"; sourceTree = "<group>"; };
+		FA5D532F1EAD697100C252B2 /* Budget+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Budget+CoreDataClass.m"; sourceTree = "<group>"; };
+		FA5D53301EAD697100C252B2 /* Budget+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Budget+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FA5D53311EAD697100C252B2 /* Budget+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Budget+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FA5D53321EAD697100C252B2 /* Wallet+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataClass.h"; sourceTree = "<group>"; };
+		FA5D53331EAD697100C252B2 /* Wallet+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataClass.m"; sourceTree = "<group>"; };
+		FA5D53341EAD697100C252B2 /* Wallet+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FA5D53351EAD697100C252B2 /* Wallet+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataProperties.m"; sourceTree = "<group>"; };
 		FA67F1161EA5616F00B59FA1 /* PlannedPaymentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlannedPaymentsViewController.h; sourceTree = "<group>"; };
 		FA67F1171EA5616F00B59FA1 /* PlannedPaymentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlannedPaymentsViewController.m; sourceTree = "<group>"; };
 		FA67F11A1EA5638700B59FA1 /* PlannedPaymentsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlannedPaymentsTableViewCell.h; sourceTree = "<group>"; };
@@ -217,10 +221,6 @@
 		FA6BC0951EA2B9FC00ECBA5E /* MRAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRAlertView.m; sourceTree = "<group>"; };
 		FA72C8281EACE5BD00E2114E /* CoreDataBudgetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataBudgetManager.h; sourceTree = "<group>"; };
 		FA72C8291EACE5BD00E2114E /* CoreDataBudgetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataBudgetManager.m; sourceTree = "<group>"; };
-		FA72C82B1EACEA5C00E2114E /* Budget+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Budget+CoreDataClass.h"; sourceTree = "<group>"; };
-		FA72C82C1EACEA5C00E2114E /* Budget+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Budget+CoreDataClass.m"; sourceTree = "<group>"; };
-		FA72C82D1EACEA5C00E2114E /* Budget+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Budget+CoreDataProperties.h"; sourceTree = "<group>"; };
-		FA72C82E1EACEA5C00E2114E /* Budget+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Budget+CoreDataProperties.m"; sourceTree = "<group>"; };
 		FA72C8351EAD03B700E2114E /* BudgetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BudgetTableViewCell.h; sourceTree = "<group>"; };
 		FA72C8361EAD03B700E2114E /* BudgetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BudgetTableViewCell.m; sourceTree = "<group>"; };
 		FA72C8371EAD03B700E2114E /* BudgetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BudgetTableViewCell.xib; sourceTree = "<group>"; };
@@ -518,14 +518,14 @@
 				FA2AF1241EACC10A003BD143 /* Transaction+CoreDataClass.m */,
 				FA2AF1251EACC10A003BD143 /* Transaction+CoreDataProperties.h */,
 				FA2AF1261EACC10A003BD143 /* Transaction+CoreDataProperties.m */,
-				FA2AF1271EACC10A003BD143 /* Wallet+CoreDataClass.h */,
-				FA2AF1281EACC10A003BD143 /* Wallet+CoreDataClass.m */,
-				FA2AF1291EACC10A003BD143 /* Wallet+CoreDataProperties.h */,
-				FA2AF12A1EACC10A003BD143 /* Wallet+CoreDataProperties.m */,
-				FA72C82B1EACEA5C00E2114E /* Budget+CoreDataClass.h */,
-				FA72C82C1EACEA5C00E2114E /* Budget+CoreDataClass.m */,
-				FA72C82D1EACEA5C00E2114E /* Budget+CoreDataProperties.h */,
-				FA72C82E1EACEA5C00E2114E /* Budget+CoreDataProperties.m */,
+				FA5D532E1EAD697100C252B2 /* Budget+CoreDataClass.h */,
+				FA5D532F1EAD697100C252B2 /* Budget+CoreDataClass.m */,
+				FA5D53301EAD697100C252B2 /* Budget+CoreDataProperties.h */,
+				FA5D53311EAD697100C252B2 /* Budget+CoreDataProperties.m */,
+				FA5D53321EAD697100C252B2 /* Wallet+CoreDataClass.h */,
+				FA5D53331EAD697100C252B2 /* Wallet+CoreDataClass.m */,
+				FA5D53341EAD697100C252B2 /* Wallet+CoreDataProperties.h */,
+				FA5D53351EAD697100C252B2 /* Wallet+CoreDataProperties.m */,
 			);
 			path = DatabaseEntities;
 			sourceTree = "<group>";
@@ -1298,23 +1298,24 @@
 				FA73EB4F1EABA8B6006222B5 /* PlannedPaymentsNotificationManager.m in Sources */,
 				FA116E081EA96688004C4A19 /* HelpViewController.m in Sources */,
 				FA745CBD1E94201E0035BB58 /* UserImagesCollectionViewCell.m in Sources */,
+				FA5D53371EAD697100C252B2 /* Budget+CoreDataProperties.m in Sources */,
 				FAA838751E870BC9005BFADF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				FAA838721E870BC9005BFADF /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				FA6BC0891EA267AE00ECBA5E /* WarrantiesTableViewCell.m in Sources */,
 				FAAE7B081E9D87F80057D648 /* ShoppingListViewController.m in Sources */,
 				FAFF39FA1E88414600524084 /* SelectedWalletViewController.m in Sources */,
 				FA116E0B1EA9669C004C4A19 /* SettingsViewController.m in Sources */,
-				FA72C8301EACEA5C00E2114E /* Budget+CoreDataProperties.m in Sources */,
 				FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */,
 				84D92FCD1E61FB9800F823DD /* iMoney.xcdatamodeld in Sources */,
+				FA5D53361EAD697100C252B2 /* Budget+CoreDataClass.m in Sources */,
 				FAE6328D1E982BDA002A0455 /* ChartsViewController.m in Sources */,
 				FA72C8381EAD03B700E2114E /* BudgetTableViewCell.m in Sources */,
 				FAEAC8B41E8FD39B00E38654 /* DropBoxUtils.m in Sources */,
 				FA2AF1341EACC10A003BD143 /* Transaction+CoreDataProperties.m in Sources */,
 				FAE6328A1E982BCC002A0455 /* RecordsViewController.m in Sources */,
 				84D92FCA1E61F9D000F823DD /* CoreDataRequestManager.m in Sources */,
+				FA5D53391EAD697100C252B2 /* Wallet+CoreDataProperties.m in Sources */,
 				FA2AF12E1EACC10A003BD143 /* ListItem+CoreDataProperties.m in Sources */,
-				FA2AF1351EACC10A003BD143 /* Wallet+CoreDataClass.m in Sources */,
 				FA9693271E87324100F86873 /* UIColor+CoreData.m in Sources */,
 				FAE632931E982BEF002A0455 /* BudgetsViewController.m in Sources */,
 				FAA838741E870BC9005BFADF /* TPKeyboardAvoidingTableView.m in Sources */,
@@ -1332,10 +1333,10 @@
 				FA6BC0961EA2B9FC00ECBA5E /* MRAlertButton.m in Sources */,
 				FAA258451EA6C05000950CA0 /* TransparentViewController.m in Sources */,
 				FA2AF1301EACC10A003BD143 /* PlannedPayments+CoreDataProperties.m in Sources */,
+				FA5D53381EAD697100C252B2 /* Wallet+CoreDataClass.m in Sources */,
 				FA2AF12F1EACC10A003BD143 /* PlannedPayments+CoreDataClass.m in Sources */,
 				FAE6327E1E982A88002A0455 /* MainViewControllerCollectionView.m in Sources */,
 				FAE6327F1E982A88002A0455 /* MainViewControllerTablleView.m in Sources */,
-				FA72C82F1EACEA5C00E2114E /* Budget+CoreDataClass.m in Sources */,
 				FAE101771E7DC8AF003525DF /* MenuViewController.m in Sources */,
 				84D92FC91E61F9D000F823DD /* CoreDataAccessLayer.m in Sources */,
 				FAAC9F911E7DE79B0077B160 /* MenuTableViewCell.m in Sources */,
@@ -1364,7 +1365,6 @@
 				FAECCFD31E96E267001D4B8F /* WalletTableViewCell.m in Sources */,
 				84D92FC01E61F88D00F823DD /* AppDelegate.m in Sources */,
 				FAA838731E870BC9005BFADF /* TPKeyboardAvoidingScrollView.m in Sources */,
-				FA2AF1361EACC10A003BD143 /* Wallet+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@
 //  Budget+CoreDataProperties.m
 //  
 //
-//  Created by Alex on 4/23/17.
+//  Created by Alex on 4/24/17.
 //
 //
 
@@ -14,12 +14,12 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"Budget"];
 }
 
-@dynamic budgetTotalAmount;
+@dynamic budgetCurrentAmount;
 @dynamic budgetFinishDate;
 @dynamic budgetInterval;
 @dynamic budgetName;
 @dynamic budgetStartDate;
-@dynamic budgetCurrentAmount;
+@dynamic budgetTotalAmount;
 @dynamic transactions;
 @dynamic wallets;
 

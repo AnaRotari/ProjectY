@@ -2,7 +2,7 @@
 //  Wallet+CoreDataProperties.h
 //  
 //
-//  Created by Alex on 4/23/17.
+//  Created by Alex on 4/24/17.
 //
 //
 
@@ -22,13 +22,18 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *walletID;
 @property (nullable, nonatomic, copy) NSString *walletName;
 @property (nonatomic) int64_t walletSort;
+@property (nullable, nonatomic, retain) NSSet<Budget *> *budget;
 @property (nullable, nonatomic, retain) NSSet<PlannedPayments *> *plannedPayment;
 @property (nullable, nonatomic, retain) NSSet<Transaction *> *transactions;
-@property (nullable, nonatomic, retain) Budget *budget;
 
 @end
 
 @interface Wallet (CoreDataGeneratedAccessors)
+
+- (void)addBudgetObject:(Budget *)value;
+- (void)removeBudgetObject:(Budget *)value;
+- (void)addBudget:(NSSet<Budget *> *)values;
+- (void)removeBudget:(NSSet<Budget *> *)values;
 
 - (void)addPlannedPaymentObject:(PlannedPayments *)value;
 - (void)removePlannedPaymentObject:(PlannedPayments *)value;

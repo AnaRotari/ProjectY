@@ -60,24 +60,6 @@
 
 - (void)doneButtonAction {
 
-    NSDate *finishDate = [iMoneyUtils getTodayFormatedDate];
-    
-    switch (self.selectedInterval) {
-        
-        case BudgetIntervalWeekly:
-            finishDate = [[iMoneyUtils getTodayFormatedDate] dateByAddingTimeInterval: 7 * 24 * 60 * 60];
-            break;
-        case BudgetIntervalMonthly:
-            finishDate = [[iMoneyUtils getTodayFormatedDate] dateByAddingTimeInterval: 31 * 24 * 60 * 60];
-            break;
-        case BudgetIntervalYearly:
-            finishDate = [[iMoneyUtils getTodayFormatedDate] dateByAddingTimeInterval: 365 * 24 * 60 * 60];
-            break;
-            
-        default:
-            break;
-    }
-    
     NSMutableSet <Wallet *> *selectedWallets = [[NSMutableSet alloc] init];
     
     for (int i = 0 ; i < self.selectionArray.count; i++) {
@@ -87,15 +69,59 @@
         }
     }
     
-    NSDictionary *options = @{@"budgetName"        : self.budgetNameTextfield.text,
-                              @"budgetTotalAmount" : self.budgetAmountTextField.text,
-                              @"budgetStartDate"   : [iMoneyUtils getTodayFormatedDate],
-                              @"budgetFinishDate"  : finishDate,
-                              @"budgetInterval"    : @(self.selectedInterval),
-                              @"wallets"           : selectedWallets};
+    if ([self checkIfCurrencyIsDifferent:selectedWallets])
+    {
+        NSDate *finishDate = [iMoneyUtils getTodayFormatedDate];
+        
+        switch (self.selectedInterval) {
+                
+            case BudgetIntervalWeekly:
+                finishDate = [[iMoneyUtils getTodayFormatedDate] dateByAddingTimeInterval: 7 * 24 * 60 * 60];
+                break;
+            case BudgetIntervalMonthly:
+                finishDate = [[iMoneyUtils getTodayFormatedDate] dateByAddingTimeInterval: 31 * 24 * 60 * 60];
+                break;
+            case BudgetIntervalYearly:
+                finishDate = [[iMoneyUtils getTodayFormatedDate] dateByAddingTimeInterval: 365 * 24 * 60 * 60];
+                break;
+                
+            default:
+                break;
+        }
+        
+        NSDictionary *options = @{@"budgetName"        : self.budgetNameTextfield.text,
+                                  @"budgetTotalAmount" : self.budgetAmountTextField.text,
+                                  @"budgetStartDate"   : [iMoneyUtils getTodayFormatedDate],
+                                  @"budgetFinishDate"  : finishDate,
+                                  @"budgetInterval"    : @(self.selectedInterval),
+                                  @"wallets"           : selectedWallets};
+        
+        [CoreDataBudgetManager createBudgetWithOptions:options];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else
+    {
+        [iMoneyUtils showAlertView:@"Alert"
+                       withMessage:@"The walets have to have the same currency !"];
+    }
+}
+
+- (BOOL)checkIfCurrencyIsDifferent:(NSMutableSet <Wallet *> *)setToCheck {
     
-    [CoreDataBudgetManager createBudgetWithOptions:options];
-    [self.navigationController popViewControllerAnimated:YES];
+    NSMutableArray <NSString *> *currenciesArray = [[NSMutableArray alloc] init];
+    
+    for (Wallet *wallet in setToCheck) {
+        [currenciesArray addObject:wallet.walletCurrency];
+    }
+    
+    NSString *currencyIopt = currenciesArray[0];
+    
+    for (NSString *allCurrencies in currenciesArray) {
+        if (![currencyIopt isEqualToString:allCurrencies]) {
+            return NO;
+        }
+    }
+    return YES;
 }
 
 #pragma mark - UIScrollViewDelegate

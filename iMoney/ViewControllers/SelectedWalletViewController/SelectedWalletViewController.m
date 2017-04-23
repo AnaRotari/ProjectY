@@ -71,7 +71,7 @@
 
     self.navigationItem.rightBarButtonItems = @[addButton,editButton,sortButton];
     
-    _plusButtonsViewNavBar = [LGPlusButtonsView plusButtonsViewWithNumberOfButtons:4
+    _plusButtonsViewNavBar = [LGPlusButtonsView plusButtonsViewWithNumberOfButtons:3
                                                            firstButtonIsPlusButton:NO
                                                                      showAfterInit:NO
                                                                      actionHandler:^(LGPlusButtonsView *plusButtonView, NSString *title, NSString *description, NSUInteger index)
@@ -85,12 +85,8 @@
                                           [self addNewRecord];
                                           break;
                                       case 2:
-                                          [self chooseTemplate];
-                                          break;
-                                      case 3:
                                           [self adjustBalance];
                                           break;
-                                          
                                       default:
                                           break;
                                   }
@@ -121,11 +117,6 @@
     TransactionViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"TransactionViewController"];
     controller.parentWallet = self.selectedWallet;
     [self.navigationController pushViewController:controller animated:YES];
-}
-
-- (void)chooseTemplate {
-    
-    NSLog(@"chooseTemplate");
 }
 
 - (void)adjustBalance {
@@ -189,7 +180,9 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     
-    [CoreDataInsertManager adjustWalletBalance:self.selectedWallet withBalance:textField.text];
+    if ([textField.text length] > 0) {
+        [CoreDataInsertManager adjustWalletBalance:self.selectedWallet withBalance:textField.text];
+    }
 }
 
 #pragma mark - LGAlertViewDelegate

@@ -12,5 +12,7 @@
 
 + (void)createBudgetWithOptions:(NSDictionary *)options;
 + (NSArray <Budget *> *)getAllBudgetsForInterval:(BudgetInterval)interval;
++ (void)handleTransaction:(Transaction *)transaction;
++ (void)checkBudgetsWithoutWallets;
 
 @end

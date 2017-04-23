@@ -8,8 +8,11 @@
 
 #import "BaseViewController.h"
 
-@interface BudgetsDetailViewController : BaseViewController
+@interface BudgetsDetailViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) Budget *selectedBudget;
+
+@property (weak, nonatomic) IBOutlet UITableView *budgetTransactionTableView;
+@property (weak, nonatomic) IBOutlet UILabel *noTransactionLabel;
 
 @end

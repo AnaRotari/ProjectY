@@ -23,15 +23,37 @@
 
 - (void)setupCellWithBudgetDetails:(Budget *)budget {
     
-//    @property (nullable, nonatomic, copy) NSDecimalNumber *budgetTotalAmount;
-//    @property (nullable, nonatomic, copy) NSDate *budgetFinishDate;
-//    @property (nonatomic) int16_t budgetInterval;
-//    @property (nullable, nonatomic, copy) NSString *budgetName;
-//    @property (nullable, nonatomic, copy) NSDate *budgetStartDate;
-//    @property (nullable, nonatomic, copy) NSDecimalNumber *budgetCurrentAmount;
-//    @property (nullable, nonatomic, retain) NSSet<Transaction *> *transactions;
-//    @property (nullable, nonatomic, retain) NSSet<Wallet *> *wallets;
+    self.budgetNameLabel.text = budget.budgetName;
+    self.finishDateLabel.text = [NSString stringWithFormat:@"Due %@",[iMoneyUtils formatDate:budget.budgetFinishDate]];
     
+    NSArray <Wallet *> *walletsArray = [[NSArray alloc] initWithArray:[budget.wallets allObjects]];
+    
+    self.spentAmountLabel.text = [NSString stringWithFormat:@"Spent %.2f %@",budget.budgetCurrentAmount.doubleValue, [walletsArray firstObject].walletCurrency];
+    
+    self.remainAmountLabel.text = [NSString stringWithFormat:@"Remains %.2f %@",budget.budgetTotalAmount.doubleValue - budget.budgetCurrentAmount.doubleValue, [walletsArray firstObject].walletCurrency];
+    
+    self.totalBudgetAmountLabel.text = [NSString stringWithFormat:@"%@ %.2f",[walletsArray firstObject].walletCurrency,budget.budgetTotalAmount.doubleValue];
+    
+    switch (budget.budgetInterval) {
+        case BudgetIntervalWeekly:
+            self.budgetTypeLabel.text = @"Weekly";
+            break;
+        case BudgetIntervalMonthly:
+            self.budgetTypeLabel.text = @"Monthly";
+            break;
+        case BudgetIntervalYearly:
+            self.budgetTypeLabel.text = @"Yearly";
+            break;
+        default:
+            break;
+    }
+    
+    double progress = budget.budgetCurrentAmount.doubleValue / budget.budgetTotalAmount.doubleValue;
+    self.budgetProgressView.progress = progress;
+    if (progress > 1) {
+        self.budgetProgressView.progressTintColor = [UIColor redColor];
+        self.remainAmountLabel.text = @"The budget is over";
+    }
 }
 
 @end

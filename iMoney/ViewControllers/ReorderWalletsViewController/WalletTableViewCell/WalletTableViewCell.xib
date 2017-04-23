@@ -27,7 +27,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xun-jq-t1X">
-                        <rect key="frame" x="49" y="25" width="263" height="17"/>
+                        <rect key="frame" x="49" y="24" width="263" height="17"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16.5" id="dPz-mB-kxn"/>
                         </constraints>
@@ -44,13 +44,21 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MDL" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crd-hr-DHG">
+                        <rect key="frame" x="282" y="16" width="30" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="GEz-74-ooS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="8I3-Dx-o1s"/>
                     <constraint firstItem="YFU-k6-bBf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="8IU-Zj-CI6"/>
                     <constraint firstAttribute="trailing" secondItem="Xun-jq-t1X" secondAttribute="trailing" constant="8" id="Biq-GB-LUH"/>
+                    <constraint firstItem="Crd-hr-DHG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HWH-SD-FlG"/>
                     <constraint firstItem="YFU-k6-bBf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Wal-vJ-L4R"/>
                     <constraint firstItem="Xun-jq-t1X" firstAttribute="leading" secondItem="YFU-k6-bBf" secondAttribute="trailing" constant="8" id="Whj-GA-YPW"/>
+                    <constraint firstAttribute="trailing" secondItem="Crd-hr-DHG" secondAttribute="trailing" constant="8" id="cys-FB-AJa"/>
                     <constraint firstAttribute="trailing" secondItem="GEz-74-ooS" secondAttribute="trailing" constant="8" id="dgy-Kw-13q"/>
                     <constraint firstItem="GEz-74-ooS" firstAttribute="leading" secondItem="YFU-k6-bBf" secondAttribute="trailing" constant="8" id="rnx-hp-Krz"/>
                     <constraint firstAttribute="bottom" secondItem="Xun-jq-t1X" secondAttribute="bottom" constant="8" id="zvI-L8-c9O"/>
@@ -60,6 +68,7 @@
             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="walletColorView" destination="YFU-k6-bBf" id="AQ1-I3-Mu8"/>
+                <outlet property="walletCurrencyLabel" destination="Crd-hr-DHG" id="gbB-9a-1N1"/>
                 <outlet property="walletDescriptionLabel" destination="Xun-jq-t1X" id="hbJ-4C-Syb"/>
                 <outlet property="walletNameLabel" destination="GEz-74-ooS" id="dLp-qr-ORa"/>
             </connections>

@@ -56,4 +56,53 @@
     return resultArray;
 }
 
++ (void)handleTransaction:(Transaction *)transaction {
+    
+    NSArray <Budget *> *budgets = [self getAllBudgetsForInterval:BudgetIntervalAll];
+    
+    for (Budget *concreteBudget in budgets) {
+        
+        NSArray <Wallet *> *availableWallets = [concreteBudget.wallets allObjects];
+        
+        for (Wallet *concreteWallet in availableWallets) {
+            
+            if ([concreteWallet isEqual:transaction.wallet])
+            {
+                if(transaction.transactionType == kTransactionTypeExpense)
+                {
+                    if ([[iMoneyUtils getTodayFormatedDate] compare:concreteBudget.budgetFinishDate] == NSOrderedAscending)
+                    {
+                        [concreteBudget addTransactionsObject:transaction];
+                        concreteBudget.budgetCurrentAmount = [concreteBudget.budgetCurrentAmount decimalNumberByAdding:transaction.transactionAmount];
+                        [[CoreDataAccessLayer sharedInstance] saveContext];
+                    }
+                }
+            }
+        }
+    }
+}
+
++ (void)checkBudgetsWithoutWallets {
+    
+    NSError *error = nil;
+    NSManagedObjectContext *context = [[CoreDataAccessLayer sharedInstance] managedObjectContext];
+    
+    NSArray <Budget *> *budgets = [self getAllBudgetsForInterval:BudgetIntervalAll];
+    
+    for (Budget *concreteBudget in budgets) {
+        
+        NSArray <Wallet *> *availableWallets = [concreteBudget.wallets allObjects];
+        
+        if (availableWallets.count == 0) {
+            
+            [context deleteObject:concreteBudget];
+            if(![context save:&error]) {
+                NSLog(@"Error: %@",[error localizedDescription]);
+            } else {
+                NSLog(@"successfull delete budget");
+            }
+        }
+    }
+}
+
 @end

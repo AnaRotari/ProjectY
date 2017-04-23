@@ -115,6 +115,8 @@
     [[[CoreDataAccessLayer sharedInstance] managedObjectContext] deleteObject:self.walletToEdit];
     if(![[[CoreDataAccessLayer sharedInstance] managedObjectContext] save:&error]) {
         NSLog(@"Cant delete wallet :%@",[error localizedDescription]);
+    } else {
+        [CoreDataBudgetManager checkBudgetsWithoutWallets];
     }
     [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:YES];
 }
