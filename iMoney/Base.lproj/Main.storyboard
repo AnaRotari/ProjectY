@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JDF-WB-fQC">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JDF-WB-fQC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -656,7 +656,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhx-zS-2lY">
-                                                <rect key="frame" x="146" y="564" width="82" height="21"/>
+                                                <rect key="frame" x="147" y="564" width="82" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1731,7 +1731,7 @@
                     <tabBarItem key="tabBarItem" title="Dashboard" image="ic_dashboard" id="bpi-MI-vgU"/>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="C4v-b8-Zab">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C4v-b8-Zab">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1966,7 +1966,7 @@
                                 <items>
                                     <barButtonItem style="plain" id="wRd-FL-nu9">
                                         <view key="customView" contentMode="scaleToFill" id="tjO-sL-Zvd" customClass="MKDropdownMenu">
-                                            <rect key="frame" x="16" y="6" width="342" height="33"/>
+                                            <rect key="frame" x="16" y="5.5" width="342" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2211,6 +2211,8 @@
                             <constraint firstItem="kW3-m1-bF6" firstAttribute="top" secondItem="xX6-jW-vWK" secondAttribute="bottom" id="I36-kX-n8E"/>
                             <constraint firstItem="a4V-g7-akX" firstAttribute="top" secondItem="nuI-lK-H6w" secondAttribute="bottom" id="QgF-iP-T8z"/>
                             <constraint firstItem="xX6-jW-vWK" firstAttribute="leading" secondItem="6q6-MC-0b7" secondAttribute="leading" id="bhm-bc-v0B"/>
+                            <constraint firstItem="Yza-gE-6iQ" firstAttribute="centerX" secondItem="kW3-m1-bF6" secondAttribute="centerX" id="lit-5l-HsM"/>
+                            <constraint firstItem="Yza-gE-6iQ" firstAttribute="centerY" secondItem="kW3-m1-bF6" secondAttribute="centerY" id="pds-sr-DqW"/>
                             <constraint firstAttribute="trailing" secondItem="a4V-g7-akX" secondAttribute="trailing" id="qb5-YQ-L8l"/>
                             <constraint firstItem="a4V-g7-akX" firstAttribute="leading" secondItem="6q6-MC-0b7" secondAttribute="leading" id="smY-cT-hdS"/>
                             <constraint firstAttribute="trailing" secondItem="kW3-m1-bF6" secondAttribute="trailing" id="y3C-UO-Cnj"/>
@@ -2259,7 +2261,7 @@
                                 <items>
                                     <barButtonItem style="plain" id="s17-YA-mSb">
                                         <view key="customView" contentMode="scaleToFill" id="hK3-oK-Nmb" customClass="MKDropdownMenu">
-                                            <rect key="frame" x="16" y="6" width="343" height="33"/>
+                                            <rect key="frame" x="16" y="5.5" width="343" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2388,7 +2390,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zye-Km-bp3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Records" image="ic_records" id="n2H-Ex-8Vt"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uDB-2Q-Rcy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uDB-2Q-Rcy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2407,7 +2409,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lfh-0w-rQw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Charts" image="ic_chart" id="dSm-ed-hV2"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hGe-cL-yfe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hGe-cL-yfe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2426,7 +2428,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Npz-q0-1YL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Reports" image="ic_raports" id="Lp9-iX-RXK"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HGL-yn-uCF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HGL-yn-uCF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2445,7 +2447,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PgU-dR-132" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Budgets" image="ic_budgets" id="Mwq-Mf-4AR"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ybc-fc-iGl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ybc-fc-iGl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
