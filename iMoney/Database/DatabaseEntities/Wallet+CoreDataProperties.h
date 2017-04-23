@@ -2,7 +2,7 @@
 //  Wallet+CoreDataProperties.h
 //  
 //
-//  Created by Alex on 4/18/17.
+//  Created by Alex on 4/23/17.
 //
 //
 
@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) int64_t walletSort;
 @property (nullable, nonatomic, retain) NSSet<PlannedPayments *> *plannedPayment;
 @property (nullable, nonatomic, retain) NSSet<Transaction *> *transactions;
+@property (nullable, nonatomic, retain) Budget *budget;
 
 @end
 

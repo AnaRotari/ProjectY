@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="BudgetTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5Y-VF-HeF">
+                        <rect key="frame" x="8" y="4" width="86" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spent 100 MDL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8D-rM-StQ">
+                        <rect key="frame" x="8" y="81" width="87" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.78315071780000001" green="0.0" blue="0.0073316655739999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remains 1000 MDL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETf-EX-vwe">
+                        <rect key="frame" x="203" y="81" width="109" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8g-x2-o5H">
+                        <rect key="frame" x="253.5" y="4" width="58.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="W0q-8b-Bh5">
+                        <rect key="frame" x="8" y="42.5" width="304" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="xj8-e4-UYT"/>
+                        </constraints>
+                        <color key="progressTintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </progressView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MDL 1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buM-Us-iDw">
+                        <rect key="frame" x="120.5" y="13" width="79" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="s8D-rM-StQ" secondAttribute="bottom" constant="4" id="5Ee-GW-5IJ"/>
+                    <constraint firstItem="Y5Y-VF-HeF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="6Jr-BK-gK2"/>
+                    <constraint firstAttribute="trailing" secondItem="W0q-8b-Bh5" secondAttribute="trailing" constant="8" id="BZT-ft-yZV"/>
+                    <constraint firstItem="Y5Y-VF-HeF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="Hpz-pS-UBc"/>
+                    <constraint firstItem="s8D-rM-StQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="LIP-Lm-jmV"/>
+                    <constraint firstItem="W0q-8b-Bh5" firstAttribute="top" secondItem="buM-Us-iDw" secondAttribute="bottom" constant="8" id="ONv-ku-oci"/>
+                    <constraint firstItem="O8g-x2-o5H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="QAE-Vr-3QD"/>
+                    <constraint firstAttribute="trailing" secondItem="O8g-x2-o5H" secondAttribute="trailing" constant="8" id="dEn-Bx-hsd"/>
+                    <constraint firstItem="W0q-8b-Bh5" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="hJs-B9-L8S"/>
+                    <constraint firstAttribute="bottom" secondItem="ETf-EX-vwe" secondAttribute="bottom" constant="4" id="iJK-oe-Elr"/>
+                    <constraint firstItem="buM-Us-iDw" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="iiG-gK-kzl"/>
+                    <constraint firstItem="W0q-8b-Bh5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="l9S-sI-R0J"/>
+                    <constraint firstItem="W0q-8b-Bh5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="oxr-e7-uUm"/>
+                    <constraint firstAttribute="trailing" secondItem="ETf-EX-vwe" secondAttribute="trailing" constant="8" id="wCr-Lt-Lry"/>
+                </constraints>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+</document>

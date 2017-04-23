@@ -34,6 +34,7 @@ static NSString *const kGoogleApiKey = @"AIzaSyBsrWIkSGvj-8ep8pn44POP3ztKTxPAwjA
     [[DatabaseSyncManager sharedInstance] startSyncronize];
     [iMoneyUtils setupAppearance];
     [self checkFirstRun];
+    
 //    [self generateFuckingRecords];
     return YES;
 }

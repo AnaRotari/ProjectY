@@ -2,7 +2,7 @@
 //  ShoppingList+CoreDataProperties.m
 //  
 //
-//  Created by Ivan on 4/13/17.
+//  Created by Alex on 4/23/17.
 //
 //
 
