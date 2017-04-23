@@ -2,14 +2,14 @@
 //  Transaction+CoreDataClass.h
 //  
 //
-//  Created by Alex on 4/15/17.
+//  Created by Alex on 4/23/17.
 //
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Wallet;
+@class Budget, Wallet;
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 
-@interface BudgetsViewController : BaseViewController
+@interface BudgetsViewController : BaseViewController <UIActionSheetDelegate, UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UILabel *noBudgetsLabel;
+@property (weak, nonatomic) IBOutlet UITableView *budgetsTableView;
 
 @end

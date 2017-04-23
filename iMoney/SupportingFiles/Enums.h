@@ -113,4 +113,12 @@ typedef NS_ENUM(NSInteger, PlannedInterval)
     PlannedIntervalRepeatYearly
 };
 
+typedef NS_ENUM(NSInteger, BudgetInterval)
+{
+    BudgetIntervalWeekly = 0,
+    BudgetIntervalMonthly,
+    BudgetIntervalYearly,
+    BudgetIntervalAll
+};
+
 #endif /* Enums_h */

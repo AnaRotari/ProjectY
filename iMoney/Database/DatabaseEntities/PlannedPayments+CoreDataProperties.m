@@ -2,7 +2,7 @@
 //  PlannedPayments+CoreDataProperties.m
 //  
 //
-//  Created by Alex on 4/20/17.
+//  Created by Alex on 4/23/17.
 //
 //
 
@@ -20,8 +20,8 @@
 @dynamic plannedDescription;
 @dynamic plannedFrequency;
 @dynamic plannedName;
-@dynamic plannedType;
 @dynamic plannedSort;
+@dynamic plannedType;
 @dynamic wallet;
 
 @end

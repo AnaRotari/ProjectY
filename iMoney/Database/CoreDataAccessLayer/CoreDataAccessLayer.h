@@ -14,6 +14,7 @@
 #import "ShoppingList+CoreDataClass.h"
 #import "ListItem+CoreDataClass.h"
 #import "PlannedPayments+CoreDataClass.h"
+#import "Budget+CoreDataClass.h"
 
 @interface CoreDataAccessLayer : NSObject
 

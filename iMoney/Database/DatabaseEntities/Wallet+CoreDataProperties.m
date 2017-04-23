@@ -2,7 +2,7 @@
 //  Wallet+CoreDataProperties.m
 //  
 //
-//  Created by Alex on 4/18/17.
+//  Created by Alex on 4/23/17.
 //
 //
 
@@ -23,5 +23,6 @@
 @dynamic walletSort;
 @dynamic plannedPayment;
 @dynamic transactions;
+@dynamic budget;
 
 @end
