@@ -8,18 +8,13 @@
 
 #import "ReportsCollectionViewCell.h"
 
-@implementation ReportsCollectionViewCell{
-    Wallet *wallet;
-}
+@implementation ReportsCollectionViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
 }
 
--(void)setTransaction:(Transaction *)transaction{
-    wallet = transaction.wallet;
-}
 
 - (IBAction)previousButtonAction:(UIButton *)sender {
     

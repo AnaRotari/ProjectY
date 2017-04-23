@@ -47,6 +47,8 @@
     selectedWalletIndex = 0;
     if (walletsArray.count == 0) {
         walletName = @"No wallets added";
+        [noTransactionsLabel setHidden:false];
+        [supportView setHidden:true];
     }else
         walletName = walletsArray[selectedWalletIndex].walletName;
     
@@ -68,11 +70,11 @@
     self.reportsCollectionView.contentOffset = CGPointMake(0, 0);
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     [_reportsCollectionView selectItemAtIndexPath:[NSIndexPath indexPathForRow:selectedMonthIndex inSection:0]
-                                                 animated:false
-                                           scrollPosition:UICollectionViewScrollPositionLeft];
+                                         animated:false
+                                   scrollPosition:UICollectionViewScrollPositionLeft];
 }
 
 -(void)moveToCurrentDate:(UIBarButtonItem *)sender{
@@ -98,6 +100,7 @@
     transactionsArray = [self sortedTransactionsByMonth:transactions];
     
     [_reportsCollectionView reloadData];
+    [self setLabelsText];
 }
 
 -(NSArray *)sortedTransactionsByMonth:(NSArray<Transaction*> *)array{
@@ -111,6 +114,7 @@
         }
     }
     [noTransactionsLabel setHidden:result.count];
+    [supportView setHidden:!result.count];
     return result;
 }
 
@@ -160,8 +164,6 @@
     
     cell.currentMonthLabel.text = [self formatedDate:indexPath.row];
     cell.cashflowLabelTop.text = [self cashflowString];
-    
-    [cell setTransaction:transactionsArray[indexPath.row]];
     
     return cell;
 }
@@ -248,6 +250,90 @@
     
     NSString *currency = walletsArray[selectedWalletIndex].walletCurrency;
     NSString *sign = [self cashflow] > 0 ? @"+" : @"-";
-    return [NSString stringWithFormat:@"Cashflow: %@%@ %.2f", sign, currency, [self cashflow]];
+    return [NSString stringWithFormat:@"Cashflow: %@%@ %.2f", sign, currency, fabsf([self cashflow])];
+}
+
+-(void)setLabelsText{
+    if (transactionsArray.count == 0) {return;}
+    
+    [self setTransactionsLabels];
+    [self setAveragePerDay];
+    [self setEndBalance];
+    cashflowLabel.text = [self cashflowString];
+}
+
+-(void)setTransactionsLabels{
+    NSInteger incomeCount = 0, expenseCount = 0;
+    float incomeTotal = 0, expenseTotal = 0;
+    float startBalance = walletsArray[selectedWalletIndex].walletBalance.floatValue;
+    
+    for (Transaction *transaction in transactionsArray) {
+        if (transaction.transactionType == kTransactionTypeIncome) {
+            incomeCount++;
+            incomeTotal += transaction.transactionAmount.floatValue;
+            startBalance -= transaction.transactionAmount.floatValue;
+        }else if(transaction.transactionType == kTransactionTypeExpense){
+            expenseCount++;
+            expenseTotal -= transaction.transactionAmount.floatValue;
+            startBalance += transaction.transactionAmount.floatValue;
+        }
+    }
+    
+    incomeCountLabel.text = [NSString stringWithFormat:@"%ld", incomeCount];
+    expenseCountLabel.text = [NSString stringWithFormat:@"%ld", expenseCount];
+    
+    NSString *currency = walletsArray[selectedWalletIndex].walletCurrency;
+    incomeTotalLabel.text = [NSString stringWithFormat:@"+ %@ %.2f",currency, incomeTotal];
+    expenseTotalLabel.text = [NSString stringWithFormat:@"- %@ %.2f",currency, fabsf(expenseTotal)];
+    
+    incomeAverageRecordLabel.text = [NSString stringWithFormat:@"+ %@ %.2f",currency, incomeTotal/incomeCount];
+    expenseAverageRecordLabel.text = [NSString stringWithFormat:@"- %@ %.2f",currency, fabsf(expenseTotal)/expenseCount];
+    
+    NSString *sign = startBalance > 0 ? @"+" : @"-";
+    startingBalanceLabel.text = [NSString stringWithFormat:@"%@%@ %0.2f",sign, currency, fabsf(startBalance)];
+}
+
+-(void)setEndBalance{
+    float balance = walletsArray[selectedWalletIndex].walletBalance.floatValue;
+    NSString *sign = balance > 0 ? @"+" : @"-";
+    NSString *currency = walletsArray[selectedWalletIndex].walletCurrency;
+    netEndingBalanceLabel.text = [NSString stringWithFormat:@"%@%@ %0.2f",sign, currency, fabsf(balance)];
+}
+
+-(void)setAveragePerDay{
+    NSMutableSet<NSDate*> *incomeSet = [NSMutableSet set];
+    NSMutableSet<NSDate*> *expenseSet = [NSMutableSet set];
+    
+    for (Transaction *transaction in transactionsArray) {
+        if (transaction.transactionType == kTransactionTypeIncome) {
+            [incomeSet addObject:transaction.transactionDate];
+        }else if(transaction.transactionType == kTransactionTypeExpense){
+            [expenseSet addObject:transaction.transactionDate];
+        }
+    }
+    
+    float incomeDayAverage = [self averageFromArray:incomeSet.allObjects transactionType:kTransactionTypeIncome];
+    float expenseDayAverage = [self averageFromArray:expenseSet.allObjects transactionType:kTransactionTypeExpense];
+    
+    NSString *currency = walletsArray[selectedWalletIndex].walletCurrency;
+    incomeAverageDayLabel.text = [NSString stringWithFormat:@"+ %@ %.2f",currency ,fabsf(incomeDayAverage)];
+    expenseAverageDayLabel.text = [NSString stringWithFormat:@"+ %@ %.2f",currency ,fabsf(expenseDayAverage)];
+}
+
+-(float)averageFromArray:(NSArray<NSDate*> *)array transactionType:(TransactionType)transactionType{
+    NSMutableArray<NSNumber*> *result = [NSMutableArray array];
+    for (NSDate *date in array) {
+        NSMutableArray<NSNumber *> *transactionsPerDayArray = [NSMutableArray array];
+        for (Transaction *transaction in transactionsArray) {
+            if ([date compare:transaction.transactionDate] == NSOrderedSame && transaction.transactionType == transactionType) {
+                [transactionsPerDayArray addObject:transaction.transactionAmount];
+            }
+        }
+        NSNumber *average = [transactionsPerDayArray valueForKeyPath:@"@avg.self"];
+        [result addObject:average];
+    }
+    
+    float dayAverage = [[result valueForKeyPath:@"@avg.self"] floatValue];
+    return dayAverage;
 }
 @end

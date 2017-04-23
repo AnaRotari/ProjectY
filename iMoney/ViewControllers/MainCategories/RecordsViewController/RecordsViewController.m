@@ -274,6 +274,6 @@
     
     NSString *currency = _walletsArray[selectedWalletIndex].walletCurrency;
     NSString *sign = [self cashflow] > 0 ? @"+" : @"-";
-    return [NSString stringWithFormat:@"Cashflow: %@%@ %.2f", sign, currency, [self cashflow]];
+    return [NSString stringWithFormat:@"Cashflow: %@%@ %.2f", sign, currency, fabsf([self cashflow])];
 }
 @end
