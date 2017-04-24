@@ -17,6 +17,5 @@
 - (void)goToExportsViewController;
 - (void)goToDebtsViewController;
 - (void)goToHelpViewController;
-- (void)goToSettingsViewController;
 
 @end

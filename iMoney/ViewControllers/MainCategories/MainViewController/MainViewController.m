@@ -196,9 +196,6 @@
         case kMenuItemHelp:
             [self goToHelpViewController];
             break;
-        case kMenuItemSettings:
-            [self goToSettingsViewController];
-            break;
         case kMenuItemLogout:
             break;
             

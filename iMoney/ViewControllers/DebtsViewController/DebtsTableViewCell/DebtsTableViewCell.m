@@ -37,6 +37,7 @@
 
     if (amountProgress >= 1) {
         self.debtAmountProgressView.progressTintColor = [UIColor greenColor];
+        [self.closeDebtButtonAction setHidden:YES];
     }
 }
 

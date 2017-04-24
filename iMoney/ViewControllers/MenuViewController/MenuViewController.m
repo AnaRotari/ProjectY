@@ -127,11 +127,8 @@
     }
     if (indexPath.section == 1 && indexPath.row == 1) {
         if (self.delegate && [self.delegate respondsToSelector:@selector(userNavigateTo:)]) {
-            [self.delegate userNavigateTo:kMenuItemSettings];
+            [self logoutUser];
         }
-    }
-    if (indexPath.section == 1 && indexPath.row == 2) {
-        [self logoutUser];
     }
 }
 

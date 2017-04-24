@@ -1076,24 +1076,6 @@
             </objects>
             <point key="canvasLocation" x="3724" y="232.53373313343329"/>
         </scene>
-        <!--Settings View Controller-->
-        <scene sceneID="Doi-Ip-DtQ">
-            <objects>
-                <viewController storyboardIdentifier="SettingsViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WOs-Pf-CL6" customClass="SettingsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xJJ-qd-zLR"/>
-                        <viewControllerLayoutGuide type="bottom" id="cQS-7I-3zY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UB4-8X-3Cm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lSD-Du-nQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="617" y="-5962"/>
-        </scene>
         <!--Help View Controller-->
         <scene sceneID="XFP-9J-cAa">
             <objects>

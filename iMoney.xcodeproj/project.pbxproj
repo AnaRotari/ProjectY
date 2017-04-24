@@ -28,7 +28,6 @@
 		FA0CC0071E9EA10000D27444 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0CC0061E9EA10000D27444 /* LocationViewController.m */; };
 		FA116E031EA96598004C4A19 /* DebtsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA116E021EA96598004C4A19 /* DebtsViewController.m */; };
 		FA116E081EA96688004C4A19 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA116E071EA96688004C4A19 /* HelpViewController.m */; };
-		FA116E0B1EA9669C004C4A19 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA116E0A1EA9669C004C4A19 /* SettingsViewController.m */; };
 		FA1783821EA53C7900B1D36E /* RecordsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1783801EA53C7900B1D36E /* RecordsCollectionViewCell.m */; };
 		FA1783831EA53C7900B1D36E /* RecordsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1783811EA53C7900B1D36E /* RecordsCollectionViewCell.xib */; };
 		FA1783871EA53CA700B1D36E /* RecordsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1783851EA53CA700B1D36E /* RecordsTableViewCell.m */; };
@@ -174,8 +173,6 @@
 		FA116E021EA96598004C4A19 /* DebtsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebtsViewController.m; sourceTree = "<group>"; };
 		FA116E061EA96688004C4A19 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
 		FA116E071EA96688004C4A19 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
-		FA116E091EA9669C004C4A19 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		FA116E0A1EA9669C004C4A19 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		FA17837F1EA53C7900B1D36E /* RecordsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordsCollectionViewCell.h; sourceTree = "<group>"; };
 		FA1783801EA53C7900B1D36E /* RecordsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordsCollectionViewCell.m; sourceTree = "<group>"; };
 		FA1783811EA53C7900B1D36E /* RecordsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -574,7 +571,6 @@
 				2C605DFD1EA5FB9B0052939E /* ExportsViewController */,
 				FA116E001EA964CC004C4A19 /* DebtsViewController */,
 				FA116E041EA96679004C4A19 /* HelpViewController */,
-				FA116E051EA96679004C4A19 /* SettingsViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -630,15 +626,6 @@
 				FA116E071EA96688004C4A19 /* HelpViewController.m */,
 			);
 			path = HelpViewController;
-			sourceTree = "<group>";
-		};
-		FA116E051EA96679004C4A19 /* SettingsViewController */ = {
-			isa = PBXGroup;
-			children = (
-				FA116E091EA9669C004C4A19 /* SettingsViewController.h */,
-				FA116E0A1EA9669C004C4A19 /* SettingsViewController.m */,
-			);
-			path = SettingsViewController;
 			sourceTree = "<group>";
 		};
 		FA17837D1EA53C5C00B1D36E /* RecordsCollectionViewCell */ = {
@@ -1353,7 +1340,6 @@
 				FA6BC0891EA267AE00ECBA5E /* WarrantiesTableViewCell.m in Sources */,
 				FAAE7B081E9D87F80057D648 /* ShoppingListViewController.m in Sources */,
 				FAFF39FA1E88414600524084 /* SelectedWalletViewController.m in Sources */,
-				FA116E0B1EA9669C004C4A19 /* SettingsViewController.m in Sources */,
 				FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */,
 				84D92FCD1E61FB9800F823DD /* iMoney.xcdatamodeld in Sources */,
 				FAE6328D1E982BDA002A0455 /* ChartsViewController.m in Sources */,

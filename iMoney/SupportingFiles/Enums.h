@@ -68,7 +68,6 @@ typedef NS_ENUM(NSInteger, MenuItems)
     kMenuItemLocations,
     kMenuItemReminder,
     kMenuItemHelp,
-    kMenuItemSettings,
     kMenuItemLogout
 };
 
