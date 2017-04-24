@@ -18,10 +18,23 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) int16_t debtType;
 @property (nullable, nonatomic, copy) NSString *debtName;
 @property (nullable, nonatomic, copy) NSString *debtDescription;
-@property (nullable, nonatomic, copy) NSDecimalNumber *debtAmount;
+@property (nullable, nonatomic, copy) NSDecimalNumber *debtTotalAmount;
 @property (nullable, nonatomic, copy) NSDate *debtStartDate;
 @property (nullable, nonatomic, copy) NSDate *debtFinishDate;
+@property (nonatomic) int32_t debtSort;
+@property (nullable, nonatomic, copy) NSDate *debtCreationDate;
+@property (nullable, nonatomic, copy) NSDecimalNumber *debtCurrentAmount;
 @property (nullable, nonatomic, retain) Wallet *wallet;
+@property (nullable, nonatomic, retain) NSSet<Transaction *> *transactions;
+
+@end
+
+@interface Debt (CoreDataGeneratedAccessors)
+
+- (void)addTransactionsObject:(Transaction *)value;
+- (void)removeTransactionsObject:(Transaction *)value;
+- (void)addTransactions:(NSSet<Transaction *> *)values;
+- (void)removeTransactions:(NSSet<Transaction *> *)values;
 
 @end
 

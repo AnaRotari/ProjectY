@@ -142,6 +142,9 @@
         case kTransactionCategoryOther:
             return @"Other";
             break;
+        case kTransactionCategoryDebts:
+            return @"Debts";
+            break;
             
         default:
             break;

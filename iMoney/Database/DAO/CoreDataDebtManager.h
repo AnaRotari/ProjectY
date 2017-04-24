@@ -11,5 +11,8 @@
 @interface CoreDataDebtManager : NSObject
 
 + (void)createDebtWithOptions:(NSDictionary *)options;
++ (NSMutableArray <Debt *> *)getAllDebts:(DebtsSort)sortOption;
+
++ (void)createNewRecordForDebt:(Debt *)debt withAmount:(NSString *)amount;
 
 @end

@@ -27,5 +27,6 @@
 @dynamic transactionWarrienty;
 @dynamic budget;
 @dynamic wallet;
+@dynamic debt;
 
 @end

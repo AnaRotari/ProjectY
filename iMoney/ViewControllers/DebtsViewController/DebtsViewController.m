@@ -7,10 +7,23 @@
 //
 
 #import "DebtsViewController.h"
-#import "DebtsTableViewCell.h"
-#import "DebtsDetailViewController.h"
+
+typedef NS_ENUM(NSInteger, ActionSheetType)
+{
+    ActionSheetTypeSort = 0,
+    ActionSheetTypeCloseDebt
+};
+
+typedef NS_ENUM(NSInteger, CloseDebtOption)
+{
+    CloseDebtOptionFull = 0,
+    CloseDebtOptionPartial
+};
 
 @interface DebtsViewController ()
+
+@property (strong, nonatomic) NSMutableArray <Debt *> *debtsArray;
+@property (assign, nonatomic) NSInteger selectedDebtForClose;
 
 @end
 
@@ -26,19 +39,19 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    [self reloadDataForIndex:BudgetsSortByCreationDateNewest];
+    [self reloadDataForIndex:DebtsSortByCreationDateNewest];
 }
 
 - (void)setUpNavigationControllerButtons {
     
     self.title = @"Debts";
     UIBarButtonItem *addDebtsButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                                                                        target:self
-                                                                                        action:@selector(addDebtsButtonAction)];
+                                                                                    target:self
+                                                                                    action:@selector(addDebtsButtonAction)];
     
     UIBarButtonItem *editDebtsButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
-                                                                                        target:self
-                                                                                        action:@selector(editDebtsButtonAction)];
+                                                                                     target:self
+                                                                                     action:@selector(editDebtsButtonAction)];
     
     UIBarButtonItem *sortButton = [iMoneyUtils getNavigationButton:@"ic_sort"
                                                             target:self
@@ -55,10 +68,10 @@
 
 -(void)reloadDataForIndex:(NSInteger)index {
     
-//    self.plannedArray = [CoreDataPlannedPaymentsManager getAllPlannedPayments:index];
-//    self.plannedArray.count ? [self.plannedListLabel setHidden:YES] : [self.plannedListLabel setHidden:NO];
-//    [self.plannedPaymentsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
-//                                 withRowAnimation:UITableViewRowAnimationFade];
+    self.debtsArray = [CoreDataDebtManager getAllDebts:index];
+    self.bedtsLabel.hidden = self.debtsArray.count;
+    [self.debtsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
+                       withRowAnimation:UITableViewRowAnimationFade];
 }
 
 
@@ -83,16 +96,19 @@
                                 @"By name - A->Z",
                                 @"By name - Z->A",
                                 @"By amount - Ascending",
-                                @"By amount - Descending"]];
+                                @"By amount - Descending"]
+                    withTitle:@"Sorting options"
+                 andActionTag:ActionSheetTypeSort];
 }
 
 #pragma mark - UIActionSheetDelegate
 
-- (void)showSortActionSheet:(NSArray <NSString *> *)sortOptionsArray {
+- (void)showSortActionSheet:(NSArray <NSString *> *)sortOptionsArray withTitle:(NSString *)title andActionTag:(NSInteger) actionType{
     
-    UIActionSheet* actionSheet = [[UIActionSheet alloc] init];
-    actionSheet.title = @"Sorting options";
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] init];
+    actionSheet.title = title;
     actionSheet.delegate = self;
+    actionSheet.tag = actionType;
     
     for (NSString *option in sortOptionsArray) {
         
@@ -105,7 +121,61 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex != actionSheet.cancelButtonIndex) {
-        [self reloadDataForIndex:buttonIndex];
+        
+        if (actionSheet.tag == ActionSheetTypeSort)
+        {
+            [self reloadDataForIndex:buttonIndex];
+        }
+        if (actionSheet.tag == ActionSheetTypeCloseDebt)
+        {
+            if(buttonIndex == CloseDebtOptionFull)
+            {
+                [self closeDebtFull];
+            }
+            if(buttonIndex == CloseDebtOptionPartial)
+            {
+                [self closeDebtPartial];
+            }
+        }
+    }
+}
+
+- (void)closeDebtFull {
+    
+    Debt *selectedDebt = self.debtsArray[self.selectedDebtForClose];
+    NSDecimalNumber *insuficient = [[NSDecimalNumber alloc] init];
+    insuficient = [selectedDebt.debtTotalAmount decimalNumberBySubtracting:selectedDebt.debtCurrentAmount];
+    selectedDebt.debtCurrentAmount = insuficient;
+    [[CoreDataAccessLayer sharedInstance] saveContext];
+    [CoreDataDebtManager createNewRecordForDebt:selectedDebt withAmount:insuficient.stringValue];
+    [self reloadDataForIndex:DebtsSortByCreationDateNewest];
+}
+
+- (void)closeDebtPartial {
+    
+    MRAlertView *alertView = [[MRAlertView alloc] initWithTitle:@"Amount"
+                                                        message:@"Enter value"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"OK"];
+    [alertView setAlertViewStyle:MRAlertViewStylePlainTextInput];
+    [alertView show];
+}
+
+#pragma mark - MRAlertViewDelegate
+
+- (void)alertView:(MRAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == 1)
+    {
+        if ([alertView.textView.text length] > 0)
+        {
+            Debt *selectedDebt = self.debtsArray[self.selectedDebtForClose];
+            [CoreDataDebtManager createNewRecordForDebt:selectedDebt withAmount:alertView.textView.text];
+            selectedDebt.debtCurrentAmount = [selectedDebt.debtCurrentAmount decimalNumberByAdding:[[NSDecimalNumber alloc] initWithString:alertView.textView.text]];
+            [[CoreDataAccessLayer sharedInstance] saveContext];
+            [self reloadDataForIndex:DebtsSortByCreationDateNewest];
+        }
     }
 }
 
@@ -113,19 +183,22 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 10;
+    return self.debtsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     DebtsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DebtsTableViewCell" forIndexPath:indexPath];
-//    [cell initCellWithPayment:self.plannedArray[indexPath.row]];
+    [cell initCellWithDebt:self.debtsArray[indexPath.row]];
+    cell.delegate = self;
+    cell.transactionsButtonOutlet.tag = indexPath.row;
+    cell.closeDebtButtonAction.tag = indexPath.row;
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return 120;
+    return 215;
 }
 
 #pragma mark - UITableViewDelegate
@@ -133,9 +206,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    PlannedPaymentsCreatorViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"PlannedPaymentsCreatorViewController"];
-//    controller.plannedPayment = self.plannedArray[indexPath.row];
-//    [self.navigationController pushViewController:controller animated:YES];
+    DebtsDetailViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"DebtsDetailViewController"];
+    controller.debtStatus = DebtStatusEdit;
+    controller.selectedDebt = self.debtsArray[indexPath.row];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -154,39 +228,47 @@
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
     
-//    PlannedPayments *plannedPayment = self.plannedArray[sourceIndexPath.row];
-//    
-//    [self.plannedArray removeObjectAtIndex:sourceIndexPath.row];
-//    [self.plannedArray insertObject:plannedPayment atIndex:destinationIndexPath.row];
-//    
-//    int i = 1;
-//    for (PlannedPayments *item in self.plannedArray) {
-//        item.plannedSort = i++;
-//    }
-//    
-//    [[CoreDataAccessLayer sharedInstance] saveContext];
+    Debt *currentDebt = self.debtsArray[sourceIndexPath.row];
+    [self.debtsArray removeObjectAtIndex:sourceIndexPath.row];
+    [self.debtsArray insertObject:currentDebt atIndex:destinationIndexPath.row];
+    
+    int i = 1;
+    for (Debt *item in self.debtsArray) {
+        item.debtSort = i++;
+    }
+    
+    [[CoreDataAccessLayer sharedInstance] saveContext];
 }
 
-// Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
-//        [PlannedPaymentsNotificationManager deleteScheduledNotificationForPlannedPayment:self.plannedArray[indexPath.row]];
-//        NSManagedObjectContext *context = [[CoreDataAccessLayer sharedInstance] managedObjectContext];
-//        NSError *error = nil;
-//        
-//        [context deleteObject:self.plannedArray[indexPath.row]];
-//        
-//        if (![context save:&error]) {
-//            NSLog(@"Can't delete: %@",[error localizedDescription]);
-//        }
-//        
-//        [self.plannedArray removeObjectAtIndex:indexPath.row];
-//        self.plannedArray.count ? [self.plannedListLabel setHidden:YES] : [self.plannedListLabel setHidden:NO];
-//        [self.plannedPaymentsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
-//                                     withRowAnimation:UITableViewRowAnimationFade];
+        NSManagedObjectContext *context = [[CoreDataAccessLayer sharedInstance] managedObjectContext];
+        NSError *error = nil;
+        [context deleteObject:self.debtsArray[indexPath.row]];
+        if (![context save:&error]) {
+            NSLog(@"Can't delete: %@",[error localizedDescription]);
+        }
+        [self reloadDataForIndex:DebtsSortByCreationDateNewest];
     }
+}
+
+#pragma mark - DebtsTableViewCellDelegate
+
+- (void)transactionsButtonDebtsCell:(NSInteger)buttonTag {
+    
+    DebtsTransactionsViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"DebtsTransactionsViewController"];
+    controller.transactionsArray = [self.debtsArray[buttonTag].transactions allObjects];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (void)closeDebtButtonDebtsCell:(NSInteger)buttonTag {
+    
+    self.selectedDebtForClose = buttonTag;
+    [self showSortActionSheet:@[@"Full",@"Partial"]
+                    withTitle:@"Are you sure you want to close this debt? New payback record will be generated."
+                 andActionTag:ActionSheetTypeCloseDebt];
 }
 
 @end

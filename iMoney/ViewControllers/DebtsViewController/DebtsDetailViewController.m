@@ -81,18 +81,21 @@
 
 - (void)setupUIWithDebt {
     
-    self.debtTypesArray = @[@"I lend",@"I borrow"];
+    self.debtTypesArray = @[@"I borrow",@"I lend"];
     self.walletsArray = [CoreDataRequestManager getAllWallets];
     
     if (self.debtStatus == DebtStatusEdit) {
         
         self.debtNameTextField.text        = self.selectedDebt.debtName;
         self.debtDescriptionTextField.text = self.selectedDebt.debtDescription;
-        self.debtAmountTextField.text      = [NSString stringWithFormat:@"%.2f",self.selectedDebt.debtAmount.doubleValue];
+        self.debtAmountTextField.text      = [NSString stringWithFormat:@"%.2f",self.selectedDebt.debtTotalAmount.doubleValue];
         self.walletCurrencyLabel.text      = self.selectedDebt.wallet.walletCurrency;
         self.startDateLabel.text           = [iMoneyUtils formatDate:self.selectedDebt.debtStartDate];
         self.finishDateLabel.text          = [iMoneyUtils formatDate:self.selectedDebt.debtFinishDate];
         self.walletNameLabel.text          = self.selectedDebt.wallet.walletName;
+        self.userSelectedStartDate         = self.selectedDebt.debtStartDate;
+        self.userSelectedFinishDate        = self.selectedDebt.debtFinishDate;
+        
         switch (self.selectedDebt.debtType) {
             case DebtTypeLend:
                 self.debtTypeLabel.text = @"I lend";
@@ -103,10 +106,16 @@
             default:
                 break;
         }
+        [self.debtTypeButtonOutlet setEnabled:NO];
+        [self.debtWalletOutlet setEnabled:NO];
+        
     } else {
         
-        self.startDateLabel.text  = [iMoneyUtils formatDate:[iMoneyUtils getTodayFormatedDate]];
-        self.finishDateLabel.text = [iMoneyUtils formatDate:[iMoneyUtils getTodayFormatedDate]];
+        self.userSelectedStartDate = [iMoneyUtils getTodayFormatedDate];
+        self.userSelectedFinishDate = [iMoneyUtils getTodayFormatedDate];
+        
+        self.startDateLabel.text  = [iMoneyUtils formatDate:self.userSelectedStartDate];
+        self.finishDateLabel.text = [iMoneyUtils formatDate:self.userSelectedFinishDate];
         
         self.debtTypeLabel.text = self.debtTypesArray[self.selectedDebtType];
         
@@ -117,8 +126,24 @@
 
 - (void)createDebt {
     
-    NSDictionary *options = @{};
+    NSDictionary *options = @{@"debtType"        : @(self.selectedDebtType),
+                              @"debtName"        : self.debtNameTextField.text,
+                              @"debtDescription" : self.debtDescriptionTextField.text,
+                              @"debtTotalAmount" : self.debtAmountTextField.text,
+                              @"debtStartDate"   : self.userSelectedStartDate,
+                              @"debtFinishDate"  : self.userSelectedFinishDate,
+                              @"wallet"          : self.walletsArray[self.selectedwalletsIndex]};
     [CoreDataDebtManager createDebtWithOptions:options];
+}
+
+- (void)saveDebt {
+    
+    self.selectedDebt.debtName        = self.debtNameTextField.text;
+    self.selectedDebt.debtDescription = self.debtDescriptionTextField.text;
+    self.selectedDebt.debtTotalAmount = [[NSDecimalNumber alloc] initWithString:self.debtAmountTextField.text];
+    self.selectedDebt.debtStartDate   = self.userSelectedStartDate;
+    self.selectedDebt.debtFinishDate  = self.userSelectedFinishDate;
+    [[CoreDataAccessLayer sharedInstance] saveContext];
 }
 
 #pragma mark - Button actions
@@ -127,7 +152,7 @@
     
     switch (self.debtStatus) {
         case DebtStatusEdit:
-            [[CoreDataAccessLayer sharedInstance] saveContext];
+            [self saveDebt];
             [self.navigationController popViewControllerAnimated:YES];
             break;
         case DebtStatusAdd:

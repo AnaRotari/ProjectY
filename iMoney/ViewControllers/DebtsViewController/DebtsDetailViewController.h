@@ -32,4 +32,8 @@ typedef NS_ENUM(NSInteger, DebtStatus)
 @property (weak, nonatomic) IBOutlet UILabel *walletNameLabel;
 @property (strong, nonatomic) IBOutletCollection(UIView) NSArray *supportViewCollection;
 
+@property (weak, nonatomic) IBOutlet UIButton *debtTypeButtonOutlet;
+@property (weak, nonatomic) IBOutlet UIButton *debtWalletOutlet;
+
+
 @end

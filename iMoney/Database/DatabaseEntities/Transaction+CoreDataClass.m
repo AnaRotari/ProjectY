@@ -8,6 +8,7 @@
 
 #import "Transaction+CoreDataClass.h"
 #import "Budget+CoreDataClass.h"
+#import "Debt+CoreDataClass.h"
 #import "Wallet+CoreDataClass.h"
 @implementation Transaction
 

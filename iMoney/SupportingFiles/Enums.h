@@ -29,7 +29,8 @@ typedef NS_ENUM(NSInteger, TransactionCategory)
     kTransactionCategoryIncome,
     kTransactionCategoryGregories,
     kTransactionCategorySale,
-    kTransactionCategoryOther
+    kTransactionCategoryOther,
+    kTransactionCategoryDebts
 };
 
 typedef NS_ENUM(NSInteger, PaymentType)
@@ -121,20 +122,20 @@ typedef NS_ENUM(NSInteger, BudgetInterval)
     BudgetIntervalAll
 };
 
-typedef NS_ENUM(NSInteger, BudgetsSort)
+typedef NS_ENUM(NSInteger, DebtsSort)
 {
-    BudgetsSortByCreationDateNewest = 0,
-    BudgetsSortByCreationDateOldest,
-    BudgetsSortByNameAZ,
-    BudgetsSortByNameZA,
-    BudgetsSortByAmountAscending,
-    BudgetsSortByAmountDescending
+    DebtsSortByCreationDateNewest = 0,
+    DebtsSortByCreationDateOldest,
+    DebtsSortByNameAZ,
+    DebtsSortByNameZA,
+    DebtsSortByAmountAscending,
+    DebtsSortByAmountDescending
 };
 
 typedef NS_ENUM(NSInteger, DebtType)
 {
-    DebtTypeLend = 0,
-    DebtTypeBorrow
+    DebtTypeBorrow = 0,
+    DebtTypeLend
 };
 
 #endif /* Enums_h */

@@ -56,20 +56,21 @@
 		FA973D431EADF973001C6346 /* DebtsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA973D411EADF973001C6346 /* DebtsTableViewCell.xib */; };
 		FA973D601EAE0246001C6346 /* Budget+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D451EAE0246001C6346 /* Budget+CoreDataClass.m */; };
 		FA973D611EAE0246001C6346 /* Budget+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D471EAE0246001C6346 /* Budget+CoreDataProperties.m */; };
-		FA973D621EAE0246001C6346 /* Debt+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D491EAE0246001C6346 /* Debt+CoreDataClass.m */; };
-		FA973D631EAE0246001C6346 /* Debt+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D4B1EAE0246001C6346 /* Debt+CoreDataProperties.m */; };
 		FA973D641EAE0246001C6346 /* ListItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D4D1EAE0246001C6346 /* ListItem+CoreDataClass.m */; };
 		FA973D651EAE0246001C6346 /* ListItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D4F1EAE0246001C6346 /* ListItem+CoreDataProperties.m */; };
 		FA973D661EAE0246001C6346 /* PlannedPayments+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D511EAE0246001C6346 /* PlannedPayments+CoreDataClass.m */; };
 		FA973D671EAE0246001C6346 /* PlannedPayments+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D531EAE0246001C6346 /* PlannedPayments+CoreDataProperties.m */; };
 		FA973D681EAE0246001C6346 /* ShoppingList+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D551EAE0246001C6346 /* ShoppingList+CoreDataClass.m */; };
 		FA973D691EAE0246001C6346 /* ShoppingList+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D571EAE0246001C6346 /* ShoppingList+CoreDataProperties.m */; };
-		FA973D6A1EAE0246001C6346 /* Transaction+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D591EAE0246001C6346 /* Transaction+CoreDataClass.m */; };
-		FA973D6B1EAE0246001C6346 /* Transaction+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D5B1EAE0246001C6346 /* Transaction+CoreDataProperties.m */; };
 		FA973D6C1EAE0246001C6346 /* Wallet+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D5D1EAE0246001C6346 /* Wallet+CoreDataClass.m */; };
 		FA973D6D1EAE0246001C6346 /* Wallet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D5F1EAE0246001C6346 /* Wallet+CoreDataProperties.m */; };
 		FA973D701EAE02E8001C6346 /* CoreDataDebtManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D6F1EAE02E8001C6346 /* CoreDataDebtManager.m */; };
 		FA973D731EAE055D001C6346 /* DebtsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D721EAE055D001C6346 /* DebtsDetailViewController.m */; };
+		FA973D8E1EAE8880001C6346 /* DebtsTransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D8D1EAE8880001C6346 /* DebtsTransactionsViewController.m */; };
+		FA973D971EAE8F2C001C6346 /* Debt+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D901EAE8F2C001C6346 /* Debt+CoreDataClass.m */; };
+		FA973D981EAE8F2C001C6346 /* Debt+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D921EAE8F2C001C6346 /* Debt+CoreDataProperties.m */; };
+		FA973D991EAE8F2C001C6346 /* Transaction+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D941EAE8F2C001C6346 /* Transaction+CoreDataClass.m */; };
+		FA973D9A1EAE8F2C001C6346 /* Transaction+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = FA973D961EAE8F2C001C6346 /* Transaction+CoreDataProperties.m */; };
 		FA9CDBD71E9031A600BA2992 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9CDBD61E9031A600BA2992 /* MapKit.framework */; };
 		FAA258431EA6C05000950CA0 /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA2583B1EA6C05000950CA0 /* PickerViewController.m */; };
 		FAA258441EA6C05000950CA0 /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA2583C1EA6C05000950CA0 /* PickerViewController.xib */; };
@@ -222,10 +223,6 @@
 		FA973D451EAE0246001C6346 /* Budget+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Budget+CoreDataClass.m"; sourceTree = "<group>"; };
 		FA973D461EAE0246001C6346 /* Budget+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Budget+CoreDataProperties.h"; sourceTree = "<group>"; };
 		FA973D471EAE0246001C6346 /* Budget+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Budget+CoreDataProperties.m"; sourceTree = "<group>"; };
-		FA973D481EAE0246001C6346 /* Debt+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Debt+CoreDataClass.h"; sourceTree = "<group>"; };
-		FA973D491EAE0246001C6346 /* Debt+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Debt+CoreDataClass.m"; sourceTree = "<group>"; };
-		FA973D4A1EAE0246001C6346 /* Debt+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Debt+CoreDataProperties.h"; sourceTree = "<group>"; };
-		FA973D4B1EAE0246001C6346 /* Debt+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Debt+CoreDataProperties.m"; sourceTree = "<group>"; };
 		FA973D4C1EAE0246001C6346 /* ListItem+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ListItem+CoreDataClass.h"; sourceTree = "<group>"; };
 		FA973D4D1EAE0246001C6346 /* ListItem+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ListItem+CoreDataClass.m"; sourceTree = "<group>"; };
 		FA973D4E1EAE0246001C6346 /* ListItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ListItem+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -238,10 +235,6 @@
 		FA973D551EAE0246001C6346 /* ShoppingList+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShoppingList+CoreDataClass.m"; sourceTree = "<group>"; };
 		FA973D561EAE0246001C6346 /* ShoppingList+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShoppingList+CoreDataProperties.h"; sourceTree = "<group>"; };
 		FA973D571EAE0246001C6346 /* ShoppingList+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShoppingList+CoreDataProperties.m"; sourceTree = "<group>"; };
-		FA973D581EAE0246001C6346 /* Transaction+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataClass.h"; sourceTree = "<group>"; };
-		FA973D591EAE0246001C6346 /* Transaction+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataClass.m"; sourceTree = "<group>"; };
-		FA973D5A1EAE0246001C6346 /* Transaction+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataProperties.h"; sourceTree = "<group>"; };
-		FA973D5B1EAE0246001C6346 /* Transaction+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataProperties.m"; sourceTree = "<group>"; };
 		FA973D5C1EAE0246001C6346 /* Wallet+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataClass.h"; sourceTree = "<group>"; };
 		FA973D5D1EAE0246001C6346 /* Wallet+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataClass.m"; sourceTree = "<group>"; };
 		FA973D5E1EAE0246001C6346 /* Wallet+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -250,6 +243,16 @@
 		FA973D6F1EAE02E8001C6346 /* CoreDataDebtManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataDebtManager.m; sourceTree = "<group>"; };
 		FA973D711EAE055D001C6346 /* DebtsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebtsDetailViewController.h; sourceTree = "<group>"; };
 		FA973D721EAE055D001C6346 /* DebtsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebtsDetailViewController.m; sourceTree = "<group>"; };
+		FA973D8C1EAE8880001C6346 /* DebtsTransactionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebtsTransactionsViewController.h; sourceTree = "<group>"; };
+		FA973D8D1EAE8880001C6346 /* DebtsTransactionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebtsTransactionsViewController.m; sourceTree = "<group>"; };
+		FA973D8F1EAE8F2C001C6346 /* Debt+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Debt+CoreDataClass.h"; sourceTree = "<group>"; };
+		FA973D901EAE8F2C001C6346 /* Debt+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Debt+CoreDataClass.m"; sourceTree = "<group>"; };
+		FA973D911EAE8F2C001C6346 /* Debt+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Debt+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FA973D921EAE8F2C001C6346 /* Debt+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Debt+CoreDataProperties.m"; sourceTree = "<group>"; };
+		FA973D931EAE8F2C001C6346 /* Transaction+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataClass.h"; sourceTree = "<group>"; };
+		FA973D941EAE8F2C001C6346 /* Transaction+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataClass.m"; sourceTree = "<group>"; };
+		FA973D951EAE8F2C001C6346 /* Transaction+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transaction+CoreDataProperties.h"; sourceTree = "<group>"; };
+		FA973D961EAE8F2C001C6346 /* Transaction+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Transaction+CoreDataProperties.m"; sourceTree = "<group>"; };
 		FA9CDBD61E9031A600BA2992 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FAA2583A1EA6C05000950CA0 /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
 		FAA2583B1EA6C05000950CA0 /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
@@ -525,10 +528,6 @@
 				FA973D451EAE0246001C6346 /* Budget+CoreDataClass.m */,
 				FA973D461EAE0246001C6346 /* Budget+CoreDataProperties.h */,
 				FA973D471EAE0246001C6346 /* Budget+CoreDataProperties.m */,
-				FA973D481EAE0246001C6346 /* Debt+CoreDataClass.h */,
-				FA973D491EAE0246001C6346 /* Debt+CoreDataClass.m */,
-				FA973D4A1EAE0246001C6346 /* Debt+CoreDataProperties.h */,
-				FA973D4B1EAE0246001C6346 /* Debt+CoreDataProperties.m */,
 				FA973D4C1EAE0246001C6346 /* ListItem+CoreDataClass.h */,
 				FA973D4D1EAE0246001C6346 /* ListItem+CoreDataClass.m */,
 				FA973D4E1EAE0246001C6346 /* ListItem+CoreDataProperties.h */,
@@ -541,14 +540,18 @@
 				FA973D551EAE0246001C6346 /* ShoppingList+CoreDataClass.m */,
 				FA973D561EAE0246001C6346 /* ShoppingList+CoreDataProperties.h */,
 				FA973D571EAE0246001C6346 /* ShoppingList+CoreDataProperties.m */,
-				FA973D581EAE0246001C6346 /* Transaction+CoreDataClass.h */,
-				FA973D591EAE0246001C6346 /* Transaction+CoreDataClass.m */,
-				FA973D5A1EAE0246001C6346 /* Transaction+CoreDataProperties.h */,
-				FA973D5B1EAE0246001C6346 /* Transaction+CoreDataProperties.m */,
 				FA973D5C1EAE0246001C6346 /* Wallet+CoreDataClass.h */,
 				FA973D5D1EAE0246001C6346 /* Wallet+CoreDataClass.m */,
 				FA973D5E1EAE0246001C6346 /* Wallet+CoreDataProperties.h */,
 				FA973D5F1EAE0246001C6346 /* Wallet+CoreDataProperties.m */,
+				FA973D8F1EAE8F2C001C6346 /* Debt+CoreDataClass.h */,
+				FA973D901EAE8F2C001C6346 /* Debt+CoreDataClass.m */,
+				FA973D911EAE8F2C001C6346 /* Debt+CoreDataProperties.h */,
+				FA973D921EAE8F2C001C6346 /* Debt+CoreDataProperties.m */,
+				FA973D931EAE8F2C001C6346 /* Transaction+CoreDataClass.h */,
+				FA973D941EAE8F2C001C6346 /* Transaction+CoreDataClass.m */,
+				FA973D951EAE8F2C001C6346 /* Transaction+CoreDataProperties.h */,
+				FA973D961EAE8F2C001C6346 /* Transaction+CoreDataProperties.m */,
 			);
 			path = DatabaseEntities;
 			sourceTree = "<group>";
@@ -614,6 +617,8 @@
 				FA116E021EA96598004C4A19 /* DebtsViewController.m */,
 				FA973D711EAE055D001C6346 /* DebtsDetailViewController.h */,
 				FA973D721EAE055D001C6346 /* DebtsDetailViewController.m */,
+				FA973D8C1EAE8880001C6346 /* DebtsTransactionsViewController.h */,
+				FA973D8D1EAE8880001C6346 /* DebtsTransactionsViewController.m */,
 			);
 			path = DebtsViewController;
 			sourceTree = "<group>";
@@ -1311,6 +1316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA973D991EAE8F2C001C6346 /* Transaction+CoreDataClass.m in Sources */,
 				2C605E001EA5FBC50052939E /* ExportsViewController.m in Sources */,
 				FAAE7B121E9D8CA80057D648 /* ShoppingListContentViewController.m in Sources */,
 				FAECCFCE1E96E232001D4B8F /* ReorderWalletsViewController.m in Sources */,
@@ -1318,9 +1324,8 @@
 				FA973D421EADF973001C6346 /* DebtsTableViewCell.m in Sources */,
 				FA973D641EAE0246001C6346 /* ListItem+CoreDataClass.m in Sources */,
 				FADB2E971E88381100319EB6 /* HWViewPager.m in Sources */,
-				FA973D631EAE0246001C6346 /* Debt+CoreDataProperties.m in Sources */,
 				FA973D701EAE02E8001C6346 /* CoreDataDebtManager.m in Sources */,
-				FA973D6B1EAE0246001C6346 /* Transaction+CoreDataProperties.m in Sources */,
+				FA973D971EAE8F2C001C6346 /* Debt+CoreDataClass.m in Sources */,
 				FA67F1211EA565E300B59FA1 /* PlannedPaymentsCreatorViewController.m in Sources */,
 				FA0330841E7D786800BB8DBA /* ApplicationConstants.m in Sources */,
 				FAE632821E982A88002A0455 /* TransactionTableViewCell.m in Sources */,
@@ -1357,7 +1362,9 @@
 				FA973D671EAE0246001C6346 /* PlannedPayments+CoreDataProperties.m in Sources */,
 				FAE6328A1E982BCC002A0455 /* RecordsViewController.m in Sources */,
 				84D92FCA1E61F9D000F823DD /* CoreDataRequestManager.m in Sources */,
+				FA973D9A1EAE8F2C001C6346 /* Transaction+CoreDataProperties.m in Sources */,
 				FA9693271E87324100F86873 /* UIColor+CoreData.m in Sources */,
+				FA973D8E1EAE8880001C6346 /* DebtsTransactionsViewController.m in Sources */,
 				FAE632931E982BEF002A0455 /* BudgetsViewController.m in Sources */,
 				FAA838741E870BC9005BFADF /* TPKeyboardAvoidingTableView.m in Sources */,
 				FAE6329B1E98318C002A0455 /* TransactionDetailViewController.m in Sources */,
@@ -1370,7 +1377,6 @@
 				FAE6327D1E982A88002A0455 /* MainViewController.m in Sources */,
 				FAC14A031EACDC3E00E1603D /* BudgetWalletTableViewCell.m in Sources */,
 				FAE632A31E9855F2002A0455 /* NSArray+CoreData.m in Sources */,
-				FA973D6A1EAE0246001C6346 /* Transaction+CoreDataClass.m in Sources */,
 				FA6BC0961EA2B9FC00ECBA5E /* MRAlertButton.m in Sources */,
 				FAA258451EA6C05000950CA0 /* TransparentViewController.m in Sources */,
 				FAE6327E1E982A88002A0455 /* MainViewControllerCollectionView.m in Sources */,
@@ -1386,6 +1392,7 @@
 				FAE101831E7DD182003525DF /* SWRevealViewController.m in Sources */,
 				FAC149FD1EACDC0900E1603D /* BudgetsDetailViewController.m in Sources */,
 				FA72C82A1EACE5BD00E2114E /* CoreDataBudgetManager.m in Sources */,
+				FA973D981EAE8F2C001C6346 /* Debt+CoreDataProperties.m in Sources */,
 				FAA258431EA6C05000950CA0 /* PickerViewController.m in Sources */,
 				FA9693231E872A6A00F86873 /* ColorPickerViewController.m in Sources */,
 				FA973D601EAE0246001C6346 /* Budget+CoreDataClass.m in Sources */,
@@ -1397,7 +1404,6 @@
 				FAAE7AFC1E9D69C50057D648 /* CoreDataShoppingListManager.m in Sources */,
 				FAA258471EA6C05000950CA0 /* UIViewController+PresentViewControllerOverCurrentContext.m in Sources */,
 				FA1783871EA53CA700B1D36E /* RecordsTableViewCell.m in Sources */,
-				FA973D621EAE0246001C6346 /* Debt+CoreDataClass.m in Sources */,
 				FA6BC0841EA259BD00ECBA5E /* WarrantiesViewController.m in Sources */,
 				FAA258461EA6C05000950CA0 /* UILabel+UIDatePickerLabels.m in Sources */,
 				FA116E031EA96598004C4A19 /* DebtsViewController.m in Sources */,

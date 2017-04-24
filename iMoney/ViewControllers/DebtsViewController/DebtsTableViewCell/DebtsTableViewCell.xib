@@ -1,19 +1,179 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DebtsTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="215"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="214"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debt name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9j5-eC-BRD">
+                        <rect key="frame" x="8" y="8" width="71" height="17"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remains: MDL 1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mu3-0k-qev">
+                        <rect key="frame" x="183" y="8" width="129" height="17"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debt description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SV2-lJ-D4r">
+                        <rect key="frame" x="8" y="33" width="304" height="17"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="3OY-JA-Eyv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHE-J3-Oaq">
+                        <rect key="frame" x="8" y="58" width="304" height="17"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="0UA-y8-bXF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPe-Ni-EO8">
+                        <rect key="frame" x="8" y="106" width="304" height="17"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="yFe-g9-4db"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start date: 24/04/17" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7M-aO-mHC">
+                        <rect key="frame" x="8" y="189" width="131" height="17"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="K4B-HU-aAG">
+                        <rect key="frame" x="8" y="83" width="304" height="15"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="kkh-6P-X7k"/>
+                        </constraints>
+                        <color key="progressTintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </progressView>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pPn-81-Wrh">
+                        <rect key="frame" x="8" y="131" width="304" height="15"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="xQR-On-9Oc"/>
+                        </constraints>
+                        <color key="progressTintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </progressView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POA-q1-G5O">
+                        <rect key="frame" x="8" y="154" width="148" height="27"/>
+                        <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="27" id="b32-MY-r1G"/>
+                            <constraint firstAttribute="width" constant="148" id="hbb-gd-yO3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="Transactions">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="transactionsButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jD1-cC-s65"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWq-rH-fZ2">
+                        <rect key="frame" x="164" y="154" width="148" height="27"/>
+                        <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="148" id="WZO-Q5-mIF"/>
+                            <constraint firstAttribute="height" constant="27" id="Yqk-N5-YMi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="Close debt">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="closeDebtButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8Jt-KL-JlI"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish date: 24/04/17" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFl-yv-8mO">
+                        <rect key="frame" x="175" y="189" width="137" height="17"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yFl-yv-8mO" firstAttribute="top" secondItem="vWq-rH-fZ2" secondAttribute="bottom" constant="8" id="2S6-66-Rds"/>
+                    <constraint firstItem="9j5-eC-BRD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="6CC-Oa-XEg"/>
+                    <constraint firstItem="POA-q1-G5O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="6W1-hH-lNq"/>
+                    <constraint firstItem="N7M-aO-mHC" firstAttribute="top" secondItem="POA-q1-G5O" secondAttribute="bottom" constant="8" id="DW9-l1-1Oc"/>
+                    <constraint firstItem="K4B-HU-aAG" firstAttribute="top" secondItem="gHE-J3-Oaq" secondAttribute="bottom" constant="8" id="FDU-dM-etU"/>
+                    <constraint firstItem="UPe-Ni-EO8" firstAttribute="top" secondItem="K4B-HU-aAG" secondAttribute="bottom" constant="8" id="FTT-G0-SMu"/>
+                    <constraint firstItem="N7M-aO-mHC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="GuL-wv-DWk"/>
+                    <constraint firstItem="9j5-eC-BRD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="I59-js-9dg"/>
+                    <constraint firstAttribute="trailing" secondItem="vWq-rH-fZ2" secondAttribute="trailing" constant="8" id="KWY-zC-jOI"/>
+                    <constraint firstItem="UPe-Ni-EO8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="LfO-3r-Klt"/>
+                    <constraint firstAttribute="trailing" secondItem="Mu3-0k-qev" secondAttribute="trailing" constant="8" id="Tfv-W8-sfn"/>
+                    <constraint firstAttribute="trailing" secondItem="pPn-81-Wrh" secondAttribute="trailing" constant="8" id="VJx-gl-Azo"/>
+                    <constraint firstItem="vWq-rH-fZ2" firstAttribute="top" secondItem="pPn-81-Wrh" secondAttribute="bottom" constant="8" id="WoF-Wu-kMd"/>
+                    <constraint firstAttribute="trailing" secondItem="SV2-lJ-D4r" secondAttribute="trailing" constant="8" id="XIy-tX-gfN"/>
+                    <constraint firstItem="K4B-HU-aAG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Xt8-8Y-uc7"/>
+                    <constraint firstAttribute="trailing" secondItem="UPe-Ni-EO8" secondAttribute="trailing" constant="8" id="YFz-eL-FuO"/>
+                    <constraint firstItem="Mu3-0k-qev" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ZWy-ZG-8Te"/>
+                    <constraint firstItem="pPn-81-Wrh" firstAttribute="top" secondItem="UPe-Ni-EO8" secondAttribute="bottom" constant="8" id="bGQ-NA-6gj"/>
+                    <constraint firstItem="gHE-J3-Oaq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="ckd-4Q-zab"/>
+                    <constraint firstItem="pPn-81-Wrh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="fxC-w7-Ypf"/>
+                    <constraint firstItem="SV2-lJ-D4r" firstAttribute="top" secondItem="Mu3-0k-qev" secondAttribute="bottom" constant="8" id="g1G-c3-Q4h"/>
+                    <constraint firstAttribute="trailing" secondItem="gHE-J3-Oaq" secondAttribute="trailing" constant="8" id="hCP-bF-9w8"/>
+                    <constraint firstAttribute="trailing" secondItem="K4B-HU-aAG" secondAttribute="trailing" constant="8" id="nyF-AI-gOG"/>
+                    <constraint firstItem="POA-q1-G5O" firstAttribute="top" secondItem="pPn-81-Wrh" secondAttribute="bottom" constant="8" id="pdH-Yi-VDe"/>
+                    <constraint firstItem="SV2-lJ-D4r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="vCc-po-qiu"/>
+                    <constraint firstAttribute="trailing" secondItem="yFl-yv-8mO" secondAttribute="trailing" constant="8" id="yhS-Fg-6Z6"/>
+                    <constraint firstItem="gHE-J3-Oaq" firstAttribute="top" secondItem="SV2-lJ-D4r" secondAttribute="bottom" constant="8" id="zAe-YC-htf"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="closeDebtButtonAction" destination="vWq-rH-fZ2" id="J2g-hn-w4c"/>
+                <outlet property="debtAmountProgressView" destination="K4B-HU-aAG" id="mHZ-Pk-Y70"/>
+                <outlet property="debtDescriptionLabel" destination="SV2-lJ-D4r" id="0JI-9I-nPO"/>
+                <outlet property="debtFinishDateLabel" destination="yFl-yv-8mO" id="ACc-f4-WN1"/>
+                <outlet property="debtNameLabel" destination="9j5-eC-BRD" id="Xvy-nV-K2f"/>
+                <outlet property="debtRemainLabel" destination="Mu3-0k-qev" id="Sc7-Vm-sg2"/>
+                <outlet property="debtStartDateLabel" destination="N7M-aO-mHC" id="3Jo-7B-vlT"/>
+                <outlet property="debtTimeProgressView" destination="pPn-81-Wrh" id="qst-30-o7Z"/>
+                <outlet property="transactionsButtonOutlet" destination="POA-q1-G5O" id="F96-VK-6US"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

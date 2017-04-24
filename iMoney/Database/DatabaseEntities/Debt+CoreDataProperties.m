@@ -17,9 +17,13 @@
 @dynamic debtType;
 @dynamic debtName;
 @dynamic debtDescription;
-@dynamic debtAmount;
+@dynamic debtTotalAmount;
 @dynamic debtStartDate;
 @dynamic debtFinishDate;
+@dynamic debtSort;
+@dynamic debtCreationDate;
+@dynamic debtCurrentAmount;
 @dynamic wallet;
+@dynamic transactions;
 
 @end

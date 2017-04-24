@@ -42,6 +42,14 @@
     [self setUpMapView];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear:animated];
+    [self.transactionType closeAllComponentsAnimated:NO];
+    [self.transactionCategory closeAllComponentsAnimated:NO];
+    [self.paymentType closeAllComponentsAnimated:NO];
+}
+
 - (void)setupNavigationBar {
     
     UIBarButtonItem *doneNavButton = [iMoneyUtils getNavigationButton:@"ic_checkmark"

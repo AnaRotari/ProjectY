@@ -15,6 +15,7 @@
 @interface SelectedWalletViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *transactionsTableView;
+@property (weak, nonatomic) IBOutlet UILabel *noTransactionsLabel;
 @property (strong, nonatomic) NSMutableArray <Transaction *> *transactionsArray;
 @property (strong, nonatomic) LGAlertView *adjustBalanceAlertView;
 
@@ -39,6 +40,7 @@
     self.transactionsArray = [[CoreDataRequestManager getAllTransactionForWallet:self.selectedWallet] mutableCopy];
     [self.transactionsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
                               withRowAnimation:UITableViewRowAnimationFade];
+    self.noTransactionsLabel.hidden = self.transactionsArray.count;
     self.transactionsTableView.tableFooterView = [UIView new];
 }
 
@@ -192,6 +194,7 @@
     
     [self.transactionsArray removeAllObjects];
     self.transactionsArray = [[CoreDataRequestManager getAllTransactionForWallet:self.selectedWallet] mutableCopy];
+    self.noTransactionsLabel.hidden = self.transactionsArray.count;
     [self.transactionsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
                               withRowAnimation:UITableViewRowAnimationFade];
 }
@@ -264,7 +267,7 @@
         }
         
         [self.transactionsArray removeObjectAtIndex:indexPath.row];
-        
+        self.noTransactionsLabel.hidden = self.transactionsArray.count;
         [self.transactionsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
                                   withRowAnimation:UITableViewRowAnimationFade];
     }
@@ -293,6 +296,7 @@
         [self.transactionsArray removeAllObjects];
         self.transactionsArray = [[CoreDataRequestManager getAllTransactionForWallet:self.selectedWallet
                                                                       withSortOption:buttonIndex] mutableCopy];
+        self.noTransactionsLabel.hidden = self.transactionsArray.count;
         [self.transactionsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
                                   withRowAnimation:UITableViewRowAnimationFade];
     }

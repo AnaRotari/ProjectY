@@ -443,18 +443,27 @@
                                     <outlet property="delegate" destination="cNu-dQ-Fz9" id="fqY-nn-34W"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No transactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVg-hC-7eO">
+                                <rect key="frame" x="117" y="322" width="141" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="b5Z-Qm-Tww" firstAttribute="top" secondItem="635-Vl-Ym3" secondAttribute="top" id="DMi-Ry-Yir"/>
                             <constraint firstItem="i1N-zu-wld" firstAttribute="top" secondItem="b5Z-Qm-Tww" secondAttribute="bottom" id="H6f-d5-Zxh"/>
+                            <constraint firstItem="aVg-hC-7eO" firstAttribute="centerX" secondItem="b5Z-Qm-Tww" secondAttribute="centerX" id="KPR-Qf-iso"/>
                             <constraint firstAttribute="trailing" secondItem="b5Z-Qm-Tww" secondAttribute="trailing" id="fWF-Ec-fq9"/>
+                            <constraint firstItem="aVg-hC-7eO" firstAttribute="centerY" secondItem="b5Z-Qm-Tww" secondAttribute="centerY" id="tFu-58-rNk"/>
                             <constraint firstItem="b5Z-Qm-Tww" firstAttribute="leading" secondItem="635-Vl-Ym3" secondAttribute="leading" id="wbd-l3-4bC"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="noTransactionsLabel" destination="aVg-hC-7eO" id="dQh-HC-15l"/>
                         <outlet property="transactionsTableView" destination="b5Z-Qm-Tww" id="DHt-vR-9wv"/>
                     </connections>
                 </viewController>
@@ -1115,9 +1124,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5NM-GG-pdm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5NM-GG-pdm">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="dataSource" destination="xVx-Lj-XoB" id="5yR-pi-DRy"/>
                                     <outlet property="delegate" destination="xVx-Lj-XoB" id="XUP-f5-vup"/>
@@ -1223,9 +1233,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRB-vq-gH9">
-                                        <rect key="frame" x="8" y="0.0" width="150" height="30"/>
+                                        <rect key="frame" x="8" y="0.0" width="250" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="wKk-Id-EEh"/>
+                                            <constraint firstAttribute="width" constant="250" id="wKk-Id-EEh"/>
                                         </constraints>
                                         <state key="normal" title="Date">
                                             <color key="titleColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1259,9 +1269,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5m-9Y-W52">
-                                        <rect key="frame" x="8" y="0.0" width="150" height="30"/>
+                                        <rect key="frame" x="8" y="0.0" width="250" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="fFe-SS-fBX"/>
+                                            <constraint firstAttribute="width" constant="250" id="fFe-SS-fBX"/>
                                         </constraints>
                                         <state key="normal" title="Payback">
                                             <color key="titleColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1295,9 +1305,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFP-XT-4qP">
-                                        <rect key="frame" x="8" y="0.0" width="150" height="30"/>
+                                        <rect key="frame" x="8" y="0.0" width="250" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="jK9-8y-Dec"/>
+                                            <constraint firstAttribute="width" constant="250" id="jK9-8y-Dec"/>
                                         </constraints>
                                         <state key="normal" title="Type">
                                             <color key="titleColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1331,9 +1341,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8M-wo-avH">
-                                        <rect key="frame" x="8" y="0.0" width="150" height="30"/>
+                                        <rect key="frame" x="8" y="0.0" width="250" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="l6h-em-UFJ"/>
+                                            <constraint firstAttribute="width" constant="250" id="l6h-em-UFJ"/>
                                         </constraints>
                                         <state key="normal" title="Wallet">
                                             <color key="titleColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1398,7 +1408,9 @@
                         <outlet property="debtAmountTextField" destination="Nbv-97-HdY" id="eJD-yB-DkR"/>
                         <outlet property="debtDescriptionTextField" destination="Xnf-m1-4Dk" id="0Jw-HX-Poj"/>
                         <outlet property="debtNameTextField" destination="RLx-PX-GuB" id="omc-Rw-yq7"/>
+                        <outlet property="debtTypeButtonOutlet" destination="fFP-XT-4qP" id="TX3-qm-Add"/>
                         <outlet property="debtTypeLabel" destination="MJS-wv-cMX" id="Y2G-41-uda"/>
+                        <outlet property="debtWalletOutlet" destination="K8M-wo-avH" id="aMs-Z7-ohs"/>
                         <outlet property="finishDateLabel" destination="AfL-uy-dKK" id="h9F-Ce-gXt"/>
                         <outlet property="startDateLabel" destination="Oje-EZ-erH" id="06w-mG-iBZ"/>
                         <outlet property="walletCurrencyLabel" destination="swb-7t-UnV" id="q9w-kH-D5a"/>
@@ -1412,6 +1424,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHp-2L-X5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1328.8" y="-4616.0419790104952"/>
+        </scene>
+        <!--Debts Transactions View Controller-->
+        <scene sceneID="3oJ-AU-Np1">
+            <objects>
+                <viewController storyboardIdentifier="DebtsTransactionsViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qa1-tm-F9l" customClass="DebtsTransactionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3T1-TC-2fF"/>
+                        <viewControllerLayoutGuide type="bottom" id="yY1-Jm-Ba6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iBA-8T-EFM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v26-mn-zTf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qa1-tm-F9l" id="pws-re-Nzt"/>
+                                    <outlet property="delegate" destination="qa1-tm-F9l" id="YO2-FI-0Qi"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="v26-mn-zTf" firstAttribute="leading" secondItem="iBA-8T-EFM" secondAttribute="leading" id="0rs-ZX-GEQ"/>
+                            <constraint firstItem="yY1-Jm-Ba6" firstAttribute="top" secondItem="v26-mn-zTf" secondAttribute="bottom" id="5Nl-Kf-DEQ"/>
+                            <constraint firstAttribute="trailing" secondItem="v26-mn-zTf" secondAttribute="trailing" id="USO-VE-vx6"/>
+                            <constraint firstItem="v26-mn-zTf" firstAttribute="top" secondItem="iBA-8T-EFM" secondAttribute="top" id="yFE-xd-2Q8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="debtTransactionsTableView" destination="v26-mn-zTf" id="Lfs-u0-XmF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0cE-Sl-Pfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2021.5999999999999" y="-4616.0419790104952"/>
         </scene>
         <!--Exports View Controller-->
         <scene sceneID="OAq-eZ-wlB">

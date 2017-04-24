@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSDate *transactionWarrienty;
 @property (nullable, nonatomic, retain) NSSet<Budget *> *budget;
 @property (nullable, nonatomic, retain) Wallet *wallet;
+@property (nullable, nonatomic, retain) Debt *debt;
 
 @end
 
