@@ -39,6 +39,7 @@
     self.transactionsArray = [[CoreDataRequestManager getAllTransactionForWallet:self.selectedWallet] mutableCopy];
     [self.transactionsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
                               withRowAnimation:UITableViewRowAnimationFade];
+    self.transactionsTableView.tableFooterView = [UIView new];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

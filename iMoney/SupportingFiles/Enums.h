@@ -121,4 +121,20 @@ typedef NS_ENUM(NSInteger, BudgetInterval)
     BudgetIntervalAll
 };
 
+typedef NS_ENUM(NSInteger, BudgetsSort)
+{
+    BudgetsSortByCreationDateNewest = 0,
+    BudgetsSortByCreationDateOldest,
+    BudgetsSortByNameAZ,
+    BudgetsSortByNameZA,
+    BudgetsSortByAmountAscending,
+    BudgetsSortByAmountDescending
+};
+
+typedef NS_ENUM(NSInteger, DebtType)
+{
+    DebtTypeLend = 0,
+    DebtTypeBorrow
+};
+
 #endif /* Enums_h */

@@ -2,7 +2,7 @@
 //  Transaction+CoreDataProperties.m
 //  
 //
-//  Created by Alex on 4/23/17.
+//  Created by Alex on 4/24/17.
 //
 //
 
@@ -25,7 +25,7 @@
 @dynamic transactionPaymentType;
 @dynamic transactionType;
 @dynamic transactionWarrienty;
-@dynamic wallet;
 @dynamic budget;
+@dynamic wallet;
 
 @end

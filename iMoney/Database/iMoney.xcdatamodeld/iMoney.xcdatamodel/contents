@@ -10,6 +10,15 @@
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="budget" inverseEntity="Transaction" syncable="YES"/>
         <relationship name="wallets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Wallet" inverseName="budget" inverseEntity="Wallet" syncable="YES"/>
     </entity>
+    <entity name="Debt" representedClassName="Debt" syncable="YES">
+        <attribute name="debtAmount" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="debtDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="debtFinishDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="debtName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="debtStartDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="debtType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="wallet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Wallet" inverseName="debt" inverseEntity="Wallet" syncable="YES"/>
+    </entity>
     <entity name="ListItem" representedClassName="ListItem" syncable="YES">
         <attribute name="itemIsDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="itemName" optional="YES" attributeType="String" syncable="YES"/>
@@ -43,7 +52,7 @@
         <attribute name="transactionPaymentType" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="transactionType" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="transactionWarrienty" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <relationship name="budget" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Budget" inverseName="transactions" inverseEntity="Budget" syncable="YES"/>
+        <relationship name="budget" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Budget" inverseName="transactions" inverseEntity="Budget" syncable="YES"/>
         <relationship name="wallet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Wallet" inverseName="transactions" inverseEntity="Wallet" syncable="YES"/>
     </entity>
     <entity name="Wallet" representedClassName="Wallet" syncable="YES">
@@ -55,15 +64,17 @@
         <attribute name="walletName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="walletSort" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="budget" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Budget" inverseName="wallets" inverseEntity="Budget" syncable="YES"/>
+        <relationship name="debt" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Debt" inverseName="wallet" inverseEntity="Debt" syncable="YES"/>
         <relationship name="plannedPayment" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PlannedPayments" inverseName="wallet" inverseEntity="PlannedPayments" syncable="YES"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Transaction" inverseName="wallet" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Budget" positionX="486" positionY="1467" width="128" height="165"/>
-        <element name="ListItem" positionX="862" positionY="1697" width="128" height="105"/>
-        <element name="PlannedPayments" positionX="844" positionY="1467" width="128" height="178"/>
-        <element name="ShoppingList" positionX="646" positionY="1727" width="128" height="75"/>
+        <element name="Budget" positionX="484" positionY="1422" width="128" height="165"/>
+        <element name="ListItem" positionX="484" positionY="1689" width="128" height="105"/>
+        <element name="PlannedPayments" positionX="837" positionY="1629" width="128" height="178"/>
+        <element name="ShoppingList" positionX="295" positionY="1719" width="128" height="75"/>
         <element name="Transaction" positionX="313" positionY="1422" width="128" height="238"/>
-        <element name="Wallet" positionX="648" positionY="1467" width="128" height="193"/>
+        <element name="Wallet" positionX="655" positionY="1422" width="128" height="208"/>
+        <element name="Debt" positionX="835" positionY="1422" width="128" height="148"/>
     </elements>
 </model>

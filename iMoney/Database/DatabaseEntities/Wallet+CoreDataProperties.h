@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSSet<Budget *> *budget;
 @property (nullable, nonatomic, retain) NSSet<PlannedPayments *> *plannedPayment;
 @property (nullable, nonatomic, retain) NSSet<Transaction *> *transactions;
+@property (nullable, nonatomic, retain) NSSet<Debt *> *debt;
 
 @end
 
@@ -44,6 +45,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeTransactionsObject:(Transaction *)value;
 - (void)addTransactions:(NSSet<Transaction *> *)values;
 - (void)removeTransactions:(NSSet<Transaction *> *)values;
+
+- (void)addDebtObject:(Debt *)value;
+- (void)removeDebtObject:(Debt *)value;
+- (void)addDebt:(NSSet<Debt *> *)values;
+- (void)removeDebt:(NSSet<Debt *> *)values;
 
 @end
 

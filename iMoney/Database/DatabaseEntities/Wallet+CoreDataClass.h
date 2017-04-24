@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Budget, PlannedPayments, Transaction;
+@class Budget, Debt, PlannedPayments, Transaction;
 
 NS_ASSUME_NONNULL_BEGIN
 

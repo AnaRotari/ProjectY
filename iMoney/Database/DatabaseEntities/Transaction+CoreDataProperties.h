@@ -2,7 +2,7 @@
 //  Transaction+CoreDataProperties.h
 //  
 //
-//  Created by Alex on 4/23/17.
+//  Created by Alex on 4/24/17.
 //
 //
 
@@ -26,8 +26,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) int32_t transactionPaymentType;
 @property (nonatomic) int32_t transactionType;
 @property (nullable, nonatomic, copy) NSDate *transactionWarrienty;
+@property (nullable, nonatomic, retain) NSSet<Budget *> *budget;
 @property (nullable, nonatomic, retain) Wallet *wallet;
-@property (nullable, nonatomic, retain) Budget *budget;
+
+@end
+
+@interface Transaction (CoreDataGeneratedAccessors)
+
+- (void)addBudgetObject:(Budget *)value;
+- (void)removeBudgetObject:(Budget *)value;
+- (void)addBudget:(NSSet<Budget *> *)values;
+- (void)removeBudget:(NSSet<Budget *> *)values;
 
 @end
 

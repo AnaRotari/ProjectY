@@ -1,5 +1,5 @@
 //
-//  Transaction+CoreDataClass.h
+//  Debt+CoreDataClass.h
 //  
 //
 //  Created by Alex on 4/24/17.
@@ -9,14 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Budget, Wallet;
+@class Wallet;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Transaction : NSManagedObject
+@interface Debt : NSManagedObject
 
 @end
 
 NS_ASSUME_NONNULL_END
 
-#import "Transaction+CoreDataProperties.h"
+#import "Debt+CoreDataProperties.h"

@@ -2,7 +2,7 @@
 //  ListItem+CoreDataProperties.m
 //  
 //
-//  Created by Alex on 4/23/17.
+//  Created by Alex on 4/24/17.
 //
 //
 

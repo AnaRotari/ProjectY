@@ -24,5 +24,6 @@
 @dynamic budget;
 @dynamic plannedPayment;
 @dynamic transactions;
+@dynamic debt;
 
 @end

@@ -8,6 +8,9 @@
 
 #import "BaseViewController.h"
 
-@interface DebtsViewController : BaseViewController
+@interface DebtsViewController : BaseViewController <UIActionSheetDelegate,UITableViewDataSource,UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UILabel *bedtsLabel;
+@property (weak, nonatomic) IBOutlet UITableView *debtsTableView;
 
 @end
