@@ -32,16 +32,16 @@
     [self setupNavigationBar];
     [self disableSwipe];
     [self setupTransactionTableView];
+    self.transactionsTableView.tableFooterView = [UIView new];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     
-    [super viewDidAppear:animated];
+    [super viewWillAppear:animated];
     self.transactionsArray = [[CoreDataRequestManager getAllTransactionForWallet:self.selectedWallet] mutableCopy];
     [self.transactionsTableView reloadSections:[NSIndexSet indexSetWithIndex:0]
                               withRowAnimation:UITableViewRowAnimationFade];
     self.noTransactionsLabel.hidden = self.transactionsArray.count;
-    self.transactionsTableView.tableFooterView = [UIView new];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

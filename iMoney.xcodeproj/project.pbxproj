@@ -95,6 +95,8 @@
 		FAC149FE1EACDC0900E1603D /* CreateBudgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC149FC1EACDC0900E1603D /* CreateBudgetViewController.m */; };
 		FAC14A031EACDC3E00E1603D /* BudgetWalletTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC14A011EACDC3E00E1603D /* BudgetWalletTableViewCell.m */; };
 		FAC14A041EACDC3E00E1603D /* BudgetWalletTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC14A021EACDC3E00E1603D /* BudgetWalletTableViewCell.xib */; };
+		FAC51EAE1EB28AF400A7393B /* ChartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC51EAC1EB28AF400A7393B /* ChartTableViewCell.m */; };
+		FAC51EAF1EB28AF400A7393B /* ChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC51EAD1EB28AF400A7393B /* ChartTableViewCell.xib */; };
 		FACCD6261E92CFF200C8E698 /* TransactionViewController+DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FACCD6251E92CFF200C8E698 /* TransactionViewController+DataSource.m */; };
 		FAD2FF571E87CBF5001BB364 /* CurrencyPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD2FF561E87CBF5001BB364 /* CurrencyPickerViewController.m */; };
 		FADB2E971E88381100319EB6 /* HWViewPager.m in Sources */ = {isa = PBXBuildFile; fileRef = FADB2E961E88381100319EB6 /* HWViewPager.m */; };
@@ -120,6 +122,7 @@
 		FAE632A31E9855F2002A0455 /* NSArray+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE632A21E9855F2002A0455 /* NSArray+CoreData.m */; };
 		FAEAC8AF1E8FCF7400E38654 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEAC8AE1E8FCF7400E38654 /* DropboxSDK.framework */; };
 		FAEAC8B41E8FD39B00E38654 /* DropBoxUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEAC8B31E8FD39B00E38654 /* DropBoxUtils.m */; };
+		FAEC57341EB639080010EB58 /* LineGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEC57331EB639080010EB58 /* LineGraphViewController.m */; };
 		FAECCFBF1E96AD78001D4B8F /* ReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAECCFBD1E96AD78001D4B8F /* ReminderViewController.m */; };
 		FAECCFC01E96AD78001D4B8F /* ReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAECCFBE1E96AD78001D4B8F /* ReminderViewController.xib */; };
 		FAECCFC31E96B1C0001D4B8F /* AppDelegate+Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = FAECCFC21E96B1C0001D4B8F /* AppDelegate+Notifications.m */; };
@@ -295,6 +298,9 @@
 		FAC14A001EACDC3E00E1603D /* BudgetWalletTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BudgetWalletTableViewCell.h; sourceTree = "<group>"; };
 		FAC14A011EACDC3E00E1603D /* BudgetWalletTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BudgetWalletTableViewCell.m; sourceTree = "<group>"; };
 		FAC14A021EACDC3E00E1603D /* BudgetWalletTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BudgetWalletTableViewCell.xib; sourceTree = "<group>"; };
+		FAC51EAB1EB28AF400A7393B /* ChartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartTableViewCell.h; sourceTree = "<group>"; };
+		FAC51EAC1EB28AF400A7393B /* ChartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartTableViewCell.m; sourceTree = "<group>"; };
+		FAC51EAD1EB28AF400A7393B /* ChartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartTableViewCell.xib; sourceTree = "<group>"; };
 		FACCD6241E92CFF200C8E698 /* TransactionViewController+DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TransactionViewController+DataSource.h"; sourceTree = "<group>"; };
 		FACCD6251E92CFF200C8E698 /* TransactionViewController+DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TransactionViewController+DataSource.m"; sourceTree = "<group>"; };
 		FAD2FF551E87CBF5001BB364 /* CurrencyPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyPickerViewController.h; sourceTree = "<group>"; };
@@ -341,6 +347,8 @@
 		FAEAC8AE1E8FCF7400E38654 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
 		FAEAC8B21E8FD39B00E38654 /* DropBoxUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBoxUtils.h; sourceTree = "<group>"; };
 		FAEAC8B31E8FD39B00E38654 /* DropBoxUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBoxUtils.m; sourceTree = "<group>"; };
+		FAEC57321EB639080010EB58 /* LineGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineGraphViewController.h; sourceTree = "<group>"; };
+		FAEC57331EB639080010EB58 /* LineGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineGraphViewController.m; sourceTree = "<group>"; };
 		FAECCFBC1E96AD78001D4B8F /* ReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderViewController.h; sourceTree = "<group>"; };
 		FAECCFBD1E96AD78001D4B8F /* ReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderViewController.m; sourceTree = "<group>"; };
 		FAECCFBE1E96AD78001D4B8F /* ReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReminderViewController.xib; sourceTree = "<group>"; };
@@ -881,6 +889,24 @@
 			path = BudgetWalletTableViewCell;
 			sourceTree = "<group>";
 		};
+		FAC51EAA1EB28ACE00A7393B /* ChartTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAC51EAB1EB28AF400A7393B /* ChartTableViewCell.h */,
+				FAC51EAC1EB28AF400A7393B /* ChartTableViewCell.m */,
+				FAC51EAD1EB28AF400A7393B /* ChartTableViewCell.xib */,
+			);
+			path = ChartTableViewCell;
+			sourceTree = "<group>";
+		};
+		FAC51EB01EB294B100A7393B /* ChartViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC57311EB638AE0010EB58 /* LineGraphViewController */,
+			);
+			path = ChartViewControllers;
+			sourceTree = "<group>";
+		};
 		FAD2FF541E87CBD3001BB364 /* CurrencyPickerViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1018,8 +1044,10 @@
 		FAE632851E982B8F002A0455 /* ChartsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FAC51EAA1EB28ACE00A7393B /* ChartTableViewCell */,
 				FAE6328B1E982BDA002A0455 /* ChartsViewController.h */,
 				FAE6328C1E982BDA002A0455 /* ChartsViewController.m */,
+				FAC51EB01EB294B100A7393B /* ChartViewControllers */,
 			);
 			path = ChartsViewController;
 			sourceTree = "<group>";
@@ -1095,6 +1123,15 @@
 				FAEAC8B31E8FD39B00E38654 /* DropBoxUtils.m */,
 			);
 			path = DropBoxManager;
+			sourceTree = "<group>";
+		};
+		FAEC57311EB638AE0010EB58 /* LineGraphViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC57321EB639080010EB58 /* LineGraphViewController.h */,
+				FAEC57331EB639080010EB58 /* LineGraphViewController.m */,
+			);
+			path = LineGraphViewController;
 			sourceTree = "<group>";
 		};
 		FAECCFBB1E96AD78001D4B8F /* ReminderViewController */ = {
@@ -1235,6 +1272,7 @@
 				FAE6164E1EA946AB00A6BFC5 /* ReportsCollectionViewCell.xib in Resources */,
 				FA973D431EADF973001C6346 /* DebtsTableViewCell.xib in Resources */,
 				FA0ACEEE1E87D55D000A42EE /* CurrencyTableViewCell.xib in Resources */,
+				FAC51EAF1EB28AF400A7393B /* ChartTableViewCell.xib in Resources */,
 				FAECCFCA1E96C6AA001D4B8F /* MenuContent.plist in Resources */,
 				FA1783881EA53CA700B1D36E /* RecordsTableViewCell.xib in Resources */,
 				FAE632831E982A88002A0455 /* TransactionTableViewCell.xib in Resources */,
@@ -1366,6 +1404,7 @@
 				FA6BC0961EA2B9FC00ECBA5E /* MRAlertButton.m in Sources */,
 				FAA258451EA6C05000950CA0 /* TransparentViewController.m in Sources */,
 				FAE6327E1E982A88002A0455 /* MainViewControllerCollectionView.m in Sources */,
+				FAEC57341EB639080010EB58 /* LineGraphViewController.m in Sources */,
 				FAE6327F1E982A88002A0455 /* MainViewControllerTablleView.m in Sources */,
 				FAE101771E7DC8AF003525DF /* MenuViewController.m in Sources */,
 				84D92FC91E61F9D000F823DD /* CoreDataAccessLayer.m in Sources */,
@@ -1389,6 +1428,7 @@
 				FA1783821EA53C7900B1D36E /* RecordsCollectionViewCell.m in Sources */,
 				FAAE7AFC1E9D69C50057D648 /* CoreDataShoppingListManager.m in Sources */,
 				FAA258471EA6C05000950CA0 /* UIViewController+PresentViewControllerOverCurrentContext.m in Sources */,
+				FAC51EAE1EB28AF400A7393B /* ChartTableViewCell.m in Sources */,
 				FA1783871EA53CA700B1D36E /* RecordsTableViewCell.m in Sources */,
 				FA6BC0841EA259BD00ECBA5E /* WarrantiesViewController.m in Sources */,
 				FAA258461EA6C05000950CA0 /* UILabel+UIDatePickerLabels.m in Sources */,

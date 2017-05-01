@@ -107,32 +107,52 @@ forLocalNotification:(UILocalNotification *)notification
 
 - (void)generateFuckingRecords {
     
-
-    NSMutableDictionary *finalTransactionsDetails = @{ kTransactionAmount      : @"312",
-                                                       kTransactionAttachemts  : @[],
-                                                       kTransactionCategory    : @(2),
-                                                       kTransactionDescription : @"TEST",
-                                                       kTransactionPayee       : @"TEST",
-                                                       kTransactionPaymentType : @(0),
-                                                       kTransactionType        : @(1),
-                                                       kTransactionLatitude    : @(47.011686),
-                                                       kTransactionLongitude   : @(47.011686)}.mutableCopy;
-
+//    NSMutableDictionary *finalTransactionsDetails = @{ kTransactionAmount      : @"312",
+//                                                       kTransactionAttachemts  : @[],
+//                                                       kTransactionCategory    : @(2),
+//                                                       kTransactionDescription : @"TEST",
+//                                                       kTransactionPayee       : @"TEST",
+//                                                       kTransactionPaymentType : @(0),
+//                                                       kTransactionType        : @(1),
+//                                                       kTransactionLatitude    : @(47.011686),
+//                                                       kTransactionLongitude   : @(47.011686)}.mutableCopy;
+//
     NSMutableArray *datesArray = [NSMutableArray array];
     NSDate *date = [iMoneyUtils getTodayFormatedDate];
-    
-    for (int i = 0; i <100; i++) {
+//
+    for (int i = 0; i < 200; i++) {
         
         date = [[iMoneyUtils getTodayFormatedDate] dateByAddingTimeInterval: -i * 24 * 60 * 60];
         [datesArray addObject:date];
         
     }
+//
+//    Wallet *wallet = [[CoreDataRequestManager getAllWallets] firstObject];
+//    
+//    for (int i = 0; i < 100; i++) {
+//        [finalTransactionsDetails setObject:datesArray[i] forKey:kTransactionDate];
+//        [CoreDataInsertManager createTransaction:finalTransactionsDetails
+//                                        toWallet:wallet];
+//    }
     
-    Wallet *wallet = [[CoreDataRequestManager getAllWallets] firstObject];
+    NSDictionary *userCurrentLocation = [iMoneyUtils getUserCurrentLocation];
     
-    for (int i = 0; i <100; i++) {
-        [finalTransactionsDetails setObject:datesArray[i] forKey:kTransactionDate];
-        [CoreDataInsertManager createTransaction:finalTransactionsDetails
+    Wallet *wallet = [[CoreDataRequestManager getAllWallets] lastObject];
+
+    for (int i = 0; i < 200; i++) {
+        
+        NSDictionary *options = @{ kTransactionAmount      : [NSString stringWithFormat:@"%d",arc4random_uniform(5000)],
+                                   kTransactionAttachemts  : @[],
+                                   kTransactionCategory    : @(arc4random_uniform(13)),
+                                   kTransactionDescription : @"bred",
+                                   kTransactionPayee       : @"",
+                                   kTransactionPaymentType : @(arc4random_uniform(8)),
+                                   kTransactionType        : @(arc4random_uniform(2)),
+                                   kTransactionDate        : datesArray[i],
+                                   kTransactionLatitude    : @([userCurrentLocation[kTransactionLatitude] doubleValue]),
+                                   kTransactionLongitude   : @([userCurrentLocation[kTransactionLongitude] doubleValue])};
+        
+        [CoreDataInsertManager createTransaction:options
                                         toWallet:wallet];
     }
 }

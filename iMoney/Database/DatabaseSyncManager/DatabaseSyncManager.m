@@ -35,7 +35,7 @@
 
 - (void)coreDataChangeObserver:(NSNotification *)notification {
     
-    [[DropBoxUtils sharedInstance] uploadCoreData];
+//    [[DropBoxUtils sharedInstance] uploadCoreData];
 }
 
 - (void)dealloc {

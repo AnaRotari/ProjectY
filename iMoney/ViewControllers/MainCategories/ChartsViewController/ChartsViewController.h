@@ -6,9 +6,8 @@
 //  Copyright © 2017 Ana Rotari. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 
-@interface ChartsViewController : BaseViewController
+@interface ChartsViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate>
 
 @end
