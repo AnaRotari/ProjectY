@@ -98,6 +98,8 @@
 		FAC51EAE1EB28AF400A7393B /* ChartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC51EAC1EB28AF400A7393B /* ChartTableViewCell.m */; };
 		FAC51EAF1EB28AF400A7393B /* ChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC51EAD1EB28AF400A7393B /* ChartTableViewCell.xib */; };
 		FACCD6261E92CFF200C8E698 /* TransactionViewController+DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FACCD6251E92CFF200C8E698 /* TransactionViewController+DataSource.m */; };
+		FAD0828D1EB7716500378C5D /* BTSpiderPlotterView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD0828C1EB7716500378C5D /* BTSpiderPlotterView.m */; };
+		FAD082911EB773F200378C5D /* SpiderGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD082901EB773F200378C5D /* SpiderGraphViewController.m */; };
 		FAD2FF571E87CBF5001BB364 /* CurrencyPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD2FF561E87CBF5001BB364 /* CurrencyPickerViewController.m */; };
 		FADB2E971E88381100319EB6 /* HWViewPager.m in Sources */ = {isa = PBXBuildFile; fileRef = FADB2E961E88381100319EB6 /* HWViewPager.m */; };
 		FAE101771E7DC8AF003525DF /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE101761E7DC8AF003525DF /* MenuViewController.m */; };
@@ -303,6 +305,10 @@
 		FAC51EAD1EB28AF400A7393B /* ChartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChartTableViewCell.xib; sourceTree = "<group>"; };
 		FACCD6241E92CFF200C8E698 /* TransactionViewController+DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TransactionViewController+DataSource.h"; sourceTree = "<group>"; };
 		FACCD6251E92CFF200C8E698 /* TransactionViewController+DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TransactionViewController+DataSource.m"; sourceTree = "<group>"; };
+		FAD0828B1EB7716500378C5D /* BTSpiderPlotterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTSpiderPlotterView.h; sourceTree = "<group>"; };
+		FAD0828C1EB7716500378C5D /* BTSpiderPlotterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSpiderPlotterView.m; sourceTree = "<group>"; };
+		FAD0828F1EB773F200378C5D /* SpiderGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpiderGraphViewController.h; sourceTree = "<group>"; };
+		FAD082901EB773F200378C5D /* SpiderGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpiderGraphViewController.m; sourceTree = "<group>"; };
 		FAD2FF551E87CBF5001BB364 /* CurrencyPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyPickerViewController.h; sourceTree = "<group>"; };
 		FAD2FF561E87CBF5001BB364 /* CurrencyPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyPickerViewController.m; sourceTree = "<group>"; };
 		FADB2E951E88381100319EB6 /* HWViewPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWViewPager.h; sourceTree = "<group>"; };
@@ -903,8 +909,27 @@
 			isa = PBXGroup;
 			children = (
 				FAEC57311EB638AE0010EB58 /* LineGraphViewController */,
+				FAD0828E1EB773DF00378C5D /* SpiderGraphViewController */,
 			);
 			path = ChartViewControllers;
+			sourceTree = "<group>";
+		};
+		FAD0828A1EB7716500378C5D /* BTSpiderPlotterView */ = {
+			isa = PBXGroup;
+			children = (
+				FAD0828B1EB7716500378C5D /* BTSpiderPlotterView.h */,
+				FAD0828C1EB7716500378C5D /* BTSpiderPlotterView.m */,
+			);
+			path = BTSpiderPlotterView;
+			sourceTree = "<group>";
+		};
+		FAD0828E1EB773DF00378C5D /* SpiderGraphViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FAD0828F1EB773F200378C5D /* SpiderGraphViewController.h */,
+				FAD082901EB773F200378C5D /* SpiderGraphViewController.m */,
+			);
+			path = SpiderGraphViewController;
 			sourceTree = "<group>";
 		};
 		FAD2FF541E87CBD3001BB364 /* CurrencyPickerViewController */ = {
@@ -942,6 +967,7 @@
 		FAE1017F1E7DD182003525DF /* ThirdPartyLibs */ = {
 			isa = PBXGroup;
 			children = (
+				FAD0828A1EB7716500378C5D /* BTSpiderPlotterView */,
 				FAA258391EA6C05000950CA0 /* BIZPickerViewControllerClasses */,
 				FA6BC0911EA2B9FC00ECBA5E /* MRAlertView */,
 				FADB2E941E88381100319EB6 /* HWViewPager */,
@@ -1411,6 +1437,7 @@
 				FAAC9F911E7DE79B0077B160 /* MenuTableViewCell.m in Sources */,
 				FA3D57721EA6A40D00B01454 /* CoreDataPlannedPaymentsManager.m in Sources */,
 				FAAE7B0D1E9D88AD0057D648 /* ShoppingListTableViewCell.m in Sources */,
+				FAD0828D1EB7716500378C5D /* BTSpiderPlotterView.m in Sources */,
 				FACCD6261E92CFF200C8E698 /* TransactionViewController+DataSource.m in Sources */,
 				FAE6164D1EA946AB00A6BFC5 /* ReportsCollectionViewCell.m in Sources */,
 				FAAE7AFF1E9D7C120057D648 /* MainViewController+Navigation.m in Sources */,
@@ -1430,6 +1457,7 @@
 				FAA258471EA6C05000950CA0 /* UIViewController+PresentViewControllerOverCurrentContext.m in Sources */,
 				FAC51EAE1EB28AF400A7393B /* ChartTableViewCell.m in Sources */,
 				FA1783871EA53CA700B1D36E /* RecordsTableViewCell.m in Sources */,
+				FAD082911EB773F200378C5D /* SpiderGraphViewController.m in Sources */,
 				FA6BC0841EA259BD00ECBA5E /* WarrantiesViewController.m in Sources */,
 				FAA258461EA6C05000950CA0 /* UILabel+UIDatePickerLabels.m in Sources */,
 				FA116E031EA96598004C4A19 /* DebtsViewController.m in Sources */,

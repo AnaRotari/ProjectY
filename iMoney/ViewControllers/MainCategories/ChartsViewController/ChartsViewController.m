@@ -9,6 +9,7 @@
 #import "ChartsViewController.h"
 #import "ChartTableViewCell.h"
 #import "LineGraphViewController.h"
+#import "SpiderGraphViewController.h"
 
 @interface ChartsViewController ()
 
@@ -26,7 +27,8 @@
     [self.chartPreviewTableView registerNib:[UINib nibWithNibName:@"ChartTableViewCell" bundle:nil] forCellReuseIdentifier:@"ChartTableViewCell"];
     self.chartPreviewTableView.tableFooterView = [UIView new];
     
-    self.chartTypeIdentifierArray = @[@{@"PlotName":@"Balance trend",@"StoryboardIdentifier":@"LineGraphViewController",@"PreviewImage":@"ic_balanceTrend"}];
+    self.chartTypeIdentifierArray = @[@{@"PlotName":@"Balance trend",@"StoryboardIdentifier":@"LineGraphViewController",@"PreviewImage":@"ic_balanceTrend"},
+                                      @{@"PlotName":@"Radar chart",@"StoryboardIdentifier":@"SpiderGraphViewController",@"PreviewImage":@"ic_spider"}];
 }
 
 #pragma mark - UITableViewDataSource
@@ -54,14 +56,17 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return 116;
+    return 86;
 }
 
 - (void)pushToViewController:(NSString *)viewControllerIdentifier {
     
-    if ([viewControllerIdentifier isEqualToString:@"LineGraphViewController"])
-    {
+    if ([viewControllerIdentifier isEqualToString:@"LineGraphViewController"]) {
         LineGraphViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"LineGraphViewController"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    if ([viewControllerIdentifier isEqualToString:@"SpiderGraphViewController"]) {
+        LineGraphViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"SpiderGraphViewController"];
         [self.navigationController pushViewController:controller animated:YES];
     }
 }
