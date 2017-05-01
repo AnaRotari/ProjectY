@@ -10,6 +10,8 @@
 #import "ChartTableViewCell.h"
 #import "LineGraphViewController.h"
 #import "SpiderGraphViewController.h"
+#import "ExpensesStructureViewController.h"
+#import "IncomeStructureViewController.h"
 
 @interface ChartsViewController ()
 
@@ -28,7 +30,9 @@
     self.chartPreviewTableView.tableFooterView = [UIView new];
     
     self.chartTypeIdentifierArray = @[@{@"PlotName":@"Balance trend",@"StoryboardIdentifier":@"LineGraphViewController",@"PreviewImage":@"ic_balanceTrend"},
-                                      @{@"PlotName":@"Radar chart",@"StoryboardIdentifier":@"SpiderGraphViewController",@"PreviewImage":@"ic_spider"}];
+                                      @{@"PlotName":@"Radar chart",@"StoryboardIdentifier":@"SpiderGraphViewController",@"PreviewImage":@"ic_spider"},
+                                      @{@"PlotName":@"Income structure",@"StoryboardIdentifier":@"IncomeStructureViewController",@"PreviewImage":@"ic_piechart_1"},
+                                      @{@"PlotName":@"Expense structure",@"StoryboardIdentifier":@"ExpensesStructureViewController",@"PreviewImage":@"ic_piechart_2"},];
 }
 
 #pragma mark - UITableViewDataSource
@@ -61,13 +65,28 @@
 
 - (void)pushToViewController:(NSString *)viewControllerIdentifier {
     
-    if ([viewControllerIdentifier isEqualToString:@"LineGraphViewController"]) {
-        LineGraphViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"LineGraphViewController"];
-        [self.navigationController pushViewController:controller animated:YES];
+    if ([CoreDataRequestManager getAllTransactions].count > 0 && [CoreDataRequestManager getAllTransactions].count > 0)
+    {
+        if ([viewControllerIdentifier isEqualToString:@"LineGraphViewController"]) {
+            LineGraphViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"LineGraphViewController"];
+            [self.navigationController pushViewController:controller animated:YES];
+        }
+        if ([viewControllerIdentifier isEqualToString:@"SpiderGraphViewController"]) {
+            LineGraphViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"SpiderGraphViewController"];
+            [self.navigationController pushViewController:controller animated:YES];
+        }
+        if ([viewControllerIdentifier isEqualToString:@"IncomeStructureViewController"]) {
+            IncomeStructureViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"IncomeStructureViewController"];
+            [self.navigationController pushViewController:controller animated:YES];
+        }
+        if ([viewControllerIdentifier isEqualToString:@"ExpensesStructureViewController"]) {
+            LineGraphViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ExpensesStructureViewController"];
+            [self.navigationController pushViewController:controller animated:YES];
+        }
     }
-    if ([viewControllerIdentifier isEqualToString:@"SpiderGraphViewController"]) {
-        LineGraphViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"SpiderGraphViewController"];
-        [self.navigationController pushViewController:controller animated:YES];
+    else
+    {
+        [iMoneyUtils showAlertView:@"Alert" withMessage:@"You need to create a transactions first !"];
     }
 }
 

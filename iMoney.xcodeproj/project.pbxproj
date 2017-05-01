@@ -100,6 +100,16 @@
 		FACCD6261E92CFF200C8E698 /* TransactionViewController+DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FACCD6251E92CFF200C8E698 /* TransactionViewController+DataSource.m */; };
 		FAD0828D1EB7716500378C5D /* BTSpiderPlotterView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD0828C1EB7716500378C5D /* BTSpiderPlotterView.m */; };
 		FAD082911EB773F200378C5D /* SpiderGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD082901EB773F200378C5D /* SpiderGraphViewController.m */; };
+		FAD082961EB7879100378C5D /* IncomeStructureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD082951EB7879100378C5D /* IncomeStructureViewController.m */; };
+		FAD082991EB787A300378C5D /* ExpensesStructureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD082981EB787A300378C5D /* ExpensesStructureViewController.m */; };
+		FAD082B61EB7ABB100378C5D /* BarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD0829E1EB7ABB100378C5D /* BarChart.m */; };
+		FAD082B71EB7ABB100378C5D /* CircularChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD082A11EB7ABB100378C5D /* CircularChart.m */; };
+		FAD082B81EB7ABB100378C5D /* DRScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD082A51EB7ABB100378C5D /* DRScrollView.m */; };
+		FAD082B91EB7ABB100378C5D /* HorizontalStackBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD082A81EB7ABB100378C5D /* HorizontalStackBarChart.m */; };
+		FAD082BA1EB7ABB100378C5D /* LegendView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD082AB1EB7ABB100378C5D /* LegendView.m */; };
+		FAD082BB1EB7ABB100378C5D /* LineGraphMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD082AE1EB7ABB100378C5D /* LineGraphMarker.m */; };
+		FAD082BC1EB7ABB100378C5D /* MultiLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD082B01EB7ABB100378C5D /* MultiLineGraphView.m */; };
+		FAD082BD1EB7ABB100378C5D /* PieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD082B31EB7ABB100378C5D /* PieChart.m */; };
 		FAD2FF571E87CBF5001BB364 /* CurrencyPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD2FF561E87CBF5001BB364 /* CurrencyPickerViewController.m */; };
 		FADB2E971E88381100319EB6 /* HWViewPager.m in Sources */ = {isa = PBXBuildFile; fileRef = FADB2E961E88381100319EB6 /* HWViewPager.m */; };
 		FAE101771E7DC8AF003525DF /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE101761E7DC8AF003525DF /* MenuViewController.m */; };
@@ -309,6 +319,29 @@
 		FAD0828C1EB7716500378C5D /* BTSpiderPlotterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTSpiderPlotterView.m; sourceTree = "<group>"; };
 		FAD0828F1EB773F200378C5D /* SpiderGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpiderGraphViewController.h; sourceTree = "<group>"; };
 		FAD082901EB773F200378C5D /* SpiderGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpiderGraphViewController.m; sourceTree = "<group>"; };
+		FAD082941EB7879100378C5D /* IncomeStructureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncomeStructureViewController.h; sourceTree = "<group>"; };
+		FAD082951EB7879100378C5D /* IncomeStructureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncomeStructureViewController.m; sourceTree = "<group>"; };
+		FAD082971EB787A300378C5D /* ExpensesStructureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpensesStructureViewController.h; sourceTree = "<group>"; };
+		FAD082981EB787A300378C5D /* ExpensesStructureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpensesStructureViewController.m; sourceTree = "<group>"; };
+		FAD0829D1EB7ABB100378C5D /* BarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarChart.h; sourceTree = "<group>"; };
+		FAD0829E1EB7ABB100378C5D /* BarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarChart.m; sourceTree = "<group>"; };
+		FAD082A01EB7ABB100378C5D /* CircularChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularChart.h; sourceTree = "<group>"; };
+		FAD082A11EB7ABB100378C5D /* CircularChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircularChart.m; sourceTree = "<group>"; };
+		FAD082A21EB7ABB100378C5D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		FAD082A31EB7ABB100378C5D /* DrGraphs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrGraphs.h; sourceTree = "<group>"; };
+		FAD082A41EB7ABB100378C5D /* DRScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRScrollView.h; sourceTree = "<group>"; };
+		FAD082A51EB7ABB100378C5D /* DRScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRScrollView.m; sourceTree = "<group>"; };
+		FAD082A71EB7ABB100378C5D /* HorizontalStackBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalStackBarChart.h; sourceTree = "<group>"; };
+		FAD082A81EB7ABB100378C5D /* HorizontalStackBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalStackBarChart.m; sourceTree = "<group>"; };
+		FAD082AA1EB7ABB100378C5D /* LegendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegendView.h; sourceTree = "<group>"; };
+		FAD082AB1EB7ABB100378C5D /* LegendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegendView.m; sourceTree = "<group>"; };
+		FAD082AD1EB7ABB100378C5D /* LineGraphMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineGraphMarker.h; sourceTree = "<group>"; };
+		FAD082AE1EB7ABB100378C5D /* LineGraphMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineGraphMarker.m; sourceTree = "<group>"; };
+		FAD082AF1EB7ABB100378C5D /* MultiLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiLineGraphView.h; sourceTree = "<group>"; };
+		FAD082B01EB7ABB100378C5D /* MultiLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiLineGraphView.m; sourceTree = "<group>"; };
+		FAD082B21EB7ABB100378C5D /* PieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChart.h; sourceTree = "<group>"; };
+		FAD082B31EB7ABB100378C5D /* PieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChart.m; sourceTree = "<group>"; };
+		FAD082B41EB7ABB100378C5D /* drCharts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drCharts.h; sourceTree = "<group>"; };
 		FAD2FF551E87CBF5001BB364 /* CurrencyPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyPickerViewController.h; sourceTree = "<group>"; };
 		FAD2FF561E87CBF5001BB364 /* CurrencyPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyPickerViewController.m; sourceTree = "<group>"; };
 		FADB2E951E88381100319EB6 /* HWViewPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWViewPager.h; sourceTree = "<group>"; };
@@ -910,6 +943,8 @@
 			children = (
 				FAEC57311EB638AE0010EB58 /* LineGraphViewController */,
 				FAD0828E1EB773DF00378C5D /* SpiderGraphViewController */,
+				FAD082931EB7878400378C5D /* IncomeStructureViewController */,
+				FAD082921EB7878400378C5D /* ExpensesStructureViewController */,
 			);
 			path = ChartViewControllers;
 			sourceTree = "<group>";
@@ -930,6 +965,106 @@
 				FAD082901EB773F200378C5D /* SpiderGraphViewController.m */,
 			);
 			path = SpiderGraphViewController;
+			sourceTree = "<group>";
+		};
+		FAD082921EB7878400378C5D /* ExpensesStructureViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FAD082971EB787A300378C5D /* ExpensesStructureViewController.h */,
+				FAD082981EB787A300378C5D /* ExpensesStructureViewController.m */,
+			);
+			path = ExpensesStructureViewController;
+			sourceTree = "<group>";
+		};
+		FAD082931EB7878400378C5D /* IncomeStructureViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FAD082941EB7879100378C5D /* IncomeStructureViewController.h */,
+				FAD082951EB7879100378C5D /* IncomeStructureViewController.m */,
+			);
+			path = IncomeStructureViewController;
+			sourceTree = "<group>";
+		};
+		FAD0829A1EB7ABB100378C5D /* dr-Charts */ = {
+			isa = PBXGroup;
+			children = (
+				FAD0829B1EB7ABB100378C5D /* Classes */,
+				FAD082B41EB7ABB100378C5D /* drCharts.h */,
+			);
+			path = "dr-Charts";
+			sourceTree = "<group>";
+		};
+		FAD0829B1EB7ABB100378C5D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FAD0829C1EB7ABB100378C5D /* BarChart */,
+				FAD0829F1EB7ABB100378C5D /* CircularChart */,
+				FAD082A21EB7ABB100378C5D /* Constants.h */,
+				FAD082A31EB7ABB100378C5D /* DrGraphs.h */,
+				FAD082A41EB7ABB100378C5D /* DRScrollView.h */,
+				FAD082A51EB7ABB100378C5D /* DRScrollView.m */,
+				FAD082A61EB7ABB100378C5D /* HorizontalStackChart */,
+				FAD082A91EB7ABB100378C5D /* Legend */,
+				FAD082AC1EB7ABB100378C5D /* LineChart */,
+				FAD082B11EB7ABB100378C5D /* PieChart */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		FAD0829C1EB7ABB100378C5D /* BarChart */ = {
+			isa = PBXGroup;
+			children = (
+				FAD0829D1EB7ABB100378C5D /* BarChart.h */,
+				FAD0829E1EB7ABB100378C5D /* BarChart.m */,
+			);
+			path = BarChart;
+			sourceTree = "<group>";
+		};
+		FAD0829F1EB7ABB100378C5D /* CircularChart */ = {
+			isa = PBXGroup;
+			children = (
+				FAD082A01EB7ABB100378C5D /* CircularChart.h */,
+				FAD082A11EB7ABB100378C5D /* CircularChart.m */,
+			);
+			path = CircularChart;
+			sourceTree = "<group>";
+		};
+		FAD082A61EB7ABB100378C5D /* HorizontalStackChart */ = {
+			isa = PBXGroup;
+			children = (
+				FAD082A71EB7ABB100378C5D /* HorizontalStackBarChart.h */,
+				FAD082A81EB7ABB100378C5D /* HorizontalStackBarChart.m */,
+			);
+			path = HorizontalStackChart;
+			sourceTree = "<group>";
+		};
+		FAD082A91EB7ABB100378C5D /* Legend */ = {
+			isa = PBXGroup;
+			children = (
+				FAD082AA1EB7ABB100378C5D /* LegendView.h */,
+				FAD082AB1EB7ABB100378C5D /* LegendView.m */,
+			);
+			path = Legend;
+			sourceTree = "<group>";
+		};
+		FAD082AC1EB7ABB100378C5D /* LineChart */ = {
+			isa = PBXGroup;
+			children = (
+				FAD082AD1EB7ABB100378C5D /* LineGraphMarker.h */,
+				FAD082AE1EB7ABB100378C5D /* LineGraphMarker.m */,
+				FAD082AF1EB7ABB100378C5D /* MultiLineGraphView.h */,
+				FAD082B01EB7ABB100378C5D /* MultiLineGraphView.m */,
+			);
+			path = LineChart;
+			sourceTree = "<group>";
+		};
+		FAD082B11EB7ABB100378C5D /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+				FAD082B21EB7ABB100378C5D /* PieChart.h */,
+				FAD082B31EB7ABB100378C5D /* PieChart.m */,
+			);
+			path = PieChart;
 			sourceTree = "<group>";
 		};
 		FAD2FF541E87CBD3001BB364 /* CurrencyPickerViewController */ = {
@@ -967,6 +1102,7 @@
 		FAE1017F1E7DD182003525DF /* ThirdPartyLibs */ = {
 			isa = PBXGroup;
 			children = (
+				FAD0829A1EB7ABB100378C5D /* dr-Charts */,
 				FAD0828A1EB7716500378C5D /* BTSpiderPlotterView */,
 				FAA258391EA6C05000950CA0 /* BIZPickerViewControllerClasses */,
 				FA6BC0911EA2B9FC00ECBA5E /* MRAlertView */,
@@ -1371,6 +1507,7 @@
 				2C605E001EA5FBC50052939E /* ExportsViewController.m in Sources */,
 				FAAE7B121E9D8CA80057D648 /* ShoppingListContentViewController.m in Sources */,
 				FAECCFCE1E96E232001D4B8F /* ReorderWalletsViewController.m in Sources */,
+				FAD082BB1EB7ABB100378C5D /* LineGraphMarker.m in Sources */,
 				FAE632A01E983635002A0455 /* HistorySegmentedControl.m in Sources */,
 				FA973D421EADF973001C6346 /* DebtsTableViewCell.m in Sources */,
 				FA973D641EAE0246001C6346 /* ListItem+CoreDataClass.m in Sources */,
@@ -1404,6 +1541,7 @@
 				FA6BC0891EA267AE00ECBA5E /* WarrantiesTableViewCell.m in Sources */,
 				FAAE7B081E9D87F80057D648 /* ShoppingListViewController.m in Sources */,
 				FAFF39FA1E88414600524084 /* SelectedWalletViewController.m in Sources */,
+				FAD082961EB7879100378C5D /* IncomeStructureViewController.m in Sources */,
 				FA5540191E7E995900A4C773 /* DatabaseSyncManager.m in Sources */,
 				84D92FCD1E61FB9800F823DD /* iMoney.xcdatamodeld in Sources */,
 				FAE6328D1E982BDA002A0455 /* ChartsViewController.m in Sources */,
@@ -1415,6 +1553,8 @@
 				FA973D9A1EAE8F2C001C6346 /* Transaction+CoreDataProperties.m in Sources */,
 				FA9693271E87324100F86873 /* UIColor+CoreData.m in Sources */,
 				FA973D8E1EAE8880001C6346 /* DebtsTransactionsViewController.m in Sources */,
+				FAD082BA1EB7ABB100378C5D /* LegendView.m in Sources */,
+				FAD082B91EB7ABB100378C5D /* HorizontalStackBarChart.m in Sources */,
 				FAE632931E982BEF002A0455 /* BudgetsViewController.m in Sources */,
 				FAA838741E870BC9005BFADF /* TPKeyboardAvoidingTableView.m in Sources */,
 				FAE6329B1E98318C002A0455 /* TransactionDetailViewController.m in Sources */,
@@ -1423,11 +1563,13 @@
 				FA0CC0071E9EA10000D27444 /* LocationViewController.m in Sources */,
 				FA973D611EAE0246001C6346 /* Budget+CoreDataProperties.m in Sources */,
 				FAFF3A001E8858D500524084 /* SelectedWalletViewController+UI.m in Sources */,
+				FAD082991EB787A300378C5D /* ExpensesStructureViewController.m in Sources */,
 				FAECCFBF1E96AD78001D4B8F /* ReminderViewController.m in Sources */,
 				FAE6327D1E982A88002A0455 /* MainViewController.m in Sources */,
 				FAC14A031EACDC3E00E1603D /* BudgetWalletTableViewCell.m in Sources */,
 				FAE632A31E9855F2002A0455 /* NSArray+CoreData.m in Sources */,
 				FA6BC0961EA2B9FC00ECBA5E /* MRAlertButton.m in Sources */,
+				FAD082BC1EB7ABB100378C5D /* MultiLineGraphView.m in Sources */,
 				FAA258451EA6C05000950CA0 /* TransparentViewController.m in Sources */,
 				FAE6327E1E982A88002A0455 /* MainViewControllerCollectionView.m in Sources */,
 				FAEC57341EB639080010EB58 /* LineGraphViewController.m in Sources */,
@@ -1436,6 +1578,7 @@
 				84D92FC91E61F9D000F823DD /* CoreDataAccessLayer.m in Sources */,
 				FAAC9F911E7DE79B0077B160 /* MenuTableViewCell.m in Sources */,
 				FA3D57721EA6A40D00B01454 /* CoreDataPlannedPaymentsManager.m in Sources */,
+				FAD082B61EB7ABB100378C5D /* BarChart.m in Sources */,
 				FAAE7B0D1E9D88AD0057D648 /* ShoppingListTableViewCell.m in Sources */,
 				FAD0828D1EB7716500378C5D /* BTSpiderPlotterView.m in Sources */,
 				FACCD6261E92CFF200C8E698 /* TransactionViewController+DataSource.m in Sources */,
@@ -1452,7 +1595,9 @@
 				FAFF39FD1E88415400524084 /* TransactionViewController.m in Sources */,
 				FA973D6D1EAE0246001C6346 /* Wallet+CoreDataProperties.m in Sources */,
 				FA0330961E7D7F9F00BB8DBA /* iMoneyUtils.m in Sources */,
+				FAD082B81EB7ABB100378C5D /* DRScrollView.m in Sources */,
 				FA1783821EA53C7900B1D36E /* RecordsCollectionViewCell.m in Sources */,
+				FAD082B71EB7ABB100378C5D /* CircularChart.m in Sources */,
 				FAAE7AFC1E9D69C50057D648 /* CoreDataShoppingListManager.m in Sources */,
 				FAA258471EA6C05000950CA0 /* UIViewController+PresentViewControllerOverCurrentContext.m in Sources */,
 				FAC51EAE1EB28AF400A7393B /* ChartTableViewCell.m in Sources */,
@@ -1461,6 +1606,7 @@
 				FA6BC0841EA259BD00ECBA5E /* WarrantiesViewController.m in Sources */,
 				FAA258461EA6C05000950CA0 /* UILabel+UIDatePickerLabels.m in Sources */,
 				FA116E031EA96598004C4A19 /* DebtsViewController.m in Sources */,
+				FAD082BD1EB7ABB100378C5D /* PieChart.m in Sources */,
 				FA973D661EAE0246001C6346 /* PlannedPayments+CoreDataClass.m in Sources */,
 				FA67F11D1EA5638700B59FA1 /* PlannedPaymentsTableViewCell.m in Sources */,
 				FA973D651EAE0246001C6346 /* ListItem+CoreDataProperties.m in Sources */,

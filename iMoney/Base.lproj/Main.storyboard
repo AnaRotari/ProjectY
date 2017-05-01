@@ -2063,7 +2063,7 @@
                     <tabBarItem key="tabBarItem" title="Dashboard" image="ic_dashboard" id="bpi-MI-vgU"/>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="C4v-b8-Zab">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C4v-b8-Zab">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2766,7 +2766,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-MDL 2999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="fox-ba-BAC">
                                         <rect key="frame" x="8" y="41" width="109" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -2794,7 +2794,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-MDL 2999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="zST-Na-txS">
                                         <rect key="frame" x="8" y="41" width="109" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -2822,7 +2822,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-MDL 2999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Twf-YQ-wTK">
                                         <rect key="frame" x="8" y="41" width="109" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -3005,6 +3005,68 @@
             </objects>
             <point key="canvasLocation" x="1349.5999999999999" y="1718.5907046476764"/>
         </scene>
+        <!--Data Source-->
+        <scene sceneID="nO1-Wt-WDF">
+            <objects>
+                <viewController storyboardIdentifier="ExpensesStructureViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uyX-Sr-2eS" customClass="ExpensesStructureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mc5-eN-yta"/>
+                        <viewControllerLayoutGuide type="bottom" id="2If-i4-FT7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bYr-wi-gAT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mh7-Op-wdK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KsK-hX-pBl" customClass="MKDropdownMenu">
+                                        <rect key="frame" x="8" y="8" width="359" height="28"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="uyX-Sr-2eS" id="FIO-Zy-vvr"/>
+                                            <outlet property="delegate" destination="uyX-Sr-2eS" id="qaZ-oN-wuB"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="OAs-jg-Z8r"/>
+                                    <constraint firstItem="KsK-hX-pBl" firstAttribute="leading" secondItem="mh7-Op-wdK" secondAttribute="leading" constant="8" id="Yhg-FY-pGE"/>
+                                    <constraint firstAttribute="bottom" secondItem="KsK-hX-pBl" secondAttribute="bottom" constant="8" id="bul-il-kuR"/>
+                                    <constraint firstAttribute="trailing" secondItem="KsK-hX-pBl" secondAttribute="trailing" constant="8" id="fou-n9-x9g"/>
+                                    <constraint firstItem="KsK-hX-pBl" firstAttribute="top" secondItem="mh7-Op-wdK" secondAttribute="top" constant="8" id="l8p-hk-LCJ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAs-p8-108">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="T7T-dh-eWy"/>
+                                    <constraint firstAttribute="width" constant="375" id="TuA-hQ-KGs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hAs-p8-108" firstAttribute="centerY" secondItem="bYr-wi-gAT" secondAttribute="centerY" id="AoY-l5-yTN"/>
+                            <constraint firstItem="hAs-p8-108" firstAttribute="centerX" secondItem="bYr-wi-gAT" secondAttribute="centerX" id="L8W-3Z-0zJ"/>
+                            <constraint firstAttribute="trailing" secondItem="mh7-Op-wdK" secondAttribute="trailing" id="Lfe-qa-Wif"/>
+                            <constraint firstItem="mh7-Op-wdK" firstAttribute="leading" secondItem="bYr-wi-gAT" secondAttribute="leading" id="fJM-Ri-PQN"/>
+                            <constraint firstItem="mh7-Op-wdK" firstAttribute="top" secondItem="Mc5-eN-yta" secondAttribute="bottom" id="uxh-3s-ZiI"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="supportView" destination="hAs-p8-108" id="ky2-YM-EyJ"/>
+                        <outlet property="walletsDropDownMenu" destination="KsK-hX-pBl" id="w7X-Lm-rfr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZyK-Iy-04H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2703" y="1719"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="S7f-yn-SmW">
             <objects>
@@ -3032,7 +3094,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zye-Km-bp3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Records" image="ic_records" id="n2H-Ex-8Vt"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uDB-2Q-Rcy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uDB-2Q-Rcy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3051,7 +3113,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lfh-0w-rQw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Charts" image="ic_chart" id="dSm-ed-hV2"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hGe-cL-yfe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hGe-cL-yfe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3070,7 +3132,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Npz-q0-1YL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Reports" image="ic_raports" id="Lp9-iX-RXK"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HGL-yn-uCF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HGL-yn-uCF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3089,7 +3151,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PgU-dR-132" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Budgets" image="ic_budgets" id="Mwq-Mf-4AR"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ybc-fc-iGl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ybc-fc-iGl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3101,6 +3163,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qun-EU-uDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1148" y="3249.6251874062973"/>
+        </scene>
+        <!--Data Source-->
+        <scene sceneID="911-zX-wcX">
+            <objects>
+                <viewController storyboardIdentifier="IncomeStructureViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0YX-ht-Te3" customClass="IncomeStructureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SZQ-D7-oBE"/>
+                        <viewControllerLayoutGuide type="bottom" id="ylS-bR-Q27"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E5E-n4-ddV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cD-Qh-7Cl">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPy-or-6YF" customClass="MKDropdownMenu">
+                                        <rect key="frame" x="8" y="8" width="359" height="28"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="0YX-ht-Te3" id="3UV-Le-OFi"/>
+                                            <outlet property="delegate" destination="0YX-ht-Te3" id="qLq-Od-meg"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="WPy-or-6YF" secondAttribute="trailing" constant="8" id="0uQ-ir-mtW"/>
+                                    <constraint firstAttribute="height" constant="44" id="6Ql-Hy-Gdc"/>
+                                    <constraint firstItem="WPy-or-6YF" firstAttribute="top" secondItem="8cD-Qh-7Cl" secondAttribute="top" constant="8" id="Ico-cp-Ti2"/>
+                                    <constraint firstItem="WPy-or-6YF" firstAttribute="leading" secondItem="8cD-Qh-7Cl" secondAttribute="leading" constant="8" id="lln-L6-gwt"/>
+                                    <constraint firstAttribute="bottom" secondItem="WPy-or-6YF" secondAttribute="bottom" constant="8" id="nRd-GE-iMR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e11-V2-8Bw">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="5Up-1Q-ZNs"/>
+                                    <constraint firstAttribute="width" constant="375" id="j21-sn-aCc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8cD-Qh-7Cl" firstAttribute="top" secondItem="SZQ-D7-oBE" secondAttribute="bottom" id="579-Sd-cTA"/>
+                            <constraint firstItem="8cD-Qh-7Cl" firstAttribute="leading" secondItem="E5E-n4-ddV" secondAttribute="leading" id="FxA-W3-USe"/>
+                            <constraint firstItem="e11-V2-8Bw" firstAttribute="centerY" secondItem="E5E-n4-ddV" secondAttribute="centerY" id="GkQ-hP-NlW"/>
+                            <constraint firstItem="e11-V2-8Bw" firstAttribute="centerX" secondItem="E5E-n4-ddV" secondAttribute="centerX" id="nUB-Ht-O5a"/>
+                            <constraint firstAttribute="trailing" secondItem="8cD-Qh-7Cl" secondAttribute="trailing" id="tiD-Ih-A09"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="supportView" destination="e11-V2-8Bw" id="Iad-01-mWC"/>
+                        <outlet property="walletsDropDownMenu" destination="WPy-or-6YF" id="fGG-hp-l8M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W59-Ma-5Lx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2022" y="1719"/>
         </scene>
     </scenes>
     <resources>
