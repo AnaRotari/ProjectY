@@ -75,8 +75,21 @@
 
 - (void)doneButtonAction:(id)sender {
     
-    [self constructTransaction];
-    [self.navigationController popViewControllerAnimated:YES];
+    if ([self checkAllFields]) {
+        [self constructTransaction];
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        [iMoneyUtils showAlertView:@"Alert" withMessage:@"Please fill up all data"];
+    }
+}
+
+- (BOOL)checkAllFields {
+    
+    if (self.amountTextField.text.length > 0 && self.descriptionLabel.text.length > 0 && self.payeeLabel.text.length > 0 && self.selectedPaymentTypeLabel.text.length > 0 && self.selectedTransactionCategoryLabel.text.length > 0 && self.selectedTransactionTypeLabel.text.length > 0) {
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
