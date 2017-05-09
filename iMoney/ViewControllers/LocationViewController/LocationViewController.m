@@ -29,6 +29,7 @@
     [super viewDidLoad];
     [self setUpSortButtons];
     [self reloadDataForSortOption:kSortOptionShowAll];
+    self.title = @"Locations";
 }
 
 #pragma mark - reload data

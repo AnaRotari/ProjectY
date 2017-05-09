@@ -21,13 +21,16 @@
 		FA0330841E7D786800BB8DBA /* ApplicationConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0330831E7D786800BB8DBA /* ApplicationConstants.m */; };
 		FA0330961E7D7F9F00BB8DBA /* iMoneyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0330951E7D7F9F00BB8DBA /* iMoneyUtils.m */; };
 		FA0842F01E9AD305007F5CED /* CoreDataHelpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0842EF1E9AD305007F5CED /* CoreDataHelpManager.m */; };
+		FA0A005F1EC1CC790058C5F6 /* RecordsViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0A005E1EC1CC790058C5F6 /* RecordsViewController+Navigation.m */; };
+		FA0A00621EC1CD7F0058C5F6 /* ChartsViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0A00611EC1CD7F0058C5F6 /* ChartsViewController+Navigation.m */; };
 		FA0ACEE81E87D2ED000A42EE /* currency.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA0ACEE71E87D2ED000A42EE /* currency.plist */; };
 		FA0ACEED1E87D55D000A42EE /* CurrencyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0ACEEB1E87D55D000A42EE /* CurrencyTableViewCell.m */; };
 		FA0ACEEE1E87D55D000A42EE /* CurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0ACEEC1E87D55D000A42EE /* CurrencyTableViewCell.xib */; };
 		FA0ACEF11E87EAEE000A42EE /* CoreDataInsertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0ACEF01E87EAEE000A42EE /* CoreDataInsertManager.m */; };
 		FA0CC0071E9EA10000D27444 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0CC0061E9EA10000D27444 /* LocationViewController.m */; };
 		FA116E031EA96598004C4A19 /* DebtsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA116E021EA96598004C4A19 /* DebtsViewController.m */; };
-		FA116E081EA96688004C4A19 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA116E071EA96688004C4A19 /* HelpViewController.m */; };
+		FA1445541EC1D084005ABAED /* ReportsViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1445531EC1D084005ABAED /* ReportsViewController+Navigation.m */; };
+		FA1445571EC1D1D0005ABAED /* BudgetsViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1445561EC1D1D0005ABAED /* BudgetsViewController+Navigation.m */; };
 		FA1783821EA53C7900B1D36E /* RecordsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1783801EA53C7900B1D36E /* RecordsCollectionViewCell.m */; };
 		FA1783831EA53C7900B1D36E /* RecordsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1783811EA53C7900B1D36E /* RecordsCollectionViewCell.xib */; };
 		FA1783871EA53CA700B1D36E /* RecordsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1783851EA53CA700B1D36E /* RecordsTableViewCell.m */; };
@@ -176,6 +179,10 @@
 		FA0330951E7D7F9F00BB8DBA /* iMoneyUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iMoneyUtils.m; sourceTree = "<group>"; };
 		FA0842EE1E9AD305007F5CED /* CoreDataHelpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelpManager.h; sourceTree = "<group>"; };
 		FA0842EF1E9AD305007F5CED /* CoreDataHelpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelpManager.m; sourceTree = "<group>"; };
+		FA0A005D1EC1CC790058C5F6 /* RecordsViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RecordsViewController+Navigation.h"; sourceTree = "<group>"; };
+		FA0A005E1EC1CC790058C5F6 /* RecordsViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RecordsViewController+Navigation.m"; sourceTree = "<group>"; };
+		FA0A00601EC1CD7F0058C5F6 /* ChartsViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChartsViewController+Navigation.h"; sourceTree = "<group>"; };
+		FA0A00611EC1CD7F0058C5F6 /* ChartsViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChartsViewController+Navigation.m"; sourceTree = "<group>"; };
 		FA0ACEE71E87D2ED000A42EE /* currency.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = currency.plist; sourceTree = "<group>"; };
 		FA0ACEEA1E87D55D000A42EE /* CurrencyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyTableViewCell.h; sourceTree = "<group>"; };
 		FA0ACEEB1E87D55D000A42EE /* CurrencyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyTableViewCell.m; sourceTree = "<group>"; };
@@ -186,8 +193,10 @@
 		FA0CC0061E9EA10000D27444 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		FA116E011EA96598004C4A19 /* DebtsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebtsViewController.h; sourceTree = "<group>"; };
 		FA116E021EA96598004C4A19 /* DebtsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebtsViewController.m; sourceTree = "<group>"; };
-		FA116E061EA96688004C4A19 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
-		FA116E071EA96688004C4A19 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		FA1445521EC1D084005ABAED /* ReportsViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ReportsViewController+Navigation.h"; sourceTree = "<group>"; };
+		FA1445531EC1D084005ABAED /* ReportsViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ReportsViewController+Navigation.m"; sourceTree = "<group>"; };
+		FA1445551EC1D1D0005ABAED /* BudgetsViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BudgetsViewController+Navigation.h"; sourceTree = "<group>"; };
+		FA1445561EC1D1D0005ABAED /* BudgetsViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BudgetsViewController+Navigation.m"; sourceTree = "<group>"; };
 		FA17837F1EA53C7900B1D36E /* RecordsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordsCollectionViewCell.h; sourceTree = "<group>"; };
 		FA1783801EA53C7900B1D36E /* RecordsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordsCollectionViewCell.m; sourceTree = "<group>"; };
 		FA1783811EA53C7900B1D36E /* RecordsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -617,7 +626,6 @@
 				FA67F1151EA5615A00B59FA1 /* PlannedPaymentsViewController */,
 				2C605DFD1EA5FB9B0052939E /* ExportsViewController */,
 				FA116E001EA964CC004C4A19 /* DebtsViewController */,
-				FA116E041EA96679004C4A19 /* HelpViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -664,15 +672,6 @@
 				FA973D8D1EAE8880001C6346 /* DebtsTransactionsViewController.m */,
 			);
 			path = DebtsViewController;
-			sourceTree = "<group>";
-		};
-		FA116E041EA96679004C4A19 /* HelpViewController */ = {
-			isa = PBXGroup;
-			children = (
-				FA116E061EA96688004C4A19 /* HelpViewController.h */,
-				FA116E071EA96688004C4A19 /* HelpViewController.m */,
-			);
-			path = HelpViewController;
 			sourceTree = "<group>";
 		};
 		FA17837D1EA53C5C00B1D36E /* RecordsCollectionViewCell */ = {
@@ -1197,6 +1196,8 @@
 				FA72C8311EAD01DF00E2114E /* BudgetTableViewCell */,
 				FAE632911E982BEF002A0455 /* BudgetsViewController.h */,
 				FAE632921E982BEF002A0455 /* BudgetsViewController.m */,
+				FA1445551EC1D1D0005ABAED /* BudgetsViewController+Navigation.h */,
+				FA1445561EC1D1D0005ABAED /* BudgetsViewController+Navigation.m */,
 				FAC149FA1EACDC0900E1603D /* CreateBudgetViewController */,
 				FAC149F71EACDC0900E1603D /* BudgetsDetailViewController */,
 			);
@@ -1209,6 +1210,8 @@
 				FAC51EAA1EB28ACE00A7393B /* ChartTableViewCell */,
 				FAE6328B1E982BDA002A0455 /* ChartsViewController.h */,
 				FAE6328C1E982BDA002A0455 /* ChartsViewController.m */,
+				FA0A00601EC1CD7F0058C5F6 /* ChartsViewController+Navigation.h */,
+				FA0A00611EC1CD7F0058C5F6 /* ChartsViewController+Navigation.m */,
 				FAC51EB01EB294B100A7393B /* ChartViewControllers */,
 			);
 			path = ChartsViewController;
@@ -1221,6 +1224,8 @@
 				FA17837E1EA53C5C00B1D36E /* RecordsTableViewCell */,
 				FAE632881E982BCC002A0455 /* RecordsViewController.h */,
 				FAE632891E982BCC002A0455 /* RecordsViewController.m */,
+				FA0A005D1EC1CC790058C5F6 /* RecordsViewController+Navigation.h */,
+				FA0A005E1EC1CC790058C5F6 /* RecordsViewController+Navigation.m */,
 			);
 			path = RecordsViewController;
 			sourceTree = "<group>";
@@ -1231,6 +1236,8 @@
 				FAE616491EA9468000A6BFC5 /* ReportsCollectionViewCell */,
 				FAE6328E1E982BE5002A0455 /* ReportsViewController.h */,
 				FAE6328F1E982BE5002A0455 /* ReportsViewController.m */,
+				FA1445521EC1D084005ABAED /* ReportsViewController+Navigation.h */,
+				FA1445531EC1D084005ABAED /* ReportsViewController+Navigation.m */,
 			);
 			path = ReportsViewController;
 			sourceTree = "<group>";
@@ -1508,6 +1515,7 @@
 				FAAE7B121E9D8CA80057D648 /* ShoppingListContentViewController.m in Sources */,
 				FAECCFCE1E96E232001D4B8F /* ReorderWalletsViewController.m in Sources */,
 				FAD082BB1EB7ABB100378C5D /* LineGraphMarker.m in Sources */,
+				FA0A005F1EC1CC790058C5F6 /* RecordsViewController+Navigation.m in Sources */,
 				FAE632A01E983635002A0455 /* HistorySegmentedControl.m in Sources */,
 				FA973D421EADF973001C6346 /* DebtsTableViewCell.m in Sources */,
 				FA973D641EAE0246001C6346 /* ListItem+CoreDataClass.m in Sources */,
@@ -1532,7 +1540,6 @@
 				FA0842F01E9AD305007F5CED /* CoreDataHelpManager.m in Sources */,
 				FA973D731EAE055D001C6346 /* DebtsDetailViewController.m in Sources */,
 				FA73EB4F1EABA8B6006222B5 /* PlannedPaymentsNotificationManager.m in Sources */,
-				FA116E081EA96688004C4A19 /* HelpViewController.m in Sources */,
 				FA745CBD1E94201E0035BB58 /* UserImagesCollectionViewCell.m in Sources */,
 				FAA838751E870BC9005BFADF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				FA973D681EAE0246001C6346 /* ShoppingList+CoreDataClass.m in Sources */,
@@ -1569,6 +1576,7 @@
 				FAC14A031EACDC3E00E1603D /* BudgetWalletTableViewCell.m in Sources */,
 				FAE632A31E9855F2002A0455 /* NSArray+CoreData.m in Sources */,
 				FA6BC0961EA2B9FC00ECBA5E /* MRAlertButton.m in Sources */,
+				FA1445571EC1D1D0005ABAED /* BudgetsViewController+Navigation.m in Sources */,
 				FAD082BC1EB7ABB100378C5D /* MultiLineGraphView.m in Sources */,
 				FAA258451EA6C05000950CA0 /* TransparentViewController.m in Sources */,
 				FAE6327E1E982A88002A0455 /* MainViewControllerCollectionView.m in Sources */,
@@ -1583,6 +1591,7 @@
 				FAD0828D1EB7716500378C5D /* BTSpiderPlotterView.m in Sources */,
 				FACCD6261E92CFF200C8E698 /* TransactionViewController+DataSource.m in Sources */,
 				FAE6164D1EA946AB00A6BFC5 /* ReportsCollectionViewCell.m in Sources */,
+				FA0A00621EC1CD7F0058C5F6 /* ChartsViewController+Navigation.m in Sources */,
 				FAAE7AFF1E9D7C120057D648 /* MainViewController+Navigation.m in Sources */,
 				FAE101831E7DD182003525DF /* SWRevealViewController.m in Sources */,
 				FAC149FD1EACDC0900E1603D /* BudgetsDetailViewController.m in Sources */,
@@ -1607,6 +1616,7 @@
 				FAA258461EA6C05000950CA0 /* UILabel+UIDatePickerLabels.m in Sources */,
 				FA116E031EA96598004C4A19 /* DebtsViewController.m in Sources */,
 				FAD082BD1EB7ABB100378C5D /* PieChart.m in Sources */,
+				FA1445541EC1D084005ABAED /* ReportsViewController+Navigation.m in Sources */,
 				FA973D661EAE0246001C6346 /* PlannedPayments+CoreDataClass.m in Sources */,
 				FA67F11D1EA5638700B59FA1 /* PlannedPaymentsTableViewCell.m in Sources */,
 				FA973D651EAE0246001C6346 /* ListItem+CoreDataProperties.m in Sources */,

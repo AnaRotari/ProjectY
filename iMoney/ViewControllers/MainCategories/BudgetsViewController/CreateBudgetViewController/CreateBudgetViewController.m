@@ -69,40 +69,46 @@
         }
     }
     
-    if ([self checkIfCurrencyIsDifferent:selectedWallets])
+    if ([self checkAllNeccessaryFields])
     {
-        NSDate *finishDate = [iMoneyUtils getTodayFormatedDate];
-        
-        switch (self.selectedInterval) {
-                
-            case BudgetIntervalWeekly:
-                finishDate = [[iMoneyUtils getTodayFormatedDate] dateByAddingTimeInterval: 7 * 24 * 60 * 60];
-                break;
-            case BudgetIntervalMonthly:
-                finishDate = [[iMoneyUtils getTodayFormatedDate] dateByAddingTimeInterval: 31 * 24 * 60 * 60];
-                break;
-            case BudgetIntervalYearly:
-                finishDate = [[iMoneyUtils getTodayFormatedDate] dateByAddingTimeInterval: 365 * 24 * 60 * 60];
-                break;
-                
-            default:
-                break;
+        if ([self checkIfCurrencyIsDifferent:selectedWallets]) {
+            
+            NSDate *finishDate = [iMoneyUtils getTodayFormatedDate];
+            
+            switch (self.selectedInterval) {
+                    
+                case BudgetIntervalWeekly:
+                    finishDate = [[iMoneyUtils getTodayFormatedDate] dateByAddingTimeInterval: 7 * 24 * 60 * 60];
+                    break;
+                case BudgetIntervalMonthly:
+                    finishDate = [[iMoneyUtils getTodayFormatedDate] dateByAddingTimeInterval: 31 * 24 * 60 * 60];
+                    break;
+                case BudgetIntervalYearly:
+                    finishDate = [[iMoneyUtils getTodayFormatedDate] dateByAddingTimeInterval: 365 * 24 * 60 * 60];
+                    break;
+                    
+                default:
+                    break;
+            }
+            
+            NSDictionary *options = @{@"budgetName"        : self.budgetNameTextfield.text,
+                                      @"budgetTotalAmount" : self.budgetAmountTextField.text,
+                                      @"budgetStartDate"   : [iMoneyUtils getTodayFormatedDate],
+                                      @"budgetFinishDate"  : finishDate,
+                                      @"budgetInterval"    : @(self.selectedInterval),
+                                      @"wallets"           : selectedWallets};
+            
+            [CoreDataBudgetManager createBudgetWithOptions:options];
+            [self.navigationController popViewControllerAnimated:YES];
+        } else {
+            
+            [iMoneyUtils showAlertView:@"Alert"
+                           withMessage:@"The walets have to have the same currency !"];
         }
-        
-        NSDictionary *options = @{@"budgetName"        : self.budgetNameTextfield.text,
-                                  @"budgetTotalAmount" : self.budgetAmountTextField.text,
-                                  @"budgetStartDate"   : [iMoneyUtils getTodayFormatedDate],
-                                  @"budgetFinishDate"  : finishDate,
-                                  @"budgetInterval"    : @(self.selectedInterval),
-                                  @"wallets"           : selectedWallets};
-        
-        [CoreDataBudgetManager createBudgetWithOptions:options];
-        [self.navigationController popViewControllerAnimated:YES];
     }
     else
     {
-        [iMoneyUtils showAlertView:@"Alert"
-                       withMessage:@"The walets have to have the same currency !"];
+        [iMoneyUtils showAlertView:@"Alert" withMessage:@"Please fill-up all fields !"];
     }
 }
 
@@ -122,6 +128,24 @@
         }
     }
     return YES;
+}
+
+- (BOOL)checkAllNeccessaryFields {
+    
+    NSMutableSet <Wallet *> *selectedWallets = [[NSMutableSet alloc] init];
+    
+    for (int i = 0 ; i < self.selectionArray.count; i++) {
+        
+        if ([self.selectionArray[i] isEqual:@(1)]) {
+            [selectedWallets addObject:self.walletsArray[i]];
+        }
+    }
+    
+    if (self.budgetNameTextfield.text.length > 0 && self.budgetAmountTextField.text.length > 0 && selectedWallets.count > 0) {
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 #pragma mark - UIScrollViewDelegate

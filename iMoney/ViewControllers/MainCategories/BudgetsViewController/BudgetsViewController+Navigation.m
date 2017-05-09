@@ -1,12 +1,12 @@
 //
-//  MainViewController+Navigation.m
+//  BudgetsViewController+Navigation.m
 //  iMoney
 //
-//  Created by Alex on 4/12/17.
+//  Created by Alex on 5/9/17.
 //  Copyright © 2017 Ana Rotari. All rights reserved.
 //
 
-#import "MainViewController+Navigation.h"
+#import "BudgetsViewController+Navigation.h"
 #import "ShoppingListViewController.h"
 #import "LocationViewController.h"
 #import "WarrantiesViewController.h"
@@ -14,7 +14,7 @@
 #import "ExportsViewController.h"
 #import "DebtsViewController.h"
 
-@implementation MainViewController (Navigation)
+@implementation BudgetsViewController (Navigation)
 
 - (void)goToShoppingList {
     
@@ -23,7 +23,7 @@
 }
 
 - (void)goToLocationViewController {
-
+    
     if ([CoreDataRequestManager getAllTransactions].count > 0) {
         LocationViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"LocationViewController"];
         [self.navigationController pushViewController:controller animated:YES];

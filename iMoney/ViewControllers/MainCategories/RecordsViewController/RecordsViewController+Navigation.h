@@ -1,14 +1,14 @@
 //
-//  MainViewController+Navigation.h
+//  RecordsViewController+Navigation.h
 //  iMoney
 //
-//  Created by Alex on 4/12/17.
+//  Created by Alex on 5/9/17.
 //  Copyright © 2017 Ana Rotari. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "RecordsViewController.h"
 
-@interface MainViewController (Navigation)
+@interface RecordsViewController (Navigation)
 
 - (void)goToShoppingList;
 - (void)goToLocationViewController;

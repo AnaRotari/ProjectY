@@ -90,6 +90,19 @@
                                                                 destructiveButtonTitle:nil
                                                                               delegate:self];
     
+    __weak typeof(self) wself = self;
+    self.createItemListAlertView.actionHandler = ^(LGAlertView * _Nonnull alertView, NSString * _Nullable title, NSUInteger index) {
+        __strong typeof(wself) sself = wself;
+        
+        for (UITextField *textField in alertView.textFieldsArray) {
+            
+            if (textField.tag == 20 && textField.text.length > 0) {
+                [CoreDataShoppingListManager createItemInShoppingList:sself.selectedShoppingList withName:textField.text];
+                [sself reloadItems];
+            }
+        }
+    };
+    
     [self.createItemListAlertView setButtonEnabled:NO atIndex:0];
     [self.createItemListAlertView showAnimated:YES completionHandler:nil];
 }
@@ -117,6 +130,11 @@
                                                                      cancelButtonTitle:@"Cancel"
                                                                 destructiveButtonTitle:nil
                                                                               delegate:self];
+    __weak typeof(self) wself = self;
+    self.insertMoneyAlertView.actionHandler = ^(LGAlertView * _Nonnull alertView, NSString * _Nullable title, NSUInteger index) {
+        __strong typeof(wself) sself = wself;
+        [sself showWalletActionSheet:sself.walletsArray];
+    };
     
     [self.insertMoneyAlertView setButtonEnabled:NO atIndex:0];
     [self.insertMoneyAlertView showAnimated:YES completionHandler:nil];
@@ -160,16 +178,12 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     
-    if (textField.tag == 10)
+    if (textField.tag == 10 && textField.text.length > 0)
     {
         self.selectedShoppingList.listName = textField.text;
         [[CoreDataAccessLayer sharedInstance] saveContext];
     }
-    if (textField.tag == 20)
-    {
-        [CoreDataShoppingListManager createItemInShoppingList:self.selectedShoppingList withName:textField.text];
-    }
-    if (textField.tag == 30)
+    if (textField.tag == 30 && textField.text.length > 0)
     {
         insertAmount = textField.text;
     }
@@ -308,19 +322,6 @@
             NSLog(@"Can't delete: %@",[error localizedDescription]);
         }
         [self reloadItems];
-    }
-}
-
-#pragma mark - LGAlertViewDelegate
-
-- (void)alertViewWillDismiss:(nonnull LGAlertView *)alertView {
-    
-    if ([alertView isEqual:self.createItemListAlertView]) {
-        [self reloadItems];
-    }
-    if ([alertView isEqual:self.insertMoneyAlertView]) {
-        
-        [self showWalletActionSheet:self.walletsArray];
     }
 }
 

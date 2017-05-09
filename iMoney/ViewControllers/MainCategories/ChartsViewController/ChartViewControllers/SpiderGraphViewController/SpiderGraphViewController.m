@@ -31,7 +31,7 @@
     [self setUpSortButtons];
     
     self.dataSourceForPlot = [NSArray array];
-    
+    [self.walletsDropDownMenu setDropdownCornerRadius:5.f];
     self.walletsArray = [CoreDataRequestManager getAllWallets];
     self.walletName = self.walletsArray[self.selectedWalletIndex].walletName;
     

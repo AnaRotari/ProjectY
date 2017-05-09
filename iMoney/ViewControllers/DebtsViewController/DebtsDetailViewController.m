@@ -126,14 +126,30 @@
 
 - (void)createDebt {
     
-    NSDictionary *options = @{@"debtType"        : @(self.selectedDebtType),
-                              @"debtName"        : self.debtNameTextField.text,
-                              @"debtDescription" : self.debtDescriptionTextField.text,
-                              @"debtTotalAmount" : self.debtAmountTextField.text,
-                              @"debtStartDate"   : self.userSelectedStartDate,
-                              @"debtFinishDate"  : self.userSelectedFinishDate,
-                              @"wallet"          : self.walletsArray[self.selectedwalletsIndex]};
-    [CoreDataDebtManager createDebtWithOptions:options];
+    if ([self checkDebtFields]) {
+        
+        NSDictionary *options = @{@"debtType"        : @(self.selectedDebtType),
+                                  @"debtName"        : self.debtNameTextField.text,
+                                  @"debtDescription" : self.debtDescriptionTextField.text,
+                                  @"debtTotalAmount" : self.debtAmountTextField.text,
+                                  @"debtStartDate"   : self.userSelectedStartDate,
+                                  @"debtFinishDate"  : self.userSelectedFinishDate,
+                                  @"wallet"          : self.walletsArray[self.selectedwalletsIndex]};
+        [CoreDataDebtManager createDebtWithOptions:options];
+        
+    } else {
+        
+        [iMoneyUtils showAlertView:@"Alert" withMessage:@"Please fill-up all data."];
+    }
+}
+
+- (BOOL)checkDebtFields {
+    
+    if (self.debtNameTextField.text.length > 0 && self.debtDescriptionTextField.text.length > 0 && self.debtAmountTextField.text.length > 0) {
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 - (void)saveDebt {

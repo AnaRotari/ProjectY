@@ -7,6 +7,7 @@
 //
 
 #import "ReportsViewController.h"
+#import "ReportsViewController+Navigation.h"
 
 @interface ReportsViewController ()
 
@@ -18,6 +19,8 @@
     
     NSArray <Wallet *> *walletsArray;
     NSArray <Transaction *> *transactionsArray;
+    
+    MenuViewController *sideMenuController;
     
     //UI
     __weak IBOutlet UILabel *noTransactionsLabel;
@@ -62,6 +65,8 @@
     
     UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(moveToCurrentDate:)];
     self.navigationItem.rightBarButtonItem = button;
+    
+    [self customSetup];
 }
 
 - (void)registerReportsCollectionViewCell {
@@ -70,11 +75,13 @@
     self.reportsCollectionView.contentOffset = CGPointMake(0, 0);
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
+-(void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
     [_reportsCollectionView selectItemAtIndexPath:[NSIndexPath indexPathForRow:selectedMonthIndex inSection:0]
                                          animated:false
                                    scrollPosition:UICollectionViewScrollPositionLeft];
+    [sideMenuController setDelegate:self];
 }
 
 -(void)moveToCurrentDate:(UIBarButtonItem *)sender{
@@ -336,4 +343,54 @@
     float dayAverage = [[result valueForKeyPath:@"@avg.self"] floatValue];
     return dayAverage;
 }
+
+#pragma mark - Other stuff
+
+- (void)customSetup {
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if (revealViewController)
+    {
+        [self.revealToggleItem setTarget: self.revealViewController];
+        [self.revealToggleItem setAction: @selector(revealToggle:)];
+        [self.navigationController.navigationBar addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+    sideMenuController = (MenuViewController *)revealViewController.rearViewController;
+}
+
+#pragma mark - MenuViewControllerDelegate
+
+- (void)userNavigateTo:(MenuItems)menuItem {
+    
+    [self.revealViewController revealToggleAnimated:YES];
+    
+    switch (menuItem) {
+        case kMenuItemPlannedPayments:
+            [self goToPlannedPayments];
+            break;
+        case kMenuItemExports:
+            [self goToExportsViewController];
+            break;
+        case kMenuItemDebs:
+            [self goToDebtsViewController];
+            break;
+        case kMenuItemShoppingLists:
+            [self goToShoppingList];
+            break;
+        case kMenuItemWarranties:
+            [self goToWarrantiesViewController];
+            break;
+        case kMenuItemLocations:
+            [self goToLocationViewController];
+            break;
+        case kMenuItemReminder:
+            break;
+        case kMenuItemLogout:
+            break;
+            
+        default:
+            break;
+    }
+}
+
 @end

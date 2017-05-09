@@ -52,8 +52,8 @@
         [request setSortDescriptors:@[sortOrderDescriptor,exerciseOrderDescriptor]];
     }
     
-    NSArray *resultArray = [[[CoreDataAccessLayer sharedInstance] managedObjectContext ] executeFetchRequest:request
-                                                                                                       error:&requestError];
+    NSArray *resultArray = [[[CoreDataAccessLayer sharedInstance] managedObjectContext] executeFetchRequest:request
+                                                                                                      error:&requestError];
     return resultArray.mutableCopy;
 }
 

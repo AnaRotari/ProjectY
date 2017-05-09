@@ -7,7 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "MenuViewController.h"
 
-@interface ChartsViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate>
+@interface ChartsViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate, MenuViewControllerDelegate>
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *revealToggleItem;
 
 @end

@@ -13,8 +13,6 @@
 
 @property (strong, nonatomic) NSArray <ShoppingList *> *shoppingListsArray;
 
-@property (strong, nonatomic) LGAlertView *createShoppingListAlertView;
-
 @end
 
 @implementation ShoppingListViewController
@@ -59,24 +57,13 @@
 
 - (void)addNewShoppingList {
     
-    self.createShoppingListAlertView = [[LGAlertView alloc] initWithTextFieldsAndTitle:@"Shopping list"
-                                                                               message:@"Enter name"
-                                                                    numberOfTextFields:1
-                                                                textFieldsSetupHandler:^(UITextField *textField, NSUInteger index) {
-                                                                    
-                                                                    textField.tag = 1;
-                                                                    textField.delegate = self;
-                                                                    textField.enablesReturnKeyAutomatically = YES;
-                                                                    textField.autocapitalizationType = NO;
-                                                                    textField.autocorrectionType = NO;
-                                                                }
-                                                                          buttonTitles:@[@"Done"]
-                                                                     cancelButtonTitle:@"Cancel"
-                                                                destructiveButtonTitle:nil
-                                                                              delegate:self];
-    
-    [self.createShoppingListAlertView setButtonEnabled:NO atIndex:0];
-    [self.createShoppingListAlertView showAnimated:YES completionHandler:nil];
+    MRAlertView *alertView = [[MRAlertView alloc] initWithTitle:@"Shopping list"
+                                                        message:@"Enter name"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"OK"];
+    [alertView setAlertViewStyle:MRAlertViewStylePlainTextInput];
+    [alertView show];
 }
 
 #pragma mark - UITableViewDataSource
@@ -132,43 +119,18 @@
     }
 }
 
-#pragma mark - UITextFieldDelegate
+#pragma mark - MRAlertViewDelegate
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+- (void)alertView:(MRAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
-    NSMutableString *currentString = textField.text.mutableCopy;
-    [currentString replaceCharactersInRange:range withString:string];
-    [self.createShoppingListAlertView setButtonEnabled:(currentString.length > 2) atIndex:0];
-    
-    return YES;
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    
-    if (textField.tag < 1) {
-        [self.createShoppingListAlertView.textFieldsArray[(textField.tag + 1)] becomeFirstResponder];
-    }
-    else {
-        if ([self.createShoppingListAlertView isButtonEnabledAtIndex:0]) {
-            [self.createShoppingListAlertView dismissAnimated:YES completionHandler:nil];
-        }
-        else {
-            [textField resignFirstResponder];
+    if (buttonIndex == 1)
+    {
+        if ([alertView.textView.text length] > 0)
+        {
+            [CoreDataShoppingListManager createShoppingListWithName:alertView.textView.text];
+            [self reloadShoppingLists];
         }
     }
-    return YES;
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField {
-    
-    [CoreDataShoppingListManager createShoppingListWithName:textField.text];
-}
-
-#pragma mark - LGAlertViewDelegate
-
-- (void)alertViewWillDismiss:(nonnull LGAlertView *)alertView {
-    
-    [self reloadShoppingLists];
 }
 
 @end

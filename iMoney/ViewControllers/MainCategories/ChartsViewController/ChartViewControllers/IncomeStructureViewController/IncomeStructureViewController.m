@@ -35,7 +35,7 @@
     self.walletName = self.walletsArray[self.selectedWalletIndex].walletName;
     
     [self setupPieChart];
-    
+    [self.walletsDropDownMenu setDropdownCornerRadius:5.f];
     [self reloadDataForSortOption:kSortOptionShowAll];
 }
 

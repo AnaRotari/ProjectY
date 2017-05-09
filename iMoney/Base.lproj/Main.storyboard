@@ -164,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="616.79999999999995" y="232.53373313343329"/>
+            <point key="canvasLocation" x="-210" y="250"/>
         </scene>
         <!--Add Edit Wallet View Controller-->
         <scene sceneID="Gzx-kU-kw3">
@@ -469,7 +469,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2PE-BL-Hjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1404" y="232.53373313343329"/>
+            <point key="canvasLocation" x="617" y="250"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="D2z-sL-Ew2">
@@ -768,7 +768,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZh-uw-cjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2192.8000000000002" y="232.53373313343329"/>
+            <point key="canvasLocation" x="1406" y="250"/>
         </scene>
         <!--Reorder Wallets View Controller-->
         <scene sceneID="0ai-yj-PZh">
@@ -832,7 +832,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KDb-a8-und" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2983.1999999999998" y="232.53373313343329"/>
+            <point key="canvasLocation" x="2193" y="250"/>
         </scene>
         <!--Transaction Detail View Controller-->
         <scene sceneID="PD2-b8-QHj">
@@ -1074,25 +1074,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UWA-Jm-jhg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3724" y="232.53373313343329"/>
-        </scene>
-        <!--Help View Controller-->
-        <scene sceneID="XFP-9J-cAa">
-            <objects>
-                <viewController storyboardIdentifier="HelpViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2I7-Yf-cD9" customClass="HelpViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wKw-SL-CQg"/>
-                        <viewControllerLayoutGuide type="bottom" id="av3-ly-p0L"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WgU-5x-kgR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i2Y-So-5SF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="617" y="-5292"/>
+            <point key="canvasLocation" x="3090" y="250"/>
         </scene>
         <!--Debts View Controller-->
         <scene sceneID="W4D-sY-CKM">
@@ -2074,7 +2056,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b71-fW-m91" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-208.80000000000001" y="232.53373313343329"/>
+            <point key="canvasLocation" x="-1148" y="250"/>
         </scene>
         <!--Budgets-->
         <scene sceneID="xx1-hP-GRt">
@@ -2113,10 +2095,13 @@
                             <constraint firstItem="OXO-za-uxb" firstAttribute="centerY" secondItem="EoM-g9-TdI" secondAttribute="centerY" id="swW-Q5-EYZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Budgets" id="Hmb-79-pLy"/>
+                    <navigationItem key="navigationItem" title="Budgets" id="Hmb-79-pLy">
+                        <barButtonItem key="leftBarButtonItem" image="beaconMenuV2" id="e4N-p0-Ia2"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="budgetsTableView" destination="EoM-g9-TdI" id="lYf-37-KSN"/>
                         <outlet property="noBudgetsLabel" destination="OXO-za-uxb" id="40d-aL-mzl"/>
+                        <outlet property="revealToggleItem" destination="e4N-p0-Ia2" id="Hqh-r5-P7o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWP-Nc-iSr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2578,7 +2563,9 @@
                             <constraint firstAttribute="trailing" secondItem="kW3-m1-bF6" secondAttribute="trailing" id="y3C-UO-Cnj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Reports" id="Yd3-xu-Hjk"/>
+                    <navigationItem key="navigationItem" title="Reports" id="Yd3-xu-Hjk">
+                        <barButtonItem key="leftBarButtonItem" image="beaconMenuV2" id="RCx-Vd-utg"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="cashflowLabel" destination="XRN-10-S1I" id="BUH-cN-qvI"/>
                         <outlet property="expenseAverageDayLabel" destination="Ybh-TY-ZHu" id="kNp-tu-3YZ"/>
@@ -2592,6 +2579,7 @@
                         <outlet property="netEndingBalanceLabel" destination="OLj-gE-IuO" id="vHS-J7-7z2"/>
                         <outlet property="noTransactionsLabel" destination="Yza-gE-6iQ" id="TyB-qv-ylj"/>
                         <outlet property="reportsCollectionView" destination="xX6-jW-vWK" id="gpV-cK-zdv"/>
+                        <outlet property="revealToggleItem" destination="RCx-Vd-utg" id="Dof-yh-S6g"/>
                         <outlet property="startingBalanceLabel" destination="hIx-ro-cLN" id="8qx-or-OmJ"/>
                         <outlet property="supportView" destination="kW3-m1-bF6" id="ujI-zU-mzt"/>
                         <outlet property="walletsDropDownMenu" destination="tjO-sL-Zvd" id="bLu-Or-lmW"/>
@@ -2691,12 +2679,15 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Records" id="cS4-HB-3QO"/>
+                    <navigationItem key="navigationItem" title="Records" id="cS4-HB-3QO">
+                        <barButtonItem key="leftBarButtonItem" image="beaconMenuV2" id="4eL-U9-cDZ"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="noTransactionsLabel" destination="CD9-Ue-uHe" id="hOT-c3-xNQ"/>
                         <outlet property="recordsSwitcherCollectionView" destination="7W6-XM-u9z" id="5le-MS-ian"/>
                         <outlet property="recordsVisualiserTableView" destination="VNZ-Rg-UZi" id="MJy-qc-unP"/>
+                        <outlet property="revealToggleItem" destination="4eL-U9-cDZ" id="JXP-tV-5WG"/>
                         <outlet property="walletsDropDownMenu" destination="hK3-oK-Nmb" id="kxu-dd-fUT"/>
                     </connections>
                 </viewController>
@@ -2733,9 +2724,12 @@
                             <constraint firstItem="cEO-R2-FfM" firstAttribute="top" secondItem="ak0-AR-xt3" secondAttribute="bottom" id="qiH-p6-PRr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Charts" id="Ug3-Zv-LVd"/>
+                    <navigationItem key="navigationItem" title="Charts" id="Ug3-Zv-LVd">
+                        <barButtonItem key="leftBarButtonItem" image="beaconMenuV2" id="evB-bU-cGr"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="chartPreviewTableView" destination="cEO-R2-FfM" id="dUk-k5-KX2"/>
+                        <outlet property="revealToggleItem" destination="evB-bU-cGr" id="TWt-iv-uUn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i1G-yZ-0vj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3024,6 +3018,11 @@
                                         <rect key="frame" x="8" y="8" width="359" height="28"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="dataSource" destination="uyX-Sr-2eS" id="FIO-Zy-vvr"/>
                                             <outlet property="delegate" destination="uyX-Sr-2eS" id="qaZ-oN-wuB"/>
@@ -3094,7 +3093,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zye-Km-bp3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Records" image="ic_records" id="n2H-Ex-8Vt"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uDB-2Q-Rcy">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uDB-2Q-Rcy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3113,7 +3113,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lfh-0w-rQw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Charts" image="ic_chart" id="dSm-ed-hV2"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hGe-cL-yfe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hGe-cL-yfe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3132,7 +3132,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Npz-q0-1YL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Reports" image="ic_raports" id="Lp9-iX-RXK"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HGL-yn-uCF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HGL-yn-uCF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3183,6 +3183,11 @@
                                         <rect key="frame" x="8" y="8" width="359" height="28"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.1647058824" green="0.01176470588" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="dataSource" destination="0YX-ht-Te3" id="3UV-Le-OFi"/>
                                             <outlet property="delegate" destination="0YX-ht-Te3" id="qLq-Od-meg"/>

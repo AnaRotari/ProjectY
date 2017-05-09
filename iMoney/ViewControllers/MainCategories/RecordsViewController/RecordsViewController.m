@@ -7,8 +7,12 @@
 //
 
 #import "RecordsViewController.h"
+#import "RecordsViewController+Navigation.h"
 
-@interface RecordsViewController () <MKDropdownMenuDelegate,MKDropdownMenuDataSource>
+@interface RecordsViewController () <MKDropdownMenuDelegate,MKDropdownMenuDataSource> {
+    
+    MenuViewController *sideMenuController;
+}
 
 @property (strong, nonatomic) NSArray <Wallet *> *walletsArray;
 @property (strong, nonatomic) NSArray <Transaction *> *transactionsArray;
@@ -33,20 +37,40 @@
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
     selectedMonthIndex = components.month-1;
     selectedYear = components.year;
-
-    [self reloadContentForWallet:selectedWalletIndex];
     
     [self.walletsDropDownMenu setDropdownCornerRadius:5];
     
     UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(moveToCurrentDate:)];
     self.navigationItem.rightBarButtonItem = button;
+    [self customSetup];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self reloadContentForWallet:selectedWalletIndex];
     [_recordsSwitcherCollectionView selectItemAtIndexPath:[NSIndexPath indexPathForRow:selectedMonthIndex inSection:0]
                                                  animated:false
                                            scrollPosition:UICollectionViewScrollPositionLeft];
+    [sideMenuController setDelegate:self];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear:animated];
+}
+
+#pragma mark - Other stuff
+
+- (void)customSetup {
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if (revealViewController)
+    {
+        [self.revealToggleItem setTarget: self.revealViewController];
+        [self.revealToggleItem setAction: @selector(revealToggle:)];
+        [self.navigationController.navigationBar addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+    sideMenuController = (MenuViewController *)revealViewController.rearViewController;
 }
 
 -(void)moveToCurrentDate:(UIBarButtonItem *)sender{
@@ -137,9 +161,6 @@
     [dropdownMenu closeAllComponentsAnimated:YES];
     [dropdownMenu reloadComponent:component];
     [self reloadContentForWallet:selectedWalletIndex];
-    
-//    self.selectedTransactionTypeLabel.text = self.transactionTypeArray[row];
-//    selectedTransactionType = row;
 }
 
 #pragma mark - UITableViewDataSource
@@ -187,17 +208,6 @@
     
     return cell;
 }
-
-#pragma mark - UICollectionViewDelegate
-
-//-(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
-//    
-//    if(scrollView == self.recordsSwitcherCollectionView)
-//    {
-//        self.selectedMonthIndex = targetContentOffset->x/CGRectGetWidth(self.recordsSwitcherCollectionView.frame);
-//        [self reloadContentForWallet:selectedWalletIndex];
-//    }
-//}
 
 #pragma mark - UICollectionViewFlowLayout
 
@@ -276,4 +286,40 @@
     NSString *sign = [self cashflow] > 0 ? @"+" : @"-";
     return [NSString stringWithFormat:@"Cashflow: %@%@ %.2f", sign, currency, fabsf([self cashflow])];
 }
+
+#pragma mark - MenuViewControllerDelegate
+
+- (void)userNavigateTo:(MenuItems)menuItem {
+    
+    [self.revealViewController revealToggleAnimated:YES];
+    
+    switch (menuItem) {
+        case kMenuItemPlannedPayments:
+            [self goToPlannedPayments];
+            break;
+        case kMenuItemExports:
+            [self goToExportsViewController];
+            break;
+        case kMenuItemDebs:
+            [self goToDebtsViewController];
+            break;
+        case kMenuItemShoppingLists:
+            [self goToShoppingList];
+            break;
+        case kMenuItemWarranties:
+            [self goToWarrantiesViewController];
+            break;
+        case kMenuItemLocations:
+            [self goToLocationViewController];
+            break;
+        case kMenuItemReminder:
+            break;
+        case kMenuItemLogout:
+            break;
+            
+        default:
+            break;
+    }
+}
+
 @end

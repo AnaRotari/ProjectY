@@ -54,6 +54,7 @@
         self.tableDelegates.transactionsArray.count ? [self.noTransactionsLabel setHidden:YES] : [self.noTransactionsLabel setHidden:NO];
         [self.transactionsTableView reloadData];
     }];
+    [sideMenuController setDelegate:self];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -146,7 +147,6 @@
         [self.navigationController.navigationBar addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     sideMenuController = (MenuViewController *)revealViewController.rearViewController;
-    sideMenuController.delegate = self;
 }
 
 #pragma mark - DropBoxDelegate
@@ -192,9 +192,6 @@
             [self goToLocationViewController];
             break;
         case kMenuItemReminder:
-            break;
-        case kMenuItemHelp:
-            [self goToHelpViewController];
             break;
         case kMenuItemLogout:
             break;

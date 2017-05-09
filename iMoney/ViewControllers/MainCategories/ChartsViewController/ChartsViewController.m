@@ -12,8 +12,12 @@
 #import "SpiderGraphViewController.h"
 #import "ExpensesStructureViewController.h"
 #import "IncomeStructureViewController.h"
+#import "ChartsViewController+Navigation.h"
 
-@interface ChartsViewController ()
+@interface ChartsViewController () {
+    
+    MenuViewController *sideMenuController;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *chartPreviewTableView;
 
@@ -26,6 +30,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    [self customSetup];
     [self.chartPreviewTableView registerNib:[UINib nibWithNibName:@"ChartTableViewCell" bundle:nil] forCellReuseIdentifier:@"ChartTableViewCell"];
     self.chartPreviewTableView.tableFooterView = [UIView new];
     
@@ -33,6 +38,26 @@
                                       @{@"PlotName":@"Radar chart",@"StoryboardIdentifier":@"SpiderGraphViewController",@"PreviewImage":@"ic_spider"},
                                       @{@"PlotName":@"Income structure",@"StoryboardIdentifier":@"IncomeStructureViewController",@"PreviewImage":@"ic_piechart_1"},
                                       @{@"PlotName":@"Expense structure",@"StoryboardIdentifier":@"ExpensesStructureViewController",@"PreviewImage":@"ic_piechart_2"},];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    [sideMenuController setDelegate:self];
+}
+
+#pragma mark - Other stuff
+
+- (void)customSetup {
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if (revealViewController)
+    {
+        [self.revealToggleItem setTarget: self.revealViewController];
+        [self.revealToggleItem setAction: @selector(revealToggle:)];
+        [self.navigationController.navigationBar addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+    sideMenuController = (MenuViewController *)revealViewController.rearViewController;
 }
 
 #pragma mark - UITableViewDataSource
@@ -87,6 +112,41 @@
     else
     {
         [iMoneyUtils showAlertView:@"Alert" withMessage:@"You need to create a transactions first !"];
+    }
+}
+
+#pragma mark - MenuViewControllerDelegate
+
+- (void)userNavigateTo:(MenuItems)menuItem {
+    
+    [self.revealViewController revealToggleAnimated:YES];
+    
+    switch (menuItem) {
+        case kMenuItemPlannedPayments:
+            [self goToPlannedPayments];
+            break;
+        case kMenuItemExports:
+            [self goToExportsViewController];
+            break;
+        case kMenuItemDebs:
+            [self goToDebtsViewController];
+            break;
+        case kMenuItemShoppingLists:
+            [self goToShoppingList];
+            break;
+        case kMenuItemWarranties:
+            [self goToWarrantiesViewController];
+            break;
+        case kMenuItemLocations:
+            [self goToLocationViewController];
+            break;
+        case kMenuItemReminder:
+            break;
+        case kMenuItemLogout:
+            break;
+            
+        default:
+            break;
     }
 }
 

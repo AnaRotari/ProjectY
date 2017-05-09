@@ -26,7 +26,7 @@
     self.title = @"Balance trend";
     [self setupGraph];
     [self setUpSortButtons];
-    
+    [self.walletsDropDownMenu setDropdownCornerRadius:5.f];
     self.dataSourceForPlot = [NSArray array];
     
     self.walletsArray = [CoreDataRequestManager getAllWallets];

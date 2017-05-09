@@ -58,11 +58,7 @@
 
 - (void)addPlannedPaymentButtonAction {
     
-    PlannedPayments *plannedPayment = [NSEntityDescription insertNewObjectForEntityForName:@"PlannedPayments"
-                                                   inManagedObjectContext:[[CoreDataAccessLayer sharedInstance] managedObjectContext]];
-    
     PlannedPaymentsCreatorViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"PlannedPaymentsCreatorViewController"];
-    controller.plannedPayment = plannedPayment;
     [self.navigationController pushViewController:controller animated:YES];
 }
 

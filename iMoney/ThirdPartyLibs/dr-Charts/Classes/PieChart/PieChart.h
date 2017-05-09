@@ -11,6 +11,7 @@
 
 @protocol PieChartDelegate <NSObject>
 
+@optional
 - (void)didTapOnPieChartWithValue:(NSString *)value;
 
 @end

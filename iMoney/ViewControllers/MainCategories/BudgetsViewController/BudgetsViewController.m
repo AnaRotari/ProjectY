@@ -10,8 +10,12 @@
 #import "CreateBudgetViewController.h"
 #import "BudgetsDetailViewController.h"
 #import "BudgetTableViewCell.h"
+#import "BudgetsViewController+Navigation.h"
 
-@interface BudgetsViewController ()
+@interface BudgetsViewController () {
+    
+    MenuViewController *sideMenuController;
+}
 
 @property (strong, nonatomic) NSMutableArray <Budget *> *budgetsArray;
 
@@ -25,12 +29,14 @@
     [self setupNavigationBar];
     [self.budgetsTableView registerNib:[UINib nibWithNibName:@"BudgetTableViewCell" bundle:nil] forCellReuseIdentifier:@"BudgetTableViewCell"];
     self.budgetsTableView.tableFooterView = [UIView new];
+    [self customSetup];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
     [self reloadDataForIndex:BudgetIntervalAll];
+    [sideMenuController setDelegate:self];
 }
 
 - (void)setupNavigationBar {
@@ -148,6 +154,55 @@
             NSLog(@"Can't delete: %@",[error localizedDescription]);
         }
         [self reloadDataForIndex:BudgetIntervalAll];
+    }
+}
+
+#pragma mark - Other stuff
+
+- (void)customSetup {
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if (revealViewController)
+    {
+        [self.revealToggleItem setTarget: self.revealViewController];
+        [self.revealToggleItem setAction: @selector(revealToggle:)];
+        [self.navigationController.navigationBar addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+    sideMenuController = (MenuViewController *)revealViewController.rearViewController;
+}
+
+#pragma mark - MenuViewControllerDelegate
+
+- (void)userNavigateTo:(MenuItems)menuItem {
+    
+    [self.revealViewController revealToggleAnimated:YES];
+    
+    switch (menuItem) {
+        case kMenuItemPlannedPayments:
+            [self goToPlannedPayments];
+            break;
+        case kMenuItemExports:
+            [self goToExportsViewController];
+            break;
+        case kMenuItemDebs:
+            [self goToDebtsViewController];
+            break;
+        case kMenuItemShoppingLists:
+            [self goToShoppingList];
+            break;
+        case kMenuItemWarranties:
+            [self goToWarrantiesViewController];
+            break;
+        case kMenuItemLocations:
+            [self goToLocationViewController];
+            break;
+        case kMenuItemReminder:
+            break;
+        case kMenuItemLogout:
+            break;
+            
+        default:
+            break;
     }
 }
 

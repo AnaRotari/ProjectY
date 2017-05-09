@@ -40,8 +40,6 @@
     [self setupNavigationBarButton];
     [self setupDataSources];
     [self setupUI];
-    [self addTapGestureRecognizer];
-    [self disableSwipe];
 }
 
 - (void)setupNavigationBarButton {
@@ -68,7 +66,7 @@
 
 - (void)setupUI {
     
-    if (self.plannedPayment.plannedName != nil) {
+    if (self.plannedPayment) {
         
         
         self.plannedNameTextField.text = self.plannedPayment.plannedName;
@@ -101,17 +99,6 @@
     }
 }
 
-- (void)addTapGestureRecognizer {
-    
-    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gestureHandlerMethod)];
-    [self.view addGestureRecognizer:tapRecognizer];
-}
-
-- (void)gestureHandlerMethod {
-    
-    [self.view endEditing:YES];
-}
-
 #pragma mark - Button actions
 
 - (void)doneButtonAction {
@@ -123,17 +110,38 @@
     [components setMinute:0];
     NSDate *exactTime = [calendar dateFromComponents:components];
     
-    [CoreDataPlannedPaymentsManager savePlannedPayment:self.plannedPayment
-                                              withData:@{@"plannedAmount":self.plannedAmountTextField.text,
-                                                         @"plannedCategory":@(self.categoryArrayIndex),
-                                                         @"plannedDate":exactTime,
-                                                         @"plannedDescription":self.plannedDescriptionTextField.text,
-                                                         @"plannedFrequency":@(self.frequencyArrayIndex),
-                                                         @"plannedName":self.plannedNameTextField.text,
-                                                         @"plannedType":@(self.typeArrayIndex),
-                                                         @"plannedWallet":self.walletsArray[self.walletsArrayIndex]}];
+    if ([self checkDataIntegrity]) {
+        
+        PlannedPayments *payment = self.plannedPayment;
+        if (payment == nil) {
+            payment = [NSEntityDescription insertNewObjectForEntityForName:@"PlannedPayments"
+                                                    inManagedObjectContext:[[CoreDataAccessLayer sharedInstance] managedObjectContext]];
+        }
+        
+        [CoreDataPlannedPaymentsManager savePlannedPayment:payment
+                                                  withData:@{@"plannedAmount":self.plannedAmountTextField.text,
+                                                             @"plannedCategory":@(self.categoryArrayIndex),
+                                                             @"plannedDate":exactTime,
+                                                             @"plannedDescription":self.plannedDescriptionTextField.text,
+                                                             @"plannedFrequency":@(self.frequencyArrayIndex),
+                                                             @"plannedName":self.plannedNameTextField.text,
+                                                             @"plannedType":@(self.typeArrayIndex),
+                                                             @"plannedWallet":self.walletsArray[self.walletsArrayIndex]}];
+        
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    } else {
+        [iMoneyUtils showAlertView:@"Alert" withMessage:@"Please, fill-up all data"];
+    }
+}
+
+- (BOOL)checkDataIntegrity {
     
-    [self.navigationController popViewControllerAnimated:YES];
+    if (self.plannedAmountTextField.text.length > 0 && self.plannedDescriptionTextField.text.length > 0 && self.plannedNameTextField.text.length > 0) {
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 - (IBAction)categoryButtonAction:(id)sender {
@@ -232,18 +240,6 @@
         
         self.walletsArrayIndex = index;
         self.plannedWalletLabel.text = self.walletsArray[self.walletsArrayIndex].walletName;
-    }
-}
-
-- (void)willMoveToParentViewController:(UIViewController *)parent {
-    
-    [super willMoveToParentViewController:parent];
-}
-
-- (void)disableSwipe {
-    
-    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     }
 }
 

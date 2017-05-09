@@ -37,6 +37,8 @@
     [self setupPieChart];
     
     [self reloadDataForSortOption:kSortOptionShowAll];
+    
+    [self.walletsDropDownMenu setDropdownCornerRadius:5.f];
 }
 
 - (void)setupPieChart {

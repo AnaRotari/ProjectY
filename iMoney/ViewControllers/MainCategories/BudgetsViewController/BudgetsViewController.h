@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
+#import "MenuViewController.h"
 
-@interface BudgetsViewController : BaseViewController <UIActionSheetDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface BudgetsViewController : BaseViewController <UIActionSheetDelegate, UITableViewDataSource, UITableViewDelegate, MenuViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *noBudgetsLabel;
 @property (weak, nonatomic) IBOutlet UITableView *budgetsTableView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *revealToggleItem;
 
 @end
