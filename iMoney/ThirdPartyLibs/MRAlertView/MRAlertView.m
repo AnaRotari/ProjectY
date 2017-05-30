@@ -251,7 +251,6 @@ CGFloat const defaultAlertAlpha = 0.6f;
     _textView.layer.borderWidth = 1.0f;
     _textView.keyboardType = UIKeyboardTypeDefault;
     _textView.returnKeyType = UIReturnKeyDefault;
-    _textView.keyboardType = UIKeyboardTypeNumberPad;
     [self.alertView addSubview:_textView];
     [self initTextFieldNotifications];
 }

@@ -91,7 +91,7 @@
                                                                               delegate:self];
     
     __weak typeof(self) wself = self;
-    self.createItemListAlertView.actionHandler = ^(LGAlertView * _Nonnull alertView, NSString * _Nullable title, NSUInteger index) {
+    self.createItemListAlertView.actionHandler = ^(LGAlertView * _Nonnull alertView, NSUInteger index, NSString * _Nullable title) {
         __strong typeof(wself) sself = wself;
         
         for (UITextField *textField in alertView.textFieldsArray) {
@@ -131,7 +131,7 @@
                                                                 destructiveButtonTitle:nil
                                                                               delegate:self];
     __weak typeof(self) wself = self;
-    self.insertMoneyAlertView.actionHandler = ^(LGAlertView * _Nonnull alertView, NSString * _Nullable title, NSUInteger index) {
+    self.insertMoneyAlertView.actionHandler = ^(LGAlertView * _Nonnull alertView, NSUInteger index, NSString * _Nullable title) {
         __strong typeof(wself) sself = wself;
         [sself showWalletActionSheet:sself.walletsArray];
     };

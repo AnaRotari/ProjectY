@@ -15,7 +15,7 @@
 @import GoogleMaps;
 @import GooglePlaces;
 
-static NSString *const kGoogleApiKey = @"AIzaSyBsrWIkSGvj-8ep8pn44POP3ztKTxPAwjA";
+static NSString *const kGoogleApiKey = @"AIzaSyB6sXpc4TCPlbjfYGilo74vTQ-c6KZEIVg";
 
 @interface AppDelegate ()
 
